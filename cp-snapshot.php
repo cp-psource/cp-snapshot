@@ -36,6 +36,14 @@ Network: true
  *
  */
 
+ require 'psource/psource-plugin-update/psource-plugin-updater.php';
+ use Psource\PluginUpdateChecker\v5\PucFactory;
+ $MyUpdateChecker = PucFactory::buildUpdateChecker(
+	 'https://n3rds.work//wp-update-server/?action=get_metadata&slug=cp-snapshot', 
+	 __FILE__, 
+	 'cp-snapshot' 
+ );
+
 if ( ! defined( 'SNAPSHOT_I18N_DOMAIN' ) ) {
 	define( 'SNAPSHOT_I18N_DOMAIN', 'snapshot' );
 }

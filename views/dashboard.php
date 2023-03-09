@@ -39,7 +39,6 @@
 			<?php
 
 			$this->render( 'boxes/dashboard/widget-snapshots', false, array(), false, false );
-			$this->render( 'boxes/dashboard/widget-backups', false, $data, false, false );
 
 			?>
 
@@ -50,10 +49,6 @@
 			<?php
 
 			$this->render( "boxes/dashboard/widget-destinations", false, array(), false, false );
-
-			if ( ! $is_client ) {
-				$this->render( "boxes/dashboard/widget-try-pro", false, array(), false, false );
-			}
 
 			?>
 

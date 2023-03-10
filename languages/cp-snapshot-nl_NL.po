@@ -1,0 +1,4589 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CP BackUp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-10 10:22+0000\n"
+"PO-Revision-Date: 2023-03-10 11:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-4.9.22\n"
+"X-Domain: cp-snapshot"
+
+#: views/snapshots/snapshot.php:174
+#, fuzzy
+msgid " Once the form is submitted this cannot be changed."
+msgstr ""
+" Als het formulier eenmaal verzonden is, kan dit niet meer veranderd worden."
+
+#: views/boxes/dashboard/widget-status.php:34
+#, fuzzy, php-format
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr "%s geleden"
+
+#: views/managed_backups.php:128
+#, fuzzy, php-format
+msgid "%s at %s"
+msgstr "%s bij %s"
+
+#: views/managed_backups.php:207
+#, fuzzy, php-format
+msgid ""
+"%s, you've enabled Managed Backups but haven't created your first backup yet."
+" Do it now!"
+msgstr ""
+"%s, je hebt Managed Backups ingeschakeld, maar je hebt je eerste back-up nog "
+"niet gemaakt. Doe het nu!"
+
+#: views/snapshots/restore.php:461
+#, fuzzy
+msgid "(excluding .htaccess & wp-config.php files)"
+msgstr "(exclusief .htaccess & wp-config.php bestanden)"
+
+#: views/boxes/dashboard/widget-status.php:9
+#, fuzzy
+msgid "-"
+msgstr "-"
+
+#: views/snapshots/restore.php:678
+#, fuzzy
+msgid ""
+"- If a match is found but the user ID is different. The found user ID will "
+"be used."
+msgstr ""
+"- Als er een overeenkomst wordt gevonden, maar de gebruikers-ID verschilt. "
+"Het gevonden gebruikers-ID wordt gebruikt."
+
+#: views/snapshots/restore.php:677
+#, fuzzy
+msgid ""
+"- If a match is not found a new user will be created. This means a new user "
+"ID will be assigned."
+msgstr ""
+"- Als er geen overeenkomst wordt gevonden wordt een nieuwe gebruiker "
+"aangemaakt. Dit betekent dat een nieuw gebruikers-ID wordt toegewezen."
+
+#: views/snapshots/restore.php:532 views/snapshots/snapshot.php:475
+#, fuzzy
+msgid ".htaccess"
+msgstr ".htaccess"
+
+#: views/common/requirements-test.php:50
+#, fuzzy, php-format
+msgid ""
+"<b><code>max_execution_time</code> is set to %s which is too low</b>.\n"
+"\t\t\t\t\t\t\t\t\tA minimum execution time of 150 seconds is recommended to "
+"give the migration process the\n"
+"\t\t\t\t\t\t\t\t\tbest chance of succeeding. If you use a managed host, "
+"contact them directly to have it updated."
+msgstr ""
+"<b><code>max_execution_time</code> is ingesteld op %s en dat is te laag</b>."
+"\n"
+"\t\t\t\t\t\t\t\t\tEen minimale uitvoeringstijd van 150 seconden wordt "
+"aanbevolen om het migratieproces de\n"
+"\t\t\t\t\t\t\t\t\tbeste kans van slagen te geven. Als je een beheerde host "
+"gebruikt, neem dan rechtstreeks contact met hen op om dit te laten bijwerken."
+
+#: views/common/requirements-test.php:67
+#, fuzzy
+msgid ""
+"<b>PHP MySQLi module not found</b>.\n"
+"\t\t\t\t\t\t\t\t\tSnapshot needs the MySQLi module to be installed and "
+"enabled\n"
+"\t\t\t\t\t\t\t\t\ton the target server. If you use a managed host, contact "
+"them\n"
+"\t\t\t\t\t\t\t\t\tdirectly to have this module installed and enabled."
+msgstr ""
+"<b>PHP MySQLi module niet gevonden</b>.\n"
+"\t\t\t\t\t\t\t\t\tSnapshot vereist dat de MySQLi module geïnstalleerd en "
+"ingeschakeld is\n"
+"\t\t\t\t\t\t\t\t\top de doelserver. Als je een beheerde host gebruikt, neem "
+"dan contact met hen op\n"
+"\t\t\t\t\t\t\t\t\tom deze module te installeren en in te schakelen."
+
+#: views/common/requirements-test.php:86
+#, fuzzy
+msgid ""
+"<b>PHP Zip module not found</b>.\n"
+"\t\t\t\t\t\t\t\t\tTo unpack the zip file, Snapshot needs the Zip module to "
+"be installed and enabled.\n"
+"\t\t\t\t\t\t\t\t\tIf you use a managed host, contact them directly to have "
+"it updated."
+msgstr ""
+"<b>PHP Zip module niet gevonden</b>.\n"
+"\t\t\t\t\t\t\t\t\tOm het zip-bestand uit te pakken moet Snapshot de Zip-"
+"module geïnstalleerd en ingeschakeld hebben.\n"
+"\t\t\t\t\t\t\t\t\tAls je een managed host gebruikt, neem dan direct contact "
+"met hen op om deze te laten updaten."
+
+#: views/managed_backups.php:520
+#, fuzzy
+msgid "<p>Here's a log of events for managed backups.</p>"
+msgstr "<p>Hier is een log van gebeurtenissen voor beheerde back-ups.</p>"
+
+#: views/snapshots/item.php:342
+#, fuzzy
+msgid "<p>Here's a log of events for this snapshot.</p>"
+msgstr "<p>Hier is een log van gebeurtenissen voor deze momentopname.</p>"
+
+#: lib/Snapshot/Helper/UI.php:256
+#, fuzzy, php-format
+msgid ""
+"<p>The session save path (%s) is not set to a valid directory. Check your "
+"PHP (php.ini) settings or contact your hosting provider.</p>"
+msgstr ""
+"<p>Het session save path (%s) is niet ingesteld op een geldige directory. "
+"Controleer je PHP (php.ini) instellingen of neem contact op met je hosting "
+"provider.</p>"
+
+#: lib/Snapshot/Helper/UI.php:259
+#, fuzzy, php-format
+msgid ""
+"<p>The session_save_path (%s) is not writeable. Check your PHP (php.ini) "
+"settings or contact your hosting provider.</p>"
+msgstr ""
+"<p>Het session_save_path (%s) is niet beschrijfbaar. Controleer je PHP (php."
+"ini) instellingen of neem contact op met je hosting provider.</p>"
+
+#: lib/Snapshot/View/Settings.php:157
+#, fuzzy
+msgid "<span class=\"snapshot-error\">(I)</span> indicates an imported archive"
+msgstr ""
+"<span class=\"snapshot-error\">(I)</span> duidt op een geïmporteerd archief"
+
+#: views/import.php:214
+#, fuzzy
+msgid ""
+"<strong>Amazon S3:</strong> When downloading a file from S3 you need to "
+"ensure the file is public."
+msgstr ""
+"<strong>Amazon S3:</strong> Bij het downloaden van een bestand van S3 moet "
+"je ervoor zorgen dat het bestand openbaar is."
+
+#: views/snapshots/snapshot.php:527
+#, fuzzy
+msgid ""
+"<strong>Archive</strong> - (Default) Selecting archive will produce a zip "
+"archive. This is standard method for backing up your site. A single zip "
+"archive will be created for files and database tables."
+msgstr ""
+"<strong>Archief</strong> - (Standaard) Door archief te kiezen wordt een zip-"
+"archief gemaakt. Dit is de standaardmethode voor het maken van een back-up "
+"van je site. Er wordt een enkel zip-archief gemaakt voor bestanden en "
+"databasetabellen."
+
+#: views/import.php:213
+#, fuzzy
+msgid ""
+"<strong>Dropbox:</strong> If you are attempting to download a Dropbox "
+"Snapshot archive written to the <strong>App/PSOURCE Snapshot</strong> you "
+"first need to copy the file to a public folder within your Dropbox account "
+"before grabbing the public link."
+msgstr ""
+"<strong>Dropbox:</strong> Als je een Dropbox Snapshot-archief probeert te "
+"downloaden dat geschreven is naar de <strong>App/PSOURCE Snapshot</strong> "
+"moet je het bestand eerst kopiëren naar een openbare map binnen je Dropbox-"
+"account voordat je de openbare link pakt."
+
+#: views/boxes/modals/popup-welcome.php:61
+#, fuzzy
+msgid ""
+"<strong>Let’s start by adding a new destination</strong>; where would you "
+"like to store your first snapshot?"
+msgstr ""
+"<strong>Laten we beginnen met het toevoegen van een nieuwe "
+"bestemming</strong>; waar wil je je eerste momentopname opslaan?"
+
+#: views/snapshots/snapshot.php:543
+#, fuzzy
+msgid ""
+"<strong>Mirror/Sync</strong> - <strong>Dropbox ONLY</strong> Select "
+"mirroring if you want to replicate your site file structure in Dropbox. If "
+"you include database tables they will be added as a zipped archive. <strong>"
+"There is currently no restore option for Mirror/Sync.</strong>"
+msgstr ""
+"<strong>Mirror/Sync</strong> - <strong>AlLEEN voor Dropbox</strong> "
+"Selecteer mirroring als je de bestandsstructuur van je site wilt repliceren "
+"in Dropbox. Als je databasetabellen opneemt worden ze toegevoegd als een "
+"gezipt archief. <strong>Er is momenteel geen hersteloptie voor Mirror/Sync."
+"</strong>"
+
+#: views/import.php:212
+#, fuzzy
+msgid ""
+"<strong>Remote FTP:</strong> When downloading from a remote FTP server you "
+"must ensure the file is moved to a location where it will be accessible via "
+"a simple http:// or https:// URL."
+msgstr ""
+"<strong>Remote FTP:</strong> Bij het downloaden vanaf een remote FTP server "
+"moet je ervoor zorgen dat het bestand wordt verplaatst naar een plaats waar "
+"het toegankelijk is via een eenvoudige http:// of https:// URL."
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:426
+#, fuzzy
+msgid "A client ID is required"
+msgstr "Een cliënt-ID is vereist"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:429
+#, fuzzy
+msgid "A client secret ID is required"
+msgstr "Een geheime cliënt-ID is vereist"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:447
+#, fuzzy
+msgid "A directory ID is required"
+msgstr "Een directory ID is vereist"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:432
+#, fuzzy
+msgid "A directory is required"
+msgstr "Er is een directory nodig"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:442
+#, fuzzy
+msgid "A name for the destination is required"
+msgstr "Een naam voor de bestemming is vereist"
+
+#: lib/Snapshot/View/Table/Items.php:287 lib/Snapshot/View/Table/Items.php:338
+#, fuzzy
+msgid "abort"
+msgstr "afbreken"
+
+#: views/destinations/add/dropbox.php:153
+#, fuzzy
+msgid "Account"
+msgstr "Account"
+
+#: lib/Snapshot/View/Table/FullBackups.php:24
+#, fuzzy
+msgid "Actions"
+msgstr "Acties"
+
+#: views/boxes/dashboard/widget-status.php:94
+#, fuzzy
+msgid "Activate"
+msgstr "Activeer"
+
+#: views/boxes/modals/popup-welcome.php:49
+#, fuzzy
+msgid "Activate Managed Backups"
+msgstr "Beheerde back-ups activeren"
+
+#: views/boxes/dashboard/widget-destinations.php:46
+#, fuzzy
+msgid "Active Destinations"
+msgstr "Actieve Bestemmingen"
+
+#: views/snapshots/snapshot.php:561
+#, fuzzy
+msgid "Add any custom URLs you want to not include in this snapshot."
+msgstr ""
+"Voeg aangepaste URL's toe die je niet in deze momentopname wilt opnemen."
+
+#: views/boxes/destinations/widget-amazon.php:21
+#: views/boxes/destinations/widget-dropbox.php:21
+#: views/boxes/destinations/widget-google.php:21
+#: views/boxes/destinations/widget-sftp.php:21
+#: views/boxes/modals/popup-welcome.php:71
+#: views/boxes/modals/popup-welcome.php:82
+#: views/boxes/modals/popup-welcome.php:93
+#: views/boxes/modals/popup-welcome.php:104
+#, fuzzy
+msgid "Add Destination"
+msgstr "Bestemming toevoegen"
+
+#: views/boxes/dashboard/widget-destinations.php:28
+#: lib/Snapshot/View/Destination/Listing.php:61
+#, fuzzy
+msgid "Add New"
+msgstr "Nieuw toevoegen"
+
+#: views/boxes/modals/popup-snapshot.php:17
+#, fuzzy
+msgid "Add Snapshot Key"
+msgstr "Snapshot sleutel toevoegen"
+
+#: views/managed_backups.php:111
+#, fuzzy
+msgid "Add snapshot key"
+msgstr "Momentopnamesleutel toevoegen"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:119
+#, fuzzy
+msgid "Address is required"
+msgstr "Adres is vereist"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:651
+#, fuzzy
+msgid ""
+"After the popup closes copy the Client ID and Client Secret from the Google "
+"page and paste into the form fields on the left."
+msgstr ""
+"Kopieer na het sluiten van de popup de Client ID en Client Secret van de "
+"Google pagina en plak ze in de formuliervelden links."
+
+#: views/destinations/add/google-drive.php:119
+#, fuzzy
+msgid ""
+"After the popup closes copy the Client ID and Client Secret from the Google "
+"page and paste into the form fields."
+msgstr ""
+"Kopieer na het sluiten van de popup de Client ID en Client Secret van de "
+"Google pagina en plak ze in de formuliervelden."
+
+#: views/snapshots/item.php:259
+#, fuzzy
+msgid "All"
+msgstr "Alle"
+
+#: lib/Snapshot/View/Settings.php:246
+#, fuzzy
+msgid "All Archives"
+msgstr "Alle archieven"
+
+#: views/boxes/dashboard/widget-status.php:28
+#, fuzzy
+msgid "All Backed up"
+msgstr "Alles ondersteund"
+
+#: views/snapshots.php:78
+#, fuzzy
+msgid "All Destinations"
+msgstr "Alle bestemmingen"
+
+#: views/snapshots/item.php:221
+#, fuzzy
+msgid "All Files"
+msgstr "Alle bestanden"
+
+#: views/snapshots/snapshot.php:406
+#, fuzzy
+msgid "All Plugins"
+msgstr "Alle Plugins"
+
+#: views/snapshots/snapshot.php:390
+#, fuzzy
+msgid "All Themes"
+msgstr "Alle thema's"
+
+#: lib/Snapshot/Helper/Utility.php:1737
+#, fuzzy
+msgid "already present. not importing."
+msgstr "reeds aanwezig. niet importeren."
+
+#: views/managed-backups/new-backup.php:249 views/snapshots/snapshot.php:1015
+#, fuzzy
+msgid "Also run a backup now"
+msgstr "Voer nu ook een back-up uit"
+
+#: views/destinations/add/aws.php:111
+#: lib/Snapshot/Model/Destination/aws/index.php:707
+#, fuzzy
+msgid "Alternate Region host"
+msgstr "Plaatsvervangende regio-gastheer"
+
+#: lib/Snapshot/Helper/UI.php:46
+#, fuzzy
+msgid "am"
+msgstr "ben"
+
+#: lib/Snapshot/Model/Destination.php:158
+#, fuzzy
+msgid "Amazon AWS"
+msgstr "Amazon AWS"
+
+#: views/boxes/destinations/widget-amazon.php:19
+#: views/boxes/modals/popup-welcome.php:89 views/destinations/add/aws.php:13
+#: lib/Snapshot/Model/Destination/aws/index.php:52
+#, fuzzy
+msgid "Amazon S3"
+msgstr "Amazon S3"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:617
+#, fuzzy
+msgid "Amazon S3 Destination"
+msgstr "Amazon S3 Bestemming"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:417
+#, fuzzy
+msgid "An access token from Google is required"
+msgstr "Er is een toegangstoken van Google nodig"
+
+#: views/destinations/add/google-drive.php:214
+#, fuzzy
+msgid "An error occurred authenticating with Google: "
+msgstr "Er is een fout opgetreden bij de authenticatie met Google:"
+
+#: views/snapshots/item.php:145
+#, fuzzy
+msgid "An error occurred during the most recent upload attempt:"
+msgstr "Bij de laatste uploadpoging is een fout opgetreden:"
+
+#: views/destinations/add/dropbox.php:92 views/destinations/add/dropbox.php:96
+#: views/destinations/add/dropbox.php:100
+#: lib/Snapshot/Model/Destination/dropbox/index.php:193
+#, fuzzy
+msgid "An error occurred when attempting to connect to Dropbox: "
+msgstr ""
+"Er is een fout opgetreden bij een poging om verbinding te maken met Dropbox:"
+
+#: views/snapshots/item.php:154
+#, fuzzy
+msgid ""
+"An unknown error occurred during the last upload attempt. Further attempts "
+"to upload will continue to be made."
+msgstr ""
+"Bij de laatste uploadpoging is een onbekende fout opgetreden. Verdere "
+"pogingen om te uploaden worden voortgezet."
+
+#: views/snapshots/restore.php:358 lib/Snapshot/View/Table/Archives.php:17
+#: lib/Snapshot/View/Table/Archives.php:18
+#: lib/Snapshot/View/Table/FullBackups.php:12
+#: lib/Snapshot/View/Table/FullBackups.php:13
+#: lib/Snapshot/View/Table/Items.php:18 lib/Snapshot/View/Table/Items.php:19
+#, fuzzy
+msgid "Archive"
+msgstr "Archief"
+
+#: lib/Snapshot/Helper/Utility.php:1723 lib/Snapshot/Helper/Utility.php:1733
+#, fuzzy
+msgid "Archive imported successfully."
+msgstr "Archief succesvol geïmporteerd."
+
+#: lib/Snapshot/View/Table/Items.php:483 lib/Snapshot/View/Table/Items.php:689
+#, fuzzy
+msgid "Archives"
+msgstr "Archief"
+
+#: lib/Snapshot/View/Table/Archives.php:324
+#: lib/Snapshot/View/Table/Archives.php:326
+#, fuzzy
+msgid "Archives:"
+msgstr "Archieven:"
+
+#: views/boxes/modals/popup-welcome.php:46
+#, fuzzy
+msgid ""
+"As part of your PSOURCE membership you get 10GB free cloud storage to back "
+"up and store your entire ClassicPress website - including ClassicPress "
+"itself. You can schedule these backups to run daily, monthly or weekly and "
+"should you ever need it you can restore an entire website in just a few "
+"clicks."
+msgstr ""
+"Als onderdeel van je PSOURCE-lidmaatschap krijg je 10GB gratis cloudopslag "
+"om je hele ClassicPress-website te back-uppen en op te slaan - inclusief "
+"ClassicPress zelf. Je kunt deze back-ups plannen om dagelijks, maandelijks "
+"of wekelijks te draaien en mocht het ooit nodig zijn, dan kun je met een "
+"paar klikken een hele website herstellen."
+
+#: lib/Snapshot/Model/Destination/aws/index.php:111
+#, fuzzy
+msgid "Asia Pacific (Singapore) Region"
+msgstr "Regio Azië-Stille Oceaan (Singapore)"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:112
+#, fuzzy
+msgid "Asia Pacific (Sydney) Region"
+msgstr "Regio Azië-Stille Oceaan (Sydney)"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:113
+#, fuzzy
+msgid "Asia Pacific (Tokyo) Region"
+msgstr "Regio Azië-Stille Oceaan (Tokio)"
+
+#: views/snapshots/snapshot.php:895 views/snapshots/snapshot.php:930
+#: views/snapshots/snapshot.php:962
+#, fuzzy
+msgid "at"
+msgstr "op"
+
+#: views/boxes/dashboard/widget-status.php:72
+#: views/boxes/dashboard/widget-status.php:112
+#, fuzzy, php-format
+msgid "at %s"
+msgstr "op %s"
+
+#: views/import.php:122 lib/Snapshot/View/Settings.php:503
+#, fuzzy
+msgid "Attempting to download remote file"
+msgstr "Poging tot downloaden van bestand op afstand"
+
+#: views/destinations/add/index.php:195
+#, fuzzy
+msgid "Authenticate"
+msgstr "Authenticeren"
+
+#: views/destinations/add/dropbox.php:61 views/destinations/add/dropbox.php:245
+#: views/destinations/add/google-drive.php:185
+#, fuzzy
+msgid "Authenticated"
+msgstr "Authentiek"
+
+#: views/destinations/add/aws.php:200
+#: lib/Snapshot/Model/Destination/aws/index.php:127
+#: lib/Snapshot/Model/Destination/aws/index.php:781
+#, fuzzy
+msgid "Authenticated Read"
+msgstr "Geauthenticeerd lezen"
+
+#: views/destinations/add/dropbox.php:131
+#: views/destinations/add/dropbox.php:284
+#, fuzzy
+msgid "Authorization code"
+msgstr "Machtigingscode"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:757
+#, fuzzy
+msgid "Authorization complete."
+msgstr "Autorisatie compleet."
+
+#: views/destinations/add/google-drive.php:243
+#: lib/Snapshot/Model/Destination/google-drive/index.php:736
+#, fuzzy
+msgid "Authorize"
+msgstr "Autoriseer"
+
+#: views/managed_backups.php:190
+#, fuzzy
+msgid "Available Backups"
+msgstr "Beschikbare back-ups"
+
+#: views/boxes/dashboard/widget-status.php:82
+#, fuzzy
+msgid "Available Destinations"
+msgstr "Beschikbare bestemmingen"
+
+#: views/snapshots.php:59
+#, fuzzy
+msgid "Available Snapshots"
+msgstr "Beschikbare Snapshots"
+
+#: lib/Snapshot/View/Full/Backup.php:237
+#, fuzzy
+msgid ""
+"Aw shucks, something went wrong :( Instead of the beautiful response we "
+"expected, we got this:"
+msgstr ""
+"Aw shucks, er ging iets mis :( In plaats van de mooie reactie die we "
+"verwachtten, kregen we dit:"
+
+#: views/destinations/add/aws.php:36
+#: lib/Snapshot/Model/Destination/aws/index.php:530
+#: lib/Snapshot/Model/Destination/aws/index.php:635
+#, fuzzy
+msgid "AWS Access Key ID"
+msgstr "AWS Toegangssleutel ID"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:483
+#, fuzzy
+msgid "AWS Key is required"
+msgstr "AWS Sleutel is vereist"
+
+#: views/destinations/add/aws.php:87
+#: lib/Snapshot/Model/Destination/aws/index.php:685
+#, fuzzy
+msgid "AWS Region"
+msgstr "Regio AWS"
+
+#: views/destinations/add/aws.php:53
+#: lib/Snapshot/Model/Destination/aws/index.php:647
+#, fuzzy
+msgid "AWS Secret Access Key"
+msgstr "Geheime toegangssleutel AWS"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:484
+#, fuzzy
+msgid "AWS Secret Key is required"
+msgstr "AWS geheime sleutel is vereist"
+
+#: views/managed-backups/new-backup.php:46 views/managed-backups/restore.php:29
+#: views/snapshots/item.php:33 views/snapshots/restore.php:52
+#: views/snapshots/snapshot.php:56 views/destinations/add/index.php:62
+#: views/managed-backups/partials/create-backup-progress.php:22
+#: views/managed-backups/partials/restore-backup-progress.php:36
+#: views/snapshots/partials/create-snapshot-progress.php:39
+#: views/snapshots/partials/restore-snapshot-progress.php:29
+#, fuzzy
+msgid "Back"
+msgstr "Terug"
+
+#: lib/Snapshot/View/Full/Backup.php:240
+#, fuzzy
+msgid "Backing up... %d%"
+msgstr "Een back-up maken... %d%"
+
+#: views/managed_backups.php:233
+#, fuzzy
+msgid "Backup Details"
+msgstr "Back-up details"
+
+#: lib/Snapshot/Helper/Backup.php:403
+#, fuzzy, php-format
+msgid "Backup path creation failed: %s"
+msgstr "Het maken van een back-up pad is mislukt: %s"
+
+#: lib/Snapshot/Helper/Backup.php:404
+#, fuzzy, php-format
+msgid "Backup path not writable: %s"
+msgstr "Back-up pad niet beschrijfbaar: %s"
+
+#: lib/Snapshot/Model/Full/Error.php:185
+#, fuzzy
+msgid "Backup post-processing error"
+msgstr "Fout in de nabewerking van de back-up"
+
+#: lib/Snapshot/Model/Full/Remote/Storage.php:569
+#, fuzzy
+msgid "Backup too large for storage quota."
+msgstr "Back-up te groot voor opslagquota."
+
+#: lib/Snapshot/Model/Full/Error.php:186
+#, fuzzy
+msgid "Backup upload error"
+msgstr "Fout bij het uploaden van de back-up"
+
+#: views/managed_backups.php:165 views/managed_backups.php:171
+#: views/managed_backups.php:186
+#, fuzzy
+msgid "Backups"
+msgstr "Back-ups"
+
+#: views/managed_backups.php:479 views/managed-backups/new-backup.php:229
+#: views/snapshots/snapshot.php:995
+#, fuzzy
+msgid "backups before removing older archives."
+msgstr "back-ups alvorens oudere archieven te verwijderen."
+
+#: views/managed_backups.php:120
+#, fuzzy
+msgid "Backups Schedule"
+msgstr "Schema voor back-ups"
+
+#: views/managed-backups/new-backup.php:44
+#, fuzzy
+msgid "Backups Wizard"
+msgstr "Wizard Back-ups"
+
+#: lib/Snapshot/View/Table/Items.php:684
+#, fuzzy
+msgid "Blog"
+msgstr "Blog"
+
+#: views/snapshots/restore.php:154 views/snapshots/restore.php:163
+#: views/snapshots/restore.php:200
+#, fuzzy
+msgid "Blog ID:"
+msgstr "Blog ID:"
+
+#: views/snapshots/restore.php:91
+#, fuzzy
+msgid "Blog options"
+msgstr "Blog opties"
+
+#: views/snapshots/snapshot.php:103
+#, fuzzy
+msgid "Blog to backup"
+msgstr "Blog naar back-up"
+
+#: views/destinations/add/aws.php:150
+#: views/destinations/partials/s3-destination-list.php:17
+#: lib/Snapshot/Model/Destination/aws/index.php:531
+#, fuzzy
+msgid "Bucket"
+msgstr "Emmer"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:741
+#, fuzzy
+msgid "Bucket Name"
+msgstr "Naam emmer"
+
+#: views/managed_backups.php:467
+#, fuzzy
+msgid ""
+"By default, Snapshot will run as many scheduled backups as you need. If you "
+"would like to keep all of your snapshot archives, just set your storage "
+"limit to 0."
+msgstr ""
+"Standaard draait Snapshot zoveel geplande back-ups als je nodig hebt. Als je "
+"al je snapshot-archieven wilt bewaren, stel dan je opslaglimiet in op 0."
+
+#: views/managed-backups/new-backup.php:234
+#, fuzzy
+msgid ""
+"By default, Snapshot will run as many scheduled backups as you need. We "
+"recommend that you remove older backups to avoid filling your remote storage "
+"limit. If you would like to keep all of your backup archives, just set your "
+"storage limit to 0."
+msgstr ""
+"Standaard draait Snapshot zoveel geplande back-ups als je nodig hebt. We "
+"raden je aan oudere back-ups te verwijderen om te voorkomen dat je externe "
+"opslaglimiet vol raakt. Als je al je back-up archieven wilt bewaren, zet dan "
+"je opslaglimiet op 0."
+
+#: views/managed-backups/restore.php:104 views/snapshots/item.php:346
+#: views/snapshots/restore.php:285 views/snapshots/restore.php:837
+#: views/snapshots/snapshot.php:185 views/snapshots/snapshot.php:1075
+#: lib/Snapshot/View/Settings.php:253 lib/Snapshot/View/Settings.php:365
+#: views/destinations/add/index.php:167 views/destinations/add/index.php:179
+#: views/managed-backups/partials/create-backup-progress.php:47
+#: views/managed-backups/partials/restore-backup-progress.php:68
+#: views/managed-backups/partials/restore-backup-progress.php:118
+#: views/managed-backups/partials/restore-backup-progress.php:147
+#: views/managed-backups/partials/restore-backup-progress.php:175
+#: views/snapshots/partials/create-snapshot-progress.php:71
+#: views/snapshots/partials/create-snapshot-progress.php:159
+#: views/snapshots/partials/create-snapshot-progress.php:194
+#: views/snapshots/partials/create-snapshot-progress.php:228
+#: views/snapshots/partials/restore-snapshot-progress.php:50
+#: views/snapshots/partials/restore-snapshot-progress.php:130
+#: views/snapshots/partials/restore-snapshot-progress.php:154
+#: views/snapshots/partials/restore-snapshot-progress.php:186
+#: lib/Snapshot/View/Destination/Listing.php:176
+#, fuzzy
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: views/snapshots/restore.php:229 views/snapshots/snapshot.php:140
+#, fuzzy
+msgid "Change"
+msgstr "Verander"
+
+#: views/settings.php:147
+#, fuzzy
+msgid ""
+"Choose how you want Snapshot to handle error conditions during the backup "
+"and restore process."
+msgstr ""
+"Kies hoe je wilt dat Snapshot omgaat met foutcondities tijdens het back-up "
+"en herstelproces."
+
+#: views/snapshots/snapshot.php:221
+#, fuzzy, php-format
+msgid ""
+"Choose where to send this snapshot. Add new destinations via the <a "
+"href=\"%s\">Destinations</a> tab."
+msgstr ""
+"Kies waar je deze momentopname naartoe wilt sturen. Voeg nieuwe bestemmingen "
+"toe via het <a href=\"%s\">Bestemmingen</a> tabblad."
+
+#: views/settings.php:45
+#, fuzzy
+msgid ""
+"Choose where your snapshots will be stored whilst they are being uploaded to "
+"your third party integrations."
+msgstr ""
+"Kies waar je snapshots worden opgeslagen terwijl ze worden geüpload naar je "
+"integraties van derden."
+
+#: views/managed-backups/restore.php:76
+#, fuzzy
+msgid "Choose which folder you would like to restore your website to."
+msgstr "Kies in welke map je je website wilt herstellen."
+
+#: views/destinations/add/google-drive.php:96
+#: views/destinations/partials/google-drive-destination-list.php:15
+#: lib/Snapshot/Model/Destination/google-drive/index.php:471
+#: lib/Snapshot/Model/Destination/google-drive/index.php:637
+#, fuzzy
+msgid "Client ID"
+msgstr "Klant-ID"
+
+#: views/destinations/add/google-drive.php:129
+#: lib/Snapshot/Model/Destination/google-drive/index.php:657
+#, fuzzy
+msgid "Client Secret"
+msgstr "Geheim van de klant"
+
+#: views/managed_backups.php:68
+#, fuzzy
+msgid "Cloud Storage Used"
+msgstr "Gebruikte cloud-opslag"
+
+#: lib/Snapshot/View/Table/Archives.php:318
+#: lib/Snapshot/View/Table/Archives.php:356
+#: lib/Snapshot/View/Table/Items.php:626 lib/Snapshot/View/Table/Items.php:663
+#, fuzzy
+msgid "Complete"
+msgstr "Volledig"
+
+#: views/managed-backups/new-backup.php:59 views/managed-backups/restore.php:42
+#: views/snapshots/restore.php:67 views/snapshots/snapshot.php:69
+#, fuzzy
+msgid "Configuration"
+msgstr "Configuratie"
+
+#: views/managed_backups.php:139
+#: views/destinations/partials/dropbox-destination-list.php:59
+#: views/destinations/partials/ftp-destination-list.php:63
+#: views/destinations/partials/google-drive-destination-list.php:62
+#: views/destinations/partials/local-destination-list.php:55
+#: views/destinations/partials/s3-destination-list.php:60
+#, fuzzy
+msgid "Configure"
+msgstr "Configureer"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:256
+#, fuzzy, php-format
+msgid "Connecting to %s"
+msgstr "Verbinding maken met %s"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:327
+#, fuzzy
+msgid "Connection Protocol"
+msgstr "Verbindingsprotocol"
+
+#: views/destinations/add/ftp.php:34
+#, fuzzy
+msgid "Connection Type"
+msgstr "Type verbinding"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:122
+#, fuzzy
+msgid "Connection type is required"
+msgstr "Verbindingstype is vereist"
+
+#: views/destinations/add/aws.php:205
+#, fuzzy
+msgid "Control who will have access to your backup files."
+msgstr "Bepaal wie toegang krijgt tot je back-up bestanden."
+
+#: views/destinations/add/google-drive.php:169
+#, fuzzy
+msgid "Copy URL"
+msgstr "URL kopiëren"
+
+#: views/snapshots/item.php:266 lib/Snapshot/Helper/Utility.php:1145
+#, fuzzy
+msgid "core"
+msgstr "kern"
+
+#: lib/Snapshot/Controller/Full/Ajax.php:507
+#, fuzzy
+msgid "Could not communicate with remote service"
+msgstr "Kon niet communiceren met dienst op afstand"
+
+#: views/destinations/add/dropbox.php:200
+#, fuzzy
+msgid "Country"
+msgstr "Land"
+
+#. Name of the plugin
+#, fuzzy
+msgid "CP BackUp"
+msgstr "CP BackUp"
+
+#: views/boxes/dashboard/widget-snapshots.php:35
+#, fuzzy
+msgid "Create"
+msgstr "Maak"
+
+#: views/snapshots.php:37
+#, fuzzy
+msgid ""
+"Create and store snapshots of your website. You choose what you want to back "
+"up and where you want to save it. Let's get started!"
+msgstr ""
+"Maak en bewaar snapshots van je website. Je kiest zelf wat je wilt back-"
+"uppen en waar je het wilt opslaan. Laten we beginnen!"
+
+#: views/managed-backups/partials/create-backup-progress.php:8
+#, fuzzy
+msgid "Create Backup"
+msgstr "Back-up maken"
+
+#: views/snapshots.php:40 lib/Snapshot/View/Settings.php:80
+#: views/boxes/dashboard/widget-snapshots.php:54
+#: views/snapshots/partials/create-snapshot-progress.php:9
+#, fuzzy
+msgid "Create Snapshot"
+msgstr "Snapshot maken"
+
+#: lib/Snapshot/Helper/Log.php:131
+#, fuzzy
+msgid "Cron"
+msgstr "Cron"
+
+#: lib/Snapshot/View/Settings.php:150 lib/Snapshot/View/Settings.php:442
+#, fuzzy
+msgid "Current time:"
+msgstr "Huidige tijd:"
+
+#: lib/Snapshot/Helper/Utility.php:744 lib/Snapshot/Model/Full/Backup.php:234
+#, fuzzy
+msgid "Daily"
+msgstr "Dagelijks"
+
+#: lib/Snapshot/Model/Full/Backup.php:240
+#, fuzzy
+msgid "daily"
+msgstr "dagelijks"
+
+#: lib/Snapshot/Controller/Full/Cron.php:167
+#, fuzzy
+msgid "Daily Managed Snapshot"
+msgstr "Dagelijks beheerde momentopname"
+
+#: views/dashboard.php:3
+#, fuzzy
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: views/snapshots/restore.php:575 views/snapshots/snapshot.php:591
+#, fuzzy
+msgid "Database"
+msgstr "Database"
+
+#: views/snapshots/restore.php:157 views/snapshots/restore.php:302
+#, fuzzy
+msgid "Database Base Prefix:"
+msgstr "Database Base Prefix:"
+
+#: views/snapshots/restore.php:156 views/snapshots/restore.php:294
+#, fuzzy
+msgid "Database Name:"
+msgstr "Naam databank:"
+
+#: views/snapshots/restore.php:158 views/snapshots/restore.php:310
+#, fuzzy
+msgid "Database Prefix:"
+msgstr "Database Prefix:"
+
+#: views/snapshots/item.php:251
+#, fuzzy
+msgid "Database Tables"
+msgstr "Database Tabellen"
+
+#: views/managed_backups.php:235 views/managed_backups.php:285
+#: views/snapshots.php:128 views/snapshots.php:247
+#: views/boxes/dashboard/widget-snapshots.php:69
+#: lib/Snapshot/View/Table/Archives.php:375
+#, fuzzy
+msgid "Date"
+msgstr "Datum"
+
+#: lib/Snapshot/View/Table/FullBackups.php:22
+#, fuzzy
+msgid "Date / Time"
+msgstr "Datum / Tijd"
+
+#: views/snapshots/item.php:124
+#, fuzzy
+msgctxt "date and time separator"
+msgid " @ "
+msgstr " @"
+
+#: lib/Snapshot/Helper/Utility.php:490
+#, fuzzy
+msgctxt "date time sep"
+msgid " @ "
+msgstr " @"
+
+#: views/snapshots/restore.php:762
+#, fuzzy
+msgid "Deactivate plugins"
+msgstr "Plugins deactiveren"
+
+#: lib/Snapshot/Helper/Log.php:130
+#, fuzzy
+msgid "Default"
+msgstr "Standaard"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:406
+#, fuzzy
+msgid ""
+"Default: No. This options turns on or off passive mode. In passive mode, "
+"data connections are initiated by the client, rather than by the server. It "
+"may be needed if the client is behind firewall."
+msgstr ""
+"Standaard: Nee. Deze optie zet de passieve modus aan of uit. In passieve "
+"modus worden gegevensverbindingen geïnitieerd door de client, in plaats van "
+"door de server. Dit kan nodig zijn als de client zich achter een firewall "
+"bevindt."
+
+#: lib/Snapshot/Model/Destination/aws/index.php:612
+#, fuzzy
+msgid ""
+"Define an Amazon AWS destination connection. You can define multiple "
+"destinations which use Amazon AWS. Each destination can use different "
+"security keys and/or buckets."
+msgstr ""
+"Definieer een Amazon AWS bestemmingsverbinding. Je kunt meerdere "
+"bestemmingen definiëren die Amazon AWS gebruiken. Elke bestemming kan "
+"verschillende beveiligingssleutels en/of buckets gebruiken."
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:227
+#, fuzzy
+msgid ""
+"Define an FTP destination connection. You can define multiple destinations "
+"which use FTP. Each destination can connect to different servers with "
+"different remote paths."
+msgstr ""
+"Definieer een FTP-bestemmingsverbinding. Je kunt meerdere bestemmingen "
+"definiëren die FTP gebruiken. Elke bestemming kan verbinding maken met "
+"verschillende servers met verschillende paden op afstand."
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:560
+#, fuzzy
+msgid ""
+"Define an Google Drive destination connection. You can define multiple "
+"destinations which use Google Drive. Each destination can use different "
+"security keys and/or directory."
+msgstr ""
+"Definieer een Google Drive bestemmingsverbinding. Je kunt meerdere "
+"bestemmingen definiëren die Google Drive gebruiken. Elke bestemming kan "
+"verschillende beveiligingssleutels en/of map gebruiken."
+
+#: views/settings.php:105
+#, fuzzy
+msgid ""
+"Define specific files or folders you want to exclude from any Snapshot or "
+"Full Backup."
+msgstr ""
+"Bepaal specifieke bestanden of mappen die je wilt uitsluiten van een "
+"Snapshot of Full Backup."
+
+#: views/managed_backups.php:343 views/snapshots.php:300
+#: views/snapshots/item.php:66 views/snapshots/item.php:313
+#: views/destinations/add/index.php:153 lib/Snapshot/View/Table/Archives.php:33
+#: lib/Snapshot/View/Table/FullBackups.php:91
+#: lib/Snapshot/Model/Destination/aws/index.php:528
+#: lib/Snapshot/Model/Destination/ftp/index.php:136
+#: lib/Snapshot/Model/Destination/google-drive/index.php:469
+#, fuzzy
+msgid "Delete"
+msgstr "Verwijder"
+
+#: lib/Snapshot/View/Table/Archives.php:174
+#: lib/Snapshot/View/Table/Items.php:199
+#: lib/Snapshot/Model/Destination/aws/index.php:564
+#: lib/Snapshot/Model/Destination/ftp/index.php:176
+#: lib/Snapshot/Model/Destination/google-drive/index.php:503
+#, fuzzy
+msgid "delete"
+msgstr "verwijder"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:598
+#: lib/Snapshot/Model/Destination/ftp/index.php:213
+#: lib/Snapshot/Model/Destination/google-drive/index.php:534
+#, fuzzy
+msgid "Delete Destination"
+msgstr "Bestemming verwijderen"
+
+#: views/managed-backups/new-backup.php:97 views/snapshots/item.php:171
+#: views/snapshots/snapshot.php:211 lib/Snapshot/View/Table/Items.php:688
+#: lib/Snapshot/Model/Destination/ftp/index.php:234
+#, fuzzy
+msgid "Destination"
+msgstr "Bestemming"
+
+#: views/destinations/add/index.php:58
+#, fuzzy
+msgid "Destination Info"
+msgstr "Info over de bestemming"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:626
+#: lib/Snapshot/Model/Destination/ftp/index.php:263
+#: lib/Snapshot/Model/Destination/google-drive/index.php:589
+#, fuzzy
+msgid "Destination Name"
+msgstr "Naam bestemming"
+
+#: lib/Snapshot/View/Table/Archives.php:362
+#: lib/Snapshot/View/Table/Items.php:669
+#, fuzzy
+msgid "Destination:"
+msgstr "Bestemming:"
+
+#: views/destinations.php:10 views/boxes/dashboard/widget-destinations.php:26
+#: views/destinations/add/index.php:49
+#, fuzzy
+msgid "Destinations"
+msgstr "Bestemmingen"
+
+#: views/boxes/dashboard/widget-destinations.php:38
+#, fuzzy
+msgid ""
+"Destinations are where your snapshots are uploaded and stored. Store files "
+"on Dropbox, Google Drive, Amazon S3, FTP/SFTP, or your local computer."
+msgstr ""
+"Bestemmingen zijn waar je snapshots worden geüpload en opgeslagen. Bewaar "
+"bestanden op Dropbox, Google Drive, Amazon S3, FTP/SFTP of je lokale "
+"computer."
+
+#. Description of the plugin
+#, fuzzy
+msgid ""
+"Dieses Plugin ermöglicht es Dir, bei Bedarf schnelle Backup-Snapshots Deiner "
+"funktionierenden ClassicPress-Datenbank zu erstellen. Du kannst aus den "
+"standardmäßigen ClassicPress-Tabellen sowie benutzerdefinierten Plugin-"
+"Tabellen innerhalb der Datenbankstruktur auswählen. Alle Snapshots werden "
+"protokolliert und Du kannst den Snapshot nach Bedarf wiederherstellen."
+msgstr ""
+"Deze plugin biedt je de mogelijkheid om bij de verwerking snelle back-up-"
+"snapshots te maken van je ClassicPress-Datenbank. Je kunt de standaard "
+"ClassicPress-tabellen en de benutzerdefiniërende Plugin-tabellen gebruiken "
+"binnen de Datenbank-structuur. Alle Snapshots worden protokolliert en je "
+"kunt de Snapshot na de Bedarf wiederherstellen."
+
+#: views/destinations/add/dropbox.php:48 views/destinations/add/ftp.php:111
+#: views/destinations/add/local.php:41
+#: views/destinations/partials/dropbox-destination-list.php:15
+#: views/destinations/partials/ftp-destination-list.php:19
+#: views/destinations/partials/google-drive-destination-list.php:16
+#: views/destinations/partials/local-destination-list.php:16
+#: views/destinations/partials/s3-destination-list.php:18
+#: lib/Snapshot/Model/Destination/aws/index.php:532
+#: lib/Snapshot/Model/Destination/ftp/index.php:140
+#: lib/Snapshot/Model/Destination/google-drive/index.php:472
+#, fuzzy
+msgid "Directory"
+msgstr "Directory"
+
+#: views/snapshots/snapshot.php:249 views/destinations/add/aws.php:213
+#: lib/Snapshot/Model/Destination/aws/index.php:788
+#, fuzzy
+msgid "Directory (optional)"
+msgstr "Directory (optioneel)"
+
+#: views/destinations/add/google-drive.php:57
+#, fuzzy
+msgid "Directory ID"
+msgstr "Directory ID"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:608
+#, fuzzy
+msgid "Directory ID (optional)"
+msgstr "Directory ID (optioneel)"
+
+#: views/import.php:239
+#, fuzzy
+msgid "Directory URL"
+msgstr "Directory URL"
+
+#: lib/Snapshot/Controller/Full/Ajax.php:270
+#, fuzzy
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+#: views/snapshots/restore.php:625 views/snapshots/snapshot.php:637
+#, fuzzy
+msgid "Don't include any database tables"
+msgstr "Neem geen databasetabellen op"
+
+#: views/snapshots/restore.php:442 views/snapshots/snapshot.php:328
+#, fuzzy
+msgid "Don't include any files"
+msgstr "Neem geen bestanden op"
+
+#: views/snapshots/item.php:344 lib/Snapshot/View/Table/FullBackups.php:46
+#, fuzzy
+msgid "Download"
+msgstr "Download"
+
+#: views/snapshots/item.php:299 lib/Snapshot/View/Table/Archives.php:152
+#: lib/Snapshot/View/Table/Archives.php:238
+#: lib/Snapshot/View/Table/Items.php:501
+#, fuzzy
+msgid "download"
+msgstr "download"
+
+#: views/snapshots/item.php:107
+#, fuzzy
+msgid "Download the snapshot archive"
+msgstr "Download het snapshot-archief"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:621
+#, fuzzy
+msgid ""
+"Drive account. Navigate to or create a new directory where you want to "
+"upload the Snapshot archives. Make sure you are viewing the destination "
+"directory."
+msgstr ""
+"Drive account. Navigeer naar of maak een nieuwe map aan waarin je de "
+"Snapshot-archieven wilt uploaden. Zorg ervoor dat je de doelmap bekijkt."
+
+#: lib/Snapshot/Model/Destination.php:157
+#: views/boxes/destinations/widget-dropbox.php:19
+#: views/boxes/modals/popup-welcome.php:67
+#: views/destinations/add/dropbox-error.php:18
+#: views/destinations/add/dropbox.php:23
+#: lib/Snapshot/Model/Destination/dropbox/index.php:46
+#, fuzzy
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: views/snapshots/snapshot.php:491
+#, fuzzy
+msgid "Dropbox Only - Select Archive or Mirroring option for this Snapshot."
+msgstr ""
+"Alleen Dropbox - Selecteer de optie Archiveren of Spiegelen voor deze "
+"Snapshot."
+
+#: views/destinations/add/dropbox-error.php:44
+#, fuzzy
+msgid ""
+"Due to the new requirement from Dropbox API V2, you need to use PHP 5.5 or "
+"newer to be able to add Dropbox destination."
+msgstr ""
+"Vanwege de nieuwe eis van Dropbox API V2 moet je PHP 5.5 of nieuwer "
+"gebruiken om Dropbox-bestemming te kunnen toevoegen."
+
+#: views/snapshots.php:289 views/snapshots/item.php:55
+#, fuzzy
+msgid "Edit"
+msgstr "Bewerk"
+
+#: lib/Snapshot/View/Table/Items.php:164
+#: lib/Snapshot/Model/Destination/aws/index.php:562
+#: lib/Snapshot/Model/Destination/ftp/index.php:173
+#: lib/Snapshot/Model/Destination/google-drive/index.php:501
+#, fuzzy
+msgid "edit"
+msgstr "edit"
+
+#: views/snapshots/snapshot.php:47
+#, fuzzy
+msgid "Edit Snapshot"
+msgstr "Momentopname bewerken"
+
+#: views/destinations/add/dropbox.php:173
+#, fuzzy
+msgid "Email"
+msgstr "E-mail"
+
+#: views/managed_backups.php:138 views/boxes/dashboard/widget-status.php:101
+#, fuzzy
+msgid "Enable"
+msgstr "Schakel  in"
+
+#: views/managed_backups.php:423
+#, fuzzy
+msgid "Enable scheduled backups"
+msgstr "Geplande back-ups inschakelen"
+
+#: lib/Snapshot/Controller/Full/Ajax.php:270
+#, fuzzy
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: views/import.php:246
+#, fuzzy
+msgid "Enter directory"
+msgstr "Directory invoeren"
+
+#: views/settings.php:81
+#, fuzzy
+msgid "Enter directory URL here"
+msgstr "Vul hier de directory URL in"
+
+#: views/settings.php:107
+#, fuzzy
+msgid "Enter file URLs to be excluded, one per line."
+msgstr "Voer de uit te sluiten bestands-URL's in, één per regel."
+
+#: views/snapshots/restore.php:276
+#, fuzzy
+msgid ""
+"Enter the blog path (i.e. site1) or blog ID (i.e. 22), or leave blank for "
+"the primary site"
+msgstr ""
+"Voer het blogpad (bijv. site1) of blog-ID (bijv. 22) in, of laat leeg voor "
+"de primaire site"
+
+#: views/snapshots/restore.php:274
+#, fuzzy
+msgid ""
+"Enter the blog sub-domain prefix (i.e. site 1) or blog ID (i.e. 22), or a "
+"mapped domain, or leave blank for the primary site."
+msgstr ""
+"Voer het blog sub-domein prefix (bijv. site 1) of blog ID (bijv. 22) in, of "
+"een gemapt domein, of laat leeg voor de primaire site."
+
+#: views/snapshots/snapshot.php:170
+#, fuzzy
+msgid ""
+"Enter the blog subdomain prefix (e.g. site1), blog ID (e.g. 22), or mapped "
+"domain, or leave blank for the primary site."
+msgstr ""
+"Voer het blog subdomein prefix (bijv. site1), blog ID (bijv. 22), of gemapt "
+"domein in, of laat leeg voor de primaire site."
+
+#: views/snapshots/snapshot.php:172
+#, fuzzy
+msgid "Enter the path, blog ID (e.g. 22), or leave blank for the primary site."
+msgstr ""
+"Voer het pad in, blog ID (bijv. 22), of laat leeg voor de primaire site."
+
+#: views/boxes/modals/popup-snapshot.php:65
+#, fuzzy
+msgid "Enter your key here"
+msgstr "Voer hier je sleutel in"
+
+#: lib/Snapshot/Helper/Log.php:113
+#, fuzzy
+msgid "Error"
+msgstr "Fout"
+
+#: views/snapshots/item.php:272 lib/Snapshot/Helper/Utility.php:1151
+#, fuzzy
+msgid "error"
+msgstr "fout"
+
+#: lib/Snapshot/Model/Full/Remote/Storage.php:815
+#, fuzzy, php-format
+msgid "Error deleting file: %s"
+msgstr "Fout bij het verwijderen van bestand: %s"
+
+#: lib/Snapshot/Model/Full/Remote/Storage.php:740
+#, fuzzy
+msgid "Error fetching file"
+msgstr "Fout bij het ophalen van het bestand"
+
+#: lib/Snapshot/Model/Database/Backup.php:160
+#, fuzzy
+msgid "Error getting table details"
+msgstr "Fout bij het verkrijgen van tabelgegevens"
+
+#: views/snapshots/restore.php:238 views/snapshots/snapshot.php:145
+#, fuzzy
+msgid "Error on blog lookup. Try again"
+msgstr "Fout bij het opzoeken van een blog. Probeer opnieuw"
+
+#: views/settings.php:139
+#, fuzzy
+msgid "Error Reporting"
+msgstr "Foutrapportage"
+
+#: lib/Snapshot/Model/Full/Remote/Storage.php:370
+#, fuzzy
+msgid "Error rotating backups"
+msgstr "Fout bij het roteren van back-ups"
+
+#: views/snapshots/snapshot.php:685
+#, fuzzy
+msgid "Error Tables - These tables are skipped for the noted reasons."
+msgstr ""
+"Foutentabellen - Deze tabellen worden om de genoemde redenen overgeslagen."
+
+#: lib/Snapshot/Model/Full/Error.php:201
+#, fuzzy, php-format
+msgid "Error with %1$s queue, source: %2$s"
+msgstr "Fout met wachtrij %1$s, bron: %2$s"
+
+#: views/import.php:26 lib/Snapshot/View/Settings.php:647
+#, fuzzy, php-format
+msgid "Error: %s"
+msgstr "Fout: %s"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:240
+#, fuzzy, php-format
+msgid "Error: Could not connect to %s: Error: %s"
+msgstr "Fout: Kon geen verbinding maken met %s: Fout: %s"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:359
+#, fuzzy, php-format
+msgid "Error: Could not send file <pre>%s</pre> :"
+msgstr "Fout: Kon bestand <pre>%s</pre> niet verzenden:"
+
+#: views/import.php:178 lib/Snapshot/View/Settings.php:536
+#, fuzzy
+msgid ""
+"Error: Your server does not have lib_curl installed. So the import process "
+"cannot retrieve remote file."
+msgstr ""
+"Fout: Op je server is lib_curl niet geïnstalleerd. Dus het importproces kan "
+"het bestand op afstand niet ophalen."
+
+#: views/settings.php:119
+#, fuzzy
+msgid "Errors"
+msgstr "Fouten"
+
+#: lib/Snapshot/View/Full/Backup.php:242
+#, fuzzy
+msgid "Estimating backup size, this might take a bit. Please, hold on"
+msgstr ""
+"Schatting van de grootte van de back-up, dit kan even duren. Wacht even"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:110
+#, fuzzy
+msgid "EU (Ireland) Region"
+msgstr "EU (Ierland) Regio"
+
+#: lib/Snapshot/Helper/Utility.php:732
+#, fuzzy
+msgid "Every 15 Minutes"
+msgstr "Elke 15 minuten"
+
+#: lib/Snapshot/Helper/Utility.php:736
+#, fuzzy
+msgid "Every 30 Minutes"
+msgstr "Elke 30 minuten"
+
+#: lib/Snapshot/Helper/Utility.php:728
+#, fuzzy
+msgid "Every 5 Minutes"
+msgstr "Elke 5 minuten"
+
+#: views/snapshots/snapshot.php:575
+#, fuzzy
+msgid ""
+"Example: to exclude the Twenty Ten theme, you can use twentyten, "
+"theme/twentyten or public/wp-content/theme/twentyten. <strong>The local "
+"folder is excluded from Snapshot backups by default.</strong>"
+msgstr ""
+"Voorbeeld: om het Twenty Ten thema uit te sluiten, kun je twentyten, "
+"theme/twentyten of public/wp-content/theme/twentyten gebruiken. <strong>De "
+"lokale map wordt standaard uitgesloten van Snapshot-back-ups.</strong>"
+
+#: views/common/requirements-test.php:7 views/common/requirements-test.php:25
+#: views/common/requirements-test.php:60 views/common/requirements-test.php:79
+#, fuzzy
+msgid "FAIL"
+msgstr "FAIL"
+
+#: lib/Snapshot/View/Table/Archives.php:311
+#: lib/Snapshot/View/Table/Archives.php:349
+#: lib/Snapshot/View/Table/Items.php:619 lib/Snapshot/View/Table/Items.php:656
+#, fuzzy
+msgid "Fail"
+msgstr "Fail"
+
+#: views/settings.php:120
+#, fuzzy
+msgid ""
+"Fatal run-time errors. These indicate errors that can not be recovered from, "
+"such as a memory allocation problem. Execution of the script is halted."
+msgstr ""
+"Fatale run-time fouten. Deze duiden op fouten die niet hersteld kunnen "
+"worden, zoals een probleem met de geheugentoewijzing. De uitvoering van het "
+"script wordt gestopt."
+
+#: lib/Snapshot/View/Table/Archives.php:374
+#, fuzzy
+msgid "File"
+msgstr "Bestand"
+
+#: lib/Snapshot/View/Table/FullBackups.php:21
+#, fuzzy
+msgid "File Name"
+msgstr "Bestandsnaam"
+
+#: views/destinations/add/aws.php:184
+#, fuzzy
+msgid "File Permissions"
+msgstr "Bestandsrechten"
+
+#: lib/Snapshot/View/Table/Archives.php:146
+#, fuzzy
+msgid "File sync has no restore at this time"
+msgstr "Bestandssynchronisatie heeft op dit moment geen restore"
+
+#: views/snapshots/item.php:96
+#, fuzzy
+msgid "Filename"
+msgstr "Bestandsnaam"
+
+#: views/snapshots/item.php:215 views/snapshots/restore.php:411
+#: views/snapshots/snapshot.php:291
+#, fuzzy
+msgid "Files"
+msgstr "Bestanden"
+
+#: lib/Snapshot/View/Table/Archives.php:125
+#: lib/Snapshot/View/Table/Items.php:479
+#, fuzzy
+msgid "files synced to destination"
+msgstr "bestanden gesynchroniseerd naar bestemming"
+
+#: lib/Snapshot/Helper/Utility.php:1185
+#, fuzzy
+msgid "Files:"
+msgstr "Bestanden:"
+
+#: views/snapshots/item.php:201
+#, fuzzy
+msgid "Filesize"
+msgstr "Bestandsgrootte"
+
+#: views/snapshots.php:87
+#, fuzzy
+msgid "Filter"
+msgstr "Filter"
+
+#: views/snapshots.php:75
+#, fuzzy
+msgid "Filter by"
+msgstr "Filter op"
+
+#: views/managed-backups/partials/restore-backup-progress.php:171
+#: views/snapshots/partials/restore-snapshot-progress.php:181
+#, fuzzy
+msgid "Finishing Restoration"
+msgstr "Afwerking Restauratie"
+
+#: lib/Snapshot/View/Full/Backup.php:241
+#, fuzzy
+msgid "Finishing up"
+msgstr "Afwerking"
+
+#: views/destinations/add/google-drive.php:108
+#, fuzzy, php-format
+msgid ""
+"Follow <a %s>these instructions</a> to retrieve your Client ID and Secret."
+msgstr ""
+"Volg <a %s>deze instructies</a> om je Client ID en Secret op te vragen."
+
+#: views/import.php:217
+#, fuzzy
+msgid ""
+"For archives already in your server but not showing in the ALL Snapshots "
+"listing you can simply submit this form without entering a value below. This "
+"will scan the snapshot archives directory <strong>"
+"/media/storage/www/wp/snapshotold/wp-content/uploads/snapshots</strong> for "
+"any missing archives and add them to the listing."
+msgstr ""
+"Voor archieven die al op je server staan maar niet in de lijst ALLE "
+"Snapshots verschijnen kun je gewoon dit formulier indienen zonder hieronder "
+"een waarde in te voeren. Dit zal de map <strong>"
+"/media/storage/www/wp/snapshotold/wp-content/uploads/snapshots</strong> voor "
+"ontbrekende archieven scannen en ze aan de lijst toevoegen."
+
+#: views/destinations/add/dropbox.php:125
+#, fuzzy
+msgid "Force Re-Authorize with Dropbox"
+msgstr "Opnieuw autoriseren met Dropbox afdwingen"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:246
+#, fuzzy
+msgid "Form Errors"
+msgstr "Vormfouten"
+
+#: views/managed_backups.php:434 views/snapshots.php:124
+#: views/snapshots.php:220 views/managed-backups/new-backup.php:147
+#: views/snapshots/item.php:181 views/snapshots/snapshot.php:802
+#, fuzzy
+msgid "Frequency"
+msgstr "Frequentie"
+
+#: lib/Snapshot/Helper/UI.php:90
+#, fuzzy
+msgid "Friday"
+msgstr "Vrijdag"
+
+#: views/destinations/add/ftp.php:12
+#: lib/Snapshot/Model/Destination/ftp/index.php:39
+#, fuzzy
+msgid "FTP"
+msgstr "FTP"
+
+#: views/boxes/modals/popup-welcome.php:100
+#, fuzzy
+msgid "FTP / sFTP"
+msgstr "FTP / sFTP"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:42
+#, fuzzy
+msgid "FTP with TSL/SSL"
+msgstr "FTP met TSL/SSL"
+
+#: lib/Snapshot/Model/Destination.php:160
+#, fuzzy
+msgid "FTP/SFTP"
+msgstr "FTP/SFTP"
+
+#: views/boxes/destinations/widget-sftp.php:19
+#: lib/Snapshot/Model/Destination/ftp/index.php:31
+#, fuzzy
+msgid "FTP/sFTP"
+msgstr "FTP/sFTP"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:342
+#, fuzzy
+msgid ""
+"FTP: uses standard PHP library functions.  (default)<br />SFTP: "
+"Implementation use the <a href=\"http://phpseclib.sourceforge.net\" "
+"target=\"_blank\">PHP Secure Communications Library</a>. This option may not "
+"work depending on how your PHP binaries are compiled.<br />FTPS with TSL/SSL."
+" This option attempts a secure connection. Will only work if PHP and OpenSSL "
+"are properly configured on your host and the destination host. This option "
+"will not work under Windows using the default PHP binaries. Check the PHP "
+"docs for ftp_ssl_connection"
+msgstr ""
+"FTP: gebruikt standaard PHP bibliotheekfuncties.  (standaard)<br />SFTP: "
+"Implementatie gebruikt de <a href=\"http://phpseclib.sourceforge.net\" "
+"target=\"_blank\">PHP Secure Communications Library</a>. Deze optie werkt "
+"mogelijk niet, afhankelijk van hoe je PHP-binaire bestanden zijn "
+"gecompileerd.<br />FTPS met TSL/SSL. Deze optie probeert een beveiligde "
+"verbinding tot stand te brengen. Werkt alleen als PHP en OpenSSL goed "
+"geconfigureerd zijn op jouw host en de bestemmingshost. Deze optie werkt "
+"niet onder Windows met de standaard PHP binaries. Bekijk de PHP documenten "
+"voor ftp_ssl_connection"
+
+#: views/snapshots/item.php:151
+#, fuzzy
+msgid ""
+"Further attempts to upload will continue to be made. However, you may want "
+"to investigate this issue to ensure that they are successful."
+msgstr ""
+"Verdere pogingen om te uploaden zullen doorgaan. Je kunt dit probleem echter "
+"onderzoeken om er zeker van te zijn dat ze succesvol zijn."
+
+#: views/settings.php:19
+#, fuzzy
+msgid "General"
+msgstr "Algemeen"
+
+#: lib/Snapshot/Model/Full/Error.php:184
+#, fuzzy
+msgid "General backup error"
+msgstr "Algemene back-up fout"
+
+#: views/destinations/add/index.php:193 views/destinations/add/index.php:196
+#, fuzzy
+msgid "Get authorization code"
+msgstr "Ontvang de autorisatiecode"
+
+#: views/boxes/modals/popup-snapshot.php:38
+#, fuzzy
+msgid "Get My Key"
+msgstr "Krijg mijn sleutel"
+
+#: views/snapshots.php:26
+#, fuzzy
+msgid "Get Started"
+msgstr "Aan de slag"
+
+#: views/boxes/dashboard/widget-status.php:31
+#, fuzzy
+msgid "Getting Older"
+msgstr "Ouder worden"
+
+#: views/snapshots/snapshot.php:1039
+#, fuzzy
+msgid "Give your snapshot a nice name!"
+msgstr "Geef je momentopname een mooie naam!"
+
+#: views/snapshots/item.php:274 lib/Snapshot/Helper/Utility.php:1153
+#, fuzzy
+msgid "global"
+msgstr "wereldwijd"
+
+#: views/settings.php:97
+#, fuzzy
+msgid "Global File Exclusions"
+msgstr "Globale bestandsuitsluitingen"
+
+#: views/destinations/add/google-drive.php:115
+#: lib/Snapshot/Model/Destination/google-drive/index.php:647
+#, fuzzy, php-format
+msgid "Go to the %s"
+msgstr "Ga naar de %s"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:621
+#, fuzzy, php-format
+msgid "Go to your %s"
+msgstr "Ga naar je %s"
+
+#: views/destinations/add/google-drive.php:82
+#, fuzzy
+msgid ""
+"Go to your <a href=\"https://drive.google.com/#my-drive\" target=\"_blank\">"
+"Drive account</a>. Navigate to or create a new directory where you want to "
+"upload the Snapshot archives. Make sure you are viewing the destination "
+"directory."
+msgstr ""
+"Ga naar je <a href=\"https://drive.google.com/#my-drive\" target=\"_blank\">"
+"Drive account</a>. Navigeer naar of maak een nieuwe map aan waarin je de "
+"Snapshot-archieven wilt uploaden. Zorg ervoor dat je de doelmap bekijkt."
+
+#: views/boxes/modals/popup-welcome.php:78
+#, fuzzy
+msgid "Google"
+msgstr "Google"
+
+#: views/destinations/add/google-drive.php:115
+#, fuzzy
+msgid "Google API Console"
+msgstr "Google API Console"
+
+#: lib/Snapshot/Model/Destination.php:159
+#: views/boxes/destinations/widget-google.php:19
+#: views/destinations/add/google-drive.php:39
+#: lib/Snapshot/Model/Destination/google-drive/index.php:52
+#, fuzzy
+msgid "Google Drive"
+msgstr "Google Drive"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:565
+#, fuzzy
+msgid "Google Drive Destination"
+msgstr "Google Drive Bestemming"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:647
+#, fuzzy
+msgid "Google Project Console"
+msgstr "Google Project Console"
+
+#: views/common/requirements-test.php:77
+#, fuzzy
+msgid "GZip"
+msgstr "GZip"
+
+#: views/boxes/dashboard/widget-status.php:50
+#, fuzzy, php-format
+msgid "Hello, %s!"
+msgstr "Hallo, %s!"
+
+#: views/managed_backups.php:221
+#, fuzzy
+msgid ""
+"Here's a list of your current backups. You can restore your entire website "
+"from them at any time."
+msgstr ""
+"Hier is een lijst van je huidige back-ups. Je kunt op elk moment je hele "
+"website daarvan herstellen."
+
+#: views/snapshots/partials/create-snapshot-progress.php:11
+#: views/snapshots/partials/restore-snapshot-progress.php:10
+#, fuzzy
+msgid "Hide Full Log"
+msgstr "Verberg volledig logboek"
+
+#: views/destinations/add/ftp.php:62
+#: views/destinations/partials/ftp-destination-list.php:18
+#: lib/Snapshot/Model/Destination/ftp/index.php:138
+#, fuzzy
+msgid "Host"
+msgstr "Gastheer"
+
+#. Author URI of the plugin
+#, fuzzy
+msgid "https://n3rds.work/"
+msgstr "https://n3rds.work/"
+
+#. URI of the plugin
+#, fuzzy
+msgid "https://n3rds.work/project/snapshot/"
+msgstr "https://n3rds.work/project/snapshot/"
+
+#: views/snapshots/snapshot.php:265
+#, fuzzy
+msgid ""
+"If \"local server\" is selected and if the directory does not start with a "
+"forward slash \"/\" the directory will be relative to the site root"
+msgstr ""
+"Als \"lokale server\" is geselecteerd en de directory niet begint met een "
+"forward slash \"/\" dan is de directory relatief ten opzichte van de site "
+"root"
+
+#: views/destinations/add/aws.php:219
+#, fuzzy
+msgid ""
+"If directory is blank the snapshot file will be stored at the bucket root. "
+"If the directory is provided it will be created inside the bucket. This is a "
+"global setting and will be used by all snapshot configurations using this "
+"destination. You can also define a director used by a specific snapshot."
+msgstr ""
+"Als directory leeg is wordt het snapshotbestand opgeslagen in de bucket root."
+" Als de map is opgegeven, wordt hij in de emmer aangemaakt. Dit is een "
+"globale instelling en zal gebruikt worden door alle snapshotconfiguraties "
+"die deze bestemming gebruiken. Je kunt ook een directeur definiëren die door "
+"een specifieke snapshot wordt gebruikt."
+
+#: lib/Snapshot/Model/Destination/aws/index.php:796
+#, fuzzy
+msgid ""
+"If directory is blank the snapshot file will be stored at the bucket root. "
+"If the directory is provided it will be created inside the bucket. This is a "
+"global setting and will be used by all snapshot configurations using this "
+"destination. You can also defined a directory used by a specific snapshot."
+msgstr ""
+"Als directory leeg is wordt het snapshotbestand opgeslagen in de bucket root."
+" Als de map is opgegeven, wordt hij in de emmer aangemaakt. Dit is een "
+"globale instelling en zal gebruikt worden door alle snapshotconfiguraties "
+"die deze bestemming gebruiken. Je kunt ook een directory definiëren die door "
+"een specifieke snapshot wordt gebruikt."
+
+#: views/snapshots/restore.php:675
+#, fuzzy
+msgid ""
+"If restoring to a non-primary blog, the user's ID and user_name fields are "
+"checked against existing users."
+msgstr ""
+"Bij herstel naar een niet-primair blog worden de velden ID en user_name van "
+"de gebruiker gecontroleerd aan de hand van bestaande gebruikers."
+
+#: views/snapshots/restore.php:674
+#, fuzzy
+msgid "If restoring to the primary blog ALL user entries will be replaced!"
+msgstr ""
+"Bij herstel naar het primaire blog worden ALLE gebruikersitems vervangen!"
+
+#: views/import.php:218
+#, fuzzy
+msgid ""
+"If the missing archive is on the server but saved to a different path. Maybe "
+"you setup the archive to save to an alternate directory. Then you can enter "
+"the full server path to the <strong>directory</strong> where the archive "
+"resides."
+msgstr ""
+"Als het ontbrekende archief op de server staat, maar op een ander pad is "
+"opgeslagen. Misschien heb je het archief zo ingesteld dat het in een andere "
+"map wordt opgeslagen. Dan kun je het volledige serverpad invoeren naar de "
+"<strong>directory</strong> waar het archief staat."
+
+#: lib/Snapshot/View/Full/Backup.php:78
+#, fuzzy, php-format
+msgid ""
+"If you're still having this issue, please feel free to open a ticket with us "
+"<a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+"Als je dit probleem nog steeds hebt, open dan gerust een ticket bij ons <a "
+"href=\"%s\" target=\"_blank\">hier</a>."
+
+#: views/import.php:189 views/import.php:260
+#, fuzzy
+msgid "Import"
+msgstr "Invoer"
+
+#: lib/Snapshot/View/Settings.php:478
+#, fuzzy
+msgid "Import Options"
+msgstr "Importopties"
+
+#: views/import.php:208
+#, fuzzy
+msgid "Import options"
+msgstr "Importopties"
+
+#: lib/Snapshot/View/Settings.php:552 lib/Snapshot/View/Settings.php:609
+#, fuzzy
+msgid "Importing archives from"
+msgstr "Archieven importeren van"
+
+#: views/import.php:62
+#, fuzzy, php-format
+msgid "Importing archives from: %s"
+msgstr "Archieven importeren van: %s"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:369
+#, fuzzy
+msgid ""
+"In most normal cases the port should be left blank. Only in rare cases where "
+"the system administrator set the default FTP/sFTP port to some other value "
+"should the port be set here. If left blank the port will be assumed as 21 "
+"for FTP or 22 for sFTP."
+msgstr ""
+"In de meeste normale gevallen moet de poort leeg blijven. Alleen in zeldzame "
+"gevallen waarin de systeembeheerder de standaard FTP/sFTP poort op een "
+"andere waarde heeft ingesteld, moet de poort hier worden ingesteld. Als de "
+"poort leeg wordt gelaten, wordt aangenomen dat deze 21 is voor FTP of 22 "
+"voor sFTP."
+
+#: views/destinations/add/ftp.php:148
+#, fuzzy
+msgid ""
+"In passive mode, data connections are initiated by the client, rather than "
+"by the server. It may be needed if the client is behind firewall. Passive "
+"mode is off by default."
+msgstr ""
+"In de passieve modus worden gegevensverbindingen geïnitieerd door de client, "
+"in plaats van door de server. Dit kan nodig zijn als de cliënt zich achter "
+"een firewall bevindt. De passieve modus staat standaard uit."
+
+#: views/snapshots/snapshot.php:653
+#, fuzzy
+msgid "Include all database tables"
+msgstr "Neem alle databasetabellen op"
+
+#: views/snapshots/snapshot.php:347
+#, fuzzy
+msgid "Include common files"
+msgstr "Algemene bestanden opnemen"
+
+#: lib/Snapshot/Helper/Log.php:116
+#, fuzzy
+msgid "Info"
+msgstr "Info"
+
+#: views/snapshots/restore.php:148
+#, fuzzy
+msgid "Information from archive"
+msgstr "Informatie uit het archief"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:619
+#: lib/Snapshot/Model/Destination/google-drive/index.php:645
+#, fuzzy
+msgid "Instructions"
+msgstr "Instructies"
+
+#: views/import.php:225
+#, fuzzy
+msgid "Integrations"
+msgstr "Integraties"
+
+#: lib/Snapshot/View/Table/Items.php:687
+#, fuzzy
+msgid "Interval"
+msgstr "Interval"
+
+#: views/snapshots/item.php:189
+#, fuzzy
+msgctxt "interval and time separator"
+msgid " @ "
+msgstr " @"
+
+#: lib/Snapshot/Helper/Backup.php:81 lib/Snapshot/Helper/Backup.php:362
+#, fuzzy, php-format
+msgid "Invalid destination: %s"
+msgstr "Ongeldige bestemming: %s"
+
+#: lib/Snapshot/Model/Full/Remote/Api.php:353
+#: lib/Snapshot/Model/Full/Remote/Api.php:482
+#, fuzzy
+msgid "Invalid endpoint"
+msgstr "Ongeldig eindpunt"
+
+#: lib/Snapshot/View/Full/Backup.php:76
+#, fuzzy
+msgid "It seems we encountered an issue communicating with the remote service."
+msgstr ""
+"Het lijkt erop dat we een probleem hebben met de communicatie met de dienst "
+"op afstand."
+
+#: views/managed_backups.php:474
+#, fuzzy
+msgid "Keep"
+msgstr "Houd"
+
+#: lib/Snapshot/View/Table/Items.php:353
+#, fuzzy
+msgid "Last"
+msgstr "Laatste"
+
+#: views/managed_backups.php:83
+#, fuzzy
+msgid "Last backup"
+msgstr "Laatste back-up"
+
+#: views/snapshots/item.php:119
+#, fuzzy
+msgid "Last run"
+msgstr "Laatste run"
+
+#: views/boxes/dashboard/widget-status.php:65
+#, fuzzy
+msgid "Last Snapshot"
+msgstr "Laatste momentopname"
+
+#: lib/Snapshot/View/Table/Items.php:495
+#, fuzzy
+msgid "Latest Log:"
+msgstr "Laatste logboek:"
+
+#: views/boxes/destinations/widget-local.php:19
+#: views/boxes/modals/popup-welcome.php:111 views/destinations/add/local.php:15
+#: lib/Snapshot/View/Table/FullBackups.php:54
+#, fuzzy
+msgid "Local"
+msgstr "Lokaal"
+
+#: views/import.php:216
+#, fuzzy
+msgid "Local archives"
+msgstr "Lokale archieven"
+
+#: views/settings.php:37
+#, fuzzy
+msgid "Local Directory"
+msgstr "Lokale gids"
+
+#: views/import.php:196
+#, fuzzy
+msgid "Local Import"
+msgstr "Plaatselijke invoer"
+
+#: views/import.php:171 lib/Snapshot/View/Settings.php:601
+#, fuzzy, php-format
+msgid ""
+"local import file not found %s. This could mean either the entered path was "
+"not valid or accessible."
+msgstr ""
+"lokaal importbestand niet gevonden %s. Dit kan betekenen dat het ingevoerde "
+"pad niet geldig of toegankelijk was."
+
+#: views/import.php:132 lib/Snapshot/View/Settings.php:539
+#, fuzzy
+msgid ""
+"local import file not found. This could mean either the entered URL was not "
+"valid or the file was not publicly accessible."
+msgstr ""
+"lokaal importbestand niet gevonden. Dit kan betekenen dat de ingevoerde URL "
+"niet geldig was of dat het bestand niet openbaar toegankelijk was."
+
+#: lib/Snapshot/View/Table/Items.php:365
+#, fuzzy
+msgid "Local Server"
+msgstr "Lokale server"
+
+#: views/managed-backups/restore.php:68
+#, fuzzy
+msgid "Location"
+msgstr "Locatie"
+
+#: views/snapshots/item.php:295
+#, fuzzy
+msgid "Log"
+msgstr "Logboek"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:139
+#, fuzzy
+msgid "Login"
+msgstr "Inloggen"
+
+#: lib/Snapshot/View/Table/Archives.php:378
+#, fuzzy
+msgid "Logs"
+msgstr "Logs"
+
+#: views/snapshots/restore.php:282 views/snapshots/snapshot.php:182
+#, fuzzy
+msgid "Lookup"
+msgstr "Lookup"
+
+#: lib/Snapshot/Controller/Full/Cron.php:161
+#, fuzzy
+msgid "Managed Backup Processing"
+msgstr "Beheerde back-up verwerking"
+
+#: views/managed_backups.php:29 views/managed-backups/new-backup.php:23
+#: views/managed-backups/restore.php:11
+#, fuzzy
+msgid "Managed Backups"
+msgstr "Beheerde back-ups"
+
+#: views/managed-backups/new-backup.php:110
+#, fuzzy, php-format
+msgid ""
+"Managed backups can only be stored on PSOURCE's cloud servers. You have "
+"<strong>%s</strong> of your %s storage remaining."
+msgstr ""
+"Beheerde back-ups kunnen alleen worden opgeslagen op de cloudservers van "
+"PSOURCE. Je hebt <strong>%s</strong> van je %s opslagruimte over."
+
+#: views/managed_backups.php:519
+#, fuzzy
+msgid "Managed Backups Log"
+msgstr "Logboek beheerde back-ups"
+
+#: views/boxes/dashboard/widget-status.php:90
+#, fuzzy
+msgid "Managed Backups Schedule"
+msgstr "Beheerd back-up schema"
+
+#: lib/Snapshot/Helper/Utility.php:1546
+#, fuzzy
+msgid "Manifest data does not contain ITEM section."
+msgstr "Manifestgegevens bevatten geen ITEM sectie."
+
+#: lib/Snapshot/Helper/Utility.php:1539 lib/Snapshot/Helper/Utility.php:1747
+#, fuzzy
+msgid "Manifest data not found in archive."
+msgstr "Manifestgegevens niet gevonden in archief."
+
+#: lib/Snapshot/Helper/Utility.php:1701
+#, fuzzy
+msgid "Manifest ITEM does not contain 'data' section."
+msgstr "Manifest ITEM bevat geen \"data\" sectie."
+
+#: lib/Snapshot/Helper/Utility.php:1554
+#, fuzzy
+msgid "Manifest ITEM does not contain 'timestamp' item."
+msgstr "Manifest ITEM bevat geen 'timestamp' item."
+
+#: lib/Snapshot/View/Table/Items.php:274
+#, fuzzy
+msgid "Manual"
+msgstr "Handmatig"
+
+#: views/common/requirements-test.php:41
+#, fuzzy
+msgid "Max Execution Time"
+msgstr "Maximale uitvoeringstijd"
+
+#: views/snapshots/snapshot.php:353
+#, fuzzy
+msgid "media"
+msgstr "media"
+
+#: views/snapshots/restore.php:514
+#, fuzzy
+msgid "Media Files"
+msgstr "Mediabestanden"
+
+#: views/snapshots/snapshot.php:442
+#, fuzzy
+msgid "Media files:"
+msgstr "Mediabestanden:"
+
+#: views/managed-backups/partials/restore-backup-progress.php:78
+#: views/snapshots/partials/create-snapshot-progress.php:117
+#: views/snapshots/partials/restore-snapshot-progress.php:97
+#, fuzzy
+msgid "Memory limit"
+msgstr "Geheugenlimiet"
+
+#: lib/Snapshot/View/Full/Backup.php:109
+#, fuzzy
+msgctxt "menu label"
+msgid "Managed Backups"
+msgstr "Beheerde back-ups"
+
+#: lib/Snapshot/Helper/UI.php:42
+#, fuzzy
+msgid "Midnight"
+msgstr "Middernacht"
+
+#: views/import.php:206
+#, fuzzy
+msgid ""
+"Missing a snapshot? You can use this import tool to find any missing "
+"snapshots. Snapshot will automatically check your integrations but you can "
+"also add a custom directory below."
+msgstr ""
+"Mis je een snapshot? Je kunt deze importtool gebruiken om ontbrekende "
+"snapshots te vinden. Snapshot controleert automatisch je integraties, maar "
+"je kunt hieronder ook een aangepaste map toevoegen."
+
+#: lib/Snapshot/Model/Full/Remote/Api.php:333
+#: lib/Snapshot/Model/Full/Remote/Api.php:477
+#, fuzzy
+msgid "Missing API key"
+msgstr "Ontbrekende API sleutel"
+
+#: lib/Snapshot/Helper/UI.php:86
+#, fuzzy
+msgid "Monday"
+msgstr "Maandag"
+
+#: lib/Snapshot/Helper/Utility.php:760 lib/Snapshot/Model/Full/Backup.php:236
+#, fuzzy
+msgid "Monthly"
+msgstr "Maandelijks"
+
+#: lib/Snapshot/Model/Full/Backup.php:242
+#, fuzzy
+msgid "monthly"
+msgstr "maandelijks"
+
+#: lib/Snapshot/Controller/Full/Cron.php:175
+#, fuzzy
+msgid "Monthly Managed Snapshot"
+msgstr "Maandelijks beheerde momentopname"
+
+#: views/snapshots/snapshot.php:424
+#, fuzzy
+msgid "MU-Plugins: All active and inactive plugins will be included"
+msgstr "MU-Plugins: Alle actieve en inactieve plugins worden opgenomen"
+
+#: views/common/requirements-test.php:58
+#, fuzzy
+msgid "MySQLi"
+msgstr "MySQLi"
+
+#: lib/Snapshot/View/Table/FullBackups.php:68
+#, fuzzy
+msgid "N/A"
+msgstr "N.V.T"
+
+#: views/snapshots.php:120 views/snapshots/item.php:88
+#: views/snapshots/snapshot.php:1031
+#: views/boxes/dashboard/widget-snapshots.php:67
+#: views/destinations/add/aws.php:21
+#: views/destinations/add/dropbox-error.php:26
+#: views/destinations/add/dropbox.php:31 views/destinations/add/dropbox.php:162
+#: views/destinations/add/ftp.php:20 views/destinations/add/google-drive.php:45
+#: views/destinations/add/local.php:25
+#: views/destinations/partials/dropbox-destination-list.php:13
+#: views/destinations/partials/ftp-destination-list.php:17
+#: views/destinations/partials/google-drive-destination-list.php:14
+#: views/destinations/partials/local-destination-list.php:15
+#: views/destinations/partials/s3-destination-list.php:16
+#: lib/Snapshot/View/Table/Items.php:681
+#: lib/Snapshot/Model/Destination/aws/index.php:529
+#: lib/Snapshot/Model/Destination/ftp/index.php:137
+#: lib/Snapshot/Model/Destination/google-drive/index.php:470
+#, fuzzy
+msgid "Name"
+msgstr "Naam"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:482
+#: lib/Snapshot/Model/Destination/ftp/index.php:118
+#, fuzzy
+msgid "Name is required"
+msgstr "Naam is verplicht"
+
+#: views/managed_backups.php:90 views/boxes/dashboard/widget-status.php:8
+#: views/boxes/dashboard/widget-status.php:77
+#, fuzzy
+msgid "Never"
+msgstr "Nooit"
+
+#: views/managed_backups.php:194
+#, fuzzy
+msgid "New Backup"
+msgstr "Nieuwe back-up"
+
+#: views/snapshots.php:61
+#, fuzzy
+msgid "New Snapshot"
+msgstr "Nieuwe momentopname"
+
+#: lib/Snapshot/View/Table/Items.php:344
+#, fuzzy
+msgid "Next"
+msgstr "Volgende"
+
+#: lib/Snapshot/View/Settings.php:154
+#, fuzzy
+msgid "Next File Send:"
+msgstr "Volgende Bestand verzenden:"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:650
+#, fuzzy
+msgid ""
+"Next, go to the <strong>API Manager > Credentials</strong> section. Click "
+"<strong>Add New Credentials > OAuth 2.0 client ID</strong>. In the popup "
+"select the <strong>Application Type</strong> as <strong>Web "
+"application</strong>. In the field <strong>Authorized redirect URI</strong> "
+"copy the value from the <strong>Redirect URI</strong> field to the left. "
+"Then click the <strong>Create Client ID</strong> button."
+msgstr ""
+"Ga vervolgens naar de sectie <strong>API Manager > Credentials</strong>. "
+"Klik op <strong>Nieuwe Credentials toevoegen > OAuth 2.0 client ID</strong>. "
+"Selecteer in de popup het <strong>Applicatietype</strong> als <strong>"
+"Webapplicatie</strong>. Kopieer in het veld <strong>Authorized redirect "
+"URI</strong> de waarde uit het veld <strong>Redirect URI</strong> naar links."
+" Klik dan op de knop <strong>Create Client ID</strong>."
+
+#: views/destinations/add/google-drive.php:118
+#, fuzzy
+msgid ""
+"Next, go to the <strong>API Manager > Credentials</strong> section. Click "
+"<strong>Create Credentials > OAuth 2.0 client ID</strong>. In the popup "
+"select the <strong>Application Type</strong> as <strong>Web "
+"application</strong>. In the field <strong>Authorized redirect URI</strong> "
+"copy the value from the <strong>Redirect URI</strong> field below. Then "
+"click the <strong>Create Client ID</strong> button."
+msgstr ""
+"Ga vervolgens naar de sectie <strong>API Manager > Credentials</strong>. "
+"Klik op <strong>Create Credentials > OAuth 2.0 client ID</strong>. Selecteer "
+"in de popup het <strong>Applicatietype</strong> als <strong>"
+"Webapplicatie</strong>. Kopieer in het veld <strong>Authorized redirect "
+"URI</strong> de waarde uit het <strong>Redirect URI</strong> veld hieronder. "
+"Klik dan op de knop <strong>Create Client ID</strong>."
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:522
+#, fuzzy, php-format
+msgid "No %s Destinations"
+msgstr "Geen %s Bestemmingen"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:587
+#, fuzzy
+msgid "No Amazon S3 Destinations"
+msgstr "Geen Amazon S3 bestemmingen"
+
+#: views/boxes/dashboard/widget-status.php:6
+#, fuzzy
+msgid "No Backups"
+msgstr "Geen back-ups"
+
+#: views/import.php:284 lib/Snapshot/View/Settings.php:665
+#, fuzzy
+msgid "No errors were encountered during the import process."
+msgstr "Tijdens het importproces werden geen fouten aangetroffen."
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:202
+#, fuzzy
+msgid "No FTP Destinations"
+msgstr "Geen FTP-bestemmingen"
+
+#: lib/Snapshot/View/Table/Items.php:531
+#, fuzzy
+msgid "No Snapshot file found"
+msgstr "Geen Snapshot-bestand gevonden"
+
+#: views/snapshots/snapshot.php:781
+#, fuzzy
+msgid "No Tables"
+msgstr "Geen tafels"
+
+#: views/snapshots/restore.php:721
+#, fuzzy
+msgid "No tables"
+msgstr "Geen tafels"
+
+#: views/snapshots/item.php:268 lib/Snapshot/Helper/Utility.php:1147
+#, fuzzy
+msgid "non-core"
+msgstr "niet-kernactiviteit"
+
+#: views/snapshots/restore.php:649 views/snapshots/snapshot.php:683
+#, fuzzy
+msgid "Non-ClassicPress Tables"
+msgstr "Niet-ClassicPress-tabellen"
+
+#: views/snapshots/item.php:219 views/snapshots/item.php:257
+#, fuzzy
+msgid "None"
+msgstr "Geen"
+
+#: lib/Snapshot/Helper/UI.php:44
+#, fuzzy
+msgid "Noon"
+msgstr "Middag"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:616
+#, fuzzy
+msgid ""
+"Note: This is not a traditional directory path like /usr/local/path but a "
+"unique ID assigned by Google for the directory with your Drive. See the "
+"instructions to the right on how to obtain the Directory ID."
+msgstr ""
+"Opmerking: Dit is geen traditioneel directory-pad zoals /usr/local/path, "
+"maar een unieke ID die door Google is toegewezen aan de directory met je "
+"Drive. Zie de instructies rechts voor het verkrijgen van de Directory ID."
+
+#: lib/Snapshot/View/Table/Archives.php:376
+#: lib/Snapshot/View/Table/Items.php:686
+#, fuzzy
+msgid "Notes"
+msgstr "Opmerkingen"
+
+#: lib/Snapshot/Helper/Log.php:115
+#, fuzzy
+msgid "Notice"
+msgstr "Bericht"
+
+#: views/settings.php:129
+#, fuzzy
+msgid "Notices"
+msgstr "Mededelingen"
+
+#: lib/Snapshot/View/Table/Items.php:291 lib/Snapshot/View/Table/Items.php:317
+#, fuzzy
+msgid "Now"
+msgstr "Nu"
+
+#: views/import.php:282
+#, fuzzy
+msgid ""
+"Oh no! One or more of your Snapshot archives was not imported successfully. "
+"Please check your Snapshot logs for more details, or try restoring again in "
+"a few moments."
+msgstr ""
+"Oh nee! Een of meer van je Snapshot-archieven zijn niet succesvol "
+"geïmporteerd. Controleer je Snapshot logs voor meer details, of probeer over "
+"enkele ogenblikken opnieuw te herstellen."
+
+#: views/snapshots/snapshot.php:918 views/snapshots/snapshot.php:950
+#, fuzzy
+msgid "on"
+msgstr "op"
+
+#: lib/Snapshot/Helper/Utility.php:740
+#, fuzzy
+msgid "Once Hourly"
+msgstr "Eenmaal per uur"
+
+#: views/snapshots.php:226 views/snapshots/item.php:192
+#: views/snapshots/snapshot.php:825
+#, fuzzy
+msgid "Once off"
+msgstr "Eenmaal uit"
+
+#: views/destinations/add/google-drive.php:117
+#: lib/Snapshot/Model/Destination/google-drive/index.php:649
+#, fuzzy
+msgid ""
+"Once the Project creation is completed go to the <strong>API Manager</strong>"
+". Here you need to enable the <strong>Drive API</strong>"
+msgstr ""
+"Zodra het aanmaken van het Project is voltooid ga je naar de <strong>API "
+"Manager</strong>. Hier moet je de <strong>Drive API</strong> inschakelen"
+
+#: views/boxes/modals/popup-snapshot.php:40
+#, fuzzy
+msgid "Once you've got your key, enter it below:"
+msgstr "Als je eenmaal je sleutel hebt, voer hem dan hieronder in:"
+
+#: views/managed-backups/new-backup.php:169
+#, fuzzy
+msgid "Once-off"
+msgstr "Eenmalig"
+
+#: views/snapshots/snapshot.php:669
+#, fuzzy
+msgid "Only include selected database tables"
+msgstr "Alleen geselecteerde databasetabellen opnemen"
+
+#: views/snapshots/restore.php:478 views/snapshots/snapshot.php:368
+#, fuzzy
+msgid "Only include selected files"
+msgstr "Alleen geselecteerde bestanden opnemen"
+
+#: views/snapshots/restore.php:638
+#, fuzzy
+msgid "Only include selected tables"
+msgstr "Alleen geselecteerde tabellen opnemen"
+
+#: views/managed-backups/new-backup.php:237 views/snapshots/snapshot.php:1003
+#, fuzzy
+msgid "Optional"
+msgstr "Optioneel"
+
+#: views/managed_backups.php:318 views/snapshots.php:287
+#: views/snapshots/item.php:53
+#, fuzzy
+msgid "Options"
+msgstr "Opties"
+
+#: views/snapshots/item.php:270 lib/Snapshot/Helper/Utility.php:1149
+#: lib/Snapshot/Model/Destination/aws/index.php:115
+#, fuzzy
+msgid "other"
+msgstr "andere"
+
+#: lib/Snapshot/Model/Full/Error.php:180
+#, fuzzy
+msgid "Other kind of backup error"
+msgstr "Ander soort back-up fout"
+
+#: views/snapshots/restore.php:650 views/snapshots/snapshot.php:684
+#, fuzzy
+msgid "Other Tables"
+msgstr "Andere tabellen"
+
+#: lib/Snapshot/View/Full/Backup.php:108
+#, fuzzy
+msgctxt "page label"
+msgid "Managed Backups"
+msgstr "Beheerde back-ups"
+
+#: views/common/requirements-test.php:11 views/common/requirements-test.php:27
+#: views/common/requirements-test.php:45 views/common/requirements-test.php:62
+#: views/common/requirements-test.php:81
+#, fuzzy
+msgid "PASS"
+msgstr "PASS"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:392
+#, fuzzy
+msgid "Passive Mode"
+msgstr "Passieve modus"
+
+#: views/destinations/add/ftp.php:97
+#: lib/Snapshot/Model/Destination/ftp/index.php:302
+#, fuzzy
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:121
+#, fuzzy
+msgid "Password is required"
+msgstr "Wachtwoord is vereist"
+
+#: views/managed-backups/partials/restore-backup-progress.php:90
+#: views/snapshots/partials/create-snapshot-progress.php:129
+#: views/snapshots/partials/restore-snapshot-progress.php:109
+#, fuzzy
+msgid "Peak"
+msgstr "Piek"
+
+#: lib/Snapshot/View/Table/Archives.php:304
+#: lib/Snapshot/View/Table/Archives.php:342
+#: lib/Snapshot/View/Table/Items.php:612 lib/Snapshot/View/Table/Items.php:649
+#, fuzzy
+msgid "Pending"
+msgstr "In afwachting van"
+
+#: lib/Snapshot/Model/Full/Remote/Api.php:358
+#: lib/Snapshot/Model/Full/Remote/Api.php:365
+#: lib/Snapshot/Model/Full/Remote/Api.php:488
+#, fuzzy
+msgid "Persistent connection error"
+msgstr "Aanhoudende verbindingsfout"
+
+#: views/import.php:121 lib/Snapshot/View/Settings.php:500
+#, fuzzy
+msgid "PHP max_execution_time"
+msgstr "PHP max_uitvoering_tijd"
+
+#: views/common/requirements-test.php:23
+#, fuzzy
+msgid "PHP Version"
+msgstr "PHP versie"
+
+#: views/destinations/add/google-drive.php:215
+#, fuzzy
+msgid ""
+"Please check your client ID and secret ID before resubmitting this form to "
+"try again"
+msgstr ""
+"Controleer je cliënt ID en geheime ID voordat je dit formulier opnieuw "
+"verstuurt om het opnieuw te proberen"
+
+#: lib/Snapshot/Model/Destination/dropbox/index.php:137
+#, fuzzy
+msgid "Please provide a name for the destination."
+msgstr "Geef een naam voor de bestemming."
+
+#: lib/Snapshot/Model/Destination/dropbox/index.php:143
+#, fuzzy
+msgid "Please provide a valid subdirectory to store the snapshots."
+msgstr "Geef een geldige subdirectory op om de snapshots in op te slaan."
+
+#: views/boxes/modals/popup-snapshot.php:45
+#, fuzzy
+msgid "Please wait while we verify your Snapshot key..."
+msgstr "Wacht alstublieft terwijl wij uw Snapshot sleutel verifiëren..."
+
+#: lib/Snapshot/View/Full/Backup.php:77
+#, fuzzy, php-format
+msgid ""
+"Please, make sure your site is able to perform remote requests to <code>"
+"%1$s</code>."
+msgstr ""
+"Zorg ervoor dat je site in staat is om op afstand verzoeken te doen aan "
+"<code>%1$s</code>."
+
+#: views/snapshots/restore.php:505 views/snapshots/restore.php:743
+#, fuzzy
+msgid "Plugins"
+msgstr "Plugins"
+
+#: lib/Snapshot/Helper/UI.php:48
+#, fuzzy
+msgid "pm"
+msgstr "pm"
+
+#: views/destinations/add/ftp.php:70
+#, fuzzy
+msgid "Port"
+msgstr "Haven"
+
+#: views/destinations/add/aws.php:194
+#: lib/Snapshot/Model/Destination/aws/index.php:124
+#: lib/Snapshot/Model/Destination/aws/index.php:769
+#, fuzzy
+msgid "Private"
+msgstr "Privé"
+
+#: views/managed-backups/partials/restore-backup-progress.php:102
+#: views/snapshots/partials/create-snapshot-progress.php:141
+#: views/snapshots/partials/restore-snapshot-progress.php:119
+#, fuzzy
+msgid "Process"
+msgstr "Proces"
+
+#: lib/Snapshot/View/Full/Backup.php:239
+#, fuzzy, php-format
+msgid "Processing (step %d)"
+msgstr "Verwerking (stap %d)"
+
+#: views/import.php:96 views/import.php:141 lib/Snapshot/View/Settings.php:517
+#: lib/Snapshot/View/Settings.php:577 lib/Snapshot/View/Settings.php:635
+#, fuzzy
+msgid "Processing archive"
+msgstr "Verwerkingsarchief"
+
+#: views/managed-backups/partials/restore-backup-progress.php:104
+#: views/snapshots/partials/create-snapshot-progress.php:143
+#: views/snapshots/partials/restore-snapshot-progress.php:120
+#, fuzzy
+msgid "Progress"
+msgstr "Vooruitgang"
+
+#: views/destinations/add/aws.php:196
+#: lib/Snapshot/Model/Destination/aws/index.php:125
+#: lib/Snapshot/Model/Destination/aws/index.php:773
+#, fuzzy
+msgid "Public Read"
+msgstr "Publiek lezen"
+
+#: views/destinations/add/aws.php:198
+#: lib/Snapshot/Model/Destination/aws/index.php:126
+#: lib/Snapshot/Model/Destination/aws/index.php:777
+#, fuzzy
+msgid "Public Read/Write"
+msgstr "Publiek lezen/schrijven"
+
+#: lib/Snapshot/Helper/Log.php:133
+#, fuzzy
+msgid "Queue"
+msgstr "Wachtrij"
+
+#: views/destinations/add/google-drive.php:244
+#: lib/Snapshot/Model/Destination/google-drive/index.php:734
+#, fuzzy
+msgid "Re-Authorize"
+msgstr "Opnieuw autoriseren"
+
+#: views/common/requirements-test.php:96
+#, fuzzy
+msgid "Re-Check"
+msgstr "Controleer opnieuw"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:668
+#, fuzzy
+msgid "Redirect URI"
+msgstr "URI omleiden"
+
+#: views/destinations/add/google-drive.php:145
+#, fuzzy
+msgid "Redirect URL"
+msgstr "Omleiding URL"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:120
+#, fuzzy
+msgid "Reduced Redundancy"
+msgstr "Minder redundantie"
+
+#: views/snapshots.php:292 views/snapshots/item.php:58
+#, fuzzy
+msgid "Regenerate"
+msgstr "Regenereer"
+
+#: lib/Snapshot/Helper/Log.php:132 lib/Snapshot/View/Table/FullBackups.php:54
+#, fuzzy
+msgid "Remote"
+msgstr "Op afstand"
+
+#: views/import.php:209
+#, fuzzy
+msgid "Remote archives"
+msgstr "Archieven op afstand"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:313
+#, fuzzy
+msgid "Remote Path"
+msgstr "Afgelegen pad"
+
+#: views/destinations/add/index.php:161
+#, fuzzy
+msgid "Remove"
+msgstr "Verwijder"
+
+#: views/destinations/add/index.php:159
+#, fuzzy
+msgid "Remove Destination"
+msgstr "Bestemming verwijderen"
+
+#: views/common/requirements-test.php:3
+#, fuzzy
+msgid "Requirements Check"
+msgstr "Vereisten controleren"
+
+#: lib/Snapshot/View/Table/Archives.php:184
+#, fuzzy
+msgid "resend"
+msgstr "opnieuw verzenden"
+
+#: lib/Snapshot/View/Table/Archives.php:36
+#, fuzzy
+msgid "Resend Archive"
+msgstr "Archief opnieuw verzenden"
+
+#: views/boxes/modals/popup-snapshot.php:74
+#, fuzzy
+msgid "Reset Key"
+msgstr "Reset-toets"
+
+#: views/managed-backups/partials/restore-backup-progress.php:72
+#: views/snapshots/partials/restore-snapshot-progress.php:92
+#, fuzzy
+msgid "Restoration Log"
+msgstr "Restauratie Logboek"
+
+#: views/managed_backups.php:329 views/snapshots.php:296
+#: views/snapshots/item.php:62 views/snapshots/item.php:327
+#: lib/Snapshot/View/Table/FullBackups.php:47
+#: lib/Snapshot/View/Table/FullBackups.php:86
+#, fuzzy
+msgid "Restore"
+msgstr "Herstel"
+
+#: lib/Snapshot/View/Table/Archives.php:141
+#: lib/Snapshot/View/Table/Archives.php:162
+#: lib/Snapshot/View/Table/Items.php:190
+#, fuzzy
+msgid "restore"
+msgstr "herstellen"
+
+#: views/snapshots/restore.php:610
+#, fuzzy
+msgid ""
+"Restore <strong>all</strong> blog database tables contained in this archive "
+msgstr "Herstel <strong>alle</strong> blogdatabasetabellen in dit archief"
+
+#: views/snapshots/restore.php:610
+#, fuzzy
+msgid ""
+"Restore <strong>all</strong> blog database tables contained in this archive "
+"<strong>(excluding global tables users & usermeta)</strong>"
+msgstr ""
+"Herstel <strong>alle</strong> blogdatabasetabellen in dit archief <strong>"
+"(exclusief globale tabellen users & usermeta)</strong>"
+
+#: views/snapshots/restore.php:455
+#, fuzzy
+msgid "Restore all files"
+msgstr "Alle bestanden herstellen"
+
+#: lib/Snapshot/View/Settings.php:344
+#, fuzzy
+msgid "Restore Blog Options"
+msgstr "Blog opties herstellen"
+
+#: views/snapshots/restore.php:591
+#, fuzzy, php-format
+msgid ""
+"Restore Note: The archive contains tables names with a different database "
+"prefix ( %s ) than this site ( %s ). The tables restored will automatically "
+"be renamed to the site prefix"
+msgstr ""
+"Herstel Opmerking: Het archief bevat tabelnamen met een andere database "
+"prefix ( %s ) dan deze site ( %s ). De herstelde tabellen worden automatisch "
+"hernoemd naar de site prefix"
+
+#: views/snapshots/restore.php:424
+#, fuzzy
+msgid ""
+"Restore Note: The archive you are about to restore includes the .htaccess "
+"and/or the wp-config.php files. Normally you do not want to restore these "
+"files unless your site is broken. To restore either of these files you must "
+"select them from the'include selected files' section below."
+msgstr ""
+"Herstel Opmerking: Het archief dat je gaat herstellen bevat de .htaccess "
+"en/of de wp-config.php bestanden. Normaal gesproken wil je deze bestanden "
+"niet herstellen, tenzij je site kapot is. Om een van deze bestanden te "
+"herstellen moet je ze selecteren uit de 'include selected files' sectie "
+"hieronder."
+
+#: views/snapshots/restore.php:585
+#, fuzzy
+msgid ""
+"Restore Note: The archive you are about to restore includes the global "
+"database tables users and/or usermeta. Normally, you do not want to restore "
+"these tables unless your site is broken. To restore either of these database "
+"tables you must select them from the 'Restore selected database tables' "
+"section below. The data contained within these tables will be merged with "
+"the current global tables"
+msgstr ""
+"Herstel Opmerking: Het archief dat je gaat herstellen bevat de globale "
+"database tabellen users en/of usermeta. Normaal gesproken wil je deze "
+"tabellen niet herstellen, tenzij je site kapot is. Om een van deze "
+"databasetabellen te herstellen moet je ze selecteren in het gedeelte "
+"\"Geselecteerde databasetabellen herstellen\" hieronder. De gegevens in deze "
+"tabellen zullen worden samengevoegd met de huidige globale tabellen"
+
+#: views/snapshots/restore.php:486
+#, fuzzy
+msgid ""
+"Restore Note: The files wp-config.php and .htaccess can only be restored for "
+"the primary site. Even then it is not advisable to restore these file for a "
+"working Multisite installation."
+msgstr ""
+"Herstel Opmerking: De bestanden wp-config.php en .htaccess kunnen alleen "
+"worden hersteld voor de primaire site. Zelfs dan is het niet raadzaam om "
+"deze bestanden te herstellen voor een werkende Multisite installatie."
+
+#: views/snapshots/restore.php:138
+#, fuzzy
+msgid ""
+"Restore Note: URL mismatch! The Snapshot archive does not appear made from "
+"the current ClassicPress system. Every attempt will be made to replace the "
+"source URL with the URL from the destination."
+msgstr ""
+"Herstel Opmerking: URL mismatch! Het Snapshot-archief lijkt niet gemaakt van "
+"het huidige ClassicPress-systeem. Er wordt alles aan gedaan om de bron-URL "
+"te vervangen door de URL van de bestemming."
+
+#: views/managed-backups/restore.php:105 views/snapshots/restore.php:838
+#, fuzzy
+msgid "Restore Now"
+msgstr "Nu herstellen"
+
+#: views/managed-backups/partials/restore-backup-progress.php:15
+#: views/snapshots/partials/restore-snapshot-progress.php:15
+#, fuzzy
+msgid "Restore Result"
+msgstr "Herstel resultaat"
+
+#: lib/Snapshot/View/Settings.php:362
+#, fuzzy
+msgid "Restore Snapshot"
+msgstr "Snapshot herstellen"
+
+#: lib/Snapshot/View/Settings.php:357
+#, fuzzy
+msgid "Restore Theme Options"
+msgstr "Thema-opties herstellen"
+
+#: views/managed-backups/restore.php:81
+#, fuzzy
+msgid "Restore to"
+msgstr "Herstel naar"
+
+#: views/managed-backups/restore.php:27 views/snapshots/restore.php:49
+#: views/managed-backups/partials/restore-backup-progress.php:8
+#: views/snapshots/partials/restore-snapshot-progress.php:8
+#, fuzzy
+msgid "Restore Wizard"
+msgstr "Herstelwizard"
+
+#: views/managed_backups.php:210 views/managed-backups/new-backup.php:269
+#: views/managed-backups/new-backup.php:270
+#, fuzzy
+msgid "Run Backup"
+msgstr "Back-up uitvoeren"
+
+#: views/managed-backups/new-backup.php:180 views/snapshots/snapshot.php:840
+#, fuzzy
+msgid "Run daily, weekly or monthly"
+msgstr "Dagelijks, wekelijks of maandelijks uitvoeren"
+
+#: lib/Snapshot/View/Table/Items.php:179
+#, fuzzy
+msgid "run now"
+msgstr "ren nu"
+
+#: views/settings.php:130
+#, fuzzy
+msgid ""
+"Run-time notices. Indicate that the script encountered something that could "
+"indicate an error, but could also happen in the normal course of running a "
+"script."
+msgstr ""
+"Run-time meldingen. Geven aan dat het script iets tegenkwam dat op een fout "
+"kan duiden, maar ook kan gebeuren in het normale verloop van het draaien van "
+"een script."
+
+#: views/settings.php:125
+#, fuzzy
+msgid ""
+"Run-time warnings (non-fatal errors). Executeion of the script is not halted."
+msgstr ""
+"Run-time waarschuwingen (niet-fatale fouten). De uitvoering van het script "
+"wordt niet gestopt."
+
+#: lib/Snapshot/Helper/UI.php:91
+#, fuzzy
+msgid "Saturday"
+msgstr "Zaterdag"
+
+#: views/snapshots/snapshot.php:1077
+#, fuzzy
+msgid "Save"
+msgstr "Sla"
+
+#: views/snapshots/snapshot.php:1077
+#, fuzzy
+msgid "Save & Run Backup"
+msgstr "Back-up opslaan en uitvoeren"
+
+#: views/settings.php:209
+#, fuzzy
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: views/destinations/add/index.php:194 views/destinations/add/index.php:198
+#: lib/Snapshot/View/Destination/Listing.php:174
+#, fuzzy
+msgid "Save Destination"
+msgstr "Bestemming opslaan"
+
+#: views/boxes/modals/popup-snapshot.php:69
+#, fuzzy
+msgid "Save Key"
+msgstr "Sleutel opslaan"
+
+#: lib/Snapshot/View/Settings.php:250
+#, fuzzy
+msgid "Save Snapshot"
+msgstr "Momentopname opslaan"
+
+#: lib/Snapshot/View/Settings.php:481
+#, fuzzy
+msgid "Scan / Import Snapshots"
+msgstr "Snapshots scannen / importeren"
+
+#: views/managed_backups.php:403 views/managed-backups/new-backup.php:188
+#: views/snapshots/snapshot.php:848
+#, fuzzy
+msgid "Schedule"
+msgstr "Schema"
+
+#: views/snapshots/restore.php:666 views/snapshots/snapshot.php:703
+#, fuzzy
+msgid "Select all"
+msgstr "Selecteer alle"
+
+#: views/destinations/add/google-drive.php:116
+#, fuzzy
+msgid ""
+"Select an existing project or create a new one. If creating a new project, "
+"you will need to enter a name, but the ID is not important and can be "
+"ignored."
+msgstr ""
+"Selecteer een bestaand project of maak een nieuw project. Als je een nieuw "
+"project maakt, moet je een naam opgeven, maar het ID is niet belangrijk en "
+"kan genegeerd worden."
+
+#: views/destinations/add/aws.php:168
+#: lib/Snapshot/Model/Destination/aws/index.php:752
+#, fuzzy
+msgid "Select Bucket"
+msgstr "Selecteer emmer"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:648
+#, fuzzy
+msgid ""
+"Select existing or Add a new Project. If you add a new project you will see "
+"a popup. Enter a project name. The Project ID is not important and can be "
+"ignored."
+msgstr ""
+"Selecteer bestaand of Voeg een nieuw project toe. Als je een nieuw project "
+"toevoegt zie je een popup. Voer een projectnaam in. Het Project ID is niet "
+"belangrijk en kan genegeerd worden."
+
+#: views/snapshots/restore.php:366
+#, fuzzy
+msgid "Select the archive you wish to restore from."
+msgstr "Selecteer het archief waaruit je wilt herstellen."
+
+#: lib/Snapshot/View/Table/Archives.php:409
+#, fuzzy
+msgid "Select the snapshot item to restore"
+msgstr "Selecteer het snapshot-item om te herstellen"
+
+#: views/snapshots/restore.php:595 views/snapshots/snapshot.php:621
+#, fuzzy
+msgid "Select which database tables you want to include."
+msgstr "Selecteer welke databasetabellen je wilt opnemen."
+
+#: views/snapshots/restore.php:430 views/snapshots/snapshot.php:299
+#, fuzzy
+msgid "Select which files you want to include."
+msgstr "Selecteer welke bestanden je wilt opnemen."
+
+#: views/snapshots/restore.php:788
+#, fuzzy
+msgid "Select which theme you want to activate when this site is restored."
+msgstr "Selecteer welk thema je wilt activeren als deze site wordt hersteld."
+
+#: lib/Snapshot/View/Settings.php:339
+#, fuzzy
+msgid "Selected Archive to Restore"
+msgstr "Geselecteerd archief om te herstellen"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:275
+#, fuzzy
+msgid "Server Address"
+msgstr "Server Adres"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:362
+#, fuzzy
+msgid "Server Port (optional)"
+msgstr "Serverpoort (optioneel)"
+
+#: views/destinations/add/ftp.php:157
+#: lib/Snapshot/Model/Destination/ftp/index.php:375
+#, fuzzy
+msgid "Server Timeout"
+msgstr "Time-out server"
+
+#: views/managed_backups.php:406
+#, fuzzy
+msgid ""
+"Set your full website managed backups to run automatically to a schedule "
+"that suits you. We highly recommend a weekly or daily frequency depending on "
+"how active your website is."
+msgstr ""
+"Stel je volledig beheerde website back-ups zo in dat ze automatisch worden "
+"uitgevoerd volgens een schema dat bij jou past. Wij raden een wekelijkse of "
+"dagelijkse frequentie aan, afhankelijk van hoe actief je website is."
+
+#: views/managed_backups.php:168 views/managed_backups.php:172
+#: views/managed_backups.php:383 views/settings.php:10
+#, fuzzy
+msgid "Settings"
+msgstr "Instellingen"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:40
+#, fuzzy
+msgid "SFTP"
+msgstr "SFTP"
+
+#: lib/Snapshot/View/Table/Items.php:121
+#, fuzzy
+msgid "Show All Destinations"
+msgstr "Toon alle bestemmingen"
+
+#: views/managed-backups/partials/restore-backup-progress.php:10
+#: views/snapshots/partials/create-snapshot-progress.php:11
+#: views/snapshots/partials/create-snapshot-progress.php:11
+#: views/snapshots/partials/restore-snapshot-progress.php:10
+#: views/snapshots/partials/restore-snapshot-progress.php:10
+#, fuzzy
+msgid "Show Full Log"
+msgstr "Toon volledig logboek"
+
+#: views/managed_backups.php:192
+#, fuzzy
+msgid "Show Log"
+msgstr "Toon logboek"
+
+#: views/snapshots/restore.php:155 views/snapshots/restore.php:210
+#, fuzzy
+msgid "Site URL:"
+msgstr "Site URL:"
+
+#: views/managed_backups.php:234 views/managed_backups.php:281
+#: views/snapshots.php:126 views/snapshots.php:231
+#: lib/Snapshot/View/Table/Archives.php:377
+#: lib/Snapshot/View/Table/FullBackups.php:23
+#, fuzzy
+msgid "Size"
+msgstr "Maat"
+
+#: views/boxes/modals/popup-welcome.php:23
+#, fuzzy
+msgid "Skip"
+msgstr "Skip"
+
+#: views/snapshots/snapshot.php:1047
+#, fuzzy
+msgid "Snapshot"
+msgstr "Momentopname"
+
+#: lib/Snapshot/View/Destination/Listing.php:24
+#, fuzzy
+msgctxt "Snapshot Destination Page Title"
+msgid "All Snapshot Destinations"
+msgstr "Alle Snapshot-bestemmingen"
+
+#: lib/Snapshot/View/Destination/Listing.php:191
+#, fuzzy
+msgid "Snapshot Destinations"
+msgstr "Snapshot Bestemmingen"
+
+#: views/managed-backups/partials/restore-backup-progress.php:114
+#: views/snapshots/partials/restore-snapshot-progress.php:126
+#, fuzzy
+msgid "Snapshot determining tables/files to restore"
+msgstr "Snapshot bepaalt tabellen/bestanden om te herstellen"
+
+#: views/snapshots/partials/create-snapshot-progress.php:222
+#, fuzzy
+msgid "Snapshot Finishing (creating zip archive of tables)"
+msgstr "Snapshot-afwerking (zip-archief van tabellen maken)"
+
+#: views/snapshots/item.php:31
+#, fuzzy
+msgid "Snapshot Info"
+msgstr "Snapshot Info"
+
+#: lib/Snapshot/View/Settings.php:64 lib/Snapshot/View/Settings.php:225
+#: lib/Snapshot/View/Settings.php:335
+#, fuzzy
+msgid "Snapshot Information"
+msgstr "Momentopname Informatie"
+
+#: views/snapshots/partials/create-snapshot-progress.php:153
+#, fuzzy
+msgid "Snapshot Initializing"
+msgstr "Snapshot initialiseert"
+
+#: views/managed_backups.php:97
+#, fuzzy
+msgid "Snapshot Key"
+msgstr "Snapshot sleutel"
+
+#: views/snapshots/partials/create-snapshot-progress.php:111
+#, fuzzy
+msgid "Snapshot Log"
+msgstr "Snapshot Log"
+
+#: lib/Snapshot/View/Full/Backup.php:243
+#, fuzzy
+msgid "Snapshot Logs"
+msgstr "Snapshot Logs"
+
+#: lib/Snapshot/View/Settings.php:36
+#, fuzzy
+msgctxt "Snapshot New Page Title"
+msgid "Add New Snapshot"
+msgstr "Nieuwe momentopname toevoegen"
+
+#: lib/Snapshot/View/Settings.php:141
+#, fuzzy
+msgctxt "Snapshot New Page Title"
+msgid "All Snapshots"
+msgstr "Alle momentopnamen"
+
+#: lib/Snapshot/View/Destination/Listing.php:120
+#: lib/Snapshot/View/Destination/Listing.php:131
+#: lib/Snapshot/View/Destination/Listing.php:143
+msgctxt "Snapshot page description"
+msgid ""
+msgstr ""
+
+#: lib/Snapshot/View/Settings.php:375
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"ERROR: Missing argument. Please return to the main Snapshot panel and select "
+"the archive to restore. "
+msgstr ""
+"FOUT: Ontbrekend argument. Ga terug naar het hoofdpaneel Snapshot en "
+"selecteer het archief om te herstellen."
+
+#: lib/Snapshot/View/Settings.php:284
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"On this page you can restore a previous snapshot. Using the 'Restore "
+"Options' section below you can also opt to turn off all plugins as well as "
+"switch to a different theme as part of the restore."
+msgstr ""
+"Op deze pagina kun je een vorige momentopname herstellen. In het gedeelte "
+"'Herstelopties' hieronder kun je er ook voor kiezen om alle plugins uit te "
+"schakelen en over te schakelen op een ander thema als onderdeel van het "
+"herstel."
+
+#: lib/Snapshot/View/Settings.php:400
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"The Settings panel provides access to a number of configuration options you "
+"can customize Snapshot to meet you site needs."
+msgstr ""
+"Het paneel Instellingen biedt toegang tot een aantal configuratieopties "
+"waarmee je Snapshot kunt aanpassen aan de behoeften van je site."
+
+#: lib/Snapshot/View/Settings.php:147
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"This is a listing of all Snapshots created within your site. To delete a "
+"snapshot set the checkbox then click the 'Delete Snapshots' button below the "
+"listing. To restore a snapshot click the 'Restore' button for that snapshot. "
+"To edit a snapshot click the name of the snapshot"
+msgstr ""
+"Dit is een lijst van alle snapshots die in je site zijn gemaakt. Om een "
+"snapshot te verwijderen zet je het selectievakje aan en klik je vervolgens "
+"op de knop 'Snapshots verwijderen' onder de lijst. Om een snapshot te "
+"herstellen klik je op de knop \"Herstellen\" voor dat snapshot. Om een "
+"snapshot te bewerken klik je op de naam van het snapshot"
+
+#: lib/Snapshot/View/Destination/Listing.php:26
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"This page show all the destinations available for the Snapshot plugin. A "
+"destination is a remote system like Amazon S3, Dropbox or SFTP. Simply "
+"select the destination type from the drop down then will in the details. "
+"When you add or edit a Snapshot you will be able to assign it a destination. "
+"When the snapshot backup runs the archive file will be sent to the "
+"destination and local archive stored or deleted depending on <strong>Keep "
+"local archives?</strong> option."
+msgstr ""
+"Deze pagina toont alle bestemmingen die beschikbaar zijn voor de Snapshot "
+"plugin. Een bestemming is een systeem op afstand zoals Amazon S3, Dropbox of "
+"SFTP. Selecteer gewoon het type bestemming uit de dropdown en vul dan de "
+"details in. Wanneer je een Snapshot toevoegt of bewerkt kun je er een "
+"bestemming aan toekennen. Als de snapshot-back-up wordt uitgevoerd, wordt "
+"het archiefbestand naar de bestemming gestuurd en het lokale archief "
+"opgeslagen of verwijderd, afhankelijk van de <strong>Keep local archives?"
+"</strong> optie."
+
+#: lib/Snapshot/View/Settings.php:38
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"Use this form to create a new snapshot of your site. Fill in the optional "
+"Name and Notes fields. Select the tables to be included in this snapshot."
+msgstr ""
+"Gebruik dit formulier om een nieuwe momentopname van je site te maken. Vul "
+"de optionele velden Naam en Notities in. Selecteer de tabellen die in deze "
+"momentopname moeten worden opgenomen."
+
+#: lib/Snapshot/View/Settings.php:203
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"Use this form to update the details for a previous snapshot. Also, provided "
+"is a link you can use to download the snapshot for sharing or archiving."
+msgstr ""
+"Gebruik dit formulier om de gegevens van een vorige momentopname bij te "
+"werken. Je krijgt ook een link waarmee je de momentopname kunt downloaden om "
+"te delen of te archiveren."
+
+#: lib/Snapshot/View/Destination/Listing.php:130
+#, fuzzy
+msgctxt "Snapshot Plugin Page Title"
+msgid "Add Snapshot Destination"
+msgstr "Snapshot-bestemming toevoegen"
+
+#: lib/Snapshot/View/Settings.php:201
+#, fuzzy
+msgctxt "Snapshot Plugin Page Title"
+msgid "Edit Snapshot"
+msgstr "Momentopname bewerken"
+
+#: lib/Snapshot/View/Destination/Listing.php:119
+#: lib/Snapshot/View/Destination/Listing.php:142
+#, fuzzy
+msgctxt "Snapshot Plugin Page Title"
+msgid "Edit Snapshot Destination"
+msgstr "Bewerk Snapshot Bestemming"
+
+#: lib/Snapshot/View/Settings.php:282 lib/Snapshot/View/Settings.php:373
+#, fuzzy
+msgctxt "Snapshot Plugin Page Title"
+msgid "Restore Snapshot"
+msgstr "Snapshot herstellen"
+
+#: lib/Snapshot/View/Settings.php:464
+#, fuzzy
+msgctxt "Snapshot Plugin Page Title"
+msgid "Snapshot Scan / Import"
+msgstr "Momentopname scannen / importeren"
+
+#: lib/Snapshot/View/Settings.php:398
+#, fuzzy
+msgctxt "Snapshot Plugin Page Title"
+msgid "Snapshot Settings"
+msgstr "Snapshot-instellingen"
+
+#: views/snapshots/partials/create-snapshot-progress.php:17
+#, fuzzy
+msgid "Snapshot Result"
+msgstr "Momentopname Resultaat"
+
+#: views/snapshots/snapshot.php:1053
+#, fuzzy
+msgid ""
+"Snapshot will automatically add the date and an ID to your archive ZIP file."
+msgstr ""
+"Snapshot voegt automatisch de datum en een ID toe aan je archief ZIP-bestand."
+
+#: views/snapshots/snapshot.php:1000
+#, fuzzy
+msgid ""
+"Snapshot will run backups are per your schedule and send them to your chosen "
+"destination. In addition to sending the copy off site we keep a local copy "
+"just in case things go wrong. Here you can specify how many local archives "
+"to keep before removing the oldest."
+msgstr ""
+"Snapshot maakt back-ups volgens jouw schema en stuurt ze naar de door jou "
+"gekozen bestemming. Naast het versturen van de kopie naar een andere locatie "
+"bewaren we een lokale kopie voor het geval er iets mis gaat. Hier kun je "
+"aangeven hoeveel lokale archieven je wilt bewaren voordat je de oudste "
+"verwijdert."
+
+#: views/snapshots/snapshot.php:53
+#, fuzzy
+msgid "Snapshot Wizard"
+msgstr "Snapshot Wizard"
+
+#: views/snapshots.php:16 views/snapshots/item.php:21
+#: views/snapshots/restore.php:34 views/snapshots/snapshot.php:29
+#: views/boxes/dashboard/widget-snapshots.php:27
+#: views/boxes/modals/popup-welcome.php:55
+#: views/destinations/partials/dropbox-destination-list.php:16
+#: views/destinations/partials/ftp-destination-list.php:20
+#: views/destinations/partials/google-drive-destination-list.php:17
+#: views/destinations/partials/local-destination-list.php:17
+#: views/destinations/partials/s3-destination-list.php:19
+#, fuzzy
+msgid "Snapshots"
+msgstr "Snapshots"
+
+#: views/boxes/dashboard/widget-snapshots.php:59
+#, fuzzy
+msgid ""
+"Snapshots are restore points for your site. Here are your latest snapshots."
+msgstr ""
+"Snapshots zijn herstelpunten voor je site. Hier zijn je laatste snapshots."
+
+#: views/boxes/dashboard/widget-snapshots.php:51
+#, fuzzy
+msgid ""
+"Snapshots are restore points for your site. Simply choose what you want to "
+"back up and then store it on destinations such as Dropbox, Amazon S3 and "
+"more."
+msgstr ""
+"Snapshots zijn herstelpunten voor je site. Kies gewoon wat je wilt back-"
+"uppen en sla het dan op op bestemmingen als Dropbox, Amazon S3 en meer."
+
+#: lib/Snapshot/Model/Destination/aws/index.php:114
+#, fuzzy
+msgid "South America (Sao Paulo) Region"
+msgstr "Regio Zuid-Amerika (Sao Paulo)"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:119
+#, fuzzy
+msgid "Standard"
+msgstr "Standaard"
+
+#: lib/Snapshot/View/Full/Backup.php:238
+#, fuzzy
+msgid "Starting..."
+msgstr "Te beginnen..."
+
+#: views/snapshots/item.php:136 lib/Snapshot/View/Table/Archives.php:379
+#, fuzzy
+msgid "Status"
+msgstr "Status"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:574
+#, fuzzy
+msgid "Step 1: Define a name for this Destination"
+msgstr "Stap 1: Definieer een naam voor deze bestemming"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:631
+#, fuzzy
+msgid "Step 2: Google Drive Access Credentials"
+msgstr "Stap 2: Google Drive Toegangscodes"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:708
+#, fuzzy
+msgid "Step 3: Google Authorize"
+msgstr "Stap 3: Google Autoriseren"
+
+#: views/settings.php:131
+#, fuzzy
+msgid "Stop the backup process if a notice occurs"
+msgstr "Het back-upproces stoppen als er een melding komt"
+
+#: views/settings.php:126
+#, fuzzy
+msgid "Stop the backup process if a warning occurs"
+msgstr "Het back-up proces stoppen als er een waarschuwing optreedt"
+
+#: views/settings.php:121
+#, fuzzy
+msgid "Stop the backup process if an error occurs"
+msgstr "Het back-up proces stoppen als er een fout optreedt"
+
+#: views/managed_backups.php:464 views/managed-backups/new-backup.php:214
+#: views/snapshots/snapshot.php:980
+#, fuzzy
+msgid "Storage Limit"
+msgstr "Opslaglimiet"
+
+#: views/destinations/add/aws.php:126
+#: lib/Snapshot/Model/Destination/aws/index.php:720
+#, fuzzy
+msgid "Storage Type"
+msgstr "Type opslag"
+
+#: views/destinations/add/dropbox.php:221
+#, fuzzy
+msgid "Storage Used"
+msgstr "Gebruikte opslag"
+
+#: views/destinations/add/google-drive.php:223
+#, fuzzy
+msgid "Success. The Google Access Token has been received."
+msgstr "Succes. Het Google Access Token is ontvangen."
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:726
+#, fuzzy
+msgid ""
+"Success. The Google Access Token has been received. <strong>You must save "
+"this form one last time to retain the token.</strong> The stored token will "
+"be used in the future when connecting to Google"
+msgstr ""
+"Succes. Het Google Access Token is ontvangen. <strong>U moet dit formulier "
+"nog een laatste keer opslaan om het token te behouden.</strong> Het "
+"opgeslagen token zal in de toekomst worden gebruikt bij het verbinden met "
+"Google"
+
+#: views/import.php:32 lib/Snapshot/View/Settings.php:651
+#, fuzzy, php-format
+msgid "Success: %s"
+msgstr "Succes: %s"
+
+#: lib/Snapshot/Helper/UI.php:85
+#, fuzzy
+msgid "Sunday"
+msgstr "Zondag"
+
+#: lib/Snapshot/Helper/Utility.php:1138
+#, fuzzy
+msgid "Tables:"
+msgstr "Tafels:"
+
+#: views/destinations/add/aws.php:221 views/destinations/add/ftp.php:165
+#: lib/Snapshot/Model/Destination/aws/index.php:805
+#: lib/Snapshot/Model/Destination/ftp/index.php:414
+#, fuzzy
+msgid "Test Connection"
+msgstr "Testaansluiting"
+
+#: views/import.php:210
+#, fuzzy
+msgid ""
+"The <strong>import</strong> process can import an archive from a remote "
+"system server via FTP, Amazon S3 or Dropbox. The remote archive <strong>"
+"must</strong> be publicly accessible as this import process does not yet "
+"support authentication. See notes below on specific services."
+msgstr ""
+"Het <strong>import</strong> proces kan een archief importeren van een "
+"externe systeemserver via FTP, Amazon S3 of Dropbox. Het externe archief "
+"<strong>moet</strong> openbaar toegankelijk zijn, omdat dit importproces nog "
+"geen authenticatie ondersteunt. Zie de opmerkingen hieronder over specifieke "
+"diensten."
+
+#: views/destinations/add/ftp.php:163
+#: lib/Snapshot/Model/Destination/ftp/index.php:383
+#, fuzzy
+msgid ""
+"The default timeout for PHP FTP connections is 90 seconds. Sometimes this "
+"timeout needs to be longer for slower connections to busy servers."
+msgstr ""
+"De standaard time-out voor PHP FTP-verbindingen is 90 seconden. Soms moet "
+"deze timeout langer zijn voor langzamere verbindingen met drukke servers."
+
+#: views/settings.php:109
+#, fuzzy
+msgid ""
+"The exclude feature uses pattern matching so you can easily select files to "
+"exclude from your backups. Example: to exclude the Twenty Ten theme, you can "
+"use twentyten, theme/twentyten or public/wp-content/theme/twentyten. <strong>"
+"The local folder is excluded from Snapshot backups by default.</strong>"
+msgstr ""
+"De uitsluitingsfunctie gebruikt patroonherkenning, zodat je gemakkelijk "
+"bestanden kunt selecteren die je wilt uitsluiten van je back-ups. Voorbeeld: "
+"om het Twenty Ten thema uit te sluiten, kun je twentyten, theme/twentyten of "
+"public/wp-content/theme/twentyten gebruiken. <strong>De lokale map wordt "
+"standaard uitgesloten van Snapshot-back-ups.</strong>"
+
+#: views/destinations/add/dropbox.php:257
+#: views/destinations/add/dropbox.php:272
+#, fuzzy
+msgid ""
+"The first step in the Dropbox setup is Authorizing Snapshot to communicate "
+"with your Dropbox account. Dropbox requires that you grant Snapshot access "
+"to your account. This is required in order for Snapshot to upload files to "
+"your Dropbox account."
+msgstr ""
+"De eerste stap in de Dropbox setup is Snapshot autoriseren om te "
+"communiceren met je Dropbox account. Dropbox vereist dat je Snapshot toegang "
+"verleent tot je account. Dit is nodig om Snapshot bestanden te laten "
+"uploaden naar je Dropbox-account."
+
+#: views/destinations/add/ftp.php:53
+#, fuzzy, php-format
+msgid ""
+"The FTP option will use the standard PHP library functions. Choosing FTPS "
+"will use the <a target=\"_blank\" href=\"%s\">PHP Secure Communications "
+"Library</a>This option may not work depending on how your PHP binaries are "
+"compiled. FTPS with TSL/SSL attemts a secure connection, however it will "
+"only work if PHP and OpenSSL are properly configured on your host and "
+"destination host. This option will also not work with Windows using the "
+"default PHP binaries. Check the PHP docs for ftp_ssl_connection."
+msgstr ""
+"De FTP optie gebruikt de standaard PHP bibliotheek functies. FTPS gebruikt "
+"de <a target=\"_blank\" href=\"%s\">PHP Secure Communications Library</a>"
+"Deze optie werkt mogelijk niet, afhankelijk van hoe je PHP binaire bestanden "
+"zijn gecompileerd. FTPS met TSL/SSL streeft naar een veilige verbinding, "
+"maar werkt alleen als PHP en OpenSSL goed geconfigureerd zijn op jouw host "
+"en bestemmingshost. Deze optie werkt ook niet onder Windows met de standaard "
+"PHP-binaire bestanden. Kijk in de PHP documenten voor ftp_ssl_connection."
+
+#: views/snapshots/snapshot.php:264
+#, fuzzy
+msgid ""
+"The optional Directory can be used to override or supplement the selected "
+"destination directory value."
+msgstr ""
+"De optionele Directory kan worden gebruikt om de geselecteerde waarde van de "
+"doelmap te overschrijven of aan te vullen."
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:321
+#, fuzzy
+msgid ""
+"The remote path will be used to store the snapshot archives. The remote path "
+"must already existing on the server. If the remote path is blank then the "
+"FTP home directory will be used as the destination for snapshot files. This "
+"is a global setting and will be used by all snapshot configurations using "
+"this destination. You can also defined a directory used by a specific "
+"snapshot."
+msgstr ""
+"Het pad op afstand wordt gebruikt om de snapshot-archieven op te slaan. Het "
+"pad op afstand moet al bestaan op de server. Als het pad op afstand leeg is, "
+"dan wordt de FTP-thuismap gebruikt als bestemming voor snapshotbestanden. "
+"Dit is een globale instelling en zal gebruikt worden door alle "
+"snapshotconfiguraties die deze bestemming gebruiken. Je kunt ook een "
+"directory definiëren die door een specifieke snapshot wordt gebruikt."
+
+#: lib/Snapshot/View/Settings.php:469
+#, fuzzy
+msgid ""
+"The Snapshot import form below is used to import snapshot archives from "
+"outside of this environment into view of the snapshot plugin. If you are "
+"attempting to restore an archive from a remote server for example you first "
+"need to import the archive here. This will then show the archive in the All "
+"Snapshots listing. From that page you can then perform the needed restore."
+msgstr ""
+"Het onderstaande Snapshot import formulier wordt gebruikt om snapshot "
+"archieven van buiten deze omgeving te importeren in het zicht van de "
+"snapshot plugin. Als je bijvoorbeeld een archief van een externe server "
+"probeert te herstellen moet je eerst het archief hier importeren. Dit zal "
+"dan het archief tonen in de Alle Snapshots lijst. Vanaf die pagina kun je "
+"dan de benodigde restore uitvoeren."
+
+#: views/destinations/add/google-drive.php:225
+#, fuzzy
+msgid "The stored token will be used in the future when connecting to Google."
+msgstr ""
+"Het opgeslagen token wordt in de toekomst gebruikt bij het verbinden met "
+"Google."
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:622
+#, fuzzy
+msgid ""
+"The URL for the directory will be something similar to <em>https://drive."
+"google.com/#folders/0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>. The Directory ID "
+"would be the last part after /#folders/ <strong><em>"
+"0B6GD66ctHXXCOWZKNDRIRGJJXS3</em></strong>."
+msgstr ""
+"De URL voor de directory zal iets zijn als <em>https://drive.google."
+"com/#folders/0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>. Het ID van de map is het "
+"laatste deel na /#folders/ <strong><em>0B6GD66ctHXXCOWZKNDRIRGJXS3</em>"
+"</strong>."
+
+#: views/destinations/add/google-drive.php:83
+#, fuzzy
+msgid ""
+"The URL for the directory will be something similar to <em>https://drive."
+"google.com/#folders/0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>. The Directory ID "
+"would be the last part after <em>/#folders/</em>: <strong>"
+"0B6GD66ctHXXCOWZKNDRIRGJJXS3.</strong>"
+msgstr ""
+"De URL voor de directory zal zoiets zijn als <em>https://drive.google."
+"com/#folders/0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>. De Directory ID zou het "
+"laatste deel zijn na <em>/#folders/</em>: <strong>"
+"0B6GD66ctHXXCOWZKNDRIRGJJXS3.</strong>"
+
+#: views/snapshots/restore.php:496 views/snapshots/restore.php:780
+#, fuzzy
+msgid "Themes"
+msgstr "Thema's"
+
+#: views/snapshots/snapshot.php:351
+#, fuzzy
+msgid "themes, plugins,"
+msgstr "thema's, plugins,"
+
+#: lib/Snapshot/Model/Database/Backup.php:78
+#, fuzzy
+msgid "There was an error writing a line to the backup script:"
+msgstr ""
+"Er is een fout opgetreden bij het schrijven van een regel naar het back-up "
+"script:"
+
+#: views/snapshots/snapshot.php:708
+#, fuzzy
+msgid ""
+"These global user tables contain blog specific user information which can be "
+"included as part of the snapshot archive. Only users whose primary blog "
+"matches this selected blog will be included. <strong>Superadmin users will "
+"not be included in the sub-site archive.</strong>"
+msgstr ""
+"Deze globale gebruikerstabellen bevatten blog-specifieke "
+"gebruikersinformatie die kan worden opgenomen als onderdeel van het snapshot-"
+"archief. Alleen gebruikers wiens primaire blog overeenkomt met dit "
+"geselecteerde blog worden opgenomen. <strong>Superadmin gebruikers worden "
+"niet opgenomen in het sub-site archief.</strong>"
+
+#: views/destinations/partials/dropbox-destination-list.php:39
+#: views/destinations/partials/ftp-destination-list.php:44
+#: views/destinations/partials/google-drive-destination-list.php:39
+#: views/destinations/partials/local-destination-list.php:37
+#: views/destinations/partials/s3-destination-list.php:43
+#, fuzzy
+msgid "This destination has not been fully configured."
+msgstr "Deze bestemming is niet volledig geconfigureerd."
+
+#: views/destinations/add/dropbox.php:112
+#: views/destinations/add/google-drive.php:199
+#, fuzzy
+msgid "This destination is authenticated and ready for use."
+msgstr "Deze bestemming is geverifieerd en klaar voor gebruik."
+
+#: views/destinations/add/dropbox.php:269
+#, fuzzy
+msgid "This destination is not authenticated yet."
+msgstr "Deze bestemming is nog niet geauthenticeerd."
+
+#: views/destinations/add/dropbox.php:254
+#, fuzzy
+msgid ""
+"This destination is using old Dropbox authentication system, please re-"
+"authenticate."
+msgstr ""
+"Deze bestemming gebruikt het oude Dropbox-authenticatiesysteem, authenticeer "
+"opnieuw."
+
+#: views/destinations/add/ftp.php:120
+#, fuzzy
+msgid ""
+"This directory will be used to store your Snapshot archives and must already "
+"exist on the server. If the remote path is left blank, the FTP home "
+"directory will be used as the destination for your Snapshot files."
+msgstr ""
+"Deze map zal gebruikt worden om je Snapshot-archieven in op te slaan en moet "
+"al bestaan op de server. Als het externe pad leeg gelaten wordt, zal de FTP-"
+"thuismap gebruikt worden als bestemming voor je Snapshot-bestanden."
+
+#: views/snapshots/snapshot.php:268
+#, fuzzy
+msgid "This field supports tokens you can use to create dynamic values."
+msgstr ""
+"Dit veld ondersteunt tokens die je kunt gebruiken om dynamische waarden te "
+"creëren."
+
+#: views/snapshots/snapshot.php:282
+#, fuzzy
+msgid "This is the unique ID assigned to this Snapshot."
+msgstr "Dit is het unieke ID dat aan dit Snapshot is toegekend."
+
+#: views/boxes/modals/popup-snapshot.php:31
+#: views/boxes/modals/popup-snapshot.php:55
+#, fuzzy
+msgid ""
+"This is your Snapshot API key. If you have any issues connecting to WPMU "
+"DEV’s cloud servers, just reset your key. Don’t worry, resetting your key "
+"won’t affect your backups."
+msgstr ""
+"Dit is je Snapshot API sleutel. Als je problemen hebt met de verbinding met "
+"de cloud servers van WPMU DEV, reset dan gewoon je sleutel. Maak je geen "
+"zorgen, het resetten van je sleutel heeft geen invloed op je back-ups."
+
+#: views/destinations/add/google-drive.php:71
+#, fuzzy
+msgid ""
+"This isn't a traditional directory path like /app/snapshot/ but a unique "
+"directory ID that Google Drive use for their filesystem. "
+msgstr ""
+"Dit is geen traditioneel directorypad zoals /app/snapshot/ maar een unieke "
+"directory-ID die Google Drive gebruikt voor hun bestandssysteem."
+
+#: views/snapshots/restore.php:132
+#, fuzzy
+msgid "This migration logic is considered still in beta."
+msgstr "Deze migratielogica wordt beschouwd als nog in bèta."
+
+#: views/snapshots/snapshot.php:274
+#, fuzzy
+msgid ""
+"This represents the Directory/Bucket used by the selected Backup Destination "
+"or if local, the Settings Folder location. This can be used to supplement "
+"the value entered into this Snapshot. If [DEST_PATH] is not used the "
+"Directory value here will override the complete value from the selected "
+"Destination."
+msgstr ""
+"Dit vertegenwoordigt de Directory/Bucket die door de geselecteerde Back-up "
+"Bestemming wordt gebruikt of, indien lokaal, de locatie van de "
+"Instellingenmap. Dit kan worden gebruikt als aanvulling op de waarde die in "
+"dit Snapshot is ingevoerd. Als [DEST_PATH] niet wordt gebruikt zal de "
+"Directory waarde hier de volledige waarde van de geselecteerde Bestemming "
+"overschrijven."
+
+#: views/snapshots/snapshot.php:278
+#, fuzzy
+msgid "This represents the full domain of the selected site per this snapshot."
+msgstr ""
+"Dit vertegenwoordigt het volledige domein van de geselecteerde site per deze "
+"momentopname."
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:284
+#, fuzzy
+msgid ""
+"This should remote server address as in somehost.co or ftp.somehost.com or "
+"maybe the IP address 123.456.789.255. Do not use ftp://somehost.com"
+msgstr ""
+"Dit moet het remote server adres zijn zoals in somehost.co of ftp.somehost."
+"com of misschien het IP adres 123.456.789.255. Gebruik niet ftp://somehost."
+"com"
+
+#: lib/Snapshot/View/Settings.php:448
+#, fuzzy
+msgid ""
+"This Snapshot item is setup as <strong>files sync</strong>. You cannot "
+"perform a resend of the individual items like on a normal archive. But you "
+"can click the <strong>resend</strong> on any item below to clear the last "
+"send dates on all files. This will force all files to be re-synced."
+msgstr ""
+"Dit Snapshot-item is ingesteld als <strong>bestanden synchroniseren</strong>."
+" Je kunt de afzonderlijke items niet opnieuw verzenden zoals bij een normaal "
+"archief. Maar je kunt op de <strong>herverzend</strong> klikken op elk item "
+"hieronder om de laatste verzenddata van alle bestanden te wissen. Hierdoor "
+"worden alle bestanden opnieuw gesynchroniseerd."
+
+#: views/snapshots/restore.php:765
+#, fuzzy
+msgid ""
+"This will deactivate all plugins. You'll then be able to activate them "
+"manually after the restoration is complete."
+msgstr ""
+"Dit zal alle plugins deactiveren. Je kunt ze dan handmatig activeren nadat "
+"het herstel is voltooid."
+
+#: lib/Snapshot/Helper/UI.php:89
+#, fuzzy
+msgid "Thursday"
+msgstr "Donderdag"
+
+#: views/managed_backups.php:444
+#, fuzzy
+msgid "Time of Day"
+msgstr "Tijd van de dag"
+
+#: views/boxes/modals/popup-snapshot.php:36
+#, fuzzy
+msgid ""
+"To enable Managed Backups and your 10GB storage allowance on our PSOURCE "
+"cloud servers, you need to add your Snapshot key."
+msgstr ""
+"Om Managed Backups en je 10GB opslagruimte op onze PSOURCE cloud servers in "
+"te schakelen, moet je je Snapshot sleutel toevoegen."
+
+#: views/destinations/add/google-drive.php:233
+#, fuzzy
+msgid ""
+"To finish adding this destination you must authenticate it with Google Drive."
+msgstr ""
+"Om het toevoegen van deze bestemming af te ronden moet je hem authenticeren "
+"met Google Drive."
+
+#: views/destinations/add/google-drive.php:73
+#, fuzzy, php-format
+msgid "To retrieve your directory ID, follow <a %s>these instructions</a>."
+msgstr "Volg <a %s>deze instructies</a> om je map-ID op te vragen."
+
+#: lib/Snapshot/View/Table/FullBackups.php:48
+#, fuzzy
+msgid "Trash"
+msgstr "Afval"
+
+#: views/managed-backups/partials/create-backup-progress.php:23
+#: views/managed-backups/partials/restore-backup-progress.php:38
+#: views/snapshots/partials/create-snapshot-progress.php:41
+#: views/snapshots/partials/restore-snapshot-progress.php:30
+#, fuzzy
+msgid "Try Again"
+msgstr "Opnieuw proberen"
+
+#: lib/Snapshot/Helper/UI.php:87
+#, fuzzy
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+#: lib/Snapshot/Helper/Utility.php:748
+#, fuzzy
+msgid "Twice Daily"
+msgstr "Tweemaal daags"
+
+#: lib/Snapshot/Helper/Utility.php:764
+#, fuzzy
+msgid "Twice Monthly"
+msgstr "Tweemaal per maand"
+
+#: lib/Snapshot/Helper/Utility.php:756
+#, fuzzy
+msgid "Twice Weekly"
+msgstr "Tweemaal per week"
+
+#: views/snapshots.php:122 views/boxes/dashboard/widget-destinations.php:48
+#: views/destinations/add/aws.php:8 views/destinations/add/dropbox-error.php:13
+#: views/destinations/add/dropbox.php:18 views/destinations/add/ftp.php:7
+#: views/destinations/add/google-drive.php:34
+#: views/destinations/add/local.php:7
+#, fuzzy
+msgid "Type"
+msgstr "Type"
+
+#: views/destinations/add/dropbox.php:187
+#, fuzzy
+msgid "UID"
+msgstr "UID"
+
+#: lib/Snapshot/Controller/Full/Ajax.php:95
+#, fuzzy
+msgid "Unable to exchange key"
+msgstr "Kan geen sleutel uitwisselen"
+
+#: lib/Snapshot/Model/Full/Remote/Storage.php:694
+#, fuzzy
+msgid "Unable to finalize the upload."
+msgstr "Kan de upload niet afronden."
+
+#: lib/Snapshot/Controller/Full/Ajax.php:92
+#, fuzzy
+msgid "Unable to get exchange token"
+msgstr "Kan geen wisseltoken krijgen"
+
+#: views/destinations/add/google-drive.php:249
+#, fuzzy
+msgid "Unable to obtain an authorization URL from Google"
+msgstr "Kan geen autorisatie-URL van Google krijgen"
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:745
+#, fuzzy
+msgid "Unable to obtain Authorization URL from Google"
+msgstr "Kan autorisatie-URL niet verkrijgen van Google"
+
+#: views/snapshots/snapshot.php:127
+#, fuzzy
+msgid "Unknown Blog"
+msgstr "Onbekend Blog"
+
+#: lib/Snapshot/Model/Full/Error.php:197
+#, fuzzy
+msgid "unknown source"
+msgstr "onbekende bron"
+
+#: views/managed_backups.php:487 views/managed-backups/new-backup.php:268
+#, fuzzy
+msgid "Update Settings"
+msgstr "Instellingen bijwerken"
+
+#: views/snapshots/restore.php:159 views/snapshots/restore.php:324
+#, fuzzy
+msgid "Upload Path:"
+msgstr "Uploadpad:"
+
+#: views/snapshots/item.php:160
+#, fuzzy
+msgid "Uploaded"
+msgstr "Geüpload"
+
+#: views/snapshots/item.php:161
+#, fuzzy
+msgid "Uploading&hellip;"
+msgstr "Uploaden&hellip;"
+
+#: views/snapshots/item.php:236
+#, fuzzy
+msgid "URL exclusions"
+msgstr "URL uitsluitingen"
+
+#: views/snapshots/snapshot.php:570
+#, fuzzy
+msgid ""
+"URLs can be files and must be listed one per line. The exclude feature uses "
+"pattern matching, so typing twentyten will exclude the twentyten folder, as "
+"well as any filters with twentyten in the filename."
+msgstr ""
+"URL's kunnen bestanden zijn en moeten één per regel zijn. De "
+"uitsluitingsfunctie gebruikt patroonherkenning, dus het intypen van "
+"twintigten sluit de map twintigten uit, evenals alle filters met twintigten "
+"in de bestandsnaam."
+
+#: lib/Snapshot/Model/Destination/aws/index.php:107
+#, fuzzy
+msgid "US Standard"
+msgstr "Amerikaanse standaard"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:109
+#, fuzzy
+msgid "US West (Northern California) Region"
+msgstr "Regio US West (Noord-Californië)"
+
+#: lib/Snapshot/Model/Destination/aws/index.php:108
+#, fuzzy
+msgid "US West (Oregon) Region"
+msgstr "Regio US West (Oregon)"
+
+#: views/managed-backups/partials/restore-backup-progress.php:84
+#: views/snapshots/partials/create-snapshot-progress.php:123
+#: views/snapshots/partials/restore-snapshot-progress.php:103
+#, fuzzy
+msgid "Usage"
+msgstr "Gebruik"
+
+#: views/settings.php:73
+#, fuzzy
+msgid "Use custom directory"
+msgstr "Gebruik aangepaste map"
+
+#: views/settings.php:59
+#, fuzzy
+msgid "Use default directory"
+msgstr "Standaardmap gebruiken"
+
+#: views/boxes/modals/popup-welcome.php:115
+#, fuzzy
+msgid "Use Destination"
+msgstr "Gebruik Bestemming"
+
+#: views/destinations/add/ftp.php:133
+#, fuzzy
+msgid "Use Passive Mode"
+msgstr "Passieve modus gebruiken"
+
+#: views/destinations/add/aws.php:68
+#: lib/Snapshot/Model/Destination/aws/index.php:661
+#, fuzzy
+msgid "Use SSL Connection"
+msgstr "SSL-verbinding gebruiken"
+
+#: views/snapshots/snapshot.php:270
+#, fuzzy
+msgid "Use the forward slash \"/\" to separate directory elements."
+msgstr ""
+"Gebruik de forward slash \"/\" om directory-elementen van elkaar te scheiden."
+
+#: lib/Snapshot/Model/Destination/aws/index.php:533
+#: lib/Snapshot/Model/Destination/ftp/index.php:141
+#: lib/Snapshot/Model/Destination/google-drive/index.php:473
+#, fuzzy
+msgid "Used"
+msgstr "Gebruikt"
+
+#: views/destinations/add/ftp.php:83
+#: views/destinations/partials/dropbox-destination-list.php:14
+#, fuzzy
+msgid "User"
+msgstr "Gebruiker"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:290
+#, fuzzy
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: lib/Snapshot/Model/Destination/ftp/index.php:120
+#, fuzzy
+msgid "Username is required"
+msgstr "Gebruikersnaam is vereist"
+
+#: views/snapshots/item.php:298 lib/Snapshot/View/Table/Archives.php:234
+#: lib/Snapshot/View/Table/Items.php:485 lib/Snapshot/View/Table/Items.php:498
+#, fuzzy
+msgid "view"
+msgstr "bekijk"
+
+#: views/boxes/dashboard/widget-destinations.php:87
+#: views/boxes/dashboard/widget-snapshots.php:163
+#, fuzzy
+msgid "View All"
+msgstr "Alles bekijken"
+
+#: views/managed-backups/partials/create-backup-progress.php:77
+#, fuzzy
+msgid "View Backups"
+msgstr "Back-ups bekijken"
+
+#: views/managed_backups.php:106
+#, fuzzy
+msgid "View Key"
+msgstr "Bekijk sleutel"
+
+#: lib/Snapshot/View/Table/Items.php:522
+#, fuzzy
+msgid "view log"
+msgstr "logboek bekijken"
+
+#: views/snapshots/item.php:341
+#, fuzzy
+msgid "View Logs"
+msgstr "Logboeken bekijken"
+
+#: views/snapshots/partials/restore-snapshot-progress.php:86
+#, fuzzy
+msgid "View Site"
+msgstr "Bekijk site"
+
+#: views/managed-backups/partials/restore-backup-progress.php:237
+#: views/snapshots/partials/create-snapshot-progress.php:104
+#, fuzzy
+msgid "View Snapshot"
+msgstr "Bekijk Snapshot"
+
+#: views/snapshots/partials/restore-snapshot-progress.php:64
+#, fuzzy
+msgid "View website."
+msgstr "Bekijk website."
+
+#: views/common/requirements-test.php:9 views/common/requirements-test.php:43
+#, fuzzy
+msgid "WARNING"
+msgstr "WAARSCHUWING"
+
+#: lib/Snapshot/Helper/Log.php:114
+#, fuzzy
+msgid "Warning"
+msgstr "Waarschuwing"
+
+#: views/settings.php:124
+#, fuzzy
+msgid "Warnings"
+msgstr "Waarschuwingen"
+
+#: views/boxes/modals/popup-snapshot.php:50
+#, fuzzy, php-format
+msgid ""
+"We couldn’t verify your Snapshot key. Try entering it again, or reset it for "
+"this website in <a target=\"_blank\" href=\"%s\">The Hub</a> over at WPMU "
+"DEV."
+msgstr ""
+"We konden je Snapshot sleutel niet verifiëren. Probeer het opnieuw in te "
+"voeren, of stel het opnieuw in voor deze website in <a target=\"_blank\" "
+"href=\"%s\">The Hub</a> daar bij WPMU DEV."
+
+#: lib/Snapshot/Model/Full/Remote/Storage.php:260
+#, fuzzy
+msgid "We encountered an issue communicating with the API"
+msgstr "We ondervonden een probleem bij de communicatie met de API"
+
+#: lib/Snapshot/View/Full/Backup.php:79
+#, fuzzy
+msgid "We have encountered an error refreshing the backup list."
+msgstr "Er is een fout opgetreden bij het verversen van de reservelijst."
+
+#: lib/Snapshot/View/Full/Backup.php:75
+#, fuzzy
+msgid ""
+"We were unable to find the appropriate API info in the remote service "
+"response."
+msgstr ""
+"We konden de juiste API info niet vinden in het antwoord van de remote "
+"service."
+
+#: lib/Snapshot/Helper/UI.php:88
+#, fuzzy
+msgid "Wednesday"
+msgstr "Woensdag"
+
+#: lib/Snapshot/Helper/Utility.php:752 lib/Snapshot/Model/Full/Backup.php:235
+#, fuzzy
+msgid "Weekly"
+msgstr "Wekelijks"
+
+#: lib/Snapshot/Model/Full/Backup.php:241
+#, fuzzy
+msgid "weekly"
+msgstr "wekelijks"
+
+#: lib/Snapshot/Controller/Full/Cron.php:171
+#, fuzzy
+msgid "Weekly Managed Snapshot"
+msgstr "Wekelijks beheerde momentopname"
+
+#: views/boxes/modals/popup-welcome.php:21
+#, fuzzy
+msgid "Welcome to Snapshot"
+msgstr "Welkom bij Snapshot"
+
+#: views/boxes/modals/popup-welcome.php:34
+#, fuzzy
+msgid ""
+"Welcome to Snapshot Pro, the hottest backups plugin for ClassicPress! Let’s "
+"start by choosing what type of backup you’d like to make - there are two "
+"types…"
+msgstr ""
+"Welkom bij Snapshot Pro, de populairste back-upplugin voor ClassicPress! "
+"Laten we beginnen met te kiezen welk type back-up je wilt maken - er zijn "
+"twee soorten.."
+
+#: views/boxes/modals/popup-welcome.php:38
+#, fuzzy
+msgid ""
+"Welcome to Snapshot, the hottest backups plugin for ClassicPress! With this "
+"plugin you can backup and migrate bits and pieces of your website to third "
+"party destinations like Dropbox, Google Drive, Amazon S3 & more."
+msgstr ""
+"Welkom bij Snapshot, de hipste back-up plugin voor ClassicPress! Met deze "
+"plugin kun je back-ups maken en stukjes van je website migreren naar "
+"bestemmingen van derden, zoals Dropbox, Google Drive, Amazon S3 & meer."
+
+#: views/boxes/dashboard/widget-status.php:53
+#, fuzzy
+msgid ""
+"Welcome to the Dashboard. Here you can manage all your snapshots and backups."
+msgstr ""
+"Welkom in het Dashboard. Hier kun je al je snapshots en back-ups beheren."
+
+#: views/boxes/dashboard/widget-status.php:55
+#, fuzzy
+msgid "Welcome to the Dashboard. Here you can manage all your snapshots."
+msgstr "Welkom in het Dashboard. Hier kun je al je snapshots beheren."
+
+#: lib/Snapshot/View/Settings.php:67 lib/Snapshot/View/Settings.php:229
+#, fuzzy
+msgid "What Files to Archive?"
+msgstr "Welke bestanden te archiveren?"
+
+#: lib/Snapshot/View/Settings.php:353
+#, fuzzy
+msgid "What Files to Restore?"
+msgstr "Welke bestanden herstellen?"
+
+#: lib/Snapshot/View/Settings.php:70 lib/Snapshot/View/Settings.php:233
+#, fuzzy
+msgid "What Tables to Archive"
+msgstr "Welke tabellen te archiveren"
+
+#: lib/Snapshot/View/Settings.php:349
+#, fuzzy
+msgid "What Tables to Restore?"
+msgstr "Welke tabellen te herstellen?"
+
+#: views/snapshots/restore.php:671
+#, fuzzy
+msgid ""
+"When restoring users and usermeta records under a Multisite environment "
+"there are a few limitations. Please read the following carefully"
+msgstr ""
+"Bij het herstellen van gebruikers en usermeta records onder een Multisite "
+"omgeving zijn er een paar beperkingen. Lees het volgende zorgvuldig"
+
+#: lib/Snapshot/View/Settings.php:73 lib/Snapshot/View/Settings.php:237
+#, fuzzy
+msgid "When to Archive"
+msgstr "Wanneer archiveren?"
+
+#: views/destinations/add/google-drive.php:173
+#, fuzzy
+msgid "When your create your new credentials, add this as the redirect URL."
+msgstr ""
+"Wanneer je je nieuwe referenties aanmaakt, voeg je dit toe als de omleidings-"
+"URL."
+
+#: lib/Snapshot/View/Settings.php:76 lib/Snapshot/View/Settings.php:241
+#, fuzzy
+msgid "Where to save the Archive "
+msgstr "Waar het Archief te bewaren"
+
+#: views/snapshots/restore.php:192
+#, fuzzy
+msgid "Will be restored to"
+msgstr "Zal worden hersteld tot"
+
+#: views/boxes/modals/popup-welcome.php:56
+#, fuzzy
+msgid ""
+"With Snapshots you can backup and migrate bits and pieces of your website. "
+"You can choose what files, plugins/themes and database tables to backup and "
+"then store them on third party destinations. To get started, let’s add your "
+"first destination."
+msgstr ""
+"Met Snapshots kun je stukjes en beetjes van je website back-uppen en "
+"migreren. Je kunt kiezen welke bestanden, plugins/thema's en "
+"databasetabellen je wilt back-uppen en deze vervolgens opslaan op "
+"bestemmingen van derden. Laten we, om te beginnen, je eerste bestemming "
+"toevoegen."
+
+#. Author of the plugin
+#, fuzzy
+msgid "WMS N@W"
+msgstr "WMS N@W"
+
+#: views/snapshots/restore.php:648
+#, fuzzy
+msgid "ClassicPress Blog Tables"
+msgstr "ClassicPress Blog Tabellen"
+
+#: views/snapshots/snapshot.php:682
+#, fuzzy
+msgid "ClassicPress core Tables"
+msgstr "ClassicPress kerntabellen"
+
+#: views/snapshots/restore.php:647 views/snapshots/snapshot.php:681
+#, fuzzy
+msgid "ClassicPress Global Tables"
+msgstr "ClassicPress Globale tabellen"
+
+#: views/managed-backups/new-backup.php:156
+#, fuzzy
+msgid ""
+"Would you like to schedule managed backups to run regularly or once-off?"
+msgstr "Wil je beheerde back-ups plannen om regelmatig of eenmalig te draaien?"
+
+#: views/snapshots/snapshot.php:810
+#, fuzzy
+msgid "Would you like to schedule this snapshot to run regularly or once off?"
+msgstr ""
+"Wil je deze momentopname inplannen om regelmatig of eenmalig te draaien?"
+
+#: views/managed-backups/partials/restore-backup-progress.php:236
+#: views/snapshots/partials/restore-snapshot-progress.php:84
+#, fuzzy
+msgid "WP ADMIN"
+msgstr "WP ADMIN"
+
+#: views/snapshots/restore.php:523 views/snapshots/snapshot.php:459
+#, fuzzy
+msgid "wp-config.php"
+msgstr "wp-config.php"
+
+#: views/managed-backups/new-backup.php:130
+#, fuzzy
+msgid "PSOURCE Cloud"
+msgstr "PSOURCE Cloud"
+
+#: views/boxes/modals/popup-welcome.php:45
+#, fuzzy
+msgid "PSOURCE Managed Backups"
+msgstr "PSOURCE Beheerde back-ups"
+
+#: lib/Snapshot/View/Settings.php:287
+#, fuzzy
+msgid ""
+"You are about to restore a previous version of your ClassicPress database. "
+"This will remove any new information added since the snapshot backup."
+msgstr ""
+"Je staat op het punt een vorige versie van je ClassicPress-database terug te "
+"zetten. Dit zal alle nieuwe informatie verwijderen die is toegevoegd sinds "
+"de snapshot back-up."
+
+#: views/destinations/add/index.php:160
+#, fuzzy, php-format
+msgid ""
+"You are deleting the destination <strong>%s</strong>. This destination has "
+"%d archives in it, are you sure you wish to remove it? You will still be "
+"able to access any archives at the destinations using the %s interface."
+msgstr ""
+"Je verwijdert de bestemming <strong>%s</strong>. Deze bestemming bevat %d "
+"archieven, weet je zeker dat je hem wilt verwijderen? Je hebt nog steeds "
+"toegang tot alle archieven op de bestemmingen via de %s interface."
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:623
+#, fuzzy
+msgid "You can define multiple Directory IDs seperated by comma"
+msgstr "Je kunt meerdere directory-ID's definiëren, gescheiden door een komma"
+
+#: views/destinations/add/aws.php:45
+#, fuzzy, php-format
+msgid ""
+"You can get your access keys via the <a target=\"_blank\" href=\"%s\">AWS "
+"Console</a>"
+msgstr ""
+"Je kunt je toegangssleutels krijgen via de <a target=\"_blank\" href=\"%s\">"
+"AWS Console</a>"
+
+#: views/destinations/add/dropbox.php:117
+#, fuzzy
+msgid ""
+"You can re-authenticate at any time if you wish to change this destination's "
+"details."
+msgstr ""
+"Je kunt op elk moment opnieuw authenticeren als je de gegevens van deze "
+"bestemming wilt wijzigen."
+
+#: lib/Snapshot/View/Full/Backup.php:80
+#, fuzzy, php-format
+msgid "You can reset your key <a href=\"%s\">here</a>"
+msgstr "Je kunt je sleutel <a href=\"%s\">hier</a> opnieuw instellen"
+
+#: views/snapshots/restore.php:128
+#, fuzzy
+msgid ""
+"You can restore the backup to a different blog within your Multisite "
+"environment.<br><strong>Note: The destination blog MUST already exist."
+"</strong>"
+msgstr ""
+"Je kunt de back-up terugzetten naar een ander blog binnen je Multisite-"
+"omgeving.<br><strong>Noot: Het doelblog MOET al bestaan.</strong>"
+
+#: views/snapshots/snapshot.php:269
+#, fuzzy
+msgid "You can use any combination of the following tokens."
+msgstr "Je kunt elke combinatie van de volgende tokens gebruiken."
+
+#: views/managed-backups/new-backup.php:83 views/managed-backups/restore.php:50
+#: views/snapshots/restore.php:75 views/snapshots/snapshot.php:87
+#, fuzzy
+msgid ""
+"You have 1 or more requirements warnings. You can proceed, however Snapshot "
+"may run into issues due to the warnings."
+msgstr ""
+"Je hebt 1 of meer waarschuwingen voor vereisten. Je kunt doorgaan, maar "
+"Snapshot kan problemen krijgen door de waarschuwingen."
+
+#: views/destinations/partials/dropbox-destination-list.php:5
+#, fuzzy
+msgid "You haven't added a Dropbox destination yet."
+msgstr "Je hebt nog geen Dropbox-bestemming toegevoegd."
+
+#: views/destinations/partials/ftp-destination-list.php:5
+#, fuzzy
+msgid "You haven't added a FTP destination yet."
+msgstr "Je hebt nog geen FTP-bestemming toegevoegd."
+
+#: views/destinations/partials/google-drive-destination-list.php:4
+#, fuzzy
+msgid "You haven't added a Google Drive destination yet."
+msgstr "Je hebt nog geen Google Drive bestemming toegevoegd."
+
+#: views/destinations/partials/local-destination-list.php:5
+#, fuzzy
+msgid "You haven't added a Local destination yet."
+msgstr "Je hebt nog geen Lokale bestemming toegevoegd."
+
+#: views/destinations/partials/s3-destination-list.php:6
+#, fuzzy
+msgid "You haven't added an Amazon S3 destination yet."
+msgstr "Je hebt nog geen Amazon S3 bestemming toegevoegd."
+
+#: lib/Snapshot/Helper/UI.php:242
+#, fuzzy, php-format
+msgid ""
+"You haven't added any third party destinations yet. It's much safer to store "
+"your snapshots off-site so we recommend you add <a href='%s'>another "
+"destination</a>."
+msgstr ""
+"Je hebt nog geen bestemmingen van derden toegevoegd. Het is veel veiliger om "
+"je snapshots off-site op te slaan, dus we raden je aan <a href='%s'>een "
+"andere bestemming</a> toe te voegen."
+
+#: views/boxes/dashboard/widget-status.php:7
+#, fuzzy
+msgid ""
+"You haven't backed up your site yet. Create your first backup now<br>– it'll "
+"only take a minute."
+msgstr ""
+"Je hebt nog geen back-up van je site gemaakt. Maak nu je eerste back-up<br>- "
+"het duurt maar een minuutje."
+
+#: views/destinations/add/google-drive.php:84
+#, fuzzy, php-format
+msgid "You may specify multiple Directory IDs separated by a comma \"%s\""
+msgstr ""
+"Je kunt meerdere directory-ID's opgeven, gescheiden door een komma \"%s\""
+
+#: views/managed-backups/new-backup.php:85 views/snapshots/snapshot.php:89
+#, fuzzy
+msgid "You meet the server requirements. You can proceed now."
+msgstr "Je voldoet aan de serververeisten. Je kunt nu doorgaan."
+
+#: views/managed-backups/new-backup.php:81 views/managed-backups/restore.php:45
+#: views/snapshots/restore.php:70 views/snapshots/snapshot.php:85
+#, fuzzy
+msgid "You must meet the server requirements before proceeding."
+msgstr "Je moet aan de serververeisten voldoen voordat je verder gaat."
+
+#: lib/Snapshot/Model/Destination.php:34
+#, fuzzy
+msgid "You must override all required vars in your Snapshot Destination class!"
+msgstr ""
+"Je moet alle vereiste vars in je Snapshot-bestemmingsklasse overschrijven!"
+
+#: lib/Snapshot/Model/Destination.php:48
+#, fuzzy
+msgid ""
+"You must override the function 'display_details_form' in your Snapshot "
+"Destination class!"
+msgstr ""
+"Je moet de functie 'display_details_form' in je Snapshot-bestemmingsklasse "
+"overschrijven!"
+
+#: lib/Snapshot/Model/Destination.php:40
+#, fuzzy
+msgid ""
+"You must override the function 'display_listing_table' in your Snapshot "
+"Destination class!"
+msgstr ""
+"Je moet de functie 'display_listing_table' overschrijven in je Snapshot-"
+"bestemmingsklasse!"
+
+#: lib/Snapshot/Model/Destination.php:44
+#, fuzzy
+msgid ""
+"You must override the function 'sendfile_to_remote' in your Snapshot "
+"Destination class!"
+msgstr ""
+"Je moet de functie 'sendfile_to_remote' overschrijven in je Snapshot-"
+"bestemmingsklasse!"
+
+#: views/destinations/add/google-drive.php:224
+#: lib/Snapshot/Model/Destination/google-drive/index.php:759
+#, fuzzy
+msgid "You must save this form one last time to retain the token."
+msgstr ""
+"Je moet dit formulier nog een laatste keer opslaan om het token te behouden."
+
+#: views/managed-backups/restore.php:92
+#, fuzzy
+msgid ""
+"You need to enter the full path to the directory you want to restore your "
+"website to. Note: this will be the new root directory for your site."
+msgstr ""
+"Je moet het volledige pad invoeren naar de map waarin je je website wilt "
+"herstellen. Opmerking: dit wordt de nieuwe hoofddirectory voor je site."
+
+#: lib/Snapshot/View/Full/Backup.php:81
+#, fuzzy, php-format
+msgid ""
+"You need to have your secret key entered in settings for automatic managed "
+"backups to work. You can get your key <a href=\"%s\">here</a>."
+msgstr ""
+"Je moet je geheime sleutel hebben ingevoerd in de instellingen om "
+"automatische beheerde back-ups te laten werken. Je kunt je sleutel <a "
+"href=\"%s\">hier</a> krijgen."
+
+#: views/destinations/add/dropbox.php:108
+#, fuzzy
+msgid ""
+"You've authenticated this Dropbox destination. To finish adding this "
+"destination, please specify a folder to store the snapshots in and click "
+"Save Destination."
+msgstr ""
+"Je hebt deze Dropbox-bestemming geverifieerd. Om het toevoegen van deze "
+"bestemming te voltooien, geef je een map op om de snapshots in op te slaan "
+"en klik je op Bestemming opslaan."
+
+#: views/managed-backups/partials/create-backup-progress.php:57
+#, fuzzy
+msgid ""
+"Your backup has been successfully created and uploaded to PSOURCE servers!."
+msgstr "Je back-up is met succes gemaakt en geüpload naar de PSOURCE servers!"
+
+#: views/managed-backups/partials/create-backup-progress.php:29
+#, fuzzy
+msgid ""
+"Your backup is in progress. <strong>You need to keep this page open for the "
+"backup to complete.</strong> Once your website has been backed up, it will "
+"be uploaded to PSOURCE servers. If your site is small, this will only take a "
+"few minutes, but could take a couple of hours for larger sites."
+msgstr ""
+"Je back-up is bezig. <strong>Je moet deze pagina open houden om de back-up "
+"te voltooien.</strong> Zodra je website is geback-upt, wordt hij geüpload "
+"naar de servers van PSOURCE. Als je site klein is, duurt dit maar een paar "
+"minuten, maar voor grotere sites kan het een paar uur duren."
+
+#: views/import.php:249
+#, fuzzy, php-format
+msgid ""
+"Your current snapshot directory is %s. We will automatically check this "
+"directory also."
+msgstr ""
+"Je huidige snapshot-map is %s. We zullen automatisch ook deze map "
+"controleren."
+
+#: views/settings.php:83
+#, fuzzy, php-format
+msgid ""
+"Your current snapshot directory lives at: <a href=\"#\">%s</a>. If you "
+"choose a custom directory, Snapshot will automatically transfer any archives "
+"to the new directory for you."
+msgstr ""
+"Je huidige snapshot-map staat op: <a href=\"#\">%s</a>. Als je een "
+"aangepaste map kiest, zal Snapshot automatisch alle archieven voor je "
+"overbrengen naar de nieuwe map."
+
+#: views/boxes/dashboard/widget-status.php:29
+#, fuzzy
+msgid "Your last backup was created less than a week ago. Excellent work!"
+msgstr ""
+"Je laatste back-up is minder dan een week geleden gemaakt. Uitstekend werk!"
+
+#: views/boxes/dashboard/widget-status.php:32
+#, fuzzy
+msgid ""
+"Your last backup was over a week ago. Make sure you're backing up regulary!"
+msgstr ""
+"Je laatste back-up was meer dan een week geleden. Zorg ervoor dat je "
+"regelmatig een back-up maakt!"
+
+#: lib/Snapshot/Controller/Full/Ajax.php:74
+#, fuzzy
+msgid "Your log file is empty"
+msgstr "Je logbestand is leeg"
+
+#: views/common/requirements-test.php:32
+#, fuzzy, php-format
+msgid ""
+"Your PHP version is out of date.\n"
+"\t\t\t\t\t\t\t\t\tYour current version is %s and we require 5.2 or newer.\n"
+"\t\t\t\t\t\t\t\t\tYou'll need to update your PHP version to proceed.\n"
+"\t\t\t\t\t\t\t\t\tIf you use a managed host, contact them directly to have "
+"it updated."
+msgstr ""
+"Je PHP-versie is verouderd.\n"
+"\t\t\t\t\t\t\t\t\tJe huidige versie is %s en we hebben 5.2 of nieuwer nodig."
+"\n"
+"\t\t\t\t\t\t\t\t\tJe moet je PHP-versie bijwerken om verder te kunnen gaan.\n"
+"\t\t\t\t\t\t\t\t\tAls je een managed host gebruikt, neem dan direct contact "
+"met hen op om het bij te laten werken."
+
+#: views/managed-backups/partials/restore-backup-progress.php:46
+#: views/snapshots/partials/restore-snapshot-progress.php:36
+#, fuzzy
+msgid ""
+"Your restoration is in progress. If your site is small, this will only take "
+"a few minutes, but could take a couple of hours for larger sites."
+msgstr ""
+"Je restauratie is bezig. Als je site klein is, duurt dit maar een paar "
+"minuten, maar voor grotere sites kan het een paar uur duren."
+
+#: views/snapshots/partials/create-snapshot-progress.php:79
+#, fuzzy
+msgid ""
+"Your snapshot has been successfully created and stored! <a href=\"\">View "
+"snapshot</a>."
+msgstr ""
+"Je snapshot is succesvol gemaakt en opgeslagen! <a href=\"\">Bekijk "
+"snapshot</a>."
+
+#: views/snapshots/partials/create-snapshot-progress.php:49
+#, fuzzy
+msgid ""
+"Your snapshot is in progress. <strong> You need to keep this page open for "
+"the backup to complete. </strong> Once your website has been backed up, it "
+"will be uploaded to your destination. If your site is small, this will only "
+"take a few minutes, but could take a couple of hours for larger sites."
+msgstr ""
+"Je snapshot is bezig. <strong> Je moet deze pagina open houden om de back-up "
+"te voltooien. </strong> Zodra je website is geback-upt, wordt hij geüpload "
+"naar je bestemming. Als je site klein is, duurt dit maar een paar minuten, "
+"maar voor grotere sites kan het een paar uur duren."
+
+#: lib/Snapshot/View/Settings.php:295
+#, fuzzy, php-format
+msgid ""
+"Your web server timeout is set very low, %d seconds. Also, it appears this "
+"timeout cannot be adjusted via the Snapshot restore process. Attempting a "
+"snapshot restore could result in a partial restore of your tables."
+msgstr ""
+"De time-out van je webserver is erg laag ingesteld, %d seconden. Het lijkt "
+"er ook op dat deze time-out niet kan worden aangepast via het Snapshot "
+"herstelproces. Pogingen om een snapshot te herstellen kunnen resulteren in "
+"een gedeeltelijk herstel van je tabellen."
+
+#: views/snapshots/partials/restore-snapshot-progress.php:60
+#, fuzzy
+msgid "Your website has been successfully restored from your snapshot!"
+msgstr "Je website is succesvol hersteld van je snapshot!"
+
+#: views/managed-backups/partials/restore-backup-progress.php:210
+#, fuzzy, php-format
+msgid ""
+"Your website has been successfully restored from your snapshot!! <a "
+"href=\"%s\">View website</a>."
+msgstr ""
+"Je website is succesvol hersteld van je snapshot!!! <a href=\"%s\">Bekijk "
+"website</a>."

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: CP BackUp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-10 10:22+0000\n"
-"PO-Revision-Date: 2023-03-10 10:59+0000\n"
+"PO-Revision-Date: 2023-03-10 11:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -194,13 +194,12 @@ msgstr ""
 "abrufst."
 
 #: views/boxes/modals/popup-welcome.php:61
-#, fuzzy
 msgid ""
 "<strong>Let’s start by adding a new destination</strong>; where would you "
 "like to store your first snapshot?"
 msgstr ""
 "<strong>Fangen wir damit an, ein neues Ziel hinzuzufügen</strong>; wo "
-"möchtest du deinen ersten Schnappschuss speichern?"
+"möchtest du deinen ersten Snapshot speichern?"
 
 #: views/snapshots/snapshot.php:543
 #, fuzzy
@@ -279,9 +278,8 @@ msgid "Activate Managed Backups"
 msgstr "Managed Backups aktivieren"
 
 #: views/boxes/dashboard/widget-destinations.php:46
-#, fuzzy
 msgid "Active Destinations"
-msgstr "Aktive Reiseziele"
+msgstr "Aktive Ziel-Definitionen"
 
 #: views/snapshots/snapshot.php:561
 #, fuzzy
@@ -309,14 +307,12 @@ msgid "Add New"
 msgstr "Neu hinzufügen"
 
 #: views/boxes/modals/popup-snapshot.php:17
-#, fuzzy
 msgid "Add Snapshot Key"
-msgstr "Schnappschuss-Schlüssel hinzufügen"
+msgstr "Snapshot-Schlüssel hinzufügen"
 
 #: views/managed_backups.php:111
-#, fuzzy
 msgid "Add snapshot key"
-msgstr "Schnappschuss-Schlüssel hinzufügen"
+msgstr "Snapshot-Schlüssel hinzufügen"
 
 #: lib/Snapshot/Model/Destination/ftp/index.php:119
 #, fuzzy
@@ -359,9 +355,8 @@ msgid "All Backed up"
 msgstr "Alles gesichert"
 
 #: views/snapshots.php:78
-#, fuzzy
 msgid "All Destinations"
-msgstr "Alle Reiseziele"
+msgstr "Alle Ziel-Definitionen"
 
 #: views/snapshots/item.php:221
 #, fuzzy
@@ -562,14 +557,12 @@ msgid "Available Backups"
 msgstr "Verfügbare Backups"
 
 #: views/boxes/dashboard/widget-status.php:82
-#, fuzzy
 msgid "Available Destinations"
-msgstr "Verfügbare Reiseziele"
+msgstr "Verfügbare Ziel-Definitionen"
 
 #: views/snapshots.php:59
-#, fuzzy
 msgid "Available Snapshots"
-msgstr "Verfügbare Schnappschüsse"
+msgstr "Verfügbare Snapshots"
 
 #: lib/Snapshot/View/Full/Backup.php:237
 #, fuzzy
@@ -772,21 +765,20 @@ msgstr ""
 "Wiederherstellungsprozesses behandeln soll."
 
 #: views/snapshots/snapshot.php:221
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Choose where to send this snapshot. Add new destinations via the <a "
 "href=\"%s\">Destinations</a> tab."
 msgstr ""
-"Wähle aus, wohin dieser Schnappschuss gesendet werden soll. Füge neue Ziele "
-"über die Registerkarte <a href=\"%s\">Ziele</a> hinzu."
+"Wähle aus, wohin dieser Snapshot gesendet werden soll. Füge neue Ziele über "
+"die Registerkarte <a href=\"%s\">Ziele</a> hinzu."
 
 #: views/settings.php:45
-#, fuzzy
 msgid ""
 "Choose where your snapshots will be stored whilst they are being uploaded to "
 "your third party integrations."
 msgstr ""
-"Wähle aus, wo deine Schnappschüsse gespeichert werden sollen, während sie in "
+"Wähle aus, wo deine Snapshots gespeichert werden sollen, während sie in "
 "deine Drittanbieter-Integrationen hochgeladen werden."
 
 #: views/managed-backups/restore.php:76
@@ -892,13 +884,12 @@ msgid "Create"
 msgstr "Erstellen"
 
 #: views/snapshots.php:37
-#, fuzzy
 msgid ""
 "Create and store snapshots of your website. You choose what you want to back "
 "up and where you want to save it. Let's get started!"
 msgstr ""
-"Erstelle und speichere Schnappschüsse von deiner Website. Du wählst aus, was "
-"du sichern willst und wo du es speichern willst. Los geht's!"
+"Erstelle und speichere Snapshots von deiner Website. Du wählst aus, was du "
+"sichern willst und wo du es speichern willst. Los geht's!"
 
 #: views/managed-backups/partials/create-backup-progress.php:8
 #, fuzzy
@@ -908,9 +899,8 @@ msgstr "Sicherung erstellen"
 #: views/snapshots.php:40 lib/Snapshot/View/Settings.php:80
 #: views/boxes/dashboard/widget-snapshots.php:54
 #: views/snapshots/partials/create-snapshot-progress.php:9
-#, fuzzy
 msgid "Create Snapshot"
-msgstr "Schnappschuss erstellen"
+msgstr "Snapshot erstellen"
 
 #: lib/Snapshot/Helper/Log.php:131
 #, fuzzy
@@ -933,9 +923,8 @@ msgid "daily"
 msgstr "täglich"
 
 #: lib/Snapshot/Controller/Full/Cron.php:167
-#, fuzzy
 msgid "Daily Managed Snapshot"
-msgstr "Täglich verwalteter Schnappschuss"
+msgstr "Täglich verwalteter Snapshot"
 
 #: views/dashboard.php:3
 #, fuzzy
@@ -1110,19 +1099,17 @@ msgstr "Zielort:"
 
 #: views/destinations.php:10 views/boxes/dashboard/widget-destinations.php:26
 #: views/destinations/add/index.php:49
-#, fuzzy
 msgid "Destinations"
-msgstr "Reiseziele"
+msgstr "Ziel-Definitionen"
 
 #: views/boxes/dashboard/widget-destinations.php:38
-#, fuzzy
 msgid ""
 "Destinations are where your snapshots are uploaded and stored. Store files "
 "on Dropbox, Google Drive, Amazon S3, FTP/SFTP, or your local computer."
 msgstr ""
-"Die Ziele sind die Orte, an die deine Schnappschüsse hochgeladen und "
-"gespeichert werden. Du kannst Dateien auf Dropbox, Google Drive, Amazon S3, "
-"FTP/SFTP oder deinem lokalen Computer speichern."
+"Die Ziele sind die Orte, an die deine Snapshots hochgeladen und gespeichert "
+"werden. Du kannst Dateien auf Dropbox, Google Drive, Amazon S3, FTP/SFTP "
+"oder deinem lokalen Computer speichern."
 
 #. Description of the plugin
 #, fuzzy
@@ -1202,9 +1189,8 @@ msgid "download"
 msgstr "herunterladen"
 
 #: views/snapshots/item.php:107
-#, fuzzy
 msgid "Download the snapshot archive"
-msgstr "Download des Schnappschuss-Archivs"
+msgstr "Download des Snapshot-Archivs"
 
 #: lib/Snapshot/Model/Destination/google-drive/index.php:621
 #, fuzzy
@@ -1256,9 +1242,8 @@ msgid "edit"
 msgstr "bearbeiten"
 
 #: views/snapshots/snapshot.php:47
-#, fuzzy
 msgid "Edit Snapshot"
-msgstr "Schnappschuss bearbeiten"
+msgstr "Snapshot bearbeiten"
 
 #: views/destinations/add/dropbox.php:173
 #, fuzzy
@@ -1681,9 +1666,8 @@ msgid "Getting Older"
 msgstr "Älter werden"
 
 #: views/snapshots/snapshot.php:1039
-#, fuzzy
 msgid "Give your snapshot a nice name!"
-msgstr "Gib deinem Schnappschuss einen schönen Namen!"
+msgstr "Gib deinem Snapshot einen schönen Namen!"
 
 #: views/snapshots/item.php:274 lib/Snapshot/Helper/Utility.php:1153
 #, fuzzy
@@ -1999,9 +1983,8 @@ msgid "Last run"
 msgstr "Letzter Lauf"
 
 #: views/boxes/dashboard/widget-status.php:65
-#, fuzzy
 msgid "Last Snapshot"
-msgstr "Letzter Schnappschuss"
+msgstr "Letzter Snapshot"
 
 #: lib/Snapshot/View/Table/Items.php:495
 #, fuzzy
@@ -2173,13 +2156,12 @@ msgid "Midnight"
 msgstr "Mitternacht"
 
 #: views/import.php:206
-#, fuzzy
 msgid ""
 "Missing a snapshot? You can use this import tool to find any missing "
 "snapshots. Snapshot will automatically check your integrations but you can "
 "also add a custom directory below."
 msgstr ""
-"Fehlt ein Schnappschuss? Mit diesem Import-Tool kannst du alle fehlenden "
+"Fehlt ein Snapshot? Mit diesem Import-Tool kannst du alle fehlenden "
 "Snapshots finden. Snapshot überprüft deine Integrationen automatisch, aber "
 "du kannst auch ein benutzerdefiniertes Verzeichnis unten hinzufügen."
 
@@ -2263,9 +2245,8 @@ msgid "New Backup"
 msgstr "Neue Sicherung"
 
 #: views/snapshots.php:61
-#, fuzzy
 msgid "New Snapshot"
-msgstr "Neuer Schnappschuss"
+msgstr "Neuer Snapshot"
 
 #: lib/Snapshot/View/Table/Items.php:344
 #, fuzzy
@@ -2857,9 +2838,8 @@ msgid "Restore Result"
 msgstr "Ergebnis wiederherstellen"
 
 #: lib/Snapshot/View/Settings.php:362
-#, fuzzy
 msgid "Restore Snapshot"
-msgstr "Schnappschuss wiederherstellen"
+msgstr "Snapshot wiederherstellen"
 
 #: lib/Snapshot/View/Settings.php:357
 #, fuzzy
@@ -2945,14 +2925,12 @@ msgid "Save Key"
 msgstr "Schlüssel speichern"
 
 #: lib/Snapshot/View/Settings.php:250
-#, fuzzy
 msgid "Save Snapshot"
-msgstr "Schnappschuss speichern"
+msgstr "Snapshot speichern"
 
 #: lib/Snapshot/View/Settings.php:481
-#, fuzzy
 msgid "Scan / Import Snapshots"
-msgstr "Schnappschüsse scannen / importieren"
+msgstr "Snapshot scannen / importieren"
 
 #: views/managed_backups.php:403 views/managed-backups/new-backup.php:188
 #: views/snapshots/snapshot.php:848
@@ -2999,9 +2977,8 @@ msgid "Select the archive you wish to restore from."
 msgstr "Wähle das Archiv aus, das du wiederherstellen möchtest."
 
 #: lib/Snapshot/View/Table/Archives.php:409
-#, fuzzy
 msgid "Select the snapshot item to restore"
-msgstr "Wähle das wiederherzustellende Schnappschusselement aus"
+msgstr "Wähle das wiederherzustellende Snapshotelement aus"
 
 #: views/snapshots/restore.php:595 views/snapshots/snapshot.php:621
 #, fuzzy
@@ -3065,9 +3042,8 @@ msgid "SFTP"
 msgstr "SFTP"
 
 #: lib/Snapshot/View/Table/Items.php:121
-#, fuzzy
 msgid "Show All Destinations"
-msgstr "Alle Reiseziele anzeigen"
+msgstr "Alle Reiseziele Ziel-Definitionen"
 
 #: views/managed-backups/partials/restore-backup-progress.php:10
 #: views/snapshots/partials/create-snapshot-progress.php:11
@@ -3102,20 +3078,17 @@ msgid "Skip"
 msgstr "Überspringen"
 
 #: views/snapshots/snapshot.php:1047
-#, fuzzy
 msgid "Snapshot"
-msgstr "Schnappschuss"
+msgstr "Snapshot"
 
 #: lib/Snapshot/View/Destination/Listing.php:24
-#, fuzzy
 msgctxt "Snapshot Destination Page Title"
 msgid "All Snapshot Destinations"
-msgstr "Alle Schnappschuss-Ziele"
+msgstr "Alle Snapshot-Ziele"
 
 #: lib/Snapshot/View/Destination/Listing.php:191
-#, fuzzy
 msgid "Snapshot Destinations"
-msgstr "Schnappschuss Reiseziele"
+msgstr "Snapshot Ziel-Definitionen"
 
 #: views/managed-backups/partials/restore-backup-progress.php:114
 #: views/snapshots/partials/restore-snapshot-progress.php:126
@@ -3129,15 +3102,13 @@ msgid "Snapshot Finishing (creating zip archive of tables)"
 msgstr "Snapshot Finishing (Erstellen eines Zip-Archivs der Tabellen)"
 
 #: views/snapshots/item.php:31
-#, fuzzy
 msgid "Snapshot Info"
-msgstr "Schnappschuss-Infos"
+msgstr "Snapshot-Infos"
 
 #: lib/Snapshot/View/Settings.php:64 lib/Snapshot/View/Settings.php:225
 #: lib/Snapshot/View/Settings.php:335
-#, fuzzy
 msgid "Snapshot Information"
-msgstr "Schnappschuss-Informationen"
+msgstr "Snapshot-Informationen"
 
 #: views/snapshots/partials/create-snapshot-progress.php:153
 #, fuzzy
@@ -3145,31 +3116,26 @@ msgid "Snapshot Initializing"
 msgstr "Snapshot Initialisierung"
 
 #: views/managed_backups.php:97
-#, fuzzy
 msgid "Snapshot Key"
-msgstr "Schnappschuss-Schlüssel"
+msgstr "Snapshot-Schlüssel"
 
 #: views/snapshots/partials/create-snapshot-progress.php:111
-#, fuzzy
 msgid "Snapshot Log"
-msgstr "Schnappschuss-Protokoll"
+msgstr "Snapshot-Protokoll"
 
 #: lib/Snapshot/View/Full/Backup.php:243
-#, fuzzy
 msgid "Snapshot Logs"
-msgstr "Schnappschuss-Protokolle"
+msgstr "Snapshot-Protokolle"
 
 #: lib/Snapshot/View/Settings.php:36
-#, fuzzy
 msgctxt "Snapshot New Page Title"
 msgid "Add New Snapshot"
-msgstr "Neuen Schnappschuss hinzufügen"
+msgstr "Neuen Snapshot hinzufügen"
 
 #: lib/Snapshot/View/Settings.php:141
-#, fuzzy
 msgctxt "Snapshot New Page Title"
 msgid "All Snapshots"
-msgstr "Alle Schnappschüsse"
+msgstr "Alle Snapshots"
 
 #: lib/Snapshot/View/Destination/Listing.php:120
 #: lib/Snapshot/View/Destination/Listing.php:131
@@ -3179,14 +3145,13 @@ msgid ""
 msgstr ""
 
 #: lib/Snapshot/View/Settings.php:375
-#, fuzzy
 msgctxt "Snapshot page description"
 msgid ""
 "ERROR: Missing argument. Please return to the main Snapshot panel and select "
 "the archive to restore. "
 msgstr ""
-"ERROR: Fehlendes Argument. Bitte kehre zum Hauptfenster des Schnappschusses "
-"zurück und wähle das Archiv aus, das du wiederherstellen möchtest."
+"ERROR: Fehlendes Argument. Bitte kehre zum Hauptfenster des Snapshots zurück "
+"und wähle das Archiv aus, das du wiederherstellen möchtest."
 
 #: lib/Snapshot/View/Settings.php:284
 #, fuzzy
@@ -3248,68 +3213,59 @@ msgstr ""
 "gelöscht, je nach der Option <strong>Lokale Archive behalten?</strong>."
 
 #: lib/Snapshot/View/Settings.php:38
-#, fuzzy
 msgctxt "Snapshot page description"
 msgid ""
 "Use this form to create a new snapshot of your site. Fill in the optional "
 "Name and Notes fields. Select the tables to be included in this snapshot."
 msgstr ""
-"Verwende dieses Formular, um einen neuen Schnappschuss deiner Website zu "
+"Verwende dieses Formular, um einen neuen Snapshot deiner Website zu "
 "erstellen. Fülle die optionalen Felder Name und Notizen aus. Wähle die "
 "Tabellen aus, die in diesen Snapshot aufgenommen werden sollen."
 
 #: lib/Snapshot/View/Settings.php:203
-#, fuzzy
 msgctxt "Snapshot page description"
 msgid ""
 "Use this form to update the details for a previous snapshot. Also, provided "
 "is a link you can use to download the snapshot for sharing or archiving."
 msgstr ""
-"Verwende dieses Formular, um die Details eines früheren Schnappschusses zu "
+"Verwende dieses Formular, um die Details eines früheren Snapshots zu "
 "aktualisieren. Außerdem findest du einen Link, über den du den Schnappschuss "
 "zum Teilen oder Archivieren herunterladen kannst."
 
 #: lib/Snapshot/View/Destination/Listing.php:130
-#, fuzzy
 msgctxt "Snapshot Plugin Page Title"
 msgid "Add Snapshot Destination"
-msgstr "Schnappschuss-Ziel hinzufügen"
+msgstr "Snapshot-Ziel hinzufügen"
 
 #: lib/Snapshot/View/Settings.php:201
-#, fuzzy
 msgctxt "Snapshot Plugin Page Title"
 msgid "Edit Snapshot"
-msgstr "Schnappschuss bearbeiten"
+msgstr "Snapshot bearbeiten"
 
 #: lib/Snapshot/View/Destination/Listing.php:119
 #: lib/Snapshot/View/Destination/Listing.php:142
-#, fuzzy
 msgctxt "Snapshot Plugin Page Title"
 msgid "Edit Snapshot Destination"
-msgstr "Schnappschuss-Ziel bearbeiten"
+msgstr "Snapshot-Ziel bearbeiten"
 
 #: lib/Snapshot/View/Settings.php:282 lib/Snapshot/View/Settings.php:373
-#, fuzzy
 msgctxt "Snapshot Plugin Page Title"
 msgid "Restore Snapshot"
-msgstr "Schnappschuss wiederherstellen"
+msgstr "Snapshot wiederherstellen"
 
 #: lib/Snapshot/View/Settings.php:464
-#, fuzzy
 msgctxt "Snapshot Plugin Page Title"
 msgid "Snapshot Scan / Import"
-msgstr "Schnappschuss-Scan / Import"
+msgstr "Snapshot-Scan / Import"
 
 #: lib/Snapshot/View/Settings.php:398
-#, fuzzy
 msgctxt "Snapshot Plugin Page Title"
 msgid "Snapshot Settings"
-msgstr "Schnappschuss-Einstellungen"
+msgstr "Snapshot-Einstellungen"
 
 #: views/snapshots/partials/create-snapshot-progress.php:17
-#, fuzzy
 msgid "Snapshot Result"
-msgstr "Schnappschuss Ergebnis"
+msgstr "Snapshot Ergebnis"
 
 #: views/snapshots/snapshot.php:1053
 #, fuzzy
@@ -3334,9 +3290,8 @@ msgstr ""
 "das älteste gelöscht wird."
 
 #: views/snapshots/snapshot.php:53
-#, fuzzy
 msgid "Snapshot Wizard"
-msgstr "Schnappschuss-Assistent"
+msgstr "Snapshot-Assistent"
 
 #: views/snapshots.php:16 views/snapshots/item.php:21
 #: views/snapshots/restore.php:34 views/snapshots/snapshot.php:29
@@ -3347,9 +3302,8 @@ msgstr "Schnappschuss-Assistent"
 #: views/destinations/partials/google-drive-destination-list.php:17
 #: views/destinations/partials/local-destination-list.php:17
 #: views/destinations/partials/s3-destination-list.php:19
-#, fuzzy
 msgid "Snapshots"
-msgstr "Schnappschüsse"
+msgstr "Snapshots"
 
 #: views/boxes/dashboard/widget-snapshots.php:59
 #, fuzzy
@@ -4061,9 +4015,8 @@ msgstr "Seite ansehen"
 
 #: views/managed-backups/partials/restore-backup-progress.php:237
 #: views/snapshots/partials/create-snapshot-progress.php:104
-#, fuzzy
 msgid "View Snapshot"
-msgstr "Schnappschuss ansehen"
+msgstr "Snapshot ansehen"
 
 #: views/snapshots/partials/restore-snapshot-progress.php:64
 #, fuzzy
@@ -4171,10 +4124,9 @@ msgstr ""
 "verwalten."
 
 #: views/boxes/dashboard/widget-status.php:55
-#, fuzzy
 msgid "Welcome to the Dashboard. Here you can manage all your snapshots."
 msgstr ""
-"Willkommen im Dashboard. Hier kannst du alle deine Schnappschüsse verwalten."
+"Willkommen im Dashboard. Hier kannst du alle deine Snapshots verwalten."
 
 #: lib/Snapshot/View/Settings.php:67 lib/Snapshot/View/Settings.php:229
 #, fuzzy
@@ -4495,15 +4447,14 @@ msgstr ""
 "href=\"%s\">hier</a> erhalten."
 
 #: views/destinations/add/dropbox.php:108
-#, fuzzy
 msgid ""
 "You've authenticated this Dropbox destination. To finish adding this "
 "destination, please specify a folder to store the snapshots in and click "
 "Save Destination."
 msgstr ""
 "Du hast dieses Dropbox-Ziel authentifiziert. Um das Hinzufügen dieses Ziels "
-"abzuschließen, gib bitte einen Ordner an, in dem die Schnappschüsse "
-"gespeichert werden sollen, und klicke auf Ziel speichern."
+"abzuschließen, gib bitte einen Ordner an, in dem die Snapshots gespeichert "
+"werden sollen, und klicke auf Ziel speichern."
 
 #: views/managed-backups/partials/create-backup-progress.php:57
 #, fuzzy

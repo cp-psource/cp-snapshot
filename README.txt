@@ -15,3 +15,5 @@ This plugin allows you to create quick backup snapshots of your working ClassicP
 
 == Description ==
 
+[RESTORE SCRIPT](https://github.com/cp-psource/cp-snapshot-installer-1.0.1)
+

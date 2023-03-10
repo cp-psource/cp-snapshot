@@ -24,7 +24,7 @@ $snapshots = array_slice( $snapshots, 0, 3 );
 	<div class="wpmud-box-title<?php echo empty( $snapshots ) ? ' has-button' : ''; ?>">
 
 		<h3<?php echo empty( $snapshots ) ? ' class="has-count"' : ''; ?>>
-			<?php _e( 'Snapshots', SNAPSHOT_I18N_DOMAIN ); ?>
+			<?php _e( 'Snapshots', 'cp-snapshot' ); ?>
 
 			<?php if ( ! empty( $snapshots ) ) : ?>
 				<span class="wps-count"><?php echo $snapshots_counts ?></span>
@@ -32,7 +32,7 @@ $snapshots = array_slice( $snapshots, 0, 3 );
 
 		<?php if ( ! empty( $snapshots ) ) : ?>
 
-			<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-new-snapshot' ); ?>" class="button button-small button-blue"><?php _e( 'Create', SNAPSHOT_I18N_DOMAIN ) ?></a>
+			<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-new-snapshot' ); ?>" class="button button-small button-blue"><?php _e( 'Create', 'cp-snapshot' ) ?></a>
 
 		<?php endif; ?>
 
@@ -48,15 +48,15 @@ $snapshots = array_slice( $snapshots, 0, 3 );
 
 					<div class="wps-image img-snappie-one"></div>
 
-					<p><?php _e( 'Snapshots are restore points for your site. Simply choose what you want to back up and then store it on destinations such as Dropbox, Amazon S3 and more.', SNAPSHOT_I18N_DOMAIN ) ?></p>
+					<p><?php _e( 'Snapshots are restore points for your site. Simply choose what you want to back up and then store it on destinations such as Dropbox, Amazon S3 and more.', 'cp-snapshot' ) ?></p>
 
 					<p>
-						<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-new-snapshot' ); ?>" class="button button-blue"><?php _e( 'Create Snapshot', SNAPSHOT_I18N_DOMAIN ) ?></a>
+						<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-new-snapshot' ); ?>" class="button button-blue"><?php _e( 'Create Snapshot', 'cp-snapshot' ) ?></a>
 					</p>
 
 				<?php else : ?>
 
-					<p><?php _e( 'Snapshots are restore points for your site. Here are your latest snapshots.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+					<p><?php _e( 'Snapshots are restore points for your site. Here are your latest snapshots.', 'cp-snapshot' ); ?></p>
 
 					<table class="has-footer" cellpadding="0" cellspacing="0">
 
@@ -64,9 +64,9 @@ $snapshots = array_slice( $snapshots, 0, 3 );
 
 						<tr>
 
-							<th class="wss-name"><?php _e( 'Name', SNAPSHOT_I18N_DOMAIN ) ?></th>
+							<th class="wss-name"><?php _e( 'Name', 'cp-snapshot' ) ?></th>
 
-							<th class="wss-date"><?php _e( 'Date', SNAPSHOT_I18N_DOMAIN ) ?></th>
+							<th class="wss-date"><?php _e( 'Date', 'cp-snapshot' ) ?></th>
 
 						</tr>
 
@@ -160,7 +160,7 @@ $snapshots = array_slice( $snapshots, 0, 3 );
 
 							<td colspan="2">
 
-								<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-snapshots' ); ?>" class="button button-outline button-gray"><?php _e( 'View All', SNAPSHOT_I18N_DOMAIN ); ?></a>
+								<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-snapshots' ); ?>" class="button button-outline button-gray"><?php _e( 'View All', 'cp-snapshot' ); ?></a>
 
 							</td>
 

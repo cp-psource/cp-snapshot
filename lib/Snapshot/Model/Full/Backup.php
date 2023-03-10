@@ -153,7 +153,7 @@ class Snapshot_Model_Full_Backup extends Snapshot_Model_Full_Abstract {
 	}
 
 	/**
-	 * Check if we have WPMU DEV Dashboard plugin installed and activated
+	 * Check if we have PSOURCE Dashboard plugin installed and activated
 	 *
 	 * @return bool
 	 */
@@ -231,15 +231,15 @@ class Snapshot_Model_Full_Backup extends Snapshot_Model_Full_Abstract {
 
 		if ( $title_case ) {
 			$frequencies = array(
-				'daily' => __( 'Daily', SNAPSHOT_I18N_DOMAIN ),
-				'weekly' => __( 'Weekly', SNAPSHOT_I18N_DOMAIN ),
-				'monthly' => __( 'Monthly', SNAPSHOT_I18N_DOMAIN ),
+				'daily' => __( 'Daily', 'cp-snapshot' ),
+				'weekly' => __( 'Weekly', 'cp-snapshot' ),
+				'monthly' => __( 'Monthly', 'cp-snapshot' ),
 			);
 		} else {
 			$frequencies = array(
-				'daily' => __( 'daily', SNAPSHOT_I18N_DOMAIN ),
-				'weekly' => __( 'weekly', SNAPSHOT_I18N_DOMAIN ),
-				'monthly' => __( 'monthly', SNAPSHOT_I18N_DOMAIN ),
+				'daily' => __( 'daily', 'cp-snapshot' ),
+				'weekly' => __( 'weekly', 'cp-snapshot' ),
+				'monthly' => __( 'monthly', 'cp-snapshot' ),
 			);
 		}
 

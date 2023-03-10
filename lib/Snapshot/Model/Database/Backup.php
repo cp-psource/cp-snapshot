@@ -75,7 +75,7 @@ if ( ! class_exists( 'Snapshot_Model_Database_Backup' ) ) {
 		function stow( $query_line ) {
 			//echo "query_line=[". $query_line ."]<br />";
 			if ( false === @fwrite( $this->fp, $query_line ) ) {
-				$this->error( __( 'There was an error writing a line to the backup script:', SNAPSHOT_I18N_DOMAIN ) . '  ' . $query_line . '  ' . $php_errormsg );
+				$this->error( __( 'There was an error writing a line to the backup script:', 'cp-snapshot' ) . '  ' . $query_line . '  ' . $php_errormsg );
 			}
 		}
 
@@ -142,7 +142,7 @@ if ( ! class_exists( 'Snapshot_Model_Database_Backup' ) ) {
 		 * Alain Wolf, Zurich - Switzerland
 		 * Website: http://restkultur.ch/personal/wolf/scripts/db_backup/
 		 * Modified by Scott Merrill (http://www.skippy.net/)
-		 * to use the WordPress $wpdb object
+		 * to use the ClassicPress $wpdb object
 		 *
 		 * @param string $table
 		 * @param string $segment
@@ -157,7 +157,7 @@ if ( ! class_exists( 'Snapshot_Model_Database_Backup' ) ) {
 
 			$table_structure = $wpdb->get_results( "DESCRIBE `" . $table . "`" );
 			if ( ! $table_structure ) {
-				$this->error( __( 'Error getting table details', SNAPSHOT_I18N_DOMAIN ) . ": $table" );
+				$this->error( __( 'Error getting table details', 'cp-snapshot' ) . ": $table" );
 
 				return false;
 			}

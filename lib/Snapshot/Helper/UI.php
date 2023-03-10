@@ -39,13 +39,13 @@ if ( ! class_exists( 'Snapshot_Helper_UI' ) ) {
 			while ( $_hour < 24 ) {
 
 				if ( $_hour == 0 ) {
-					$_hour_label = __( "Midnight", SNAPSHOT_I18N_DOMAIN );
+					$_hour_label = __( "Midnight", 'cp-snapshot' );
 				} else if ( $_hour == 12 ) {
-					$_hour_label = __( "Noon", SNAPSHOT_I18N_DOMAIN );
+					$_hour_label = __( "Noon", 'cp-snapshot' );
 				} else if ( $_hour < 13 ) {
-					$_hour_label = $_hour . __( "am", SNAPSHOT_I18N_DOMAIN );
+					$_hour_label = $_hour . __( "am", 'cp-snapshot' );
 				} else {
-					$_hour_label = ( $_hour - 12 ) . __( "pm", SNAPSHOT_I18N_DOMAIN );
+					$_hour_label = ( $_hour - 12 ) . __( "pm", 'cp-snapshot' );
 				}
 
 				?>
@@ -82,13 +82,13 @@ if ( ! class_exists( 'Snapshot_Helper_UI' ) ) {
 		public static function form_show_wday_selector_options( $wday_value = 0 ) {
 
 			$_dow = array(
-				'0' => __( 'Sunday', SNAPSHOT_I18N_DOMAIN ),
-				'1' => __( 'Monday', SNAPSHOT_I18N_DOMAIN ),
-				'2' => __( 'Tuesday', SNAPSHOT_I18N_DOMAIN ),
-				'3' => __( 'Wednesday', SNAPSHOT_I18N_DOMAIN ),
-				'4' => __( 'Thursday', SNAPSHOT_I18N_DOMAIN ),
-				'5' => __( 'Friday', SNAPSHOT_I18N_DOMAIN ),
-				'6' => __( 'Saturday', SNAPSHOT_I18N_DOMAIN ),
+				'0' => __( 'Sunday', 'cp-snapshot' ),
+				'1' => __( 'Monday', 'cp-snapshot' ),
+				'2' => __( 'Tuesday', 'cp-snapshot' ),
+				'3' => __( 'Wednesday', 'cp-snapshot' ),
+				'4' => __( 'Thursday', 'cp-snapshot' ),
+				'5' => __( 'Friday', 'cp-snapshot' ),
+				'6' => __( 'Saturday', 'cp-snapshot' ),
 			);
 
 			foreach ( $_dow as $_key => $_label ) {
@@ -239,7 +239,7 @@ if ( ! class_exists( 'Snapshot_Helper_UI' ) ) {
 
 				</div>
 				<?php if( count( $all_destinations ) < 2 ) : ?>
-				<div class="wps-notice"><p><?php printf( __( "You haven't added any third party destinations yet. It's much safer to store your snapshots off-site so we recommend you add <a href='%s'>another destination</a>.", SNAPSHOT_I18N_DOMAIN ), PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations') ); ?></p></div>
+				<div class="wps-notice"><p><?php printf( __( "You haven't added any third party destinations yet. It's much safer to store your snapshots off-site so we recommend you add <a href='%s'>another destination</a>.", 'cp-snapshot' ), PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations') ); ?></p></div>
 				<?php endif; ?>
 			</div>
 			<?php
@@ -253,10 +253,10 @@ if ( ! class_exists( 'Snapshot_Helper_UI' ) ) {
 			$session_save_path = session_save_path();
 			//echo "session_save_path=[". $session_save_path ."]<br />";
 			if ( ! file_exists( $session_save_path ) ) {
-				PSOURCESnapshot::instance()->snapshot_admin_notices_proc( "error", sprintf( __( "<p>The session save path (%s) is not set to a valid directory. Check your PHP (php.ini) settings or contact your hosting provider.</p>", SNAPSHOT_I18N_DOMAIN ), $session_save_path ) );
+				PSOURCESnapshot::instance()->snapshot_admin_notices_proc( "error", sprintf( __( "<p>The session save path (%s) is not set to a valid directory. Check your PHP (php.ini) settings or contact your hosting provider.</p>", 'cp-snapshot' ), $session_save_path ) );
 
 			} else if ( ! is_writable( $session_save_path ) ) {
-				PSOURCESnapshot::instance()->snapshot_admin_notices_proc( "error", sprintf( __( "<p>The session_save_path (%s) is not writeable. Check your PHP (php.ini) settings or contact your hosting provider.</p>", SNAPSHOT_I18N_DOMAIN ), $session_save_path ) );
+				PSOURCESnapshot::instance()->snapshot_admin_notices_proc( "error", sprintf( __( "<p>The session_save_path (%s) is not writeable. Check your PHP (php.ini) settings or contact your hosting provider.</p>", 'cp-snapshot' ), $session_save_path ) );
 			}
 		}
 

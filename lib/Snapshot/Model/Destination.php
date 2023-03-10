@@ -31,21 +31,21 @@ abstract class Snapshot_Model_Destination {
 		}
 
 		if ( empty( $this->name_display ) || empty ( $this->name_slug ) ) {
-			wp_die( __( 'You must override all required vars in your Snapshot Destination class!', SNAPSHOT_I18N_DOMAIN ) );
+			wp_die( __( 'You must override all required vars in your Snapshot Destination class!', 'cp-snapshot' ) );
 		}
 
 	}
 
 	public function display_listing_table( $destinations, $edit_url, $delete_url ) {
-		wp_die( __( "You must override the function 'display_listing_table' in your Snapshot Destination class!", SNAPSHOT_I18N_DOMAIN ) );
+		wp_die( __( "You must override the function 'display_listing_table' in your Snapshot Destination class!", 'cp-snapshot' ) );
 	}
 
 	public function sendfile_to_remote( $destination_info, $filename ) {
-		wp_die( __( "You must override the function 'sendfile_to_remote' in your Snapshot Destination class!", SNAPSHOT_I18N_DOMAIN ) );
+		wp_die( __( "You must override the function 'sendfile_to_remote' in your Snapshot Destination class!", 'cp-snapshot' ) );
 	}
 
 	public function display_details_form( $item = 0 ) {
-		wp_die( __( "You must override the function 'display_details_form' in your Snapshot Destination class!", SNAPSHOT_I18N_DOMAIN ) );
+		wp_die( __( "You must override the function 'display_details_form' in your Snapshot Destination class!", 'cp-snapshot' ) );
 	}
 
 	public static function load_destinations() {
@@ -154,10 +154,10 @@ abstract class Snapshot_Model_Destination {
 	public static function get_destination_nice_name( $destination_type ) {
 
 		$nice_names = array(
-			'dropbox'      => __( 'Dropbox', SNAPSHOT_I18N_DOMAIN ),
-			'aws'          => __( 'Amazon AWS', SNAPSHOT_I18N_DOMAIN ),
-			'google-drive' => __( 'Google Drive', SNAPSHOT_I18N_DOMAIN ),
-			'ftp'          => __( 'FTP/SFTP', SNAPSHOT_I18N_DOMAIN ),
+			'dropbox'      => __( 'Dropbox', 'cp-snapshot' ),
+			'aws'          => __( 'Amazon AWS', 'cp-snapshot' ),
+			'google-drive' => __( 'Google Drive', 'cp-snapshot' ),
+			'ftp'          => __( 'FTP/SFTP', 'cp-snapshot' ),
 		);
 
 		if ( isset( $nice_names[ $destination_type ] ) ) {

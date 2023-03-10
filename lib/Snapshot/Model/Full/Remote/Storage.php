@@ -257,7 +257,7 @@ class Snapshot_Model_Full_Remote_Storage extends Snapshot_Model_Full {
 		$used = (float) $this->_get_used_remote_space();
 
 		if ( empty( $total ) ) {
-			$this->_set_error( __( "We encountered an issue communicating with the API", SNAPSHOT_I18N_DOMAIN ) );
+			$this->_set_error( __( "We encountered an issue communicating with the API", 'cp-snapshot' ) );
 			return false;
 		}
 
@@ -367,7 +367,7 @@ class Snapshot_Model_Full_Remote_Storage extends Snapshot_Model_Full {
 	public function rotate_backups( $path ) {
 		Snapshot_Helper_Log::info( "Enter backup rotation", "Remote" );
 
-		$error = __( 'Error rotating backups', SNAPSHOT_I18N_DOMAIN );
+		$error = __( 'Error rotating backups', 'cp-snapshot' );
 		$to_remove = $this->get_backup_rotation_list( $path );
 
 		if ( empty( $to_remove ) ) {
@@ -566,7 +566,7 @@ class Snapshot_Model_Full_Remote_Storage extends Snapshot_Model_Full {
 			$total = (float) $this->get_total_remote_space(); // Cast to int, as it can return false
 
 			if ( $filesize > $total ) {
-				$this->_set_error( __( 'Backup too large for storage quota.', SNAPSHOT_I18N_DOMAIN ) );
+				$this->_set_error( __( 'Backup too large for storage quota.', 'cp-snapshot' ) );
 				Snapshot_Helper_Log::warn( "Backup too large for storage quota", "Remote" );
 				return false; // We don't have enough room to store this anyway
 			}
@@ -691,7 +691,7 @@ class Snapshot_Model_Full_Remote_Storage extends Snapshot_Model_Full {
 			if ( ! empty( $upload_id ) ) {
 				return $this->finalize_upload( $upload_id, $path );
 			} else {
-				$this->_set_error( __( 'Unable to finalize the upload.', SNAPSHOT_I18N_DOMAIN ) );
+				$this->_set_error( __( 'Unable to finalize the upload.', 'cp-snapshot' ) );
 				Snapshot_Helper_Log::warn( "Unable to finalize the upload", "Remote" );
 				return false;
 			}
@@ -737,7 +737,7 @@ class Snapshot_Model_Full_Remote_Storage extends Snapshot_Model_Full {
 					)
 				);
 				if ( ! $resp->isOk() ) {
-					$this->_set_error( __( 'Error fetching file', SNAPSHOT_I18N_DOMAIN ) );
+					$this->_set_error( __( 'Error fetching file', 'cp-snapshot' ) );
 					Snapshot_Helper_Log::warn( "Error fetching file", "Remote" );
 					return false; // Error fetching the file
 				} else {
@@ -812,7 +812,7 @@ class Snapshot_Model_Full_Remote_Storage extends Snapshot_Model_Full {
 
 			$status = $resp->isOk();
 			if ( empty( $status ) ) {
-				$this->_set_error( sprintf( __( 'Error deleting file: %s', SNAPSHOT_I18N_DOMAIN ), $remote_file ) );
+				$this->_set_error( sprintf( __( 'Error deleting file: %s', 'cp-snapshot' ), $remote_file ) );
 				Snapshot_Helper_Log::warn( "Error deleting remote file: [{$remote_file}]", "Remote" );
 			}
 		}

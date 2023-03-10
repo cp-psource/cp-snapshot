@@ -330,7 +330,7 @@ class Snapshot_Model_Full_Remote_Api extends Snapshot_Model_Full {
 		$key = $this->get_dashboard_api_key();
 		if (empty($key)) return new WP_Error(
 			$this->get_filter('missing_api_key'),
-			__('Missing API key', SNAPSHOT_I18N_DOMAIN)
+			__('Missing API key', 'cp-snapshot')
 		);
 
 		$secret_key = $this->get_config('secret-key', false);
@@ -350,19 +350,19 @@ class Snapshot_Model_Full_Remote_Api extends Snapshot_Model_Full {
 
 		if (!in_array($endpoint, array('credentials', 'backups-size', 'register-settings', 'get-token'))) return new WP_Error(
 			$this->get_filter('invalid_endoint'),
-			__('Invalid endpoint', SNAPSHOT_I18N_DOMAIN)
+			__('Invalid endpoint', 'cp-snapshot')
 		);
 
 		if (Snapshot_Model_Transient::get($this->get_filter('api_error'), false)) return new WP_Error(
 			$this->get_filter('connection_error_cache'),
-			__('Persistent connection error', SNAPSHOT_I18N_DOMAIN)
+			__('Persistent connection error', 'cp-snapshot')
 		);
 
 		// Special case, when API responds with 200 OK but JSON is invalid
 		if (Snapshot_Model_Transient::get($this->get_filter('api_down'), false)) {
 			return new WP_Error(
 				$this->get_filter('connection_error_cache'),
-				__('Persistent connection error', SNAPSHOT_I18N_DOMAIN)
+				__('Persistent connection error', 'cp-snapshot')
 			);
 		}
 
@@ -474,18 +474,18 @@ class Snapshot_Model_Full_Remote_Api extends Snapshot_Model_Full {
 		$key = $this->get_dashboard_api_key();
 		if (empty($key)) return new WP_Error(
 			$this->get_filter('missing_api_key'),
-			__('Missing API key', SNAPSHOT_I18N_DOMAIN)
+			__('Missing API key', 'cp-snapshot')
 		);
 
 		if (!in_array($endpoint, array('get-urls', 'backups-size', 'get-key'))) return new WP_Error(
 			$this->get_filter('invalid_endoint'),
-			__('Invalid endpoint', SNAPSHOT_I18N_DOMAIN)
+			__('Invalid endpoint', 'cp-snapshot')
 		);
 
 		if (Snapshot_Model_Transient::get($this->get_filter('api_error'), false)) {
 			return new WP_Error(
 				$this->get_filter('connection_error_cache'),
-				__('Persistent connection error', SNAPSHOT_I18N_DOMAIN)
+				__('Persistent connection error', 'cp-snapshot')
 			);
 		}
 

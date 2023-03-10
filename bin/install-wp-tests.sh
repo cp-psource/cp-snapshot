@@ -30,7 +30,7 @@ else
 	grep '[0-9]+\.[0-9]+(\.[0-9]+)?' /tmp/wp-latest.json
 	LATEST_VERSION=$(grep -o '"version":"[^"]*' /tmp/wp-latest.json | sed 's/"version":"//')
 	if [[ -z "$LATEST_VERSION" ]]; then
-		echo "Latest WordPress version could not be found"
+		echo "Latest ClassicPress version could not be found"
 		exit 1
 	fi
 	WP_TESTS_TAG="tags/$LATEST_VERSION"

@@ -177,13 +177,13 @@ class Snapshot_Model_Full_Error extends Snapshot_Model_Full {
 	 * @return string
 	 */
 	public static function get_human_description ($error_key) {
-		$fallback = __('Other kind of backup error', SNAPSHOT_I18N_DOMAIN);
+		$fallback = __('Other kind of backup error', 'cp-snapshot');
 
 		if (empty($error_key) || !is_string($error_key)) return $fallback;
 
-		if (self::ERROR_GENERAL === $error_key) return __('General backup error', SNAPSHOT_I18N_DOMAIN);
-		if (self::ERROR_POSTPROCESS === $error_key) return __('Backup post-processing error', SNAPSHOT_I18N_DOMAIN);
-		if (self::ERROR_UPLOAD === $error_key) return __('Backup upload error', SNAPSHOT_I18N_DOMAIN);
+		if (self::ERROR_GENERAL === $error_key) return __('General backup error', 'cp-snapshot');
+		if (self::ERROR_POSTPROCESS === $error_key) return __('Backup post-processing error', 'cp-snapshot');
+		if (self::ERROR_UPLOAD === $error_key) return __('Backup upload error', 'cp-snapshot');
 
 		if (false === strpos($error_key, ':')) return $fallback;
 
@@ -194,11 +194,11 @@ class Snapshot_Model_Full_Error extends Snapshot_Model_Full {
 		if (empty($err[0]) || self::PART_UNKNOWN === $err[0]) return $fallback; // Unknown queue, let's just fall back
 		else $queue = $err[0];
 
-		if (empty($err[1]) || self::PART_UNKNOWN === $err[1]) $source = __('unknown source', SNAPSHOT_I18N_DOMAIN);
+		if (empty($err[1]) || self::PART_UNKNOWN === $err[1]) $source = __('unknown source', 'cp-snapshot');
 		else $source = $err[1];
 
 		return sprintf(
-			__('Error with %1$s queue, source: %2$s', SNAPSHOT_I18N_DOMAIN),
+			__('Error with %1$s queue, source: %2$s', 'cp-snapshot'),
 			$queue,
 			$source
 		);

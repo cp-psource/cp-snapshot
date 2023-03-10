@@ -49,7 +49,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 			$this->name_slug = 'google-drive';
 
 			// The display name for listing on admin panels
-			$this->name_display = __( 'Google Drive', SNAPSHOT_I18N_DOMAIN );
+			$this->name_display = __( 'Google Drive', 'cp-snapshot' );
 		}
 
 		function init() {
@@ -174,7 +174,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 
 				$tmpfname = tempnam( sys_get_temp_dir(), 'Snapshot_' );
 				$handle = fopen( $tmpfname, "w" );
-				fwrite( $handle, "WPMU DEV Snapshot Test connection file." );
+				fwrite( $handle, "PSOURCE Snapshot Test connection file." );
 				fclose( $handle );
 
 				$this->send_file( $tmpfname );
@@ -234,10 +234,10 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 			} catch ( Exception $e ) {
 				//echo "e<pre>"; print_r($e); echo "</pre>";
 				$this->error_array['errorStatus'] = true;
-//				$this->error_array['errorArray'][] 		= sprintf(__("Error: Could not connect to %s :", SNAPSHOT_I18N_DOMAIN), $this->name_display) . $e->getMessage();
+//				$this->error_array['errorArray'][] 		= sprintf(__("Error: Could not connect to %s :", 'cp-snapshot'), $this->name_display) . $e->getMessage();
 
 				if ( isset( $this->snapshot_logger ) ) {
-					$this->snapshot_logger->log_message( sprintf( __( "Error: Could not connect to %s: Error: %s", SNAPSHOT_I18N_DOMAIN ), $this->name_display, $e ) );
+					$this->snapshot_logger->log_message( sprintf( __( "Error: Could not connect to %s: Error: %s", 'cp-snapshot' ), $this->name_display, $e ) );
 				}
 
 				//echo "error_array<pre>"; print_r($error_array); echo "</pre>";
@@ -253,7 +253,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 			$this->init();
 			$this->load_class_destination( $destination_info );
 
-			$this->snapshot_logger->log_message( sprintf( __( "Connecting to %s", SNAPSHOT_I18N_DOMAIN ), $this->name_display ) );
+			$this->snapshot_logger->log_message( sprintf( __( "Connecting to %s", 'cp-snapshot' ), $this->name_display ) );
 
 			if ( ! $this->login() ) {
 				return $this->error_array;
@@ -356,7 +356,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 				}
 			} catch ( Exception $e ) {
 				$this->error_array['errorStatus'] = true;
-				$this->error_array['errorArray'][] = sprintf( __( 'Error: Could not send file <pre>%s</pre> :', SNAPSHOT_I18N_DOMAIN ), $e ) . $e->getMessage();
+				$this->error_array['errorArray'][] = sprintf( __( 'Error: Could not send file <pre>%s</pre> :', 'cp-snapshot' ), $e ) . $e->getMessage();
 
 				return false;
 			}
@@ -414,7 +414,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 			if ( $form_step >= 3 ) {
 
 				if ( ! $destination_info['access_token'] ) {
-					$this->form_errors['access_token'] = __( 'An access token from Google is required', SNAPSHOT_I18N_DOMAIN );
+					$this->form_errors['access_token'] = __( 'An access token from Google is required', 'cp-snapshot' );
 					$advance_form = false;
 				}
 			}
@@ -423,13 +423,13 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 
 				if ( ! $destination_info['clientid'] || ! $destination_info['clientsecret'] || ! $destination_info['directory'] ) {
 					if ( empty( $destination_info['clientid'] ) ) {
-						$this->form_errors['clientid'] = esc_html__( 'A client ID is required', SNAPSHOT_I18N_DOMAIN );
+						$this->form_errors['clientid'] = esc_html__( 'A client ID is required', 'cp-snapshot' );
 					}
 					if ( empty( $destination_info['clientsecret'] ) ) {
-						$this->form_errors['clientsecret'] = esc_html__( 'A client secret ID is required', SNAPSHOT_I18N_DOMAIN );
+						$this->form_errors['clientsecret'] = esc_html__( 'A client secret ID is required', 'cp-snapshot' );
 					}
 					if ( empty( $destination_info['directory'] ) ) {
-						$this->form_errors['directory'] = esc_html__( 'A directory is required', SNAPSHOT_I18N_DOMAIN );
+						$this->form_errors['directory'] = esc_html__( 'A directory is required', 'cp-snapshot' );
 					}
 
 					$advance_form = false;
@@ -439,12 +439,12 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 			if ( $form_step >= 1 ) {
 
 				if ( ! $destination_info['name'] ) {
-					$this->form_errors['name'] = esc_html__( 'A name for the destination is required', SNAPSHOT_I18N_DOMAIN );
+					$this->form_errors['name'] = esc_html__( 'A name for the destination is required', 'cp-snapshot' );
 					$advance_form = false;
 				}
 
 				if ( ! $destination_info['directory'] ) {
-					$this->form_errors['directory'] = esc_html__( 'A directory ID is required', SNAPSHOT_I18N_DOMAIN );
+					$this->form_errors['directory'] = esc_html__( 'A directory ID is required', 'cp-snapshot' );
 					$advance_form = false;
 				}
 			}
@@ -466,11 +466,11 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 			<table class="widefat">
 				<thead>
 				<tr class="form-field">
-					<th class="snapshot-col-delete"><?php _e( 'Delete', SNAPSHOT_I18N_DOMAIN ); ?></th>
-					<th class="snapshot-col-name"><?php _e( 'Name', SNAPSHOT_I18N_DOMAIN ); ?></th>
-					<th class="snapshot-col-access-key"><?php _e( 'Client ID', SNAPSHOT_I18N_DOMAIN ); ?></th>
-					<th class="snapshot-col-directory"><?php _e( 'Directory', SNAPSHOT_I18N_DOMAIN ); ?></th>
-					<th class="snapshot-col-used"><?php _e( 'Used', SNAPSHOT_I18N_DOMAIN ); ?></th>
+					<th class="snapshot-col-delete"><?php _e( 'Delete', 'cp-snapshot' ); ?></th>
+					<th class="snapshot-col-name"><?php _e( 'Name', 'cp-snapshot' ); ?></th>
+					<th class="snapshot-col-access-key"><?php _e( 'Client ID', 'cp-snapshot' ); ?></th>
+					<th class="snapshot-col-directory"><?php _e( 'Directory', 'cp-snapshot' ); ?></th>
+					<th class="snapshot-col-used"><?php _e( 'Used', 'cp-snapshot' ); ?></th>
 				</tr>
 				<thead>
 				<tbody>
@@ -498,9 +498,9 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 
 								<div class="row-actions" style="margin:0; padding:0;">
 									<span class="edit"><a
-												href="<?php echo $edit_url; ?>item=<?php echo $idx; ?>"><?php _e( 'edit', SNAPSHOT_I18N_DOMAIN ); ?></a></span>
+												href="<?php echo $edit_url; ?>item=<?php echo $idx; ?>"><?php _e( 'edit', 'cp-snapshot' ); ?></a></span>
 									| <span class="delete"><a
-												href="<?php echo $delete_url; ?>item=<?php echo $idx; ?>&amp;snapshot-noonce-field=<?php echo wp_create_nonce( 'snapshot-delete-destination' ); ?>"><?php _e( 'delete', SNAPSHOT_I18N_DOMAIN ); ?></a></span>
+												href="<?php echo $delete_url; ?>item=<?php echo $idx; ?>&amp;snapshot-noonce-field=<?php echo wp_create_nonce( 'snapshot-delete-destination' ); ?>"><?php _e( 'delete', 'cp-snapshot' ); ?></a></span>
 								</div>
 							</td>
 							<td class="snapshot-col-server"><?php
@@ -519,7 +519,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 					?>
 					<tr class="form-field">
 					<td colspan="4"><?php
-						echo sprintf( __( 'No %s Destinations', SNAPSHOT_I18N_DOMAIN ), $this->name_display ); ?></td>
+						echo sprintf( __( 'No %s Destinations', 'cp-snapshot' ), $this->name_display ); ?></td>
 					</tr><?php
 				}
 				?>
@@ -531,7 +531,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 				<div class="tablenav">
 					<div class="alignleft actions">
 						<input class="button-secondary" type="submit"
-							   value="<?php _e( 'Delete Destination', SNAPSHOT_I18N_DOMAIN ); ?>"/>
+							   value="<?php _e( 'Delete Destination', 'cp-snapshot' ); ?>"/>
 					</div>
 				</div>
 				<?php
@@ -557,12 +557,12 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 			?>
 			<input type="hidden" name="snapshot-destination[form-step]" id="snapshot-destination-form-step" value="<?php echo $form_step ?>"/>
 
-			<p><?php _e( 'Define an Google Drive destination connection. You can define multiple destinations which use Google Drive. Each destination can use different security keys and/or directory.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+			<p><?php _e( 'Define an Google Drive destination connection. You can define multiple destinations which use Google Drive. Each destination can use different security keys and/or directory.', 'cp-snapshot' ); ?></p>
 			<div id="poststuff" class="metabox-holder">
 			<div style="display: none" id="snapshot-destination-test-result"></div>
 			<div class="postbox" id="snapshot-destination-item">
 
-				<h3 class="hndle"><span><?php _e( 'Google Drive Destination', SNAPSHOT_I18N_DOMAIN ); ?></span></h3>
+				<h3 class="hndle"><span><?php _e( 'Google Drive Destination', 'cp-snapshot' ); ?></span></h3>
 
 				<div class="inside">
 					<input type="hidden" name="snapshot-destination[type]" id="snapshot-destination-type"
@@ -571,7 +571,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 					if ( ( ! isset( $_GET['item'] ) ) || ( empty( $item['name'] ) ) ) {
 						$form_step = 1;
 						?>
-						<p><?php _e( 'Step 1: Define a name for this Destination', SNAPSHOT_I18N_DOMAIN ) ?><?php if ( $form_step > 1 ) {
+						<p><?php _e( 'Step 1: Define a name for this Destination', 'cp-snapshot' ) ?><?php if ( $form_step > 1 ) {
 								echo ' - ' . __( '<strong>COMPLETE</strong>' );
 							} ?></p>
 						<?php
@@ -579,14 +579,14 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 					/*
 					else {
 						?>
-						<p class="description"><?php _e('In the form below provide the Client ID, Client Secret from the Google. The Redirect URI provided below needs to be added to the settings in Google for the same Client ID and Client Secret.', SNAPSHOT_I18N_DOMAIN) ?></p>
+						<p class="description"><?php _e('In the form below provide the Client ID, Client Secret from the Google. The Redirect URI provided below needs to be added to the settings in Google for the same Client ID and Client Secret.', 'cp-snapshot') ?></p>
 						<?php
 					} */
 					?>
 					<table class="form-table">
 						<tr class="form-field">
 							<th scope="row"><label
-										for="snapshot-destination-name"><?php _e( 'Destination Name', SNAPSHOT_I18N_DOMAIN ); ?></label>
+										for="snapshot-destination-name"><?php _e( 'Destination Name', 'cp-snapshot' ); ?></label>
 							</th>
 							<td>
 								<?php if ( $form_step == 1 ) { ?>
@@ -605,7 +605,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 						</tr>
 						<tr class="form-field">
 							<th scope="row" style="width:10%"><label
-										for="snapshot-destination-directory"><?php _e( 'Directory ID (optional)', SNAPSHOT_I18N_DOMAIN ); ?></label>
+										for="snapshot-destination-directory"><?php _e( 'Directory ID (optional)', 'cp-snapshot' ); ?></label>
 							</th>
 							<td style="width:40%"><input type="text" name="snapshot-destination[directory]"
 														 id="snapshot-destination-directory"
@@ -613,14 +613,14 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 															 echo $item['directory'];
 														 } ?>"/><br/>
 
-								<p class="description"><?php echo sprintf( __( 'Note: This is not a traditional directory path like /usr/local/path but a unique ID assigned by Google for the directory with your Drive. See the instructions to the right on how to obtain the Directory ID.', SNAPSHOT_I18N_DOMAIN ) ) ?></p>
+								<p class="description"><?php echo sprintf( __( 'Note: This is not a traditional directory path like /usr/local/path but a unique ID assigned by Google for the directory with your Drive. See the instructions to the right on how to obtain the Directory ID.', 'cp-snapshot' ) ) ?></p>
 							</td>
 							<td style="width:50%">
-								<p><?php _e( 'Instructions', SNAPSHOT_I18N_DOMAIN ) ?></p>
+								<p><?php _e( 'Instructions', 'cp-snapshot' ) ?></p>
 								<ol>
-									<li><?php echo sprintf( __( 'Go to your %s', SNAPSHOT_I18N_DOMAIN ), '<a href="https://drive.google.com/#my-drive">' . __( 'Drive account. Navigate to or create a new directory where you want to upload the Snapshot archives. Make sure you are viewing the destination directory.', SNAPSHOT_I18N_DOMAIN ) . '</a>' ) ?></li>
-									<li><?php _e( 'The URL for the directory will be something similar to <em>https://drive.google.com/#folders/0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>. The Directory ID would be the last part after /#folders/ <strong><em>0B6GD66ctHXXCOWZKNDRIRGJJXS3</em></strong>.', SNAPSHOT_I18N_DOMAIN ) ?></li>
-									<li><?php _e( 'You can define multiple Directory IDs seperated by comma', SNAPSHOT_I18N_DOMAIN ) ?></li>
+									<li><?php echo sprintf( __( 'Go to your %s', 'cp-snapshot' ), '<a href="https://drive.google.com/#my-drive">' . __( 'Drive account. Navigate to or create a new directory where you want to upload the Snapshot archives. Make sure you are viewing the destination directory.', 'cp-snapshot' ) . '</a>' ) ?></li>
+									<li><?php _e( 'The URL for the directory will be something similar to <em>https://drive.google.com/#folders/0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>. The Directory ID would be the last part after /#folders/ <strong><em>0B6GD66ctHXXCOWZKNDRIRGJJXS3</em></strong>.', 'cp-snapshot' ) ?></li>
+									<li><?php _e( 'You can define multiple Directory IDs seperated by comma', 'cp-snapshot' ) ?></li>
 								</ol>
 							</td>
 						</tr>
@@ -628,13 +628,13 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 					<?php
 					if ( $form_step > 1 ) {
 						?>
-						<p><?php _e( 'Step 2: Google Drive Access Credentials', SNAPSHOT_I18N_DOMAIN ) ?><?php if ( $form_step > 2 ) {
+						<p><?php _e( 'Step 2: Google Drive Access Credentials', 'cp-snapshot' ) ?><?php if ( $form_step > 2 ) {
 								echo ' - ' . __( '<strong>COMPLETE</strong>' );
 							} ?></p>
 						<table class="form-table">
 							<tr class="form-field">
 								<th scope="row" style="width:10%"><label
-											for="snapshot-destination-clientid"><?php _e( 'Client ID', SNAPSHOT_I18N_DOMAIN ); ?></label>
+											for="snapshot-destination-clientid"><?php _e( 'Client ID', 'cp-snapshot' ); ?></label>
 								</th>
 								<td style="width:40%"><input type="text" name="snapshot-destination[clientid]"
 															 id="snapshot-destination-clientid"
@@ -642,19 +642,19 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 																 echo sanitize_text_field( $item['clientid'] );
 															 } ?>"/></td>
 								<td rowspan="3" style="width: 50%">
-									<p><?php _e( 'Instructions', SNAPSHOT_I18N_DOMAIN ) ?></p>
+									<p><?php _e( 'Instructions', 'cp-snapshot' ) ?></p>
 									<ol>
-										<li><?php echo sprintf( __( 'Go to the %s', SNAPSHOT_I18N_DOMAIN ), '<a href="https://console.developers.google.com/project">' . __( 'Google Project Console', SNAPSHOT_I18N_DOMAIN ) . '</a>' ) ?></li>
-										<li><?php _e( 'Select existing or Add a new Project. If you add a new project you will see a popup. Enter a project name. The Project ID is not important and can be ignored.', SNAPSHOT_I18N_DOMAIN ); ?></li>
-										<li><?php _e( 'Once the Project creation is completed go to the <strong>API Manager</strong>. Here you need to enable the <strong>Drive API</strong>', SNAPSHOT_I18N_DOMAIN ) ?></li>
-										<li><?php _e( 'Next, go to the <strong>API Manager > Credentials</strong> section. Click <strong>Add New Credentials > OAuth 2.0 client ID</strong>. In the popup select the <strong>Application Type</strong> as <strong>Web application</strong>. In the field <strong>Authorized redirect URI</strong> copy the value from the <strong>Redirect URI</strong> field to the left. Then click the <strong>Create Client ID</strong> button.', SNAPSHOT_I18N_DOMAIN ) ?></li>
-										<li><?php _e( 'After the popup closes copy the Client ID and Client Secret from the Google page and paste into the form fields on the left.', SNAPSHOT_I18N_DOMAIN ) ?></li>
+										<li><?php echo sprintf( __( 'Go to the %s', 'cp-snapshot' ), '<a href="https://console.developers.google.com/project">' . __( 'Google Project Console', 'cp-snapshot' ) . '</a>' ) ?></li>
+										<li><?php _e( 'Select existing or Add a new Project. If you add a new project you will see a popup. Enter a project name. The Project ID is not important and can be ignored.', 'cp-snapshot' ); ?></li>
+										<li><?php _e( 'Once the Project creation is completed go to the <strong>API Manager</strong>. Here you need to enable the <strong>Drive API</strong>', 'cp-snapshot' ) ?></li>
+										<li><?php _e( 'Next, go to the <strong>API Manager > Credentials</strong> section. Click <strong>Add New Credentials > OAuth 2.0 client ID</strong>. In the popup select the <strong>Application Type</strong> as <strong>Web application</strong>. In the field <strong>Authorized redirect URI</strong> copy the value from the <strong>Redirect URI</strong> field to the left. Then click the <strong>Create Client ID</strong> button.', 'cp-snapshot' ) ?></li>
+										<li><?php _e( 'After the popup closes copy the Client ID and Client Secret from the Google page and paste into the form fields on the left.', 'cp-snapshot' ) ?></li>
 									</ol>
 								</td>
 							</tr>
 							<tr class="form-field">
 								<th scope="row"><label
-											for="snapshot-destination-clientsecret"><?php _e( 'Client Secret', SNAPSHOT_I18N_DOMAIN ); ?></label>
+											for="snapshot-destination-clientsecret"><?php _e( 'Client Secret', 'cp-snapshot' ); ?></label>
 								</th>
 								<td><input type="password" name="snapshot-destination[clientsecret]"
 										   id="snapshot-destination-clientsecret"
@@ -665,7 +665,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 
 							<tr class="form-field">
 								<th scope="row"><label
-											for="snapshot-destination-redirecturi"><?php _e( 'Redirect URI', SNAPSHOT_I18N_DOMAIN ); ?></label>
+											for="snapshot-destination-redirecturi"><?php _e( 'Redirect URI', 'cp-snapshot' ); ?></label>
 								</th>
 								<td><?php
 									if ( ( is_multisite() ) && ( is_network_admin() ) ) {
@@ -705,7 +705,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 					<?php
 					if ( $form_step > 2 ) {
 						?>
-						<p><?php _e( 'Step 3: Google Authorize', SNAPSHOT_I18N_DOMAIN ) ?><?php if ( $form_step > 3 ) {
+						<p><?php _e( 'Step 3: Google Authorize', 'cp-snapshot' ) ?><?php if ( $form_step > 3 ) {
 								echo ' - ' . __( '<strong>COMPLETE</strong>' );
 							} ?></p>
 						<table class="form-table">
@@ -723,7 +723,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 											//echo "access_token<pre>"; "[". $this->destination_info['access_token'] ."]<br />";
 											if ( ! empty( $this->destination_info['access_token'] ) ) {
 												?>
-												<p><?php _e( 'Success. The Google Access Token has been received. <strong>You must save this form one last time to retain the token.</strong> The stored token will be used in the future when connecting to Google', SNAPSHOT_I18N_DOMAIN ); ?></p>
+												<p><?php _e( 'Success. The Google Access Token has been received. <strong>You must save this form one last time to retain the token.</strong> The stored token will be used in the future when connecting to Google', 'cp-snapshot' ); ?></p>
 												<input type="hidden" name="snapshot-destination[access_token]"
 													   id="snapshot-destination-access_token"
 													   value="<?php echo urlencode( $this->destination_info['access_token'] ) ?>" /><?php
@@ -731,9 +731,9 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 										}
 									} else {
 										if ( ! empty( $this->destination_info['access_token'] ) ) {
-											$auth_button_label = __( 'Re-Authorize', SNAPSHOT_I18N_DOMAIN );
+											$auth_button_label = __( 'Re-Authorize', 'cp-snapshot' );
 										} else {
-											$auth_button_label = __( 'Authorize', SNAPSHOT_I18N_DOMAIN );
+											$auth_button_label = __( 'Authorize', 'cp-snapshot' );
 										}
 
 										$auth_url = $this->getAuthorizationUrl();
@@ -742,7 +742,7 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 											?><a id="snapshot-destination-authorize-connection" class="button-secondary"
 												 href="<?php echo $auth_url; ?>"><?php echo $auth_button_label ?></a><?php
 										} else {
-											_e( 'Unable to obtain Authorization URL from Google', SNAPSHOT_I18N_DOMAIN );
+											_e( 'Unable to obtain Authorization URL from Google', 'cp-snapshot' );
 										}
 									}
 									?></td>
@@ -754,9 +754,9 @@ if ( ! class_exists( 'SnapshotDestinationGoogleDrive' ) && version_compare( phpv
 					<?php
 					if ( ( $form_step > 3 ) && ( ! empty( $this->destination_info['access_token'] ) ) ) {
 						?>
-						<p><?php _e( 'Authorization complete.', SNAPSHOT_I18N_DOMAIN ) ?></p>
+						<p><?php _e( 'Authorization complete.', 'cp-snapshot' ) ?></p>
 						<p>
-							<strong><?php _e( 'You must save this form one last time to retain the token.', SNAPSHOT_I18N_DOMAIN ); ?></strong>
+							<strong><?php _e( 'You must save this form one last time to retain the token.', 'cp-snapshot' ); ?></strong>
 						</p>
 						<input type="hidden" name="snapshot-destination[access_token]"
 							   id="snapshot-destination-access_token"

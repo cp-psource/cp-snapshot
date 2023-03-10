@@ -16,9 +16,9 @@ foreach ( PSOURCESnapshot::instance()->config_data['destinations'] as $key => $i
 
 		<i class="wps-typecon sftp"></i>
 
-		<h3><?php _e( 'FTP/sFTP', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+		<h3><?php _e( 'FTP/sFTP', 'cp-snapshot' ); ?></h3>
 
-		<a class="button button-small button-outline" href="<?php echo add_query_arg( array( 'snapshot-action' => 'add' , 'type' => 'ftp' ), PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations') ); ?>" class="button button-outline"><?php _e( 'Add Destination', SNAPSHOT_I18N_DOMAIN ); ?></a>
+		<a class="button button-small button-outline" href="<?php echo add_query_arg( array( 'snapshot-action' => 'add' , 'type' => 'ftp' ), PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations') ); ?>" class="button button-outline"><?php _e( 'Add Destination', 'cp-snapshot' ); ?></a>
 
 	</div>
 

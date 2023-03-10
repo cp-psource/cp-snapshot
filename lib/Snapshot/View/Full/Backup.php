@@ -72,13 +72,13 @@ class Snapshot_View_Full_Backup {
 	public static function get_message( $key ) {
 		$me = self::get();
 		$messages = array(
-			'api_error'               => __( 'We were unable to find the appropriate API info in the remote service response.', SNAPSHOT_I18N_DOMAIN ),
-			'request_error'           => __( 'It seems we encountered an issue communicating with the remote service.', SNAPSHOT_I18N_DOMAIN ),
-			'check_connection'        => __( 'Please, make sure your site is able to perform remote requests to <code>%1$s</code>.', SNAPSHOT_I18N_DOMAIN ),
-			'open_ticket'             => __( 'If you\'re still having this issue, please feel free to open a ticket with us <a href="%s" target="_blank">here</a>.', SNAPSHOT_I18N_DOMAIN ),
-			'backup_list_fetch_error' => __( 'We have encountered an error refreshing the backup list.', SNAPSHOT_I18N_DOMAIN ),
-			'reset_secret_key'        => __( 'You can reset your key <a href="%s">here</a>', SNAPSHOT_I18N_DOMAIN ),
-			'missing_secret_key'      => __( 'You need to have your secret key entered in settings for automatic managed backups to work. You can get your key <a href="%s">here</a>.', SNAPSHOT_I18N_DOMAIN ),
+			'api_error'               => __( 'We were unable to find the appropriate API info in the remote service response.', 'cp-snapshot' ),
+			'request_error'           => __( 'It seems we encountered an issue communicating with the remote service.', 'cp-snapshot' ),
+			'check_connection'        => __( 'Please, make sure your site is able to perform remote requests to <code>%1$s</code>.', 'cp-snapshot' ),
+			'open_ticket'             => __( 'If you\'re still having this issue, please feel free to open a ticket with us <a href="%s" target="_blank">here</a>.', 'cp-snapshot' ),
+			'backup_list_fetch_error' => __( 'We have encountered an error refreshing the backup list.', 'cp-snapshot' ),
+			'reset_secret_key'        => __( 'You can reset your key <a href="%s">here</a>', 'cp-snapshot' ),
+			'missing_secret_key'      => __( 'You need to have your secret key entered in settings for automatic managed backups to work. You can get your key <a href="%s">here</a>.', 'cp-snapshot' ),
 		);
 		$msg = ! empty( $messages[ $key ] )
 			? $messages[ $key ]
@@ -105,8 +105,8 @@ class Snapshot_View_Full_Backup {
 
 		$this->_page_idx = add_submenu_page(
 			'snapshots_edit_panel',
-			_x( 'Managed Backups', 'page label', SNAPSHOT_I18N_DOMAIN ),
-			_x( 'Managed Backups', 'menu label', SNAPSHOT_I18N_DOMAIN ),
+			_x( 'Managed Backups', 'page label', 'cp-snapshot' ),
+			_x( 'Managed Backups', 'menu label', 'cp-snapshot' ),
 			$this->get_page_role(),
 			'snapshots_full_backup_panel',
 			array( $this, 'render_page' )
@@ -234,13 +234,13 @@ class Snapshot_View_Full_Backup {
 		wp_enqueue_script( 'snapshot-full_backup-admin', $root . '/js/snapshot-full_backup-admin.js', array( 'jquery', 'thickbox' ), $version );
 		wp_localize_script( 'snapshot-full_backup-admin', '_snp_vars', array(
 			'l10n' => array(
-				'generic_error'      => __( 'Aw shucks, something went wrong :( Instead of the beautiful response we expected, we got this:', SNAPSHOT_I18N_DOMAIN ),
-				'starting'           => __( 'Starting...', SNAPSHOT_I18N_DOMAIN ),
-				'processing'         => __( 'Processing (step %d)', SNAPSHOT_I18N_DOMAIN ),
-				'processing_percent' => __( 'Backing up... %d%', SNAPSHOT_I18N_DOMAIN ),
-				'finishing'          => __( 'Finishing up', SNAPSHOT_I18N_DOMAIN ),
-				'estimating'         => __( 'Estimating backup size, this might take a bit. Please, hold on', SNAPSHOT_I18N_DOMAIN ),
-				'snapshot_logs'      => __( 'Snapshot Logs', SNAPSHOT_I18N_DOMAIN ),
+				'generic_error'      => __( 'Aw shucks, something went wrong :( Instead of the beautiful response we expected, we got this:', 'cp-snapshot' ),
+				'starting'           => __( 'Starting...', 'cp-snapshot' ),
+				'processing'         => __( 'Processing (step %d)', 'cp-snapshot' ),
+				'processing_percent' => __( 'Backing up... %d%', 'cp-snapshot' ),
+				'finishing'          => __( 'Finishing up', 'cp-snapshot' ),
+				'estimating'         => __( 'Estimating backup size, this might take a bit. Please, hold on', 'cp-snapshot' ),
+				'snapshot_logs'      => __( 'Snapshot Logs', 'cp-snapshot' ),
 			),
 		) );
 	}

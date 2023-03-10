@@ -20,7 +20,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 ?>
 
 <section id="header">
-	<h1><?php esc_html_e( 'Managed Backups', SNAPSHOT_I18N_DOMAIN ); ?></h1>
+	<h1><?php esc_html_e( 'Managed Backups', 'cp-snapshot' ); ?></h1>
 </section>
 
 <?php $this->render( "managed-backups/partials/create-backup-progress", false, array( 'item' => $item, 'time_key' => $time_key ), false, false ); ?>
@@ -41,9 +41,9 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 
 			<div class="wpmud-box-title has-button">
 
-				<h3><?php _e( 'Backups Wizard', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+				<h3><?php _e( 'Backups Wizard', 'cp-snapshot' ); ?></h3>
 
-				<a href="<?php echo esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' ) ); ?>" class="button button-small button-gray button-outline"><?php _e( 'Back', SNAPSHOT_I18N_DOMAIN ); ?></a>
+				<a href="<?php echo esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' ) ); ?>" class="button button-small button-gray button-outline"><?php _e( 'Back', 'cp-snapshot' ); ?></a>
 
 			</div>
 
@@ -56,7 +56,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 				} ?>">
 
 					<div class="wpmud-box-tab-title can-toggle">
-						<h3><?php _e( 'Configuration', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+						<h3><?php _e( 'Configuration', 'cp-snapshot' ); ?></h3>
 						<?php if ( $all_good ): ?>
 							<i class="wps-icon i-arrow-right"></i>
 						<?php endif; ?>
@@ -78,11 +78,11 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 										echo 'success';
 									} ?>">
 										<?php if ( ! $all_good ) { ?>
-											<p><?php _e( 'You must meet the server requirements before proceeding.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+											<p><?php _e( 'You must meet the server requirements before proceeding.', 'cp-snapshot' ); ?></p>
 										<?php } else if ( $warning ) { ?>
-											<p><?php _e( 'You have 1 or more requirements warnings. You can proceed, however Snapshot may run into issues due to the warnings.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+											<p><?php _e( 'You have 1 or more requirements warnings. You can proceed, however Snapshot may run into issues due to the warnings.', 'cp-snapshot' ); ?></p>
 										<?php } else { ?>
-											<p><?php _e( 'You meet the server requirements. You can proceed now.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+											<p><?php _e( 'You meet the server requirements. You can proceed now.', 'cp-snapshot' ); ?></p>
 										<?php } ?>
 									</div>
 
@@ -94,7 +94,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 
 								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-									<label class="label-box"><?php _e( 'Destination', SNAPSHOT_I18N_DOMAIN ); ?></label>
+									<label class="label-box"><?php _e( 'Destination', 'cp-snapshot' ); ?></label>
 
 								</div>
 
@@ -107,7 +107,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 											$storage = Snapshot_Model_Full_Remote_Storage::get();
 
 											printf(
-												__( "Managed backups can only be stored on WPMU DEV's cloud servers. You have <strong>%s</strong> of your %s storage remaining.", SNAPSHOT_I18N_DOMAIN ),
+												__( "Managed backups can only be stored on PSOURCE's cloud servers. You have <strong>%s</strong> of your %s storage remaining.", 'cp-snapshot' ),
 												size_format( $storage->get_free_remote_space() ),
 												size_format( $storage->get_total_remote_space() )
 											); ?></label>
@@ -127,7 +127,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 
 													</div>
 
-													<label for="snap-cloud"><span><?php _e( 'WPMU DEV Cloud', SNAPSHOT_I18N_DOMAIN ); ?></span><i class="wps-typecon cloud"></i></label>
+													<label for="snap-cloud"><span><?php _e( 'PSOURCE Cloud', 'cp-snapshot' ); ?></span><i class="wps-typecon cloud"></i></label>
 
 												</div>
 
@@ -144,7 +144,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 
 								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-									<label class="label-box"><?php _e( 'Frequency', SNAPSHOT_I18N_DOMAIN ); ?></label>
+									<label class="label-box"><?php _e( 'Frequency', 'cp-snapshot' ); ?></label>
 
 								</div>
 
@@ -153,7 +153,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 									<div class="wpmud-box-mask">
 
 										<label class="label-title">
-											<?php _e( 'Would you like to schedule managed backups to run regularly or once-off?', SNAPSHOT_I18N_DOMAIN ); ?>
+											<?php _e( 'Would you like to schedule managed backups to run regularly or once-off?', 'cp-snapshot' ); ?>
 										</label>
 
 										<div class="wps-input--group">
@@ -166,7 +166,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 													<label for="frequency-once"></label>
 
 												</div>
-												<label for="frequency-once"><?php _e( 'Once-off', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="frequency-once"><?php _e( 'Once-off', 'cp-snapshot' ); ?></label>
 											</div>
 
 											<div class="wps-input--item">
@@ -177,7 +177,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 													<label for="frequency-daily"></label>
 												</div>
 
-												<label for="frequency-daily"><?php _e( 'Run daily, weekly or monthly', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="frequency-daily"><?php _e( 'Run daily, weekly or monthly', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -185,7 +185,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 
 										<div id="snapshot-schedule-options-container" class="wpmud-box-gray">
 
-											<h3><?php _e( 'Schedule', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+											<h3><?php _e( 'Schedule', 'cp-snapshot' ); ?></h3>
 
 											<?php Snapshot_Model_Request::nonce( 'snapshot-full_backups-schedule' ); ?>
 
@@ -211,7 +211,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 
 											</div>
 
-											<h3><?php _e( 'Storage Limit', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+											<h3><?php _e( 'Storage Limit', 'cp-snapshot' ); ?></h3>
 
 											<div class="storage-inline-form">
 
@@ -226,15 +226,15 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 												<input type="number" name="backups-limit" id="snapshot-archive-count"
 												       value="<?php echo esc_attr( $item['archive-count'] ); ?>">
 
-												<span class="inbetween"><?php _e( 'backups before removing older archives.', SNAPSHOT_I18N_DOMAIN ); ?></span>
+												<span class="inbetween"><?php _e( 'backups before removing older archives.', 'cp-snapshot' ); ?></span>
 
 											</div>
 
 											<p>
-												<small><?php _e( "By default, Snapshot will run as many scheduled backups as you need. We recommend that you remove older backups to avoid filling your remote storage limit. If you would like to keep all of your backup archives, just set your storage limit to 0.", SNAPSHOT_I18N_DOMAIN ); ?></small>
+												<small><?php _e( "By default, Snapshot will run as many scheduled backups as you need. We recommend that you remove older backups to avoid filling your remote storage limit. If you would like to keep all of your backup archives, just set your storage limit to 0.", 'cp-snapshot' ); ?></small>
 											</p>
 
-											<h3><?php _e( 'Optional', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+											<h3><?php _e( 'Optional', 'cp-snapshot' ); ?></h3>
 
 											<div class="wps-input--item">
 
@@ -246,7 +246,7 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 
 												</div>
 
-												<label for="checkbox-run-backup-now"><?php _e( 'Also run a backup now', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="checkbox-run-backup-now"><?php _e( 'Also run a backup now', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -265,9 +265,9 @@ $cron_disabled = $model->get_config( 'disable_cron', false );
 									<div class="form-button-container form-button-single">
 
 										<button type="submit" class="button button-blue"
-										        data-update-settings-text="<?php esc_attr_e( 'Update Settings', SNAPSHOT_I18N_DOMAIN ); ?>"
-										        data-run-backup-text="<?php esc_attr_e( 'Run Backup', SNAPSHOT_I18N_DOMAIN ); ?>">
-											<?php _e( 'Run Backup', SNAPSHOT_I18N_DOMAIN ); ?>
+										        data-update-settings-text="<?php esc_attr_e( 'Update Settings', 'cp-snapshot' ); ?>"
+										        data-run-backup-text="<?php esc_attr_e( 'Run Backup', 'cp-snapshot' ); ?>">
+											<?php _e( 'Run Backup', 'cp-snapshot' ); ?>
 										</button>
 
 									</div>

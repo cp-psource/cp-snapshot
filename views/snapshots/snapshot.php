@@ -26,7 +26,7 @@ $warning = $requirements_test['warning'];
 ?>
 
 <section id="header">
-	<h1><?php esc_html_e( 'Snapshots', SNAPSHOT_I18N_DOMAIN ); ?></h1>
+	<h1><?php esc_html_e( 'Snapshots', 'cp-snapshot' ); ?></h1>
 </section>
 
 <?php $this->render( 'snapshots/partials/create-snapshot-progress', false, array( 'item' => $item, 'time_key' => $time_key ), false, false ); ?>
@@ -44,16 +44,16 @@ $warning = $requirements_test['warning'];
 			<?php if ( $update ) : ?>
 
 				<div class="wpmud-box-title">
-					<h3><?php _e( 'Edit Snapshot', SNAPSHOT_I18N_DOMAIN ); ?>: <?php echo $item['name'] ?></h3>
+					<h3><?php _e( 'Edit Snapshot', 'cp-snapshot' ); ?>: <?php echo $item['name'] ?></h3>
 				</div>
 
 			<?php else : ?>
 
 				<div class="wpmud-box-title has-button>">
-					<h3><?php _e( 'Snapshot Wizard', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+					<h3><?php _e( 'Snapshot Wizard', 'cp-snapshot' ); ?></h3>
 
 					<a href="<?php echo esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-snapshots' ) ); ?>"
-					   class="button button-small button-gray button-outline"><?php _e( 'Back', SNAPSHOT_I18N_DOMAIN ); ?></a>
+					   class="button button-small button-gray button-outline"><?php _e( 'Back', 'cp-snapshot' ); ?></a>
 
 				</div>
 
@@ -66,7 +66,7 @@ $warning = $requirements_test['warning'];
 				<div class="wpmud-box-tab configuration-box<?php echo $all_good ? ' open' : ''; ?>">
 
 					<div class="wpmud-box-tab-title can-toggle">
-						<h3><?php _e( 'Configuration', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+						<h3><?php _e( 'Configuration', 'cp-snapshot' ); ?></h3>
 						<?php if ( $all_good ): ?>
 							<i class="wps-icon i-arrow-right"></i>
 						<?php endif; ?>
@@ -82,11 +82,11 @@ $warning = $requirements_test['warning'];
 
 									<div class="wps-auth-message <?php echo $all_good ? ( $warning ? 'warning' : 'success' ) : 'error'; ?>">
 										<?php if ( ! $all_good ) { ?>
-											<p><?php _e( 'You must meet the server requirements before proceeding.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+											<p><?php _e( 'You must meet the server requirements before proceeding.', 'cp-snapshot' ); ?></p>
 										<?php } else if ( $warning ) { ?>
-											<p><?php _e( 'You have 1 or more requirements warnings. You can proceed, however Snapshot may run into issues due to the warnings.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+											<p><?php _e( 'You have 1 or more requirements warnings. You can proceed, however Snapshot may run into issues due to the warnings.', 'cp-snapshot' ); ?></p>
 										<?php } else { ?>
-											<p><?php _e( 'You meet the server requirements. You can proceed now.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+											<p><?php _e( 'You meet the server requirements. You can proceed now.', 'cp-snapshot' ); ?></p>
 										<?php } ?>
 									</div>
 
@@ -100,7 +100,7 @@ $warning = $requirements_test['warning'];
 
 									<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-										<label class="label-box"><?php _e( 'Blog to backup', SNAPSHOT_I18N_DOMAIN ); ?></label>
+										<label class="label-box"><?php _e( 'Blog to backup', 'cp-snapshot' ); ?></label>
 
 									</div>
 
@@ -124,7 +124,7 @@ $warning = $requirements_test['warning'];
 													if ( isset( $blog_info ) ) {
 														printf( '%s (%s)', esc_html( $blog_info->blogname ), esc_html( $blog_info->domain ) );
 													} else {
-														_e( 'Unknown Blog', SNAPSHOT_I18N_DOMAIN );
+														_e( 'Unknown Blog', 'cp-snapshot' );
 													}
 												} else { ?>
 
@@ -137,12 +137,12 @@ $warning = $requirements_test['warning'];
 															<?php echo esc_html( trailingslashit( site_url() ) ); ?>
 														</span>
 														<button id="snapshot-blog-id-change" class="button button-small button-gray button-outline">
-															<?php _e( 'Change', SNAPSHOT_I18N_DOMAIN ); ?>
+															<?php _e( 'Change', 'cp-snapshot' ); ?>
 														</button>
 													</div>
 													<div id="snapshot-blog-search" style="display: none;">
 														<span id="snapshot-blog-search-error" style="color: #FF0000; display: none;">
-															<?php _e( 'Error on blog lookup. Try again', SNAPSHOT_I18N_DOMAIN ); ?>
+															<?php _e( 'Error on blog lookup. Try again', 'cp-snapshot' ); ?>
 															<br>
 														</span>
 														<?php
@@ -167,11 +167,11 @@ $warning = $requirements_test['warning'];
 														<p class="description">
 															<small>
 																<?php if ( is_subdomain_install() ) {
-																	_e( 'Enter the blog subdomain prefix (e.g. site1), blog ID (e.g. 22), or mapped domain, or leave blank for the primary site.', SNAPSHOT_I18N_DOMAIN );
+																	_e( 'Enter the blog subdomain prefix (e.g. site1), blog ID (e.g. 22), or mapped domain, or leave blank for the primary site.', 'cp-snapshot' );
 																} else {
-																	_e( 'Enter the path, blog ID (e.g. 22), or leave blank for the primary site.', SNAPSHOT_I18N_DOMAIN );
+																	_e( 'Enter the path, blog ID (e.g. 22), or leave blank for the primary site.', 'cp-snapshot' );
 																}
-																_e( ' Once the form is submitted this cannot be changed.', SNAPSHOT_I18N_DOMAIN );
+																_e( ' Once the form is submitted this cannot be changed.', 'cp-snapshot' );
 
 																?>
 															</small>
@@ -179,10 +179,10 @@ $warning = $requirements_test['warning'];
 
 														<div class="wps-subsite-btns">
 															<button id="snapshot-blog-id-lookup" class="button button-small button-blue">
-																<?php _e( 'Lookup', SNAPSHOT_I18N_DOMAIN ); ?>
+																<?php _e( 'Lookup', 'cp-snapshot' ); ?>
 															</button>
 															<button id="snapshot-blog-id-cancel" class="button button-small button-gray">
-																<?php _e( 'Cancel', SNAPSHOT_I18N_DOMAIN ); ?>
+																<?php _e( 'Cancel', 'cp-snapshot' ); ?>
 															</button>
 														</div>
 
@@ -208,7 +208,7 @@ $warning = $requirements_test['warning'];
 
 								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-									<label class="label-box"><?php _e( 'Destination', SNAPSHOT_I18N_DOMAIN ); ?></label>
+									<label class="label-box"><?php _e( 'Destination', 'cp-snapshot' ); ?></label>
 
 								</div>
 
@@ -218,7 +218,7 @@ $warning = $requirements_test['warning'];
 
 										<label class="label-title"><?php
 											printf(
-												__( 'Choose where to send this snapshot. Add new destinations via the <a href="%s">Destinations</a> tab.', SNAPSHOT_I18N_DOMAIN ),
+												__( 'Choose where to send this snapshot. Add new destinations via the <a href="%s">Destinations</a> tab.', 'cp-snapshot' ),
 												esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-destinations' ) )
 											); ?></label>
 
@@ -246,7 +246,7 @@ $warning = $requirements_test['warning'];
 							<div id="wps-custom-directory" class="row">
 								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 									<label class="label-box" for="snapshot-destination-directory">
-										<?php esc_html_e( 'Directory (optional)', SNAPSHOT_I18N_DOMAIN ); ?>
+										<?php esc_html_e( 'Directory (optional)', 'cp-snapshot' ); ?>
 									</label>
 								</div>
 								<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
@@ -261,25 +261,25 @@ $warning = $requirements_test['warning'];
 										?>"
 									/>
 									<p>
-										<?php esc_html_e( 'The optional Directory can be used to override or supplement the selected destination directory value.', SNAPSHOT_I18N_DOMAIN ); ?>
-										<?php esc_html_e( 'If "local server" is selected and if the directory does not start with a forward slash "/" the directory will be relative to the site root', SNAPSHOT_I18N_DOMAIN ); ?>
+										<?php esc_html_e( 'The optional Directory can be used to override or supplement the selected destination directory value.', 'cp-snapshot' ); ?>
+										<?php esc_html_e( 'If "local server" is selected and if the directory does not start with a forward slash "/" the directory will be relative to the site root', 'cp-snapshot' ); ?>
 									</p>
 									<p>
-										<?php esc_html_e( 'This field supports tokens you can use to create dynamic values.', SNAPSHOT_I18N_DOMAIN ); ?>
-										<?php esc_html_e( 'You can use any combination of the following tokens.', SNAPSHOT_I18N_DOMAIN ); ?>
-										<?php esc_html_e( 'Use the forward slash "/" to separate directory elements.', SNAPSHOT_I18N_DOMAIN ); ?>
+										<?php esc_html_e( 'This field supports tokens you can use to create dynamic values.', 'cp-snapshot' ); ?>
+										<?php esc_html_e( 'You can use any combination of the following tokens.', 'cp-snapshot' ); ?>
+										<?php esc_html_e( 'Use the forward slash "/" to separate directory elements.', 'cp-snapshot' ); ?>
 									</p>
 									<p>
 										<code>[DEST_PATH]</code> -
-										<?php esc_html_e( 'This represents the Directory/Bucket used by the selected Backup Destination or if local, the Settings Folder location. This can be used to supplement the value entered into this Snapshot. If [DEST_PATH] is not used the Directory value here will override the complete value from the selected Destination.', SNAPSHOT_I18N_DOMAIN ); ?>
+										<?php esc_html_e( 'This represents the Directory/Bucket used by the selected Backup Destination or if local, the Settings Folder location. This can be used to supplement the value entered into this Snapshot. If [DEST_PATH] is not used the Directory value here will override the complete value from the selected Destination.', 'cp-snapshot' ); ?>
 									</p>
 									<p>
 										<code>[SITE_DOMAIN]</code> -
-										<?php esc_html_e( 'This represents the full domain of the selected site per this snapshot.', SNAPSHOT_I18N_DOMAIN ); ?>
+										<?php esc_html_e( 'This represents the full domain of the selected site per this snapshot.', 'cp-snapshot' ); ?>
 									</p>
 									<p>
 										<code>[SNAPSHOT_ID]</code> -
-										<?php esc_html_e( 'This is the unique ID assigned to this Snapshot.', SNAPSHOT_I18N_DOMAIN ); ?>
+										<?php esc_html_e( 'This is the unique ID assigned to this Snapshot.', 'cp-snapshot' ); ?>
 									</p>
 								</div>
 							</div>
@@ -288,7 +288,7 @@ $warning = $requirements_test['warning'];
 
 								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-									<label class="label-box"><?php _e( 'Files', SNAPSHOT_I18N_DOMAIN ); ?></label>
+									<label class="label-box"><?php _e( 'Files', 'cp-snapshot' ); ?></label>
 
 								</div>
 
@@ -296,7 +296,7 @@ $warning = $requirements_test['warning'];
 
 									<div class="wpmud-box-mask">
 
-										<label class="label-title"><?php _e( 'Select which files you want to include.', SNAPSHOT_I18N_DOMAIN ); ?></label>
+										<label class="label-title"><?php _e( 'Select which files you want to include.', 'cp-snapshot' ); ?></label>
 
 										<?php
 
@@ -325,7 +325,7 @@ $warning = $requirements_test['warning'];
 
 												</div>
 
-												<label for="snapshot-files-option-none"><?php _e( "Don't include any files", SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="snapshot-files-option-none"><?php _e( "Don't include any files", 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -344,13 +344,13 @@ $warning = $requirements_test['warning'];
 													</div>
 
 													<label for="snapshot-files-option-all">
-														<?php _e( 'Include common files', SNAPSHOT_I18N_DOMAIN ); ?>:
+														<?php _e( 'Include common files', 'cp-snapshot' ); ?>:
 														<span class="snapshot-backup-files-sections-main-only"<?php if ( ! is_main_site( $item['blog-id'] ) ) {
 															echo ' style="display:none" ';
 														} ?>>
-														<?php _e( 'themes, plugins,', SNAPSHOT_I18N_DOMAIN ); ?>
+														<?php _e( 'themes, plugins,', 'cp-snapshot' ); ?>
 													</span>
-														<?php _e( 'media', SNAPSHOT_I18N_DOMAIN ); ?>
+														<?php _e( 'media', 'cp-snapshot' ); ?>
 														(<span class="snapshot-media-upload-path"><?php echo $blog_upload_path; ?></span>)
 													</label>
 
@@ -365,7 +365,7 @@ $warning = $requirements_test['warning'];
 													<label for="snapshot-files-option-selected"></label>
 												</div>
 
-												<label for="snapshot-files-option-selected"><?php _e( 'Only include selected files', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="snapshot-files-option-selected"><?php _e( 'Only include selected files', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -387,7 +387,7 @@ $warning = $requirements_test['warning'];
 
 														</div>
 
-														<label for="snapshot-files-option-themes"><?php _e( 'All Themes', SNAPSHOT_I18N_DOMAIN ); ?></label>
+														<label for="snapshot-files-option-themes"><?php _e( 'All Themes', 'cp-snapshot' ); ?></label>
 
 													</li>
 
@@ -403,7 +403,7 @@ $warning = $requirements_test['warning'];
 
 														</div>
 
-														<label for="snapshot-files-option-plugins"><?php _e( 'All Plugins', SNAPSHOT_I18N_DOMAIN ); ?></label>
+														<label for="snapshot-files-option-plugins"><?php _e( 'All Plugins', 'cp-snapshot' ); ?></label>
 
 													</li>
 
@@ -421,7 +421,7 @@ $warning = $requirements_test['warning'];
 
 															</div>
 
-															<label for="snapshot-files-option-mu-plugins"><?php _e( 'MU-Plugins: All active and inactive plugins will be included', SNAPSHOT_I18N_DOMAIN ); ?></label>
+															<label for="snapshot-files-option-mu-plugins"><?php _e( 'MU-Plugins: All active and inactive plugins will be included', 'cp-snapshot' ); ?></label>
 
 														</li>
 
@@ -439,7 +439,7 @@ $warning = $requirements_test['warning'];
 
 														</div>
 
-														<label for="snapshot-files-option-media"><?php _e( 'Media files:', SNAPSHOT_I18N_DOMAIN ); ?>
+														<label for="snapshot-files-option-media"><?php _e( 'Media files:', 'cp-snapshot' ); ?>
 															<span class="snapshot-media-upload-path"><?php echo Snapshot_Helper_Utility::get_blog_upload_path( $item['blog-id'] ); ?></span></label>
 
 													</li>
@@ -456,7 +456,7 @@ $warning = $requirements_test['warning'];
 
 														</div>
 
-														<label for="snapshot-files-option-config"><?php _e( 'wp-config.php', SNAPSHOT_I18N_DOMAIN ); ?></label>
+														<label for="snapshot-files-option-config"><?php _e( 'wp-config.php', 'cp-snapshot' ); ?></label>
 
 													</li>
 
@@ -472,7 +472,7 @@ $warning = $requirements_test['warning'];
 
 														</div>
 
-														<label for="snapshot-files-option-htaccess"><?php _e( '.htaccess', SNAPSHOT_I18N_DOMAIN ); ?></label>
+														<label for="snapshot-files-option-htaccess"><?php _e( '.htaccess', 'cp-snapshot' ); ?></label>
 
 													</li>
 
@@ -488,7 +488,7 @@ $warning = $requirements_test['warning'];
 
 												<div id="snapshot-selected-files-sync-container">
 
-													<label class="label-title"><?php _e( 'Dropbox Only - Select Archive or Mirroring option for this Snapshot.', SNAPSHOT_I18N_DOMAIN ); ?></label>
+													<label class="label-title"><?php _e( 'Dropbox Only - Select Archive or Mirroring option for this Snapshot.', 'cp-snapshot' ); ?></label>
 
 													<ul class="wpmud-box-gray wps-input--group">
 
@@ -524,7 +524,7 @@ $warning = $requirements_test['warning'];
 
 															</div>
 
-															<label for="snapshot-destination-sync-archive"><?php _e( '<strong>Archive</strong> - (Default) Selecting archive will produce a zip archive. This is standard method for backing up your site. A single zip archive will be created for files and database tables.', SNAPSHOT_I18N_DOMAIN ); ?></label>
+															<label for="snapshot-destination-sync-archive"><?php _e( '<strong>Archive</strong> - (Default) Selecting archive will produce a zip archive. This is standard method for backing up your site. A single zip archive will be created for files and database tables.', 'cp-snapshot' ); ?></label>
 
 														</li>
 
@@ -540,7 +540,7 @@ $warning = $requirements_test['warning'];
 
 															</div>
 
-															<label for="snapshot-destination-sync-mirror"><?php _e( '<strong>Mirror/Sync</strong> - <strong>Dropbox ONLY</strong> Select mirroring if you want to replicate your site file structure in Dropbox. If you include database tables they will be added as a zipped archive. <strong>There is currently no restore option for Mirror/Sync.</strong>', SNAPSHOT_I18N_DOMAIN ); ?></label>
+															<label for="snapshot-destination-sync-mirror"><?php _e( '<strong>Mirror/Sync</strong> - <strong>Dropbox ONLY</strong> Select mirroring if you want to replicate your site file structure in Dropbox. If you include database tables they will be added as a zipped archive. <strong>There is currently no restore option for Mirror/Sync.</strong>', 'cp-snapshot' ); ?></label>
 
 														</li>
 
@@ -552,13 +552,13 @@ $warning = $requirements_test['warning'];
 
 												$message = '<p>Additional options are available for the \'Dropbox\' destination.</p><p>Destinations are available to you in Snapshot Pro from WPMU Dev: <a href="%s">Upgrade Now</a></p>';
 
-												$message = sprintf( __( $message, SNAPSHOT_I18N_DOMAIN ), esc_url( 'https://premium.psource.org/project/snapshot' ) );
+												$message = sprintf( __( $message, 'cp-snapshot' ), esc_url( 'https://premium.psource.org/project/snapshot' ) );
 
 												echo $message;
 
 											} ?>
 
-											<label class="label-title"><?php _e( 'Add any custom URLs you want to not include in this snapshot.', SNAPSHOT_I18N_DOMAIN ); ?></label>
+											<label class="label-title"><?php _e( 'Add any custom URLs you want to not include in this snapshot.', 'cp-snapshot' ); ?></label>
 
 											<textarea name="snapshot-files-ignore" id="snapshot-files-ignore" cols="20" rows="5"><?php if ( ( isset( $item['files-ignore'] ) ) && ( count( $item['files-ignore'] ) ) ) {
 													echo implode( "\n", $item['files-ignore'] );
@@ -567,12 +567,12 @@ $warning = $requirements_test['warning'];
 											<p>
 												<small>
 													<?php
-													_e( 'URLs can be files and must be listed one per line. The exclude feature uses pattern matching, so typing twentyten will exclude the twentyten folder, as well as any filters with twentyten in the filename.', SNAPSHOT_I18N_DOMAIN ); ?>
+													_e( 'URLs can be files and must be listed one per line. The exclude feature uses pattern matching, so typing twentyten will exclude the twentyten folder, as well as any filters with twentyten in the filename.', 'cp-snapshot' ); ?>
 												</small>
 											</p>
 											<p>
 												<small>
-													<?php _e( 'Example: to exclude the Twenty Ten theme, you can use twentyten, theme/twentyten or public/wp-content/theme/twentyten. <strong>The local folder is excluded from Snapshot backups by default.</strong>', SNAPSHOT_I18N_DOMAIN ); ?>
+													<?php _e( 'Example: to exclude the Twenty Ten theme, you can use twentyten, theme/twentyten or public/wp-content/theme/twentyten. <strong>The local folder is excluded from Snapshot backups by default.</strong>', 'cp-snapshot' ); ?>
 												</small>
 											</p>
 
@@ -588,7 +588,7 @@ $warning = $requirements_test['warning'];
 
 								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-									<label class="label-box"><?php _e( 'Database', SNAPSHOT_I18N_DOMAIN ); ?></label>
+									<label class="label-box"><?php _e( 'Database', 'cp-snapshot' ); ?></label>
 
 								</div>
 
@@ -618,7 +618,7 @@ $warning = $requirements_test['warning'];
 
 										} ?>
 
-										<label class="label-title"><?php _e( 'Select which database tables you want to include.', SNAPSHOT_I18N_DOMAIN ); ?></label>
+										<label class="label-title"><?php _e( 'Select which database tables you want to include.', 'cp-snapshot' ); ?></label>
 
 										<div class="wps-input--group">
 
@@ -634,7 +634,7 @@ $warning = $requirements_test['warning'];
 
 												</div>
 
-												<label for="snapshot-tables-option-none"><?php _e( 'Don\'t include any database tables', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="snapshot-tables-option-none"><?php _e( 'Don\'t include any database tables', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -650,7 +650,7 @@ $warning = $requirements_test['warning'];
 
 												</div>
 
-												<label for="snapshot-tables-option-all"><?php _e( 'Include all database tables', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="snapshot-tables-option-all"><?php _e( 'Include all database tables', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -666,7 +666,7 @@ $warning = $requirements_test['warning'];
 
 												</div>
 
-												<label for="snapshot-tables-option-selected"><?php _e( 'Only include selected database tables', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="snapshot-tables-option-selected"><?php _e( 'Only include selected database tables', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -678,11 +678,11 @@ $warning = $requirements_test['warning'];
 
 											<?php
 											$tables_sets_idx = array(
-												'global' => __( "WordPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
-												'wp'     => __( "WordPress core Tables", SNAPSHOT_I18N_DOMAIN ),
-												'non'    => __( "Non-WordPress Tables", SNAPSHOT_I18N_DOMAIN ),
-												'other'  => __( "Other Tables", SNAPSHOT_I18N_DOMAIN ),
-												'error'  => __( "Error Tables - These tables are skipped for the noted reasons.", SNAPSHOT_I18N_DOMAIN )
+												'global' => __( "ClassicPress Global Tables", 'cp-snapshot' ),
+												'wp'     => __( "ClassicPress core Tables", 'cp-snapshot' ),
+												'non'    => __( "Non-ClassicPress Tables", 'cp-snapshot' ),
+												'other'  => __( "Other Tables", 'cp-snapshot' ),
+												'error'  => __( "Error Tables - These tables are skipped for the noted reasons.", 'cp-snapshot' )
 											);
 
 											foreach ( $tables_sets_idx as $table_set_key => $table_set_title ) {
@@ -700,12 +700,12 @@ $warning = $requirements_test['warning'];
 												<div id="snapshot-tables-<?php echo $table_set_key ?>-set" style="display: <?php echo $display_set; ?>">
 
 													<h3><?php echo $table_set_title; ?><?php if ( $table_set_key != 'error' ) { ?>
-															<a class="snapshot-table-select-all" href="#" id="snapshot-table-<?php echo $table_set_key ?>-select-all"><?php _e( 'Select all', SNAPSHOT_I18N_DOMAIN ); ?></a><?php } ?>
+															<a class="snapshot-table-select-all" href="#" id="snapshot-table-<?php echo $table_set_key ?>-select-all"><?php _e( 'Select all', 'cp-snapshot' ); ?></a><?php } ?>
 													</h3>
 
 													<?php if ( $table_set_key == "global" ) { ?>
 
-														<p class="description"><?php _e( 'These global user tables contain blog specific user information which can be included as part of the snapshot archive. Only users whose primary blog matches this selected blog will be included. <strong>Superadmin users will not be included in the sub-site archive.</strong>', SNAPSHOT_I18N_DOMAIN ); ?></p>
+														<p class="description"><?php _e( 'These global user tables contain blog specific user information which can be included as part of the snapshot archive. Only users whose primary blog matches this selected blog will be included. <strong>Superadmin users will not be included in the sub-site archive.</strong>', 'cp-snapshot' ); ?></p>
 
 													<?php } ?>
 
@@ -778,7 +778,7 @@ $warning = $requirements_test['warning'];
 
 														} else { ?>
 
-															<li><?php _e( 'No Tables', SNAPSHOT_I18N_DOMAIN ) ?></li>
+															<li><?php _e( 'No Tables', 'cp-snapshot' ) ?></li>
 
 														<?php } ?>
 													</ul>
@@ -799,7 +799,7 @@ $warning = $requirements_test['warning'];
 
 								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-									<label class="label-box"><?php _e( 'Frequency', SNAPSHOT_I18N_DOMAIN ); ?></label>
+									<label class="label-box"><?php _e( 'Frequency', 'cp-snapshot' ); ?></label>
 
 								</div>
 
@@ -807,7 +807,7 @@ $warning = $requirements_test['warning'];
 
 									<div class="wpmud-box-mask">
 
-										<label class="label-title"><?php _e( 'Would you like to schedule this snapshot to run regularly or once off?', SNAPSHOT_I18N_DOMAIN ); ?></label>
+										<label class="label-title"><?php _e( 'Would you like to schedule this snapshot to run regularly or once off?', 'cp-snapshot' ); ?></label>
 
 										<div class="wps-input--group">
 
@@ -822,7 +822,7 @@ $warning = $requirements_test['warning'];
 
 												</div>
 
-												<label for="frequency-once"><?php _e( 'Once off', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="frequency-once"><?php _e( 'Once off', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -837,7 +837,7 @@ $warning = $requirements_test['warning'];
 
 												</div>
 
-												<label for="frequency-daily"><?php _e( 'Run daily, weekly or monthly', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="frequency-daily"><?php _e( 'Run daily, weekly or monthly', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -845,7 +845,7 @@ $warning = $requirements_test['warning'];
 
 										<div id="snapshot-schedule-options-container" class="wpmud-box-gray">
 
-											<h3><?php _e( 'Schedule', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+											<h3><?php _e( 'Schedule', 'cp-snapshot' ); ?></h3>
 
 											<input type="hidden" id="snapshot-immediate" name="snapshot-interval" checked="checked" value="immediate" />
 
@@ -892,7 +892,7 @@ $warning = $requirements_test['warning'];
 														} else {
 															echo ' style="display: none;" ';
 														} ?> >
-															<span class="inbetween"><?php _e( 'at', SNAPSHOT_I18N_DOMAIN ); ?></span>
+															<span class="inbetween"><?php _e( 'at', 'cp-snapshot' ); ?></span>
 															<select id="snapshot-interval-offset-daily-hour"
 															        name="snapshot-interval-offset[snapshot-daily][tm_hour]">
 																<?php
@@ -915,7 +915,7 @@ $warning = $requirements_test['warning'];
 														} else {
 															echo ' style="display: none;" ';
 														} ?> >
-															<span class="inbetween"><?php _e( 'on', SNAPSHOT_I18N_DOMAIN ); ?></span>
+															<span class="inbetween"><?php _e( 'on', 'cp-snapshot' ); ?></span>
 															<select id="snapshot-interval-offset-weekly-wday"
 															        name="snapshot-interval-offset[snapshot-weekly][tm_wday]">
 																<?php
@@ -927,7 +927,7 @@ $warning = $requirements_test['warning'];
 																?>
 															</select>&nbsp;&nbsp;
 
-															<span class="inbetween"><?php _e( 'at', SNAPSHOT_I18N_DOMAIN ); ?></span>
+															<span class="inbetween"><?php _e( 'at', 'cp-snapshot' ); ?></span>
 															<select id="snapshot-interval-offset-weekly-hour"
 															        name="snapshot-interval-offset[snapshot-weekly][tm_hour]">
 																<?php
@@ -947,7 +947,7 @@ $warning = $requirements_test['warning'];
 															echo ' style="display: none;" ';
 														} ?> >
 
-															<span class="inbetween"><?php _e( 'on', SNAPSHOT_I18N_DOMAIN ); ?></span>
+															<span class="inbetween"><?php _e( 'on', 'cp-snapshot' ); ?></span>
 															<select id="snapshot-interval-offset-monthly-mday"
 															        name="snapshot-interval-offset[snapshot-monthly][tm_mday]">
 																<?php
@@ -959,7 +959,7 @@ $warning = $requirements_test['warning'];
 																?>
 															</select>&nbsp;&nbsp;
 
-															<span class="inbetween"><?php _e( 'at', SNAPSHOT_I18N_DOMAIN ); ?></span>
+															<span class="inbetween"><?php _e( 'at', 'cp-snapshot' ); ?></span>
 															<select id="snapshot-interval-offset-monthly-hour"
 															        name="snapshot-interval-offset[snapshot-monthly][tm_hour]">
 																<?php
@@ -977,7 +977,7 @@ $warning = $requirements_test['warning'];
 
 											</div>
 
-											<h3><?php _e( 'Storage Limit', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+											<h3><?php _e( 'Storage Limit', 'cp-snapshot' ); ?></h3>
 
 											<div class="storage-inline-form">
 
@@ -992,15 +992,15 @@ $warning = $requirements_test['warning'];
 												<input type="number" name="snapshot-archive-count" id="snapshot-archive-count"
 												       value="<?php echo esc_attr( $item['archive-count'] ); ?>" />
 
-												<span class="inbetween"><?php _e( 'backups before removing older archives.', SNAPSHOT_I18N_DOMAIN ); ?></span>
+												<span class="inbetween"><?php _e( 'backups before removing older archives.', 'cp-snapshot' ); ?></span>
 
 											</div>
 
 											<p>
-												<small><?php _e( 'Snapshot will run backups are per your schedule and send them to your chosen destination. In addition to sending the copy off site we keep a local copy just in case things go wrong. Here you can specify how many local archives to keep before removing the oldest.', SNAPSHOT_I18N_DOMAIN ); ?></small>
+												<small><?php _e( 'Snapshot will run backups are per your schedule and send them to your chosen destination. In addition to sending the copy off site we keep a local copy just in case things go wrong. Here you can specify how many local archives to keep before removing the oldest.', 'cp-snapshot' ); ?></small>
 											</p>
 
-											<h3><?php _e( 'Optional', SNAPSHOT_I18N_DOMAIN ); ?></h3>
+											<h3><?php _e( 'Optional', 'cp-snapshot' ); ?></h3>
 
 											<div class="wps-input--item">
 
@@ -1012,7 +1012,7 @@ $warning = $requirements_test['warning'];
 
 												</div>
 
-												<label for="checkbox-run-backup-now"><?php _e( 'Also run a backup now', SNAPSHOT_I18N_DOMAIN ); ?></label>
+												<label for="checkbox-run-backup-now"><?php _e( 'Also run a backup now', 'cp-snapshot' ); ?></label>
 
 											</div>
 
@@ -1028,7 +1028,7 @@ $warning = $requirements_test['warning'];
 
 								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-									<label class="label-box"><?php _e( 'Name', SNAPSHOT_I18N_DOMAIN ); ?></label>
+									<label class="label-box"><?php _e( 'Name', 'cp-snapshot' ); ?></label>
 
 								</div>
 
@@ -1036,7 +1036,7 @@ $warning = $requirements_test['warning'];
 
 									<div class="wpmud-box-mask">
 
-										<label class="label-title"><?php _e( 'Give your snapshot a nice name!', SNAPSHOT_I18N_DOMAIN ); ?></label>
+										<label class="label-title"><?php _e( 'Give your snapshot a nice name!', 'cp-snapshot' ); ?></label>
 
 										<?php
 										if ( isset( $_REQUEST['snapshot-name'] ) ) {
@@ -1044,13 +1044,13 @@ $warning = $requirements_test['warning'];
 										} else if ( isset( $item['name'] ) ) {
 											$snapshot_name = sanitize_text_field( $item['name'] );
 										} else {
-											$snapshot_name = __( "Snapshot", SNAPSHOT_I18N_DOMAIN );
+											$snapshot_name = __( "Snapshot", 'cp-snapshot' );
 										}
 										?>
 										<input type="text" name="snapshot-name" id="snapshot-name" value="<?php echo esc_attr( $snapshot_name ); ?>">
 
 										<p>
-											<small><?php _e( 'Snapshot will automatically add the date and an ID to your archive ZIP file.', SNAPSHOT_I18N_DOMAIN ); ?></small>
+											<small><?php _e( 'Snapshot will automatically add the date and an ID to your archive ZIP file.', 'cp-snapshot' ); ?></small>
 										</p>
 
 									</div>
@@ -1072,9 +1072,9 @@ $warning = $requirements_test['warning'];
 
 									<div class="form-button-container">
 
-										<a class="button button-gray" href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-snapshots' ); ?>"><?php _e( 'Cancel', SNAPSHOT_I18N_DOMAIN ); ?></a>
+										<a class="button button-gray" href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-snapshots' ); ?>"><?php _e( 'Cancel', 'cp-snapshot' ); ?></a>
 
-										<button id="snapshot-add-update-submit" data-title-save-only="<?php _e( 'Save', SNAPSHOT_I18N_DOMAIN ); ?>" data-title-save-and-run="<?php _e( 'Save & Run Backup', SNAPSHOT_I18N_DOMAIN ); ?>" type="submit" class="button button-blue"><?php _e( 'Save & Run Backup', SNAPSHOT_I18N_DOMAIN ); ?></button>
+										<button id="snapshot-add-update-submit" data-title-save-only="<?php _e( 'Save', 'cp-snapshot' ); ?>" data-title-save-and-run="<?php _e( 'Save & Run Backup', 'cp-snapshot' ); ?>" type="submit" class="button button-blue"><?php _e( 'Save & Run Backup', 'cp-snapshot' ); ?></button>
 
 
 									</div>

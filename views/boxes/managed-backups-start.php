@@ -4,7 +4,7 @@
 
 <div class="wpmud-box-content">
     <div class="row">
-        <p><img class="hero-circle"><br>Back up and restore your website, including WordPress core files, on WPMU DEV's secure cloud servers.</p>
+        <p><img class="hero-circle"><br>Back up and restore your website, including ClassicPress core files, on PSOURCE's secure cloud servers.</p>
         <a href="http://snapshot.psource.dev/wp-admin/admin.php?page=wphb&amp;run=true&amp;type=performance&amp;_wpnonce=0360bdece0#wphb-box-dashboard-performance-running-test" class="button button-blue">Backup my Site</a>
 
     </div>

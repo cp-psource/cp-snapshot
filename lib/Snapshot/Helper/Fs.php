@@ -43,7 +43,7 @@ class Snapshot_Helper_Fs {
 	/**
 	 * Gets WP uploads directory
 	 *
-	 * @return string WordPress uploads directory
+	 * @return string ClassicPress uploads directory
 	 */
 	public function get_uploads () {
 		$wp_upload_dir = wp_upload_dir();

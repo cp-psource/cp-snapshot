@@ -12,7 +12,7 @@
 /**
  * This class is used to sign all requests to dropbox.
  *
- * This specific class uses WordPress WP_Http to authenticate.
+ * This specific class uses ClassicPress WP_Http to authenticate.
  */
 class Dropbox_OAuth_Curl extends Dropbox_OAuth {
 

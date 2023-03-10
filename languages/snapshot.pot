@@ -1,4 +1,4 @@
-# Copyright (C) 2017 WPMU DEV
+# Copyright (C) 2017 PSOURCE
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
@@ -1242,20 +1242,20 @@ msgstr ""
 #: lib/Snapshot/View/Metabox/Admin.php:2761
 #: views-new/snapshots/edit-snapshot.php:513
 #: views-new/snapshots/new-snapshot.php:614 views-new/snapshots/restore.php:647
-msgid "WordPress Global Tables"
+msgid "ClassicPress Global Tables"
 msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:367
 #: views-new/snapshots/edit-snapshot.php:514
 #: views-new/snapshots/new-snapshot.php:615
-msgid "WordPress core Tables"
+msgid "ClassicPress core Tables"
 msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:368
 #: lib/Snapshot/View/Metabox/Admin.php:2763
 #: views-new/snapshots/edit-snapshot.php:515
 #: views-new/snapshots/new-snapshot.php:616 views-new/snapshots/restore.php:649
-msgid "Non-WordPress Tables"
+msgid "Non-ClassicPress Tables"
 msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:369
@@ -1407,7 +1407,7 @@ msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:765
 msgid ""
-"Your site has disabled the WordPress Cron scheduler (WP_CRON). When "
+"Your site has disabled the ClassicPress Cron scheduler (WP_CRON). When "
 "scheduling an archive to be created it may not run. Check your "
 "wp-config.php for the DISABLE_WP_CRON define. If found either remove it or "
 "set the value to \"false\"."
@@ -1471,7 +1471,7 @@ msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:1022
 msgid ""
-"The Snapshot scheduling process uses the WordPress Cron (WPCron) system. "
+"The Snapshot scheduling process uses the ClassicPress Cron (WPCron) system. "
 "This is the same process used to run daily checks for updates to core, "
 "plugins and themes. It should be understood this WPCron process is not "
 "precise. If you schedule a Snapshot for a specific minute of the hour "
@@ -1679,7 +1679,7 @@ msgstr ""
 #: lib/Snapshot/View/Metabox/Admin.php:1709
 msgid ""
 "Restore Note: URL mismatch!. The Snapshot archive does not appear made from "
-"the current WordPress system. Every attempt will be made to replace the "
+"the current ClassicPress system. Every attempt will be made to replace the "
 "source URL with the URL from the destination."
 msgstr ""
 
@@ -1786,7 +1786,7 @@ msgstr ""
 #: lib/Snapshot/View/Metabox/Admin.php:2135
 msgid ""
 "You can learn more about your server configuration in our <a "
-"href=\"%s\">WPMU DEV Dashboard plugin</a>."
+"href=\"%s\">PSOURCE Dashboard plugin</a>."
 msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:2155
@@ -1797,7 +1797,7 @@ msgid ""
 msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:2159
-msgid "WordPress Version"
+msgid "ClassicPress Version"
 msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:2170
@@ -2058,7 +2058,7 @@ msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:2654
 msgid ""
-"PclZip - is part of the WordPress core libraries. It will be slower than "
+"PclZip - is part of the ClassicPress core libraries. It will be slower than "
 "built-in PHP functions like ZipArchive. This library  uses memory instead "
 "of files for temporary storage when compressing large files."
 msgstr ""
@@ -2103,7 +2103,7 @@ msgid "Restore <strong>selected</strong> database tables"
 msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:2762 views-new/snapshots/restore.php:648
-msgid "WordPress Blog Tables"
+msgid "ClassicPress Blog Tables"
 msgstr ""
 
 #: lib/Snapshot/View/Metabox/Admin.php:2793 views-new/snapshots/restore.php:671
@@ -2217,7 +2217,7 @@ msgstr ""
 #: lib/Snapshot/View/Metabox/Admin.php:3043
 msgid ""
 "<strong>Dropbox:</strong> If you are attempting to download a Dropbox "
-"Snapshot archive written to the App/WPMU DEV Snapshot you first need to "
+"Snapshot archive written to the App/PSOURCE Snapshot you first need to "
 "copy the file to a public folder within your Dropbox account before "
 "grabbing the public link."
 msgstr ""
@@ -2316,7 +2316,7 @@ msgstr ""
 
 #: lib/Snapshot/View/Settings.php:287
 msgid ""
-"You are about to restore a previous version of your WordPress database. "
+"You are about to restore a previous version of your ClassicPress database. "
 "This will remove any new information added since the snapshot backup."
 msgstr ""
 
@@ -2585,24 +2585,24 @@ msgstr ""
 #: lib/PSOURCE/Dashboard/psource-dash-notification.php:230
 msgid ""
 "Important updates are available for <strong>%s</strong>. Install the free "
-"WPMU DEV Dashboard plugin now for updates and support!"
+"PSOURCE Dashboard plugin now for updates and support!"
 msgstr ""
 
 #: lib/PSOURCE/Dashboard/psource-dash-notification.php:232
 msgid ""
-"<strong>%s</strong> is almost ready - install the free WPMU DEV Dashboard "
+"<strong>%s</strong> is almost ready - install the free PSOURCE Dashboard "
 "plugin for updates and support!"
 msgstr ""
 
 #: lib/PSOURCE/Dashboard/psource-dash-notification.php:236
 msgid ""
-"Important updates are available for your WPMU DEV plugins/themes. Install "
-"the free WPMU DEV Dashboard plugin now for updates and support!"
+"Important updates are available for your PSOURCE plugins/themes. Install "
+"the free PSOURCE Dashboard plugin now for updates and support!"
 msgstr ""
 
 #: lib/PSOURCE/Dashboard/psource-dash-notification.php:238
 msgid ""
-"Almost ready - install the free WPMU DEV Dashboard plugin for updates and "
+"Almost ready - install the free PSOURCE Dashboard plugin for updates and "
 "support!"
 msgstr ""
 
@@ -2631,18 +2631,18 @@ msgstr ""
 
 #: lib/PSOURCE/Dashboard/psource-dash-notification.php:277
 msgid ""
-"Important updates are available for your WPMU DEV plugins/themes. Activate "
-"the WPMU DEV Dashboard to update now!"
+"Important updates are available for your PSOURCE plugins/themes. Activate "
+"the PSOURCE Dashboard to update now!"
 msgstr ""
 
 #: lib/PSOURCE/Dashboard/psource-dash-notification.php:279
 msgid ""
-"Just one more step - activate the WPMU DEV Dashboard plugin and you're all "
+"Just one more step - activate the PSOURCE Dashboard plugin and you're all "
 "done!"
 msgstr ""
 
 #: lib/PSOURCE/Dashboard/psource-dash-notification.php:285
-msgid "Activate WPMU DEV Dashboard"
+msgid "Activate PSOURCE Dashboard"
 msgstr ""
 
 #: lib/PSOURCE/Dashboard/psource-dash-notification.php:952
@@ -2862,7 +2862,7 @@ msgstr ""
 #: snapshot.php:1315
 msgid ""
 "The Snapshot plugin provides the ability to create quick on-demand snapshot "
-"of your WordPress site database and files. You can create as many snapshots "
+"of your ClassicPress site database and files. You can create as many snapshots "
 "as needed. The Snapshot plugin also provides the ability to restore a "
 "snapshot backup."
 msgstr ""
@@ -2884,7 +2884,7 @@ msgstr ""
 msgid ""
 "<strong>What to Backup</strong> - This section lists all tables for your "
 "site. Select the table you want to include in the backup. The tables are "
-"grouped by WordPress Core and Other tables. These Other tables could have "
+"grouped by ClassicPress Core and Other tables. These Other tables could have "
 "been created and used by some of the plugins you installed."
 msgstr ""
 
@@ -3234,7 +3234,7 @@ msgstr ""
 
 #: views-new/boxes/dashboard/widget-backups.php:57
 msgid ""
-"Backup your entire WordPress installation and store it securely in the <a "
+"Backup your entire ClassicPress installation and store it securely in the <a "
 "href=\"%s\">Hub</a> for simple site migration and one-click restoration."
 msgstr ""
 
@@ -3257,8 +3257,8 @@ msgstr ""
 #: views-new/boxes/dashboard/widget-backups.php:156
 msgid ""
 "Automatically backup your entire website on a regular basis and store those "
-"backups on WPMU DEV's secure cloud servers. Restore your full website at "
-"anytime via the WPMU DEV Hub."
+"backups on PSOURCE's secure cloud servers. Restore your full website at "
+"anytime via the PSOURCE Hub."
 msgstr ""
 
 #: views-new/boxes/dashboard/widget-backups.php:132
@@ -3267,7 +3267,7 @@ msgstr ""
 
 #: views-new/boxes/dashboard/widget-backups.php:148
 msgid ""
-"Fully automated managed backups are included in a WPMU DEV membership along "
+"Fully automated managed backups are included in a PSOURCE membership along "
 "with 100+ plugins & themes, 24/7 support and lots of handy site management "
 "tools  – <strong>Try it all absolutely FREE</strong>"
 msgstr ""
@@ -3419,7 +3419,7 @@ msgstr ""
 
 #: views-new/boxes/dashboard/widget-try-pro.php:17
 msgid ""
-"Try Snapshot Pro along with 100+ WPMU DEV plugins, themes & 24/7 WP support "
+"Try Snapshot Pro along with 100+ PSOURCE plugins, themes & 24/7 WP support "
 "for free today."
 msgstr ""
 
@@ -3448,7 +3448,7 @@ msgstr ""
 
 #: views-new/boxes/modals/popup-snapshot.php:36
 msgid ""
-"To enable Managed Backups and your 10GB storage allowance on our WPMU DEV "
+"To enable Managed Backups and your 10GB storage allowance on our PSOURCE "
 "cloud servers, you need to add your Snapshot key."
 msgstr ""
 
@@ -3468,7 +3468,7 @@ msgstr ""
 msgid ""
 "We couldn’t verify your Snapshot key. Try entering it again, or reset it "
 "for this website in <a target=\"_blank\" href=\"%s\">The Hub</a> over at "
-"WPMU DEV."
+"PSOURCE."
 msgstr ""
 
 #: views-new/boxes/modals/popup-snapshot.php:65
@@ -3493,26 +3493,26 @@ msgstr ""
 
 #: views-new/boxes/modals/popup-welcome.php:34
 msgid ""
-"Welcome to Snapshot Pro, the hottest backups plugin for WordPress! Let’s "
+"Welcome to Snapshot Pro, the hottest backups plugin for ClassicPress! Let’s "
 "start by choosing what type of backup you’d like to make - there are two "
 "types…"
 msgstr ""
 
 #: views-new/boxes/modals/popup-welcome.php:38
 msgid ""
-"Welcome to Snapshot, the hottest backups plugin for WordPress! With this "
+"Welcome to Snapshot, the hottest backups plugin for ClassicPress! With this "
 "plugin you can backup and migrate bits and pieces of your website to third "
 "party destinations like Dropbox, Google Drive, Amazon S3 & more."
 msgstr ""
 
 #: views-new/boxes/modals/popup-welcome.php:45
-msgid "WPMU DEV Managed Backups"
+msgid "PSOURCE Managed Backups"
 msgstr ""
 
 #: views-new/boxes/modals/popup-welcome.php:46
 msgid ""
-"As part of your WPMU DEV membership you get 10GB free cloud storage to back "
-"up and store your entire WordPress website - including WordPress itself. "
+"As part of your PSOURCE membership you get 10GB free cloud storage to back "
+"up and store your entire ClassicPress website - including ClassicPress itself. "
 "You can schedule these backups to run daily, monthly or weekly and should "
 "you ever need it you can restore an entire website in just a few clicks."
 msgstr ""
@@ -3550,9 +3550,9 @@ msgstr ""
 
 #: views-new/boxes/widget-notification-managed-backups.php:26
 msgid ""
-"%s, have you heard about WPMU DEV’s Managed Backups? As a WPMU DEV member, "
+"%s, have you heard about PSOURCE’s Managed Backups? As a PSOURCE member, "
 "you get 10GB free and secure cloud storage, which you can use to store full "
-"backups of your website, including WordPress core files. If disaster "
+"backups of your website, including ClassicPress core files. If disaster "
 "strikes, you can quickly and easily restore your website any time."
 msgstr ""
 
@@ -3999,7 +3999,7 @@ msgstr ""
 #: views-new/import.php:213
 msgid ""
 "<strong>Dropbox:</strong> If you are attempting to download a Dropbox "
-"Snapshot archive written to the <strong>App/WPMU DEV Snapshot</strong> you "
+"Snapshot archive written to the <strong>App/PSOURCE Snapshot</strong> you "
 "first need to copy the file to a public folder within your Dropbox account "
 "before grabbing the public link."
 msgstr ""
@@ -4055,30 +4055,30 @@ msgstr ""
 
 #: views-new/managed-backups/activate.php:24
 msgid ""
-"%s, as a WPMU DEV member you get 10GB free cloud storage included in your "
+"%s, as a PSOURCE member you get 10GB free cloud storage included in your "
 "membership. Create and store full backups of your website, including "
-"WordPress core files. And if disaster strikes, you can quickly and easily "
+"ClassicPress core files. And if disaster strikes, you can quickly and easily "
 "restore your website any time. <br/>Add your Snapshot Key to enable this "
 "service."
 msgstr ""
 
 #: views-new/managed-backups/get-started.php:19
 msgid ""
-"%s, as a WPMU DEV member you get 10GB free cloud storage included in your "
-"membership. Install the WPMU DEV Dashboard plugin and then come back to add "
-"WPMU DEV as a destination."
+"%s, as a PSOURCE member you get 10GB free cloud storage included in your "
+"membership. Install the PSOURCE Dashboard plugin and then come back to add "
+"PSOURCE as a destination."
 msgstr ""
 
 #: views-new/managed-backups/get-started.php:33
-msgid "Install The WPMU DEV Dashboard"
+msgid "Install The PSOURCE Dashboard"
 msgstr ""
 
 #: views-new/managed-backups/get-started.php:41
-msgid "Activate The WPMU DEV Dashboard"
+msgid "Activate The PSOURCE Dashboard"
 msgstr ""
 
 #: views-new/managed-backups/get-started.php:49
-msgid "Login to the WPMU DEV Dashboard plugin"
+msgid "Login to the PSOURCE Dashboard plugin"
 msgstr ""
 
 #: views-new/managed-backups/new-backup.php:44
@@ -4116,12 +4116,12 @@ msgstr ""
 
 #: views-new/managed-backups/new-backup.php:110
 msgid ""
-"Managed backups can only be stored on WPMU DEV's cloud servers. You have "
+"Managed backups can only be stored on PSOURCE's cloud servers. You have "
 "<strong>%s</strong> of your %s storage remaining."
 msgstr ""
 
 #: views-new/managed-backups/new-backup.php:130
-msgid "WPMU DEV Cloud"
+msgid "PSOURCE Cloud"
 msgstr ""
 
 #: views-new/managed-backups/new-backup.php:147
@@ -4209,12 +4209,12 @@ msgstr ""
 msgid ""
 "Your backup is in progress. <strong>You need to keep this page open for the "
 "backup to complete.</strong> Once your website has been backed up, it will "
-"be uploaded to WPMU DEV servers. If your site is small, this will only take "
+"be uploaded to PSOURCE servers. If your site is small, this will only take "
 "a few minutes, but could take a couple of hours for larger sites."
 msgstr ""
 
 #: views-new/managed-backups/partials/create-backup-progress.php:57
-msgid "Your backup has been successfully created and uploaded to WPMU DEV servers!."
+msgid "Your backup has been successfully created and uploaded to PSOURCE servers!."
 msgstr ""
 
 #: views-new/managed-backups/partials/create-backup-progress.php:77
@@ -4550,7 +4550,7 @@ msgid "Full Backups"
 msgstr ""
 
 #: views-new/settings.php:257
-msgid "Your Snapshot Key is the secret link between WPMU DEV and your website."
+msgid "Your Snapshot Key is the secret link between PSOURCE and your website."
 msgstr ""
 
 #: views-new/settings.php:263
@@ -4922,7 +4922,7 @@ msgstr ""
 #: views-new/snapshots/restore.php:138
 msgid ""
 "Restore Note: URL mismatch! The Snapshot archive does not appear made from "
-"the current WordPress system. Every attempt will be made to replace the "
+"the current ClassicPress system. Every attempt will be made to replace the "
 "source URL with the URL from the destination."
 msgstr ""
 
@@ -4997,13 +4997,13 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "This plugin allows you to take quick on-demand backup snapshots of your "
-"working WordPress database. You can select from the default WordPress "
+"working ClassicPress database. You can select from the default ClassicPress "
 "tables as well as custom plugin tables within the database structure. All "
 "snapshots are logged, and you can restore the snapshot as needed."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "WPMU DEV"
+msgid "PSOURCE"
 msgstr ""
 
 #. Author URI of the plugin/theme

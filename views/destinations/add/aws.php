@@ -5,12 +5,12 @@
 	<div id="wps-destination-type" class="form-row">
 
 		<div class="form-col-left">
-			<label><?php _e( 'Type', SNAPSHOT_I18N_DOMAIN ); ?></label>
+			<label><?php _e( 'Type', 'cp-snapshot' ); ?></label>
 		</div>
 
 		<div class="form-col">
 			<i class="wps-typecon aws"></i>
-			<label><?php _e( 'Amazon S3', SNAPSHOT_I18N_DOMAIN ); ?></label>
+			<label><?php _e( 'Amazon S3', 'cp-snapshot' ); ?></label>
 		</div>
 
 	</div>
@@ -18,7 +18,7 @@
 	<div id="wps-destination-name" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-name"><?php _e( 'Name', SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-name"><?php _e( 'Name', 'cp-snapshot' ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -33,7 +33,7 @@
 	<div id="wps-destination-id" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-awskey"><?php _e( 'AWS Access Key ID', SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-awskey"><?php _e( 'AWS Access Key ID', 'cp-snapshot' ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -42,7 +42,7 @@
 
 			<?php $this->input_error_message( 'awskey' ); ?>
 
-			<p><small><?php echo sprintf( __( 'You can get your access keys via the <a target="_blank" href="%s">AWS Console</a>', SNAPSHOT_I18N_DOMAIN ), esc_url( 'https://aws-portal.amazon.com/gp/aws/securityCredentials' ) ); ?></small></p>
+			<p><small><?php echo sprintf( __( 'You can get your access keys via the <a target="_blank" href="%s">AWS Console</a>', 'cp-snapshot' ), esc_url( 'https://aws-portal.amazon.com/gp/aws/securityCredentials' ) ); ?></small></p>
 		</div>
 
 	</div>
@@ -50,7 +50,7 @@
 	<div id="wps-destination-key" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-secretkey"><?php _e( "AWS Secret Access Key", SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-secretkey"><?php _e( "AWS Secret Access Key", 'cp-snapshot' ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -65,7 +65,7 @@
 	<div id="wps-destination-ssl" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-ssl"><?php _e( "Use SSL Connection", SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-ssl"><?php _e( "Use SSL Connection", 'cp-snapshot' ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -84,7 +84,7 @@
 	<div id="wps-destination-region" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-region"><?php _e( 'AWS Region', SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-region"><?php _e( 'AWS Region', 'cp-snapshot' ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -108,7 +108,7 @@
 				echo ' style="display: none;" ';
 			} ?>>
 				<br/><label
-					id="snapshot-destination-region-other"><?php _e( 'Alternate Region host', SNAPSHOT_I18N_DOMAIN ) ?></label><br/>
+					id="snapshot-destination-region-other"><?php _e( 'Alternate Region host', 'cp-snapshot' ) ?></label><br/>
 				<input name="snapshot-destination[region-other]"
 				       id="snapshot-destination-region-other"
 				       value="<?php echo esc_attr( $item['region-other'] ); ?>"/>
@@ -123,7 +123,7 @@
 	<div id="wps-destination-storage" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-storage"><?php _e( 'Storage Type', SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-storage"><?php _e( 'Storage Type', 'cp-snapshot' ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -147,7 +147,7 @@
 	<div id="wps-destination-bucket" class="form-row">
 
 		<div class="form-col-left">
-			<label><?php _e( 'Bucket', SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
+			<label><?php _e( 'Bucket', 'cp-snapshot' ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -165,7 +165,7 @@
 					} ?>" /><?php
 				} ?>
 
-				<button id="snapshot-destination-aws-get-bucket-list" class="button-seconary button button-gray<?php if ( empty ( esc_html( $item['bucket'] ) ) ) { echo ' wps-last-item'; } ?>" name=""><?php _e( 'Select Bucket', SNAPSHOT_I18N_DOMAIN ); ?></button>
+				<button id="snapshot-destination-aws-get-bucket-list" class="button-seconary button button-gray<?php if ( empty ( esc_html( $item['bucket'] ) ) ) { echo ' wps-last-item'; } ?>" name=""><?php _e( 'Select Bucket', 'cp-snapshot' ); ?></button>
 
 			</div>
 
@@ -181,7 +181,7 @@
 
 	<div id="wps-destination-permission" class="form-row">
 		<div class="form-col-left">
-			<label><?php _e( "File Permissions", SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
+			<label><?php _e( "File Permissions", 'cp-snapshot' ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -191,18 +191,18 @@
 			} ?>
 			<select name="snapshot-destination[acl]" id="snapshot-destination-acl" class="<?php $this->input_error_class( 'acl' ); ?>">
 				<option value="<?php echo esc_attr( AmazonS3::ACL_PRIVATE ); ?>" <?php selected( $item['acl'], AmazonS3::ACL_PRIVATE ); ?>>
-					<?php _e( 'Private', SNAPSHOT_I18N_DOMAIN ) ?></option>
+					<?php _e( 'Private', 'cp-snapshot' ) ?></option>
 				<option value="<?php echo esc_attr( AmazonS3::ACL_PUBLIC ); ?>" <?php selected( $item['acl'], AmazonS3::ACL_PUBLIC ); ?>>
-					<?php _e( 'Public Read', SNAPSHOT_I18N_DOMAIN ) ?></option>
+					<?php _e( 'Public Read', 'cp-snapshot' ) ?></option>
 				<option value="<?php echo esc_attr( AmazonS3::ACL_OPEN ); ?>" <?php selected( $item['acl'], AmazonS3::ACL_OPEN ); ?>>
-					<?php _e( 'Public Read/Write', SNAPSHOT_I18N_DOMAIN ) ?></option>
+					<?php _e( 'Public Read/Write', 'cp-snapshot' ) ?></option>
 				<option value="<?php echo esc_attr( AmazonS3::ACL_AUTH_READ ); ?>" <?php selected( $item['acl'], AmazonS3::ACL_AUTH_READ ); ?>>
-					<?php _e( 'Authenticated Read', SNAPSHOT_I18N_DOMAIN ) ?></option>
+					<?php _e( 'Authenticated Read', 'cp-snapshot' ) ?></option>
 			</select>
 
 			<?php $this->input_error_message( 'acl' ); ?>
 
-			<p><small><?php _e('Control who will have access to your backup files.', SNAPSHOT_I18N_DOMAIN); ?></small></p>
+			<p><small><?php _e('Control who will have access to your backup files.', 'cp-snapshot'); ?></small></p>
 		</div>
 
 	</div>
@@ -210,15 +210,15 @@
 	<div id="wps-destination-dir" class="form-row">
 
 		<div class="form-col-left">
-			<label><?php _e( "Directory (optional)", SNAPSHOT_I18N_DOMAIN ); ?></label>
+			<label><?php _e( "Directory (optional)", 'cp-snapshot' ); ?></label>
 		</div>
 
 		<div class="form-col">
 			<input type="text" name="snapshot-destination[directory]" id="snapshot-destination-directory" placeholder="i.e. static/files" value="<?php if ( isset( $item['directory'] ) ) { echo $item['directory']; } ?>"/>
 
-			<p><small><?php _e( "If directory is blank the snapshot file will be stored at the bucket root. If the directory is provided it will be created inside the bucket. This is a global setting and will be used by all snapshot configurations using this destination. You can also define a director used by a specific snapshot.", SNAPSHOT_I18N_DOMAIN ); ?></small></p>
+			<p><small><?php _e( "If directory is blank the snapshot file will be stored at the bucket root. If the directory is provided it will be created inside the bucket. This is a global setting and will be used by all snapshot configurations using this destination. You can also define a director used by a specific snapshot.", 'cp-snapshot' ); ?></small></p>
 
-			<button id="snapshot-destination-test-connection" class="button button-gray"><?php _e( "Test Connection", SNAPSHOT_I18N_DOMAIN ); ?></button>
+			<button id="snapshot-destination-test-connection" class="button button-gray"><?php _e( "Test Connection", 'cp-snapshot' ); ?></button>
 			<div id="snapshot-ajax-destination-test-result" style="display:none"></div>
 		</div>
 

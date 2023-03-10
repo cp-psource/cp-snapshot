@@ -23,9 +23,9 @@ foreach ( PSOURCESnapshot::instance()->config_data['destinations'] as $key => $i
 
 	<div class="wpmud-box-title has-button">
 
-		<h3 class="has-count"><?php _e( 'Destinations', SNAPSHOT_I18N_DOMAIN ); ?><span class="wps-count"><?php echo count( PSOURCESnapshot::instance()->config_data['destinations'] ) ?></span></h3>
+		<h3 class="has-count"><?php _e( 'Destinations', 'cp-snapshot' ); ?><span class="wps-count"><?php echo count( PSOURCESnapshot::instance()->config_data['destinations'] ) ?></span></h3>
 
-		<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations'); ?>" class="button button-blue button-small"><?php _e( 'Add New', SNAPSHOT_I18N_DOMAIN ); ?></a>
+		<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations'); ?>" class="button button-blue button-small"><?php _e( 'Add New', 'cp-snapshot' ); ?></a>
 
 	</div>
 
@@ -35,7 +35,7 @@ foreach ( PSOURCESnapshot::instance()->config_data['destinations'] as $key => $i
 
 			<div class="col-xs-12">
 
-				<p><?php _e( 'Destinations are where your snapshots are uploaded and stored. Store files on Dropbox, Google Drive, Amazon S3, FTP/SFTP, or your local computer.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+				<p><?php _e( 'Destinations are where your snapshots are uploaded and stored. Store files on Dropbox, Google Drive, Amazon S3, FTP/SFTP, or your local computer.', 'cp-snapshot' ); ?></p>
 
 				<table class="has-footer" cellpadding="0" cellspacing="0">
 
@@ -43,9 +43,9 @@ foreach ( PSOURCESnapshot::instance()->config_data['destinations'] as $key => $i
 
 						<tr>
 
-							<th class="wpsd-name"><?php _e( 'Active Destinations', SNAPSHOT_I18N_DOMAIN ); ?></th>
+							<th class="wpsd-name"><?php _e( 'Active Destinations', 'cp-snapshot' ); ?></th>
 
-							<th class="wpsd-type"><?php _e( 'Type', SNAPSHOT_I18N_DOMAIN ); ?></th>
+							<th class="wpsd-type"><?php _e( 'Type', 'cp-snapshot' ); ?></th>
 
 						</tr>
 
@@ -84,7 +84,7 @@ foreach ( PSOURCESnapshot::instance()->config_data['destinations'] as $key => $i
 
 							<td colspan="2">
 
-								<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations'); ?>" class="button button-outline button-gray"><?php echo __( 'View All', SNAPSHOT_I18N_DOMAIN ) ?></a>
+								<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations'); ?>" class="button button-outline button-gray"><?php echo __( 'View All', 'cp-snapshot' ) ?></a>
 
 							</td>
 

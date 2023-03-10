@@ -158,21 +158,21 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 		// off of single scheduled events firing on next request.
 		// This one's just for rebooting the process in case the normal flow staled.
 		$intervals[$this->get_filter('process_interval')] = array(
-			'display' => __('Managed Backup Processing', SNAPSHOT_I18N_DOMAIN),
+			'display' => __('Managed Backup Processing', 'cp-snapshot'),
 			'interval' => 3600,
 		);
 
 		// Various start intervals
 		$intervals[$this->get_filter('daily')] = array(
-			'display' => __('Daily Managed Snapshot', SNAPSHOT_I18N_DOMAIN),
+			'display' => __('Daily Managed Snapshot', 'cp-snapshot'),
 			'interval' => DAY_IN_SECONDS,
 		);
 		$intervals[$this->get_filter('weekly')] = array(
-			'display' => __('Weekly Managed Snapshot', SNAPSHOT_I18N_DOMAIN),
+			'display' => __('Weekly Managed Snapshot', 'cp-snapshot'),
 			'interval' => 7 * DAY_IN_SECONDS,
 		);
 		$intervals[$this->get_filter('monthly')] = array(
-			'display' => __('Monthly Managed Snapshot', SNAPSHOT_I18N_DOMAIN),
+			'display' => __('Monthly Managed Snapshot', 'cp-snapshot'),
 			'interval' => 30 * DAY_IN_SECONDS,
 		);
 

@@ -1,6 +1,6 @@
 
 <section id="header">
-    <h1><?php esc_html_e( 'Dashboard', SNAPSHOT_I18N_DOMAIN ); ?></h1>
+    <h1><?php esc_html_e( 'Dashboard', 'cp-snapshot' ); ?></h1>
 </section>
 
 <div id="container" class="snapshot-three wps-page-dashboard">

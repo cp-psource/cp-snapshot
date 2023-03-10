@@ -228,7 +228,7 @@ if ( ! class_exists( 'Snapshot_View_Form_Recovery' ) ) {
 					perform a proper restore. Proceed at your own risk.</p><?php
 			}
 			?>
-			<h2>Processing Step: 1 - Gather Information on Snapshot Archives and WordPress</h2>
+			<h2>Processing Step: 1 - Gather Information on Snapshot Archives and ClassicPress</h2>
 
 			<form action="?step=2" method="post" class="restore_form" class="restore_form">
 				<ol>
@@ -267,13 +267,13 @@ if ( ! class_exists( 'Snapshot_View_Form_Recovery' ) ) {
 						</p>
 					</li>
 					<li>
-						<h2>WordPress Information</h2>
+						<h2>ClassicPress Information</h2>
 
-						<p>In most cases if you are running this restore process your WordPress files are still in
+						<p>In most cases if you are running this restore process your ClassicPress files are still in
 							place. You can usually leave these in place and simple restore the database tables from the
 							Snapshot archive. However if your site is broken you may want to force a restore of
-							WordPress core files. The Snapshot archive does not contain WordPress core files. But this
-							restore process will attempt to download the version of WordPress to match the Snapshot
+							ClassicPress core files. The Snapshot archive does not contain ClassicPress core files. But this
+							restore process will attempt to download the version of ClassicPress to match the Snapshot
 							archive.</p>
 
 
@@ -282,9 +282,9 @@ if ( ! class_exists( 'Snapshot_View_Form_Recovery' ) ) {
 							$_SESSION['restore_form']['wordpress']['reload'] = "no";
 						}
 						?>
-						<p><label for="snapshot-restore-worpress-reload">Force Fresh WordPress Install</label> - Do you
-							want to force a fresh WordPress installed as part of this restore? <strong>If you choose
-								'Yes' existing wp-admin, wp-includes, wp-content and root WordPress files will be
+						<p><label for="snapshot-restore-worpress-reload">Force Fresh ClassicPress Install</label> - Do you
+							want to force a fresh ClassicPress installed as part of this restore? <strong>If you choose
+								'Yes' existing wp-admin, wp-includes, wp-content and root ClassicPress files will be
 								replaced. Before submitting this for please rename any files or directories you want
 								preserved.</strong><br/>
 							<?php
@@ -306,7 +306,7 @@ if ( ! class_exists( 'Snapshot_View_Form_Recovery' ) ) {
 								} ?>>Fresh
 								</option>
 							</select><br/>
-							<span class="description">If you force a fresh install the version of WordPress used will be determined from the Snapshot Archive. If this is an older version of WordPress you can upgrade after the restore.</span>
+							<span class="description">If you force a fresh install the version of ClassicPress used will be determined from the Snapshot Archive. If this is an older version of ClassicPress you can upgrade after the restore.</span>
 						</p>
 
 
@@ -315,8 +315,8 @@ if ( ! class_exists( 'Snapshot_View_Form_Recovery' ) ) {
 							$_SESSION['restore_form']['wordpress']['install-path'] = $_SERVER['DOCUMENT_ROOT'];
 						}
 						?>
-						<p><label for="snapshot-restore-wordpress-install-path">WordPress Install Path</label> - What is
-							the path to where WordPress is/will
+						<p><label for="snapshot-restore-wordpress-install-path">ClassicPress Install Path</label> - What is
+							the path to where ClassicPress is/will
 							be installed?<br/>
 							<?php
 							if ( isset( $form_errors['form']['wordpress']['install-path'] ) ) {
@@ -333,7 +333,7 @@ if ( ! class_exists( 'Snapshot_View_Form_Recovery' ) ) {
 				</ol>
 
 				<p>When you submit this form the script will locate the Snapshot Archive or download from the remote
-					URL. If you chose to install WordPress fresh an copy of the WordPress archive will also be
+					URL. If you chose to install ClassicPress fresh an copy of the ClassicPress archive will also be
 					downloaded. In the next step you will asked to verify some information like the site URL, database
 					prefix, etc which were gathered from the extracted Snapshot archive.</p>
 
@@ -369,7 +369,7 @@ if ( ! class_exists( 'Snapshot_View_Form_Recovery' ) ) {
 
 			<form action="?step=3" method="post" class="restore_form">
 
-				<p><label for="snapshot-restore-worpress-wpconfig">WordPress Configuration File (wp-config.php)</label>
+				<p><label for="snapshot-restore-worpress-wpconfig">ClassicPress Configuration File (wp-config.php)</label>
 					- If you are recovering from a broken existing site or migrating a site you usually want to reuse
 					the working wp-config.php file in your site root. Or you can select to use the configuration file
 					from the Snapshot Archive.<br/>
@@ -454,7 +454,7 @@ if ( ! class_exists( 'Snapshot_View_Form_Recovery' ) ) {
 					<input type="text" id="snapshot-restore-wordpress-home-url" name="restore[wordpress][upload-path]"
 					       value="<?php echo $_SESSION['restore_form']['wordpress']['upload-path']; ?>"/><br/>
 
-				<p>In the next step you will be asked to verify the database connection information from the WordPress
+				<p>In the next step you will be asked to verify the database connection information from the ClassicPress
 					Configuration file (wp-config.php).</p>
 
 				<p><input type="submit" value="Next Step"/></p>

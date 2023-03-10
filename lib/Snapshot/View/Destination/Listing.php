@@ -21,9 +21,9 @@ if ( ! class_exists( 'Snapshot_View_Destination_Listing' ) ) {
 			} else {
 				?>
 				<div id="snapshot-edit-destinations-panel" class="wrap snapshot-wrap">
-					<h2><?php _ex( "All Snapshot Destinations", "Snapshot Destination Page Title", SNAPSHOT_I18N_DOMAIN ); ?> </h2>
+					<h2><?php _ex( "All Snapshot Destinations", "Snapshot Destination Page Title", 'cp-snapshot' ); ?> </h2>
 
-					<p><?php _ex( "This page show all the destinations available for the Snapshot plugin. A destination is a remote system like Amazon S3, Dropbox or SFTP. Simply select the destination type from the drop down then will in the details. When you add or edit a Snapshot you will be able to assign it a destination. When the snapshot backup runs the archive file will be sent to the destination and local archive stored or deleted depending on <strong>Keep local archives?</strong> option.", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
+					<p><?php _ex( "This page show all the destinations available for the Snapshot plugin. A destination is a remote system like Amazon S3, Dropbox or SFTP. Simply select the destination type from the drop down then will in the details. When you add or edit a Snapshot you will be able to assign it a destination. When the snapshot backup runs the archive file will be sent to the destination and local archive stored or deleted depending on <strong>Keep local archives?</strong> option.", 'Snapshot page description', 'cp-snapshot' ); ?></p>
 					<?php
 					if ( session_id() == "" ) {
 						@session_start();
@@ -58,7 +58,7 @@ if ( ! class_exists( 'Snapshot_View_Destination_Listing' ) ) {
 									<a class="add-new-h2"
 									    href="<?php echo PSOURCESnapshot::instance()->get_setting( 'SNAPSHOT_MENU_URL' );
 									    ?>snapshots_destinations_panel&amp;snapshot-action=add&amp;type=<?php echo $classObject->name_slug; ?>">
-										<?php esc_html_e('Add New', SNAPSHOT_I18N_DOMAIN); ?>
+										<?php esc_html_e('Add New', 'cp-snapshot'); ?>
 									</a>
 								<?php } ?>
 							</h3>
@@ -116,8 +116,8 @@ if ( ! class_exists( 'Snapshot_View_Destination_Listing' ) ) {
 				if ( sanitize_text_field( $_REQUEST['snapshot-action'] ) == "edit" ) {
 
 					?>
-					<h2><?php _ex( "Edit Snapshot Destination", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
-					<p><?php _ex( "", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
+					<h2><?php _ex( "Edit Snapshot Destination", "Snapshot Plugin Page Title", 'cp-snapshot' ); ?></h2>
+					<p><?php _ex( "", 'Snapshot page description', 'cp-snapshot' ); ?></p>
 					<?php
 					if ( isset( $_REQUEST['item'] ) ) {
 						$item_key = sanitize_text_field( $_REQUEST['item'] );
@@ -127,8 +127,8 @@ if ( ! class_exists( 'Snapshot_View_Destination_Listing' ) ) {
 					}
 				} else if ( sanitize_text_field( $_REQUEST['snapshot-action'] ) == "add" ) {
 					?>
-					<h2><?php _ex( "Add Snapshot Destination", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
-					<p><?php _ex( "", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
+					<h2><?php _ex( "Add Snapshot Destination", "Snapshot Plugin Page Title", 'cp-snapshot' ); ?></h2>
+					<p><?php _ex( "", 'Snapshot page description', 'cp-snapshot' ); ?></p>
 					<?php
 					unset( $item );
 					$item = array();
@@ -139,8 +139,8 @@ if ( ! class_exists( 'Snapshot_View_Destination_Listing' ) ) {
 				} else if ( sanitize_text_field( $_REQUEST['snapshot-action'] ) == "update" ) {
 
 					?>
-					<h2><?php _ex( "Edit Snapshot Destination", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
-					<p><?php _ex( "", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
+					<h2><?php _ex( "Edit Snapshot Destination", "Snapshot Plugin Page Title", 'cp-snapshot' ); ?></h2>
+					<p><?php _ex( "", 'Snapshot page description', 'cp-snapshot' ); ?></p>
 					<?php
 					if ( isset( $_POST['snapshot-destination'] ) ) {
 						$item = $_POST['snapshot-destination'];
@@ -171,9 +171,9 @@ if ( ! class_exists( 'Snapshot_View_Destination_Listing' ) ) {
 					$item_object->display_details_form( $item );
 				}
 				?>
-								<input class="button-primary" type="submit" value="<?php _e( 'Save Destination', SNAPSHOT_I18N_DOMAIN ); ?>" />
+								<input class="button-primary" type="submit" value="<?php _e( 'Save Destination', 'cp-snapshot' ); ?>" />
 								<a class="button-secondary" href="<?php echo PSOURCESnapshot::instance()->get_setting( 'SNAPSHOT_MENU_URL' );
-				?>snapshots_destinations_panel"><?php _e( 'Cancel', SNAPSHOT_I18N_DOMAIN ); ?></a>
+				?>snapshots_destinations_panel"><?php _e( 'Cancel', 'cp-snapshot' ); ?></a>
 
 							</div>
 						</form>
@@ -188,7 +188,7 @@ if ( ! class_exists( 'Snapshot_View_Destination_Listing' ) ) {
 
 			?>
 			<div id="snapshot-edit-destinations-panel" class="wrap snapshot-wrap">
-				<h2><?php _e( "Snapshot Destinations", SNAPSHOT_I18N_DOMAIN ); ?> </h2>
+				<h2><?php _e( "Snapshot Destinations", 'cp-snapshot' ); ?> </h2>
 				<?php
 
 				$message = '<p>A Snapshot destination is a great way to make sure you store your "Snapshots" somewhere else other than your website host. ';
@@ -198,7 +198,7 @@ if ( ! class_exists( 'Snapshot_View_Destination_Listing' ) ) {
 
 				$message .= '<p>Destinations are available to you in Snapshot Pro from WPMU Dev: <a href="%s">Upgrade Now</a></p>';
 
-				$message = sprintf( __( $message, SNAPSHOT_I18N_DOMAIN ), esc_url( 'https://premium.psource.org/project/snapshot' ) );
+				$message = sprintf( __( $message, 'cp-snapshot' ), esc_url( 'https://premium.psource.org/project/snapshot' ) );
 
 				echo $message;
 

@@ -37,7 +37,7 @@ Change Log:
 
 3.1.2
 ----------------------------------------------------------------------
-- New: Snapshots can once again be created from and restored to a specific subsite on WordPress multisite
+- New: Snapshots can once again be created from and restored to a specific subsite on ClassicPress multisite
 - New: The Snapshot name is now included in the generated archive filename, for easier identification
 - New: An error message is displayed when uploading a snapshot to a remote destination fails
 - New: Snapshot filenames are now displayed when viewing snapshot's information
@@ -150,7 +150,7 @@ you will need to go to the site's Settings > Permalinks and click on 'Save Chang
 
 2.4.3.0 2014-09-18
 ----------------------------------------------------------------------
-- Fixed issue where WordPress core files have been placed in a different location as per http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory
+- Fixed issue where ClassicPress core files have been placed in a different location as per http://codex.wordpress.org/Giving_ClassicPress_Its_Own_Directory
 
 2.4.2.9 2014-09-18
 ----------------------------------------------------------------------
@@ -210,7 +210,7 @@ you will need to go to the site's Settings > Permalinks and click on 'Save Chang
 2.4.0.9 - 2013-12-18
 ----------------------------------------------------------------------
 - Corrected issue with WPEngine and Dropbox include paths for OAuth.
-- Corrected to restore logic where non-WordPress tables are included.
+- Corrected to restore logic where non-ClassicPress tables are included.
 - Reworked restore logic for global tables (users & usermeta) to be setup in segments like other tables.
 - Corrected issue when restoring global tables when table has zero records.
 - Added debug output on Dropbox chunked uploads to write to snapshot process log for investigation of reported issues.
@@ -222,8 +222,8 @@ you will need to go to the site's Settings > Permalinks and click on 'Save Chang
 2.4.0.7 - 2013-12-13
 ----------------------------------------------------------------------
 - Update to migration logic. Added support logic to correct old style (pre-MU 3.5) image URLs stores in posts when restoring to new post MU 3.5 site. In pre-MU 3.5 the image URLs were formatted such http://www.site.com/files/2013/12/image.jpg while in 3.5 and new installs the image URLs are http://www.site.com/wp-content/uploads//2013/12/image.jpg. Prior versions of Snapshot only update the domain part of the URL. Reminder Migration logic is still considered beta.
-- Testing for WordPress 3.8
-- Update to WPMU DEV Dashboard Notifications library.
+- Testing for ClassicPress 3.8
+- Update to PSOURCE Dashboard Notifications library.
 
 2.4.0.6 - 2013-11-13
 ----------------------------------------------------------------------
@@ -254,12 +254,12 @@ you will need to go to the site's Settings > Permalinks and click on 'Save Chang
 
 2.4.0.1 - 2013-10-11
 ----------------------------------------------------------------------
-- Corrected reported issue causing 'run now' option to not be available on regular WordPress sites.
+- Corrected reported issue causing 'run now' option to not be available on regular ClassicPress sites.
 - Corrected some PHP Notices and Warnings
 
 2.4 - 2013-10-09
 ----------------------------------------------------------------------
-- Added migration logic. This is still considered beta. Migration types supported are Regular to Multisite, Multisite to Multisite (same system or different), Multisite to regular. Using the migration logic you can even change the site URL. Note the destination blog must already be setup and working within WordPress.
+- Added migration logic. This is still considered beta. Migration types supported are Regular to Multisite, Multisite to Multisite (same system or different), Multisite to regular. Using the migration logic you can even change the site URL. Note the destination blog must already be setup and working within ClassicPress.
 - Added backup logic to include users and usermeta data related to the blog being archived. Only user who's primary blog is the archive blog.
 - Rewrite of the import logic. You can now pull in external files from public URL instead of needing to upload the archive to your server first.
 - Code cleanup on some of the archive logic.
@@ -296,7 +296,7 @@ you will need to go to the site's Settings > Permalinks and click on 'Save Chang
 
 2.3.3 - 2013-03-09
 ----------------------------------------------------------------------
-- Fixed issue where non-WordPress prefixed tables were not showing in tables listing
+- Fixed issue where non-ClassicPress prefixed tables were not showing in tables listing
 - Fixed issue with Dropbox missing slash on destination path for chunk send transactions commit.
 - Fixed issue where users were using backslashes in in destination paths.
 - Fixed page icon not displaying correctly on archives settings page.
@@ -338,7 +338,7 @@ you will need to go to the site's Settings > Permalinks and click on 'Save Chang
 - Added Selective Restore options. Similar to backup options. Lets you select to restore certain tables, File sets (Theme, Plugins, Media).
 - Also on Restore made process more efficient by restoring sections instead of individual files per call. http://premium.psource.org/forums/topic/snapshot-takes-40-minutes-to-restore-files
 - Correct issue with Windows paths http://premium.psource.org/forums/topic/site-restore-not-working
-- Added role capabilities manage_snapshots_items, manage_snapshots_destinations, manage_snapshots_settings to allow fine tune of who can access Snapshot. This is Single WordPress sonly. On Multisite this is still only Network Admins. http://premium.psource.org/forums/topic/snapshot-features-requests#post-309939
+- Added role capabilities manage_snapshots_items, manage_snapshots_destinations, manage_snapshots_settings to allow fine tune of who can access Snapshot. This is Single ClassicPress sonly. On Multisite this is still only Network Admins. http://premium.psource.org/forums/topic/snapshot-features-requests#post-309939
 
 
 2.0.5 - 2012-11-13
@@ -371,7 +371,7 @@ you will need to go to the site's Settings > Permalinks and click on 'Save Chang
 - Corrected issue on FTP Destination when using destination directory http://premium.psource.org/forums/topic/snapshot-fails-to-put
 - Corrected issue with Multi-DB integration. Now correctly selecting other databases. Works on restore as well. http://premium.psource.org/forums/topic/snapshot-isnt-doing-anything
 - Correct issue which was causing the previous plugin version options data not to be properly loaded on upgrades.
-- Corrected JavaScript conflict on manual snapshot creation with jQuery 1.8.2 coming with WordPress 3.5
+- Corrected JavaScript conflict on manual snapshot creation with jQuery 1.8.2 coming with ClassicPress 3.5
 - Modified File archive logic. Previous logic added a file at a time to zip archive. This is too costly. Now adding files by section: Media, Plugins, Themes, etc.
 - Added size of archive file to all listing panels. Added better size logic to provide better kb, M, G, etc. size display.
 - Added Settings section for global file excludes. Previously excludes were only at snapshot level.
@@ -384,7 +384,7 @@ you will need to go to the site's Settings > Permalinks and click on 'Save Chang
 
 2.0.2 - 2012-09-21
 ----------------------------------------------------------------------
-- Corrected issue displaying non-WordPress tables under WordPress single running BuddyPress
+- Corrected issue displaying non-ClassicPress tables under ClassicPress single running BuddyPress
 http://premium.psource.org/forums/topic/select-non-core-wp-tables-with-snapshot-2x#post-277620
 - Corrected label on main Snapshots table listing for core and non-core tables selected.
 - Added last archive file size to the main Snapshots row output.
@@ -392,7 +392,7 @@ http://premium.psource.org/forums/topic/select-non-core-wp-tables-with-snapshot-
 
 2.0.1 - 2012-09-19
 ----------------------------------------------------------------------
-- Correct URL/Path issue on Dropbox authorization when running WordPress in sub-directory. Thanks Arun!
+- Correct URL/Path issue on Dropbox authorization when running ClassicPress in sub-directory. Thanks Arun!
 - Added clarification to the Remote Destination form fields on Dropbox, AWS and FTP.
 
 2.0 - 2012-09-10

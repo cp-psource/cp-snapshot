@@ -2,7 +2,7 @@
 <?php if ( empty( $destinations ) ) : ?>
 
     <div class="wps-notice">
-        <p><?php _e( "You haven't added a Dropbox destination yet.", 'cp-snapshot' ); ?></p>
+        <p><?php _e( "You haven't added a Dropbox destination yet.", SNAPSHOT_I18N_DOMAIN ); ?></p>
     </div>
 
 <?php else : ?>
@@ -10,10 +10,10 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
         <tr>
-            <th class="wps-destination-name"><?php _e( 'Name', 'cp-snapshot' ); ?></th>
-            <th class="wps-destination-user"><?php _e( 'User', 'cp-snapshot' ); ?></th>
-            <th class="wps-destination-dir"><?php _e( 'Directory', 'cp-snapshot' ); ?></th>
-            <th class="wps-destination-shots"><?php _e( 'Snapshots', 'cp-snapshot' ); ?></th>
+            <th class="wps-destination-name"><?php _e( 'Name', SNAPSHOT_I18N_DOMAIN ); ?></th>
+            <th class="wps-destination-user"><?php _e( 'User', SNAPSHOT_I18N_DOMAIN ); ?></th>
+            <th class="wps-destination-dir"><?php _e( 'Directory', SNAPSHOT_I18N_DOMAIN ); ?></th>
+            <th class="wps-destination-shots"><?php _e( 'Snapshots', SNAPSHOT_I18N_DOMAIN ); ?></th>
             <th class="wps-destination-config"></th>
         </tr>
         </thead>
@@ -36,7 +36,7 @@
 					) ); ?>"><?php echo esc_html( $destination['name'] ); ?></a>
 
 	                <?php if ( ! Snapshot_Model_Destination::has_required_fields( $destination, $required_fields ) ) : ?>
-                        <span class="incomplete-warning" title="<?php esc_html_e( 'This destination has not been fully configured.', 'cp-snapshot' ); ?>"></span>
+                        <span class="incomplete-warning" title="<?php esc_html_e( 'This destination has not been fully configured.', SNAPSHOT_I18N_DOMAIN ); ?>"></span>
 	                <?php endif; ?>
 
                 </td>
@@ -56,7 +56,7 @@
 						PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-destinations' )
 					) ); ?>">
                         <span class="dashicons dashicons-admin-generic"></span>
-                        <span class="wps-destination-config-text"><?php _e( 'Configure', 'cp-snapshot' ); ?></span>
+                        <span class="wps-destination-config-text"><?php _e( 'Configure', SNAPSHOT_I18N_DOMAIN ); ?></span>
                     </a>
                 </td>
             </tr>

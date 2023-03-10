@@ -1,14 +1,13 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: CP BackUp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-10 10:18+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"POT-Creation-Date: 2023-03-10 10:22+0000\n"
+"PO-Revision-Date: 2023-03-10 10:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,24 +28,6 @@ msgstr ""
 #: views/managed_backups.php:128
 #, php-format
 msgid "%s at %s"
-msgstr ""
-
-#: views/managed-backups/activate.php:34
-#, php-format
-msgid ""
-"%s, as a PSOURCE member you get 10GB free cloud storage included in your "
-"membership. Create and store full backups of your website, including "
-"ClassicPress core files. And if disaster strikes, you can quickly and easily "
-"restore your website any time. <br/>Add your Snapshot Key to enable this "
-"service."
-msgstr ""
-
-#: views/managed-backups/get-started.php:19
-#, php-format
-msgid ""
-"%s, as a PSOURCE member you get 10GB free cloud storage included in your "
-"membership. Install the PSOURCE Dashboard plugin and then come back to add "
-"PSOURCE as a destination."
 msgstr ""
 
 #: views/managed_backups.php:207
@@ -213,13 +194,8 @@ msgstr ""
 msgid "Activate"
 msgstr ""
 
-#: views/managed-backups/activate.php:39
 #: views/boxes/modals/popup-welcome.php:49
 msgid "Activate Managed Backups"
-msgstr ""
-
-#: views/managed-backups/get-started.php:41
-msgid "Activate The PSOURCE Dashboard"
 msgstr ""
 
 #: views/boxes/dashboard/widget-destinations.php:46
@@ -377,9 +353,10 @@ msgstr ""
 #: views/boxes/modals/popup-welcome.php:46
 msgid ""
 "As part of your PSOURCE membership you get 10GB free cloud storage to back "
-"up and store your entire ClassicPress website - including ClassicPress itself. You "
-"can schedule these backups to run daily, monthly or weekly and should you "
-"ever need it you can restore an entire website in just a few clicks."
+"up and store your entire ClassicPress website - including ClassicPress "
+"itself. You can schedule these backups to run daily, monthly or weekly and "
+"should you ever need it you can restore an entire website in just a few "
+"clicks."
 msgstr ""
 
 #: lib/Snapshot/Model/Destination/aws/index.php:111
@@ -893,8 +870,8 @@ msgstr ""
 msgid ""
 "Dieses Plugin ermöglicht es Dir, bei Bedarf schnelle Backup-Snapshots Deiner "
 "funktionierenden ClassicPress-Datenbank zu erstellen. Du kannst aus den "
-"standardmäßigen ClassicPress-Tabellen sowie benutzerdefinierten Plugin-Tabellen "
-"innerhalb der Datenbankstruktur auswählen. Alle Snapshots werden "
+"standardmäßigen ClassicPress-Tabellen sowie benutzerdefinierten Plugin-"
+"Tabellen innerhalb der Datenbankstruktur auswählen. Alle Snapshots werden "
 "protokolliert und Du kannst den Snapshot nach Bedarf wiederherstellen."
 msgstr ""
 
@@ -1304,8 +1281,7 @@ msgstr ""
 msgid "Get My Key"
 msgstr ""
 
-#: views/snapshots.php:26 views/managed-backups/activate.php:21
-#: views/managed-backups/get-started.php:10
+#: views/snapshots.php:26
 msgid "Get Started"
 msgstr ""
 
@@ -1500,10 +1476,6 @@ msgstr ""
 msgid "Information from archive"
 msgstr ""
 
-#: views/managed-backups/get-started.php:33
-msgid "Install The PSOURCE Dashboard"
-msgstr ""
-
 #: lib/Snapshot/Model/Destination/google-drive/index.php:619
 #: lib/Snapshot/Model/Destination/google-drive/index.php:645
 msgid "Instructions"
@@ -1607,10 +1579,6 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: views/managed-backups/get-started.php:49
-msgid "Login to the PSOURCE Dashboard plugin"
-msgstr ""
-
 #: lib/Snapshot/View/Table/Archives.php:378
 msgid "Logs"
 msgstr ""
@@ -1623,9 +1591,8 @@ msgstr ""
 msgid "Managed Backup Processing"
 msgstr ""
 
-#: views/managed_backups.php:29 views/managed-backups/activate.php:3
-#: views/managed-backups/get-started.php:3
-#: views/managed-backups/new-backup.php:23 views/managed-backups/restore.php:11
+#: views/managed_backups.php:29 views/managed-backups/new-backup.php:23
+#: views/managed-backups/restore.php:11
 msgid "Managed Backups"
 msgstr ""
 
@@ -3274,8 +3241,8 @@ msgstr ""
 
 #: lib/Snapshot/View/Settings.php:287
 msgid ""
-"You are about to restore a previous version of your ClassicPress database. This "
-"will remove any new information added since the snapshot backup."
+"You are about to restore a previous version of your ClassicPress database. "
+"This will remove any new information added since the snapshot backup."
 msgstr ""
 
 #: views/destinations/add/index.php:160
@@ -3430,8 +3397,8 @@ msgstr ""
 msgid ""
 "Your backup is in progress. <strong>You need to keep this page open for the "
 "backup to complete.</strong> Once your website has been backed up, it will "
-"be uploaded to PSOURCE servers. If your site is small, this will only take "
-"a few minutes, but could take a couple of hours for larger sites."
+"be uploaded to PSOURCE servers. If your site is small, this will only take a "
+"few minutes, but could take a couple of hours for larger sites."
 msgstr ""
 
 #: views/import.php:249

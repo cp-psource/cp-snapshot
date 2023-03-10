@@ -4,12 +4,12 @@
 
 	<div id="wps-destination-type" class="form-row">
 		<div class="form-col-left">
-			<label><?php _e('Type', 'cp-snapshot'); ?></label>
+			<label><?php _e('Type', SNAPSHOT_I18N_DOMAIN); ?></label>
 		</div>
 
 		<div class="form-col">
 			<i class="wps-typecon sftp"></i>
-			<label><?php _e('FTP', 'cp-snapshot'); ?></label>
+			<label><?php _e('FTP', SNAPSHOT_I18N_DOMAIN); ?></label>
 		</div>
 
 	</div>
@@ -17,7 +17,7 @@
 	<div id="wps-destination-name" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-name"><?php _e( "Name", 'cp-snapshot' ); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-name"><?php _e( "Name", SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col upload-progress">
@@ -31,7 +31,7 @@
 	<div id="wps-destination-contype" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-protocol"><?php _e( "Connection Type", 'cp-snapshot' ); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-protocol"><?php _e( "Connection Type", SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -50,7 +50,7 @@
 
 			<?php $this->input_error_message( 'protocol' ); ?>
 
-			<p><small><?php echo sprintf( __( 'The FTP option will use the standard PHP library functions. Choosing FTPS will use the <a target="_blank" href="%s">PHP Secure Communications Library</a>This option may not work depending on how your PHP binaries are compiled. FTPS with TSL/SSL attemts a secure connection, however it will only work if PHP and OpenSSL are properly configured on your host and destination host. This option will also not work with Windows using the default PHP binaries. Check the PHP docs for ftp_ssl_connection.', 'cp-snapshot' ), esc_url( '#' ) ); ?></small></p>
+			<p><small><?php echo sprintf( __( 'The FTP option will use the standard PHP library functions. Choosing FTPS will use the <a target="_blank" href="%s">PHP Secure Communications Library</a>This option may not work depending on how your PHP binaries are compiled. FTPS with TSL/SSL attemts a secure connection, however it will only work if PHP and OpenSSL are properly configured on your host and destination host. This option will also not work with Windows using the default PHP binaries. Check the PHP docs for ftp_ssl_connection.', SNAPSHOT_I18N_DOMAIN ), esc_url( '#' ) ); ?></small></p>
 
 		</div>
 
@@ -59,7 +59,7 @@
 	<div id="wps-destination-host" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-address"><?php _e('Host', 'cp-snapshot'); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-address"><?php _e('Host', SNAPSHOT_I18N_DOMAIN); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -67,7 +67,7 @@
 			<input type="text" name="snapshot-destination[address]" id="snapshot-destination-address" class="<?php $this->input_error_class( 'address' ); ?>"
 			       value="<?php if ( isset( $item['address'] ) ) { echo esc_attr( $item['address'] ); } ?>" />
 
-			<span class="inbetween"><?php _e( 'Port', 'cp-snapshot' ); ?></span>
+			<span class="inbetween"><?php _e( 'Port', SNAPSHOT_I18N_DOMAIN ); ?></span>
 
 			<input type="text" name="snapshot-destination[port]" id="snapshot-destination-port" class="<?php $this->input_error_class( 'port' ); ?>"
 			       value="<?php if ( isset( $item['port'] ) ) { echo esc_attr( $item['port'] ); } ?>" />
@@ -80,7 +80,7 @@
 	<div id="wps-destination-host" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-username"><?php _e('User', 'cp-snapshot'); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-username"><?php _e('User', SNAPSHOT_I18N_DOMAIN); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -94,7 +94,7 @@
 	<div id="wps-destination-password" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-password"><?php _e('Password', 'cp-snapshot'); ?> <span class="required">*</span></label>
+			<label for="snapshot-destination-password"><?php _e('Password', SNAPSHOT_I18N_DOMAIN); ?> <span class="required">*</span></label>
 		</div>
 
 		<div class="form-col">
@@ -108,7 +108,7 @@
 	<div id="wps-destination-dir" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-directory"><?php _e('Directory', 'cp-snapshot'); ?></label>
+			<label for="snapshot-destination-directory"><?php _e('Directory', SNAPSHOT_I18N_DOMAIN); ?></label>
 		</div>
 
 		<div class="form-col">
@@ -117,7 +117,7 @@
 
 			<?php $this->input_error_message( 'directory' ); ?>
 
-			<p><small><?php _e( "This directory will be used to store your Snapshot archives and must already exist on the server. If the remote path is left blank, the FTP home directory will be used as the destination for your Snapshot files.", 'cp-snapshot' ); ?></small></p>
+			<p><small><?php _e( "This directory will be used to store your Snapshot archives and must already exist on the server. If the remote path is left blank, the FTP home directory will be used as the destination for your Snapshot files.", SNAPSHOT_I18N_DOMAIN ); ?></small></p>
 		</div>
 
 	</div>
@@ -130,7 +130,7 @@
 	<div id="wps-destination-mode" class="form-row">
 
 		<div class="form-col-left">
-			<label for="snapshot-destination-passive"><?php _e('Use Passive Mode', 'cp-snapshot'); ?></label>
+			<label for="snapshot-destination-passive"><?php _e('Use Passive Mode', SNAPSHOT_I18N_DOMAIN); ?></label>
 		</div>
 
 		<div class="form-col">
@@ -145,7 +145,7 @@
 
 			</div>
 
-			<p><small><?php _e( "In passive mode, data connections are initiated by the client, rather than by the server. It may be needed if the client is behind firewall. Passive mode is off by default.", 'cp-snapshot' ); ?></small></p>
+			<p><small><?php _e( "In passive mode, data connections are initiated by the client, rather than by the server. It may be needed if the client is behind firewall. Passive mode is off by default.", SNAPSHOT_I18N_DOMAIN ); ?></small></p>
 
 		</div>
 
@@ -154,15 +154,15 @@
 	<div id="wps-destination-server" class="form-row">
 
 		<div class="form-col-left">
-			<label><?php _e('Server Timeout', 'cp-snapshot'); ?></label>
+			<label><?php _e('Server Timeout', SNAPSHOT_I18N_DOMAIN); ?></label>
 		</div>
 
 		<div class="form-col">
 			<input type="text" name="snapshot-destination[timeout]" id="snapshot-destination-timeout" value="<?php echo ( isset( $item['timeout'] ) ) ? $item['timeout'] : 90 ;?>" style="min-width: 10%;" />
 
-			<p><small><?php _e( "The default timeout for PHP FTP connections is 90 seconds. Sometimes this timeout needs to be longer for slower connections to busy servers.", 'cp-snapshot' ); ?></small></p>
+			<p><small><?php _e( "The default timeout for PHP FTP connections is 90 seconds. Sometimes this timeout needs to be longer for slower connections to busy servers.", SNAPSHOT_I18N_DOMAIN ); ?></small></p>
 
-			<button id="snapshot-destination-test-connection" class="button button-gray"><?php _e( "Test Connection", 'cp-snapshot' ); ?></button>
+			<button id="snapshot-destination-test-connection" class="button button-gray"><?php _e( "Test Connection", SNAPSHOT_I18N_DOMAIN ); ?></button>
 			<div id="snapshot-ajax-destination-test-result" style="display:none"></div>
 		</div>
 

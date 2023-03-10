@@ -15,8 +15,8 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 
 			//Set parent defaults
 			parent::__construct( array(
-				'singular' => __( 'Archive', 'cp-snapshot' ),     //singular name of the listed records
-				'plural'   => __( 'Archive', 'cp-snapshot' ),    //plural name of the listed records
+				'singular' => __( 'Archive', SNAPSHOT_I18N_DOMAIN ),     //singular name of the listed records
+				'plural'   => __( 'Archive', SNAPSHOT_I18N_DOMAIN ),    //plural name of the listed records
 				'ajax'     => false        //does this table support ajax?
 			) );
 		}
@@ -118,7 +118,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 					?>
 					<select
 						name="snapshot-filter-destination" id="snapshot-filter-destination">
-						<option value=""><?php _e( 'Show All Destinations', 'cp-snapshot' ); ?></option>
+						<option value=""><?php _e( 'Show All Destinations', SNAPSHOT_I18N_DOMAIN ); ?></option>
 
 						<?php Snapshot_Helper_UI::destination_select_options_groups(
 							PSOURCESnapshot::instance()->config_data['destinations'],
@@ -161,7 +161,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 				$row_actions = '';
 				if ( Snapshot_Helper_Utility::current_user_can( 'manage_snapshots_items' ) ) {
 					$row_actions .= '<span class="edit"><a href="?page=snapshots_edit_panel&amp;snapshot-action=edit&amp;item=' .
-					                $item['timestamp'] . '">' . __( 'edit', 'cp-snapshot' ) . '</a></span>';
+					                $item['timestamp'] . '">' . __( 'edit', SNAPSHOT_I18N_DOMAIN ) . '</a></span>';
 
 					$show_run_now = false;
 					if ( is_multisite() ) {
@@ -176,7 +176,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 						$row_actions .= ' | ';
 						$row_actions .= '<span class="runonce"><a href="?page=snapshots_edit_panel&amp;snapshot-action=runonce&amp;item=' .
 						                $item['timestamp'] . '&amp;snapshot-noonce-field=' .
-						                wp_create_nonce( 'snapshot-runonce' ) . '">' . __( 'run now', 'cp-snapshot' ) . '</a></span>';
+						                wp_create_nonce( 'snapshot-runonce' ) . '">' . __( 'run now', SNAPSHOT_I18N_DOMAIN ) . '</a></span>';
 					}
 				}
 
@@ -187,7 +187,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 
 					$row_actions .= '<span class="restore"><a
 					 	href="?page=snapshots_edit_panel&amp;snapshot-action=item-archives&amp;snapshot-action-sub=restore&amp;item=' .
-					                $item['timestamp'] . '">' . __( 'restore', 'cp-snapshot' ) . '</a></span>';
+					                $item['timestamp'] . '">' . __( 'restore', SNAPSHOT_I18N_DOMAIN ) . '</a></span>';
 				}
 
 				if ( Snapshot_Helper_Utility::current_user_can( 'manage_snapshots_items' ) ) {
@@ -196,7 +196,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 					}
 					$row_actions .= '<span class="delete"><a href="?page=snapshots_edit_panel&amp;snapshot-action=delete-item&amp;item=' .
 					                $item['timestamp'] . '&amp;snapshot-noonce-field=' . wp_create_nonce( 'snapshot-delete-item' ) . '">' .
-					                __( 'delete', 'cp-snapshot' ) . '</a></span>';
+					                __( 'delete', SNAPSHOT_I18N_DOMAIN ) . '</a></span>';
 				}
 				if ( ! empty( $row_actions ) ) {
 					echo $row_actions;
@@ -271,7 +271,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 
 		function column_interval( $item ) {
 			if ( ( ! isset( $item['interval'] ) ) || ( $item['interval'] == "immediate" ) || ( empty( $item['interval'] ) ) ) {
-				_e( 'Manual', 'cp-snapshot' );
+				_e( 'Manual', SNAPSHOT_I18N_DOMAIN );
 
 				$snapshot_locker = new Snapshot_Helper_Locker( PSOURCESnapshot::instance()->get_setting( 'backupLockFolderFull' ), $item['timestamp'] );
 				if ( ! $snapshot_locker->is_locked() ) {
@@ -284,11 +284,11 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 						//echo "locker_info<pre>"; print_r($locker_info); echo "</pre>";
 						$snapshot_process_action = $locker_info['doing'] . ' ' . $file_progress . '(<a class="snapshot-abort-item" href="pid=' . $locker_info['pid'] .
 						                           '&amp;item=' . $item['timestamp'] . '">' .
-						                           __( 'abort', 'cp-snapshot' ) . '</a>)<br /><a class="snapshot-thickbox"
+						                           __( 'abort', SNAPSHOT_I18N_DOMAIN ) . '</a>)<br /><a class="snapshot-thickbox"
 							href="' . admin_url()
 						                           . 'admin-ajax.php?action=snapshot_view_log_ajax&&amp;snapshot-item='
 						                           . $item['timestamp']
-						                           . '&amp;snapshot-data-item=' . $locker_info['data_item_key'] . '&amp;live=1">' . __( 'Now', 'cp-snapshot' ) . '</a>';
+						                           . '&amp;snapshot-data-item=' . $locker_info['data_item_key'] . '&amp;live=1">' . __( 'Now', SNAPSHOT_I18N_DOMAIN ) . '</a>';
 
 						$running_timestamp = $locker_info['time_start'];
 						?>
@@ -314,7 +314,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 						$snapshot_process_action = '<br /><a class="snapshot-thickbox"  href="' . admin_url()
 						                           . 'admin-ajax.php?action=snapshot_view_log_ajax&snapshot-item=' . $item['timestamp'] .
 						                           '&amp;snapshot-data-item=' . $locker_info['data_item_key'] .
-						                           '&amp;live=1">' . __( 'Now', 'cp-snapshot' ) . '</a>: ';
+						                           '&amp;live=1">' . __( 'Now', SNAPSHOT_I18N_DOMAIN ) . '</a>: ';
 						$snapshot_process_action .= $locker_info['doing'];
 
 						$file_progress = '';
@@ -335,13 +335,13 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 
 						$snapshot_process_action .= '(<a class="snapshot-abort-item" href="pid=' . $locker_info['pid'] .
 						                            '&amp;item=' . $item['timestamp'] . '">' .
-						                            __( 'abort', 'cp-snapshot' ) . '</a>)';
+						                            __( 'abort', SNAPSHOT_I18N_DOMAIN ) . '</a>)';
 						echo $snapshot_process_action;
 					}
 				} else {
-					//$snapshot_process_action 	= __('Next', 'cp-snapshot') .": ";
+					//$snapshot_process_action 	= __('Next', SNAPSHOT_I18N_DOMAIN) .": ";
 					$running_timestamp = wp_next_scheduled( 'snapshot_backup_cron', array( intval( $item['timestamp'] ) ) );
-					echo "<br />" . __( 'Next', 'cp-snapshot' ) . ": " . Snapshot_Helper_Utility::show_date_time( $running_timestamp );
+					echo "<br />" . __( 'Next', SNAPSHOT_I18N_DOMAIN ) . ": " . Snapshot_Helper_Utility::show_date_time( $running_timestamp );
 				}
 				unset( $snapshot_locker );
 			}
@@ -350,7 +350,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 
 				if ( isset( $data_item ) ) {
 					if ( isset( $data_item['timestamp'] ) ) {
-						?><br/><?php _e( 'Last', 'cp-snapshot' ); ?>: <?php
+						?><br/><?php _e( 'Last', SNAPSHOT_I18N_DOMAIN ); ?>: <?php
 						echo Snapshot_Helper_Utility::show_date_time( $data_item['timestamp'] );
 					}
 				}
@@ -362,7 +362,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 			if ( isset( $item['destination'] ) ) {
 
 				if ( $item['destination'] == "local" ) {
-					_e( "Local Server", 'cp-snapshot' );
+					_e( "Local Server", SNAPSHOT_I18N_DOMAIN );
 				} else {
 					$destination_slug = $item['destination'];
 
@@ -476,13 +476,13 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 
 						if ( $data_item['destination-sync'] == "mirror" ) {
 							$output .= Snapshot_Helper_Utility::data_item_file_processed_count( $data_item ) . " " .
-							           __( 'files synced to destination', 'cp-snapshot' ) . "<br />";
+							           __( 'files synced to destination', SNAPSHOT_I18N_DOMAIN ) . "<br />";
 						}
 					}
 
-					$output .= __( 'Archives', 'cp-snapshot' ) . ': ' . '<a href="?page=snapshots_edit_panel&amp;snapshot-action=item-archives&amp;item='
+					$output .= __( 'Archives', SNAPSHOT_I18N_DOMAIN ) . ': ' . '<a href="?page=snapshots_edit_panel&amp;snapshot-action=item-archives&amp;item='
 					           . $item['timestamp']
-					           . '">' . __( 'view', 'cp-snapshot' ) . '</a> (' . count( $item['data'] ) . ')';
+					           . '">' . __( 'view', SNAPSHOT_I18N_DOMAIN ) . '</a> (' . count( $item['data'] ) . ')';
 
 					$backupLogFileFull = trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupLogFolderFull' ) )
 					                     . $item['timestamp'] . "_" . $data_item['timestamp'] . ".log";
@@ -492,13 +492,13 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 							$output .= " ";
 						}
 
-						$output .= __( 'Latest Log:', 'cp-snapshot' ) . ' ' . '<a class="snapshot-thickbox"
+						$output .= __( 'Latest Log:', SNAPSHOT_I18N_DOMAIN ) . ' ' . '<a class="snapshot-thickbox"
 							href="' . admin_url()
 						           . 'admin-ajax.php?action=snapshot_view_log_ajax&amp;snapshot-item=' . $item['timestamp'] .
-						           '&amp;snapshot-data-item=' . $data_item['timestamp'] . '">' . __( 'view', 'cp-snapshot' ) . '</a>
+						           '&amp;snapshot-data-item=' . $data_item['timestamp'] . '">' . __( 'view', SNAPSHOT_I18N_DOMAIN ) . '</a>
 							<a href="?page=snapshots_edit_panel&amp;snapshot-action=download-log&amp;snapshot-item=' . $item['timestamp']
 						           . '&amp;snapshot-data-item=' . $data_item['timestamp'] . '&amp;live=0">'
-						           . __( 'download', 'cp-snapshot' ) . '</a>';
+						           . __( 'download', SNAPSHOT_I18N_DOMAIN ) . '</a>';
 
 					}
 
@@ -519,7 +519,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 							}
 							$output .= '<a href="?page=snapshots_edit_panel&amp;snapshot-item=' . $item['timestamp']
 							           . '&snapshot-data-item=' . $data_item['timestamp']
-							           . '&snapshot-action=download-log">' . __( 'view log', 'cp-snapshot' ) . '</a>';
+							           . '&snapshot-action=download-log">' . __( 'view log', SNAPSHOT_I18N_DOMAIN ) . '</a>';
 						}
 						//}
 					}
@@ -528,7 +528,7 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 						$output .= "<br />";
 					}
 
-					$output .= __( 'No Snapshot file found', 'cp-snapshot' );
+					$output .= __( 'No Snapshot file found', SNAPSHOT_I18N_DOMAIN );
 				}
 
 				if ( strlen( $output ) ) {
@@ -609,29 +609,29 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 						if ( strlen( $status_output ) ) {
 							$status_output .= ', ';
 						}
-						$status_output .= $_count . " " . __( 'Pending', 'cp-snapshot' );
+						$status_output .= $_count . " " . __( 'Pending', SNAPSHOT_I18N_DOMAIN );
 						break;
 
 					case 'fail':
 						if ( strlen( $status_output ) ) {
 							$status_output .= ', ';
 						}
-						$status_output .= $_count . " " . __( 'Fail', 'cp-snapshot' );
+						$status_output .= $_count . " " . __( 'Fail', SNAPSHOT_I18N_DOMAIN );
 						break;
 
 					case 'complete':
 						if ( strlen( $status_output ) ) {
 							$status_output .= ', ';
 						}
-						$status_output .= $_count . " " . __( 'Complete', 'cp-snapshot' );
+						$status_output .= $_count . " " . __( 'Complete', SNAPSHOT_I18N_DOMAIN );
 						break;
 				}
 			}
 
 			//if (strlen($status_output))
-			//	echo __('Archives:', 'cp-snapshot') ." ".$status_output ."<br />";
+			//	echo __('Archives:', SNAPSHOT_I18N_DOMAIN) ." ".$status_output ."<br />";
 			//else
-			//	echo __('Archives:', 'cp-snapshot') ." ".$status_output ."<br />";
+			//	echo __('Archives:', SNAPSHOT_I18N_DOMAIN) ." ".$status_output ."<br />";
 			//echo "status_output=[". $status_output ."]<br />";
 
 
@@ -646,30 +646,30 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 						if ( strlen( $status_output ) ) {
 							$status_output .= ', ';
 						}
-						$status_output .= $_count . " " . __( 'Pending', 'cp-snapshot' );
+						$status_output .= $_count . " " . __( 'Pending', SNAPSHOT_I18N_DOMAIN );
 						break;
 
 					case 'fail':
 						if ( strlen( $status_output ) ) {
 							$status_output .= ', ';
 						}
-						$status_output .= $_count . " " . __( 'Fail', 'cp-snapshot' );
+						$status_output .= $_count . " " . __( 'Fail', SNAPSHOT_I18N_DOMAIN );
 						break;
 
 					case 'complete':
 						if ( strlen( $status_output ) ) {
 							$status_output .= ', ';
 						}
-						$status_output .= $_count . " " . __( 'Complete', 'cp-snapshot' );
+						$status_output .= $_count . " " . __( 'Complete', SNAPSHOT_I18N_DOMAIN );
 						break;
 				}
 			}
 
 			if ( strlen( $status_output ) ) {
-				echo "<br />" . __( 'Destination:', 'cp-snapshot' ) . " " . $status_output . "<br />";
+				echo "<br />" . __( 'Destination:', SNAPSHOT_I18N_DOMAIN ) . " " . $status_output . "<br />";
 			}
 			//else
-			//	echo __('Archives:', 'cp-snapshot') ." ".$status_output ."<br />";
+			//	echo __('Archives:', SNAPSHOT_I18N_DOMAIN) ." ".$status_output ."<br />";
 			//echo "status_output=[". $status_output ."]<br />";
 		}
 
@@ -678,15 +678,15 @@ if ( ! class_exists( 'Snapshot_View_Table_Items' ) ) {
 			$columns = array();
 
 			$columns['cb']   = '<input type="checkbox" />';
-			$columns['name'] = __( 'Name', 'cp-snapshot' );
+			$columns['name'] = __( 'Name', SNAPSHOT_I18N_DOMAIN );
 
 			//if (is_multisite())
-			$columns['blog'] = __( 'Blog', 'cp-snapshot' );
+			$columns['blog'] = __( 'Blog', SNAPSHOT_I18N_DOMAIN );
 
-			$columns['notes']       = __( 'Notes', 'cp-snapshot' );
-			$columns['interval']    = __( 'Interval', 'cp-snapshot' );
-			$columns['destination'] = __( 'Destination', 'cp-snapshot' );
-			$columns['archives']    = __( 'Archives', 'cp-snapshot' );
+			$columns['notes']       = __( 'Notes', SNAPSHOT_I18N_DOMAIN );
+			$columns['interval']    = __( 'Interval', SNAPSHOT_I18N_DOMAIN );
+			$columns['destination'] = __( 'Destination', SNAPSHOT_I18N_DOMAIN );
+			$columns['archives']    = __( 'Archives', SNAPSHOT_I18N_DOMAIN );
 
 			//$columns['status']  	= 	__('Status', 		SNAPSHOT_I18N_DOMAIN);
 

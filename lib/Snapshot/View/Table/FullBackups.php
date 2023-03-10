@@ -9,8 +9,8 @@ class Snapshot_View_Table_FullBackups extends WP_List_Table {
 	function __construct () {
 		//Set parent defaults
 		parent::__construct( array(
-			'singular' => __( 'Archive', 'cp-snapshot' ),     //singular name of the listed records
-			'plural'   => __( 'Archive', 'cp-snapshot' ),    //plural name of the listed records
+			'singular' => __( 'Archive', SNAPSHOT_I18N_DOMAIN ),     //singular name of the listed records
+			'plural'   => __( 'Archive', SNAPSHOT_I18N_DOMAIN ),    //plural name of the listed records
 			'ajax'     => false        //does this table support ajax?
 		) );
 	}
@@ -18,10 +18,10 @@ class Snapshot_View_Table_FullBackups extends WP_List_Table {
 	public function get_columns() {
 		return array(
 			'cb' => '<input type="checkbox" />',
-			'name' => __('File Name', 'cp-snapshot'),
-			'timestamp' => __('Date / Time', 'cp-snapshot'),
-			'size' => __('Size', 'cp-snapshot'),
-			'actions' => __('Actions', 'cp-snapshot'),
+			'name' => __('File Name', SNAPSHOT_I18N_DOMAIN),
+			'timestamp' => __('Date / Time', SNAPSHOT_I18N_DOMAIN),
+			'size' => __('Size', SNAPSHOT_I18N_DOMAIN),
+			'actions' => __('Actions', SNAPSHOT_I18N_DOMAIN),
 		);
 	}
 
@@ -43,15 +43,15 @@ class Snapshot_View_Table_FullBackups extends WP_List_Table {
 		if (empty($item['name'])) return false;
 		$is_local = !empty($item['local']);
 		$actions = array(
-			'download' => '<a href="#download">' . esc_html(__('Download', 'cp-snapshot')) . '</a>',
-			'restore' => '<a href="#restore">' . esc_html(__('Restore', 'cp-snapshot')) . '</a>',
-			'trash' => '<a href="#trash">' . esc_html(__('Trash', 'cp-snapshot')) . '</a>',
+			'download' => '<a href="#download">' . esc_html(__('Download', SNAPSHOT_I18N_DOMAIN)) . '</a>',
+			'restore' => '<a href="#restore">' . esc_html(__('Restore', SNAPSHOT_I18N_DOMAIN)) . '</a>',
+			'trash' => '<a href="#trash">' . esc_html(__('Trash', SNAPSHOT_I18N_DOMAIN)) . '</a>',
 		);
-		//if ($is_local) $actions['upload'] = '<a href="#upload">' . esc_html(__('Upload', 'cp-snapshot')) . '</a>';
+		//if ($is_local) $actions['upload'] = '<a href="#upload">' . esc_html(__('Upload', SNAPSHOT_I18N_DOMAIN)) . '</a>';
 		return sprintf(
 			'%1$s <small class="location %3$s"><em>(%2$s)</em></small> %4$s',
 			$item['name'],
-			($is_local ? __('Local', 'cp-snapshot') : __('Remote', 'cp-snapshot')),
+			($is_local ? __('Local', SNAPSHOT_I18N_DOMAIN) : __('Remote', SNAPSHOT_I18N_DOMAIN)),
 			($is_local ? 'local' : 'remote'),
 			$this->row_actions($actions)
 		);
@@ -65,7 +65,7 @@ class Snapshot_View_Table_FullBackups extends WP_List_Table {
 
 		$time = $timestamp
 			? date_i18n(get_option('time_format'), $timestamp)
-			: __('N/A', 'cp-snapshot')
+			: __('N/A', SNAPSHOT_I18N_DOMAIN)
 		;
 
 		$date = $timestamp
@@ -83,12 +83,12 @@ class Snapshot_View_Table_FullBackups extends WP_List_Table {
 	}
 
 	public function column_actions ($item) {
-		return '<button type="button" class="button button-primary restore"><span>' . __('Restore', 'cp-snapshot') . '</span></button>';
+		return '<button type="button" class="button button-primary restore"><span>' . __('Restore', SNAPSHOT_I18N_DOMAIN) . '</span></button>';
 	}
 
 	public function get_bulk_actions () {
 		return array(
-			'delete' => __('Delete', 'cp-snapshot'),
+			'delete' => __('Delete', SNAPSHOT_I18N_DOMAIN),
 		);
 	}
 

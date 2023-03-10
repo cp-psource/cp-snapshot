@@ -23,13 +23,13 @@ class Snapshot_Process_Import_Archives {
 		if ( $error_status['errorStatus'] ) {
 
 			if ( ! empty( $error_status['errorText'] ) ) {
-				echo '<div class="wps-auth-message error"><p>', sprintf( __( 'Error: %s', 'cp-snapshot' ), $error_status['errorText'] ), '</p></div>';
+				echo '<div class="wps-auth-message error"><p>', sprintf( __( 'Error: %s', SNAPSHOT_I18N_DOMAIN ), $error_status['errorText'] ), '</p></div>';
 				$this->error_count ++;
 			}
 
 		} else {
 			if ( ! empty( $error_status['responseText'] ) ) {
-				echo '<div class="wps-auth-message success"><p>', sprintf( __( 'Success: %s', 'cp-snapshot' ), $error_status['responseText'] ), '</p></div>';
+				echo '<div class="wps-auth-message success"><p>', sprintf( __( 'Success: %s', SNAPSHOT_I18N_DOMAIN ), $error_status['responseText'] ), '</p></div>';
 			}
 
 		}
@@ -59,7 +59,7 @@ class Snapshot_Process_Import_Archives {
 			return false;
 		}
 
-		echo '<div class="wps-notice"><p>', sprintf( __( 'Importing archives from: %s', 'cp-snapshot' ), $dir ), '</p></div>';
+		echo '<div class="wps-notice"><p>', sprintf( __( 'Importing archives from: %s', SNAPSHOT_I18N_DOMAIN ), $dir ), '</p></div>';
 
 		$dh = opendir( $dir );
 
@@ -93,7 +93,7 @@ class Snapshot_Process_Import_Archives {
 			}
 
 			printf( '<li><strong>%s: %s</strong> (%s)<ul><li>',
-				__( 'Processing archive', 'cp-snapshot' ),
+				__( 'Processing archive', SNAPSHOT_I18N_DOMAIN ),
 				basename( $restore_file ),
 				Snapshot_Helper_Utility::size_format( filesize( $restore_file ) )
 			);
@@ -118,8 +118,8 @@ class Snapshot_Process_Import_Archives {
 
 		@set_time_limit( 15 * 60 ); // 15 minutes - technically, server to server should be quick for large files.
 
-		printf( '<p>%s: %ds</p>', __( 'PHP max_execution_time', 'cp-snapshot' ), ini_get( 'max_execution_time' ) );
-		printf( '<p>%s: %s</p>', __( 'Attempting to download remote file', 'cp-snapshot' ), esc_html( $remote_file ) );
+		printf( '<p>%s: %ds</p>', __( 'PHP max_execution_time', SNAPSHOT_I18N_DOMAIN ), ini_get( 'max_execution_time' ) );
+		printf( '<p>%s: %s</p>', __( 'Attempting to download remote file', SNAPSHOT_I18N_DOMAIN ), esc_html( $remote_file ) );
 
 		flush();
 
@@ -129,7 +129,7 @@ class Snapshot_Process_Import_Archives {
 
 		if ( ! file_exists( $restore_file ) ) {
 
-			echo "<div class='wps-notice'><p>" . __( 'local import file not found. This could mean either the entered URL was not valid or the file was not publicly accessible.', 'cp-snapshot' ) . "</p></div>";
+			echo "<div class='wps-notice'><p>" . __( 'local import file not found. This could mean either the entered URL was not valid or the file was not publicly accessible.', SNAPSHOT_I18N_DOMAIN ) . "</p></div>";
 			return;
 		}
 
@@ -138,7 +138,7 @@ class Snapshot_Process_Import_Archives {
 		echo '<ol>';
 
 		printf( '<li><strong>%s: %s</strong> (%s)<ul><li>',
-			__( 'Processing archive', 'cp-snapshot' ),
+			__( 'Processing archive', SNAPSHOT_I18N_DOMAIN ),
 			basename( $restore_file ),
 			Snapshot_Helper_Utility::size_format( filesize( $restore_file ) )
 		);
@@ -168,14 +168,14 @@ class Snapshot_Process_Import_Archives {
 			$dir = sanitize_text_field( $_POST['snapshot-import-archive-remote-url'] );
 
 			if ( ! $this->process_local_archives( $dir ) ) {
-				echo '<div class="wps-notice"><p>', sprintf( __( 'local import file not found %s. This could mean either the entered path was not valid or accessible.', 'cp-snapshot' ), $dir ), '</p></div>';
+				echo '<div class="wps-notice"><p>', sprintf( __( 'local import file not found %s. This could mean either the entered path was not valid or accessible.', SNAPSHOT_I18N_DOMAIN ), $dir ), '</p></div>';
 			}
 
 		} else {
 
 			if ( ! function_exists( 'curl_version' ) ) {
 
-				echo '<div class="wps-auth-message error"><p>', __( 'Error: Your server does not have lib_curl installed. So the import process cannot retrieve remote file.', 'cp-snapshot' ), '</p></div>';
+				echo '<div class="wps-auth-message error"><p>', __( 'Error: Your server does not have lib_curl installed. So the import process cannot retrieve remote file.', SNAPSHOT_I18N_DOMAIN ), '</p></div>';
 				return;
 			}
 
@@ -186,14 +186,14 @@ class Snapshot_Process_Import_Archives {
 
 ?>
 <section id="header">
-	<h1><?php esc_html_e( 'Import', 'cp-snapshot' ); ?></h1>
+	<h1><?php esc_html_e( 'Import', SNAPSHOT_I18N_DOMAIN ); ?></h1>
 </section>
 
 <div id="container" class="snapshot-three wps-page-import">
 	<section class="wpmud-box">
 
 		<div class="wpmud-box-title">
-			<h3><?php esc_html_e( 'Local Import', 'cp-snapshot' ); ?></h3>
+			<h3><?php esc_html_e( 'Local Import', SNAPSHOT_I18N_DOMAIN ); ?></h3>
 		</div>
 
 		<div class="wpmud-box-content">
@@ -203,26 +203,26 @@ class Snapshot_Process_Import_Archives {
 
 				<div id="wps-import-message" class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<p><?php _e( 'Missing a snapshot? You can use this import tool to find any missing snapshots. Snapshot will automatically check your integrations but you can also add a custom directory below.', 'cp-snapshot' ); ?></p>
+						<p><?php _e( 'Missing a snapshot? You can use this import tool to find any missing snapshots. Snapshot will automatically check your integrations but you can also add a custom directory below.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 						<div class="wps-notice">
-							<h4><?php _e( 'Import options', 'cp-snapshot'); ?></h4>
-							<h5><?php _e( 'Remote archives', 'cp-snapshot' ); ?></h5>
-							<p><?php _e( 'The <strong>import</strong> process can import an archive from a remote system server via FTP, Amazon S3 or Dropbox. The remote archive <strong>must</strong> be publicly accessible as this import process does not yet support authentication. See notes below on specific services.', 'cp-snapshot' ); ?></p>
+							<h4><?php _e( 'Import options', SNAPSHOT_I18N_DOMAIN); ?></h4>
+							<h5><?php _e( 'Remote archives', SNAPSHOT_I18N_DOMAIN ); ?></h5>
+							<p><?php _e( 'The <strong>import</strong> process can import an archive from a remote system server via FTP, Amazon S3 or Dropbox. The remote archive <strong>must</strong> be publicly accessible as this import process does not yet support authentication. See notes below on specific services.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 							<ul>
-								<li><?php _e( '<strong>Remote FTP:</strong> When downloading from a remote FTP server you must ensure the file is moved to a location where it will be accessible via a simple http:// or https:// URL.', 'cp-snapshot' ); ?></li>
-								<li><?php _e( '<strong>Dropbox:</strong> If you are attempting to download a Dropbox Snapshot archive written to the <strong>App/PSOURCE Snapshot</strong> you first need to copy the file to a public folder within your Dropbox account before grabbing the public link.', 'cp-snapshot' ); ?></li>
-								<li><?php _e( '<strong>Amazon S3:</strong> When downloading a file from S3 you need to ensure the file is public.', 'cp-snapshot' ); ?></li>
+								<li><?php _e( '<strong>Remote FTP:</strong> When downloading from a remote FTP server you must ensure the file is moved to a location where it will be accessible via a simple http:// or https:// URL.', SNAPSHOT_I18N_DOMAIN ); ?></li>
+								<li><?php _e( '<strong>Dropbox:</strong> If you are attempting to download a Dropbox Snapshot archive written to the <strong>App/PSOURCE Snapshot</strong> you first need to copy the file to a public folder within your Dropbox account before grabbing the public link.', SNAPSHOT_I18N_DOMAIN ); ?></li>
+								<li><?php _e( '<strong>Amazon S3:</strong> When downloading a file from S3 you need to ensure the file is public.', SNAPSHOT_I18N_DOMAIN ); ?></li>
 							</ul>
-							<h5><?php _e( 'Local archives', 'cp-snapshot' ); ?></h5>
-							<p><?php _e( 'For archives already in your server but not showing in the ALL Snapshots listing you can simply submit this form without entering a value below. This will scan the snapshot archives directory <strong>/media/storage/www/wp/snapshotold/wp-content/uploads/snapshots</strong> for any missing archives and add them to the listing.', 'cp-snapshot' ); ?></p>
-							<p><?php _e( 'If the missing archive is on the server but saved to a different path. Maybe you setup the archive to save to an alternate directory. Then you can enter the full server path to the <strong>directory</strong> where the archive resides.', 'cp-snapshot' ); ?></p>
+							<h5><?php _e( 'Local archives', SNAPSHOT_I18N_DOMAIN ); ?></h5>
+							<p><?php _e( 'For archives already in your server but not showing in the ALL Snapshots listing you can simply submit this form without entering a value below. This will scan the snapshot archives directory <strong>/media/storage/www/wp/snapshotold/wp-content/uploads/snapshots</strong> for any missing archives and add them to the listing.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+							<p><?php _e( 'If the missing archive is on the server but saved to a different path. Maybe you setup the archive to save to an alternate directory. Then you can enter the full server path to the <strong>directory</strong> where the archive resides.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 						</div>
 					</div>
 				</div>
 
 				<div id="wps-import-integrations" class="row">
 					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-						<label class="label-box"><?php _e( 'Integrations', 'cp-snapshot' ); ?></label>
+						<label class="label-box"><?php _e( 'Integrations', SNAPSHOT_I18N_DOMAIN ); ?></label>
 					</div>
 
 					<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
@@ -236,17 +236,17 @@ class Snapshot_Process_Import_Archives {
 
 				<div id="wps-import-directory" class="row">
 					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-						<label class="label-box"><?php _e( 'Directory URL', 'cp-snapshot' ); ?></label>
+						<label class="label-box"><?php _e( 'Directory URL', SNAPSHOT_I18N_DOMAIN ); ?></label>
 					</div>
 
 					<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
 						<div class="wpmud-box-mask">
 							<input id="snapshot-import-archive-remote-url" type="text"
 								   name="snapshot-import-archive-remote-url" class="inline" value=""
-								   placeholder="<?php _e( 'Enter directory', 'cp-snapshot' ); ?>"/>
+								   placeholder="<?php _e( 'Enter directory', SNAPSHOT_I18N_DOMAIN ); ?>"/>
 
 							<p>
-								<small><?php printf( __( 'Your current snapshot directory is %s. We will automatically check this directory also.', 'cp-snapshot' ), trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupBaseFolderFull' ) ) ); ?></small>
+								<small><?php printf( __( 'Your current snapshot directory is %s. We will automatically check this directory also.', SNAPSHOT_I18N_DOMAIN ), trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupBaseFolderFull' ) ) ); ?></small>
 							</p>
 
 						</div>
@@ -257,7 +257,7 @@ class Snapshot_Process_Import_Archives {
 
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="form-button-container">
-							<input id="snapshot-add-button" class="button button-blue float-r" type="submit" value="<?php _e( 'Import', 'cp-snapshot' ); ?>">
+							<input id="snapshot-add-button" class="button button-blue float-r" type="submit" value="<?php _e( 'Import', SNAPSHOT_I18N_DOMAIN ); ?>">
 						</div>
 
 					</div>
@@ -279,9 +279,9 @@ class Snapshot_Process_Import_Archives {
 							$import_class->process();
 
 							if ( $import_class->error_count > 0 ) {
-								echo '<div class="wps-auth-message error"><p>', esc_html__( 'Oh no! One or more of your Snapshot archives was not imported successfully. Please check your Snapshot logs for more details, or try restoring again in a few moments.', 'cp-snapshot' ), '</p></div>';
+								echo '<div class="wps-auth-message error"><p>', esc_html__( 'Oh no! One or more of your Snapshot archives was not imported successfully. Please check your Snapshot logs for more details, or try restoring again in a few moments.', SNAPSHOT_I18N_DOMAIN ), '</p></div>';
 							} else {
-								echo "<div class='wps-auth-message success'><p>" . esc_html__( 'No errors were encountered during the import process.', 'cp-snapshot' ) . "</p></div>";
+								echo "<div class='wps-auth-message success'><p>" . esc_html__( 'No errors were encountered during the import process.', SNAPSHOT_I18N_DOMAIN ) . "</p></div>";
 							}
 
 						}

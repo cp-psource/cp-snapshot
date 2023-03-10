@@ -43,7 +43,7 @@ if ( ! class_exists( 'SnapshotDestinationDropbox' )
 			$this->name_slug = 'dropbox';
 
 			// The display name for listing on admin panels
-			$this->name_display = __( 'Dropbox', 'cp-snapshot' );
+			$this->name_display = __( 'Dropbox', SNAPSHOT_I18N_DOMAIN );
 
 			$this->sync_excluded_files = array(
 				'.desktop.ini',
@@ -134,13 +134,13 @@ if ( ! class_exists( 'SnapshotDestinationDropbox' )
 			}
 
 			if ( empty( $d_info['name'] ) ) {
-				$this->form_errors['name'] = esc_html__( 'Please provide a name for the destination.', 'cp-snapshot' );
+				$this->form_errors['name'] = esc_html__( 'Please provide a name for the destination.', SNAPSHOT_I18N_DOMAIN );
 			} else {
 				$destination_info['name'] = stripslashes( esc_attr( $d_info['name'] ) );
 			}
 
 			if ( empty( $d_info['directory'] ) ) {
-				$this->form_errors['directory'] = __( 'Please provide a valid subdirectory to store the snapshots.', 'cp-snapshot' );
+				$this->form_errors['directory'] = __( 'Please provide a valid subdirectory to store the snapshots.', SNAPSHOT_I18N_DOMAIN );
 			} else {
 				$destination_info['directory'] = trim( stripslashes( esc_attr( $d_info['directory'] ) ) );
 				$destination_info['directory'] = str_replace( '\\', '/', stripslashes( $destination_info['directory'] ) );
@@ -190,7 +190,7 @@ if ( ! class_exists( 'SnapshotDestinationDropbox' )
 							$message = $error_message;
 						}
 					}
-					$this->form_errors['authorization_token'] = esc_html__( 'An error occurred when attempting to connect to Dropbox: ', 'cp-snapshot' ) . ' ' . $message;
+					$this->form_errors['authorization_token'] = esc_html__( 'An error occurred when attempting to connect to Dropbox: ', SNAPSHOT_I18N_DOMAIN ) . ' ' . $message;
 
 				}
 				$destination_info['tokens']['access']['authorization_token'] = '';

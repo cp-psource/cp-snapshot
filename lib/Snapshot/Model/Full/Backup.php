@@ -231,15 +231,15 @@ class Snapshot_Model_Full_Backup extends Snapshot_Model_Full_Abstract {
 
 		if ( $title_case ) {
 			$frequencies = array(
-				'daily' => __( 'Daily', 'cp-snapshot' ),
-				'weekly' => __( 'Weekly', 'cp-snapshot' ),
-				'monthly' => __( 'Monthly', 'cp-snapshot' ),
+				'daily' => __( 'Daily', SNAPSHOT_I18N_DOMAIN ),
+				'weekly' => __( 'Weekly', SNAPSHOT_I18N_DOMAIN ),
+				'monthly' => __( 'Monthly', SNAPSHOT_I18N_DOMAIN ),
 			);
 		} else {
 			$frequencies = array(
-				'daily' => __( 'daily', 'cp-snapshot' ),
-				'weekly' => __( 'weekly', 'cp-snapshot' ),
-				'monthly' => __( 'monthly', 'cp-snapshot' ),
+				'daily' => __( 'daily', SNAPSHOT_I18N_DOMAIN ),
+				'weekly' => __( 'weekly', SNAPSHOT_I18N_DOMAIN ),
+				'monthly' => __( 'monthly', SNAPSHOT_I18N_DOMAIN ),
 			);
 		}
 

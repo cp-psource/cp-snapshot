@@ -16,9 +16,9 @@ foreach ( PSOURCESnapshot::instance()->config_data['destinations'] as $key => $i
 
 		<i class="wps-typecon google"></i>
 
-		<h3><?php _e( 'Google Drive', 'cp-snapshot' ); ?></h3>
+		<h3><?php _e( 'Google Drive', SNAPSHOT_I18N_DOMAIN ); ?></h3>
 
-		<a class="button button-small button-outline" href="<?php echo add_query_arg( array( 'snapshot-action' => 'add' , 'type' => 'google-drive' ), PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations') ); ?>" class="button button-outline"><?php _e( 'Add Destination', 'cp-snapshot' ); ?></a>
+		<a class="button button-small button-outline" href="<?php echo add_query_arg( array( 'snapshot-action' => 'add' , 'type' => 'google-drive' ), PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-destinations') ); ?>" class="button button-outline"><?php _e( 'Add Destination', SNAPSHOT_I18N_DOMAIN ); ?></a>
 
 	</div>
 

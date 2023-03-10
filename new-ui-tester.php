@@ -108,7 +108,7 @@ class PSOURCESnapshot_New_Ui_Tester {
 		}
 	}
 
-	public function managed_backups() {
+	/*public function managed_backups() {
 		$model = new Snapshot_Model_Full_Backup;
 
 		$is_dashboard_active = $model->is_dashboard_active();
@@ -203,7 +203,7 @@ class PSOURCESnapshot_New_Ui_Tester {
 					$this->render( 'managed_backups', false, $data );
 			}
 		}
-	}
+	}*/
 
 	public function import() {
 		$this->render( 'import' );

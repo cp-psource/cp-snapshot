@@ -8,7 +8,7 @@ $warning = $requirements_test['warning'];
 ?>
 
 <section id="header">
-	<h1><?php esc_html_e( 'Managed Backups', 'cp-snapshot' ); ?></h1>
+	<h1><?php esc_html_e( 'Managed Backups', SNAPSHOT_I18N_DOMAIN ); ?></h1>
 </section>
 
 <?php $this->render( "managed-backups/partials/restore-backup-progress", false, array( 'item' => $item ), false, false ); ?>
@@ -24,9 +24,9 @@ $warning = $requirements_test['warning'];
 
 			<div class="wpmud-box-title has-button">
 
-				<h3><?php _e( 'Restore Wizard', 'cp-snapshot' ); ?></h3>
+				<h3><?php _e( 'Restore Wizard', SNAPSHOT_I18N_DOMAIN ); ?></h3>
 
-				<a href="<?php echo esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-managed-backups') ); ?>" class="button button-small button-gray button-outline"><?php _e( 'Back', 'cp-snapshot' ); ?></a>
+				<a href="<?php echo esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-managed-backups') ); ?>" class="button button-small button-gray button-outline"><?php _e( 'Back', SNAPSHOT_I18N_DOMAIN ); ?></a>
 
 			</div>
 
@@ -39,15 +39,15 @@ $warning = $requirements_test['warning'];
 					<div class="wpmud-box-tab-title can-toggle">
 
 						<h3>
-							<?php _e( 'Configuration', 'cp-snapshot' ); ?>
+							<?php _e( 'Configuration', SNAPSHOT_I18N_DOMAIN ); ?>
 							<?php if ( !$all_good ) { ?>
 							<span class="wps-restore-backup-notice">
-								<?php _e( 'You must meet the server requirements before proceeding.', 'cp-snapshot' ); ?>
+								<?php _e( 'You must meet the server requirements before proceeding.', SNAPSHOT_I18N_DOMAIN ); ?>
 							</span>
 							<?php } ?>
 							<?php if ( $all_good && $warning ) { ?>
 							<span class="wps-restore-backup-notice">
-								<?php _e( 'You have 1 or more requirements warnings. You can proceed, however Snapshot may run into issues due to the warnings.', 'cp-snapshot' ); ?>
+								<?php _e( 'You have 1 or more requirements warnings. You can proceed, however Snapshot may run into issues due to the warnings.', SNAPSHOT_I18N_DOMAIN ); ?>
 							</span>
 							<?php } ?>
 						</h3>
@@ -65,7 +65,7 @@ $warning = $requirements_test['warning'];
 
 							<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-								<label class="label-box"><?php _e( 'Location', 'cp-snapshot' ); ?></label>
+								<label class="label-box"><?php _e( 'Location', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 							</div>
 
@@ -73,12 +73,12 @@ $warning = $requirements_test['warning'];
 
 								<div class="wpmud-box-mask">
 
-									<label class="label-title"><?php _e( 'Choose which folder you would like to restore your website to.', 'cp-snapshot' ); ?></label>
+									<label class="label-title"><?php _e( 'Choose which folder you would like to restore your website to.', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 									<div class="wps-restore-folder">
 
 										<div class="wps-restore-folder-label">
-											<label><?php _e( 'Restore to', 'cp-snapshot' ); ?></label>
+											<label><?php _e( 'Restore to', SNAPSHOT_I18N_DOMAIN ); ?></label>
 										</div>
 
 										<div class="wps-restore-folder-input">
@@ -89,7 +89,7 @@ $warning = $requirements_test['warning'];
 
 									</div>
 
-									<p><small><?php _e( 'You need to enter the full path to the directory you want to restore your website to. Note: this will be the new root directory for your site.', 'cp-snapshot' ); ?></small></p>
+									<p><small><?php _e( 'You need to enter the full path to the directory you want to restore your website to. Note: this will be the new root directory for your site.', SNAPSHOT_I18N_DOMAIN ); ?></small></p>
 
 								</div>
 
@@ -101,8 +101,8 @@ $warning = $requirements_test['warning'];
 
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="form-button-container">
-									<a href="<?php echo esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' ) ); ?>" class="button button-outline button-gray"><?php _e( 'Cancel', 'cp-snapshot' ); ?></a>
-									<button type="submit" class="button button-blue"><?php _e( 'Restore Now', 'cp-snapshot' ); ?></button>
+									<a href="<?php echo esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' ) ); ?>" class="button button-outline button-gray"><?php _e( 'Cancel', SNAPSHOT_I18N_DOMAIN ); ?></a>
+									<button type="submit" class="button button-blue"><?php _e( 'Restore Now', SNAPSHOT_I18N_DOMAIN ); ?></button>
 								</div>
 							</div>
 

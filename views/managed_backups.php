@@ -26,7 +26,7 @@ $model = new Snapshot_Model_Full_Backup();
 ?>
 
 	<section id="header">
-		<h1><?php esc_html_e( 'Managed Backups', 'cp-snapshot' ); ?></h1>
+		<h1><?php esc_html_e( 'Managed Backups', SNAPSHOT_I18N_DOMAIN ); ?></h1>
 	</section>
 
 	<div id="container" class="snapshot-three wps-page-backups">
@@ -65,7 +65,7 @@ $model = new Snapshot_Model_Full_Backup();
 							<div class="wps-summary-text">
 								<h1><?php echo $storage_status['used'] ? size_format( $storage_status['used'], 1 ) : 0 ; ?>
 									/ <?php echo size_format( $storage_status['total'] ) ?></h1>
-								<h5><?php _e( 'Cloud Storage Used', 'cp-snapshot' ); ?></h5>
+								<h5><?php _e( 'Cloud Storage Used', SNAPSHOT_I18N_DOMAIN ); ?></h5>
 							</div>
 
 						</div>
@@ -80,21 +80,21 @@ $model = new Snapshot_Model_Full_Backup();
 
 						<tr>
 
-							<th><?php esc_html_e( 'Last backup', 'cp-snapshot' ); ?></th>
+							<th><?php esc_html_e( 'Last backup', SNAPSHOT_I18N_DOMAIN ); ?></th>
 							<?php if ( isset( $last_backup['timestamp'] ) ) : ?>
 								<td>
 									<?php echo Snapshot_Helper_Utility::show_date_time( $last_backup['timestamp'], 'F j, Y ' ) ?>
 									<span><?php echo __( 'at' ) . ' ' . Snapshot_Helper_Utility::show_date_time( $last_backup['timestamp'], 'g:ia' ) ?></span>
 								</td>
 							<?php else : ?>
-								<td><?php echo __( 'Never', 'cp-snapshot' ); ?></span></td>
+								<td><?php echo __( 'Never', SNAPSHOT_I18N_DOMAIN ); ?></span></td>
 							<?php endif; ?>
 
 						</tr>
 
 						<tr>
 
-							<th><?php _e( 'Snapshot Key', 'cp-snapshot' ); ?>
+							<th><?php _e( 'Snapshot Key', SNAPSHOT_I18N_DOMAIN ); ?>
 								<?php if ( $hasApikey ) : ?><i class="wps-icon i-check"></i><?php endif; ?>
 							</th>
 
@@ -103,12 +103,12 @@ $model = new Snapshot_Model_Full_Backup();
 								<?php if ( $hasApikey ) : ?>
 
 									<a id="view-snapshot-key"
-									   class="button has-key button-outline button-small button-gray"><?php _e( 'View Key', 'cp-snapshot' ) ?></a>
+									   class="button has-key button-outline button-small button-gray"><?php _e( 'View Key', SNAPSHOT_I18N_DOMAIN ) ?></a>
 
 								<?php else : ?>
 
 									<a id="view-snapshot-key"
-									   class="button button-outline button-small button-gray"><?php _e( 'Add snapshot key', 'cp-snapshot' ) ?></a>
+									   class="button button-outline button-small button-gray"><?php _e( 'Add snapshot key', SNAPSHOT_I18N_DOMAIN ) ?></a>
 
 								<?php endif; ?>
 
@@ -117,7 +117,7 @@ $model = new Snapshot_Model_Full_Backup();
 						</tr>
 
 						<tr>
-							<th><?php _e( 'Backups Schedule', 'cp-snapshot' ); ?></th>
+							<th><?php _e( 'Backups Schedule', SNAPSHOT_I18N_DOMAIN ); ?></th>
 							<td>
 
 								<?php if ( ! $model->get_config( 'disable_cron', false ) ) { ?>
@@ -125,7 +125,7 @@ $model = new Snapshot_Model_Full_Backup();
 										$schedule_times = $model->get_schedule_times();
 										$frequencies = $model->get_frequencies( );
 										printf(
-											esc_html__( '%s at %s', 'cp-snapshot' ),
+											esc_html__( '%s at %s', SNAPSHOT_I18N_DOMAIN ),
 											$frequencies[ $model->get_frequency() ],
 											$schedule_times[ $model->get_schedule_time() ]
 										);
@@ -135,8 +135,8 @@ $model = new Snapshot_Model_Full_Backup();
 
 								<a id="wps-managed-backups-configure" class="button button-outline button-small button-gray">
 									<?php echo $model->get_config( 'disable_cron', false ) ?
-										esc_html__( 'Enable', 'cp-snapshot' ) :
-										esc_html__( 'Configure', 'cp-snapshot' ); ?>
+										esc_html__( 'Enable', SNAPSHOT_I18N_DOMAIN ) :
+										esc_html__( 'Configure', SNAPSHOT_I18N_DOMAIN ); ?>
 								</a>
 							</td>
 						</tr>
@@ -162,14 +162,14 @@ $model = new Snapshot_Model_Full_Backup();
 
 			<aside class="wps-managed-backups-menu">
 				<input type="radio" name="wps-managed-backups-menu" id="wps-managed-backups-menu-list" value="wps-managed-backups-list"<?php checked( $backup_menu, 'backups' ); ?>>
-				<label for="wps-managed-backups-menu-list"><?php _e( 'Backups', 'cp-snapshot' ); ?></label>
+				<label for="wps-managed-backups-menu-list"><?php _e( 'Backups', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 				<input type="radio" name="wps-managed-backups-menu" id="wps-managed-backups-menu-config" value="wps-managed-backups-configs"<?php checked( $backup_menu, 'settings' ); ?>>
-				<label for="wps-managed-backups-menu-config"><?php _e( 'Settings', 'cp-snapshot' ); ?></label>
+				<label for="wps-managed-backups-menu-config"><?php _e( 'Settings', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 				<select name="wps-managed-backups-menu-mobile" class="hide">
-					<option value="wps-managed-backups-list"<?php selected( $backup_menu, 'backups' ); ?>><?php _e( 'Backups', 'cp-snapshot' ); ?></option>
-					<option value="wps-managed-backups-configs"<?php selected( $backup_menu, 'settings' ); ?>><?php _e( 'Settings', 'cp-snapshot' ); ?></option>
+					<option value="wps-managed-backups-list"<?php selected( $backup_menu, 'backups' ); ?>><?php _e( 'Backups', SNAPSHOT_I18N_DOMAIN ); ?></option>
+					<option value="wps-managed-backups-configs"<?php selected( $backup_menu, 'settings' ); ?>><?php _e( 'Settings', SNAPSHOT_I18N_DOMAIN ); ?></option>
 				</select>
 			</aside>
 
@@ -183,15 +183,15 @@ $model = new Snapshot_Model_Full_Backup();
 
 						<?php if ( $results_count == 0 ) { ?>
 
-							<h3><?php _e( 'Backups', 'cp-snapshot' ); ?></h3>
+							<h3><?php _e( 'Backups', SNAPSHOT_I18N_DOMAIN ); ?></h3>
 
 						<?php } else { ?>
 
-							<h3><?php _e( 'Available Backups', 'cp-snapshot' ); ?></h3>
+							<h3><?php _e( 'Available Backups', SNAPSHOT_I18N_DOMAIN ); ?></h3>
 
-							<a href="#view-log-file" class="button button-small button-outline button-gray"><?php _e( 'Show Log', 'cp-snapshot' ); ?></a>
+							<a href="#view-log-file" class="button button-small button-outline button-gray"><?php _e( 'Show Log', SNAPSHOT_I18N_DOMAIN ); ?></a>
 
-							<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' ); ?>&snapshot-action=backup" class="button button-small button-blue"><?php _e( 'New Backup', 'cp-snapshot' ); ?></a>
+							<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' ); ?>&snapshot-action=backup" class="button button-small button-blue"><?php _e( 'New Backup', SNAPSHOT_I18N_DOMAIN ); ?></a>
 
 						<?php } ?>
 
@@ -204,10 +204,10 @@ $model = new Snapshot_Model_Full_Backup();
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 									<div class="wps-image img-snappie-one"></div>
-									<p><?php printf( __( "%s, you've enabled Managed Backups but haven't created your first backup yet. Do it now!", 'cp-snapshot' ), wp_get_current_user()->display_name ); ?></p>
+									<p><?php printf( __( "%s, you've enabled Managed Backups but haven't created your first backup yet. Do it now!", SNAPSHOT_I18N_DOMAIN ), wp_get_current_user()->display_name ); ?></p>
 									<p>
 										<a href="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' ); ?>&amp;snapshot-action=backup"
-										   class="button button-blue"><?php _e( 'Run Backup', 'cp-snapshot' ); ?></a>
+										   class="button button-blue"><?php _e( 'Run Backup', SNAPSHOT_I18N_DOMAIN ); ?></a>
 									</p>
 								</div>
 							</div>
@@ -218,7 +218,7 @@ $model = new Snapshot_Model_Full_Backup();
 
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-									<p><?php _e( "Here's a list of your current backups. You can restore your entire website from them at any time.", 'cp-snapshot' ); ?></p>
+									<p><?php _e( "Here's a list of your current backups. You can restore your entire website from them at any time.", SNAPSHOT_I18N_DOMAIN ); ?></p>
 
 									<div class="my-backups">
 
@@ -230,9 +230,9 @@ $model = new Snapshot_Model_Full_Backup();
 												<table cellpadding="0" cellspacing="0">
 													<thead>
 													<tr>
-														<th class="msc-name"><?php _e( 'Backup Details', 'cp-snapshot' ); ?></th>
-														<th class="msc-size"><?php _e( 'Size', 'cp-snapshot' ); ?></th>
-														<th class="msc-date"><?php _e( 'Date', 'cp-snapshot' ); ?></th>
+														<th class="msc-name"><?php _e( 'Backup Details', SNAPSHOT_I18N_DOMAIN ); ?></th>
+														<th class="msc-size"><?php _e( 'Size', SNAPSHOT_I18N_DOMAIN ); ?></th>
+														<th class="msc-date"><?php _e( 'Date', SNAPSHOT_I18N_DOMAIN ); ?></th>
 														<th class="msc-info">&nbsp;</th>
 													</tr>
 													</thead>
@@ -278,11 +278,11 @@ $model = new Snapshot_Model_Full_Backup();
 																</table>
 															</td>
 
-															<td class="msc-size" data-title="<?php _e( 'Size', 'cp-snapshot' ); ?>:">
+															<td class="msc-size" data-title="<?php _e( 'Size', SNAPSHOT_I18N_DOMAIN ); ?>:">
 																<?php echo isset( $backup['size'] ) ? Snapshot_Helper_Utility::size_format( $backup['size'] ) : '-'; ?>
 															</td>
 
-															<td class="msc-date" data-title="<?php _e( 'Date', 'cp-snapshot' ); ?>:">
+															<td class="msc-date" data-title="<?php _e( 'Date', SNAPSHOT_I18N_DOMAIN ); ?>:">
 
 																<?php if ( isset( $backup['timestamp'] ) ) {
 
@@ -315,7 +315,7 @@ $model = new Snapshot_Model_Full_Backup();
 
 																		<ul class="wps-menu-list">
 
-																			<li class="wps-menu-list-title"><?php _e( 'Options', 'cp-snapshot' ); ?></li>
+																			<li class="wps-menu-list-title"><?php _e( 'Options', SNAPSHOT_I18N_DOMAIN ); ?></li>
 																			<li>
 																				<a href="<?php
 																					echo esc_url( add_query_arg(
@@ -326,7 +326,7 @@ $model = new Snapshot_Model_Full_Backup();
 																						PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' )
 																					) );
 
-																					?>"><?php _e( 'Restore', 'cp-snapshot' ); ?></a>
+																					?>"><?php _e( 'Restore', SNAPSHOT_I18N_DOMAIN ); ?></a>
 																			</li>
 																			<li>
 																				<a href="<?php
@@ -340,7 +340,7 @@ $model = new Snapshot_Model_Full_Backup();
 																						PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-managed-backups' )
 																					) );
 
-																					?>"><?php _e( 'Delete', 'cp-snapshot' ); ?></a>
+																					?>"><?php _e( 'Delete', SNAPSHOT_I18N_DOMAIN ); ?></a>
 																			</li>
 
 																		</ul>
@@ -380,7 +380,7 @@ $model = new Snapshot_Model_Full_Backup();
 
 					<div class="wpmud-box-title">
 
-						<h3><?php _e( 'Settings', 'cp-snapshot' ); ?></h3>
+						<h3><?php _e( 'Settings', SNAPSHOT_I18N_DOMAIN ); ?></h3>
 
 					</div>
 
@@ -400,10 +400,10 @@ $model = new Snapshot_Model_Full_Backup();
 
 										<div class="col-left">
 
-											<label><?php _e( 'Schedule', 'cp-snapshot' ); ?></label>
+											<label><?php _e( 'Schedule', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 											<p>
-												<small><?php _e( 'Set your full website managed backups to run automatically to a schedule that suits you. We highly recommend a weekly or daily frequency depending on how active your website is.', 'cp-snapshot' ); ?></small>
+												<small><?php _e( 'Set your full website managed backups to run automatically to a schedule that suits you. We highly recommend a weekly or daily frequency depending on how active your website is.', SNAPSHOT_I18N_DOMAIN ); ?></small>
 											</p>
 
 										</div>
@@ -420,7 +420,7 @@ $model = new Snapshot_Model_Full_Backup();
 													<label class="toggle-label" for="wps-managed-backups-onoff"></label>
 												</div>
 
-												<label for="wps-managed-backups-onoff"><?php _e( 'Enable scheduled backups', 'cp-snapshot' ); ?></label>
+												<label for="wps-managed-backups-onoff"><?php _e( 'Enable scheduled backups', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 											</div>
 
@@ -431,7 +431,7 @@ $model = new Snapshot_Model_Full_Backup();
 												echo ' hidden';
 											} ?>">
 
-												<label for="frequency"><?php _e( 'Frequency', 'cp-snapshot' ); ?></label>
+												<label for="frequency"><?php _e( 'Frequency', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 												<select id="frequency" name="frequency" <?php echo $disabled; ?> >
 													<?php foreach ( $model->get_frequencies() as $key => $label ) { ?>
@@ -441,7 +441,7 @@ $model = new Snapshot_Model_Full_Backup();
 													<?php } ?>
 												</select>
 
-												<label for="schedule_time"><?php _e( 'Time of Day', 'cp-snapshot' ); ?></label>
+												<label for="schedule_time"><?php _e( 'Time of Day', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 												<select id="schedule_time" name="schedule_time" <?php echo $disabled; ?> >
 													<?php foreach ( $model->get_schedule_times() as $key => $label ) { ?>
@@ -461,22 +461,22 @@ $model = new Snapshot_Model_Full_Backup();
 
 										<div class="col-left">
 
-											<label><?php _e( 'Storage Limit', 'cp-snapshot' ); ?></label>
+											<label><?php _e( 'Storage Limit', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 											<p>
-												<small><?php _e( 'By default, Snapshot will run as many scheduled backups as you need. If you would like to keep all of your snapshot archives, just set your storage limit to 0.', 'cp-snapshot' ); ?></small>
+												<small><?php _e( 'By default, Snapshot will run as many scheduled backups as you need. If you would like to keep all of your snapshot archives, just set your storage limit to 0.', SNAPSHOT_I18N_DOMAIN ); ?></small>
 											</p>
 
 										</div>
 
 										<div class="col-right">
 
-											<label><?php _e( 'Keep', 'cp-snapshot' ); ?></label>
+											<label><?php _e( 'Keep', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 											<input type="number" min="0" name="backups-limit" id="snapshot-archive-count"
 											       value="<?php echo esc_attr( Snapshot_Model_Full_Remote_Storage::get()->get_max_backups_limit() ); ?>">
 
-											<label><?php _e( 'backups before removing older archives.', 'cp-snapshot' ); ?></label>
+											<label><?php _e( 'backups before removing older archives.', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
 										</div>
 
@@ -484,7 +484,7 @@ $model = new Snapshot_Model_Full_Backup();
 
 									<div id="wps-backups-settings-update">
 										<button type="submit" class="button button-blue" name="snapshot-schedule" value="yes">
-											<?php esc_html_e( 'Update Settings', 'cp-snapshot' ); ?>
+											<?php esc_html_e( 'Update Settings', SNAPSHOT_I18N_DOMAIN ); ?>
 										</button>
 									</div>
 
@@ -516,8 +516,8 @@ $this->render( "boxes/modals/popup-snapshot", false, $data, false, false );
 
 $modal_data = array(
 	'modal_id' => "wps-snapshot-log",
-	'modal_title' => __( 'Managed Backups Log', 'cp-snapshot' ),
-	'modal_content' => __( "<p>Here's a log of events for managed backups.</p>", 'cp-snapshot' ),
+	'modal_title' => __( 'Managed Backups Log', SNAPSHOT_I18N_DOMAIN ),
+	'modal_content' => __( "<p>Here's a log of events for managed backups.</p>", SNAPSHOT_I18N_DOMAIN ),
 );
 
 $this->render( "boxes/modals/popup-dynamic", false, $modal_data, false, false );

@@ -71,7 +71,7 @@ class Snapshot_Controller_Full_Ajax extends Snapshot_Controller_Full {
 	public function json_get_log () {
 		if (!current_user_can(Snapshot_View_Full_Backup::get()->get_page_role())) die; // Only some users can reload
 
-		$response = __('Your log file is empty', 'cp-snapshot');
+		$response = __('Your log file is empty', SNAPSHOT_I18N_DOMAIN);
 		$content = Snapshot_Helper_Log::get()->get_log();
 		if (!empty($content)) {
 			$response = '<textarea readonly style="width:100%; height:100%">' . esc_textarea($content) . '</textarea>';
@@ -89,10 +89,10 @@ class Snapshot_Controller_Full_Ajax extends Snapshot_Controller_Full {
 		$rmt = Snapshot_Model_Full_Remote_Key::get();
 
 		$token = $rmt->get_remote_key();
-		if (empty($token)) return wp_send_json_error(__('Unable to get exchange token', 'cp-snapshot'));
+		if (empty($token)) return wp_send_json_error(__('Unable to get exchange token', SNAPSHOT_I18N_DOMAIN));
 
 		$key = $rmt->get_remote_key($token);
-		if (empty($key)) return wp_send_json_error(__('Unable to exchange key', 'cp-snapshot'));
+		if (empty($key)) return wp_send_json_error(__('Unable to exchange key', SNAPSHOT_I18N_DOMAIN));
 
 		$status = $rmt->set_key($key);
 		if ($status) $this->_model->set_config( 'active', true ); // Also activate
@@ -267,7 +267,7 @@ class Snapshot_Controller_Full_Ajax extends Snapshot_Controller_Full {
 			),
 			'php' => array(
 				'basedir' => array(
-					'value' => $open_basedir ? __('Enabled', 'cp-snapshot') : __('Disabled', 'cp-snapshot'),
+					'value' => $open_basedir ? __('Enabled', SNAPSHOT_I18N_DOMAIN) : __('Disabled', SNAPSHOT_I18N_DOMAIN),
 					'result' => !$open_basedir,
 				),
 				'maxtime' => array(
@@ -504,7 +504,7 @@ class Snapshot_Controller_Full_Ajax extends Snapshot_Controller_Full {
 		if (!$status && !$this->_model->has_api_info()) {
 			$response = array(
 				'status' => true,
-				'msg' => __('Could not communicate with remote service', 'cp-snapshot'),
+				'msg' => __('Could not communicate with remote service', SNAPSHOT_I18N_DOMAIN),
 			);
 		} else {
 			$response = array(

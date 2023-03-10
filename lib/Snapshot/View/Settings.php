@@ -33,9 +33,9 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 			}
 			?>
 			<div id="snapshot-new-panel" class="wrap snapshot-wrap">
-				<h2><?php _ex( "Add New Snapshot", "Snapshot New Page Title", 'cp-snapshot' ); ?></h2>
+				<h2><?php _ex( "Add New Snapshot", "Snapshot New Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
 
-				<p><?php _ex( "Use this form to create a new snapshot of your site. Fill in the optional Name and Notes fields. Select the tables to be included in this snapshot.", 'Snapshot page description', 'cp-snapshot' ); ?></p>
+				<p><?php _ex( "Use this form to create a new snapshot of your site. Fill in the optional Name and Notes fields. Select the tables to be included in this snapshot.", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
 
 				<?php
 				if ( ! Snapshot_Helper_Utility::check_server_timeout() ) {
@@ -61,23 +61,23 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 						<?php wp_nonce_field( 'snapshot-add', 'snapshot-noonce-field' ); ?>
 
 						<?php $_snapshot_metaboxes->snapshot_metaboxes_show_item_header_information(
-							__( 'Snapshot Information', 'cp-snapshot' ), null ); ?>
+							__( 'Snapshot Information', SNAPSHOT_I18N_DOMAIN ), null ); ?>
 						<?php
 						$_snapshot_metaboxes->snapshot_metabox_show_backup_files_options(
-							__( 'What Files to Archive?', 'cp-snapshot' ), null );
+							__( 'What Files to Archive?', SNAPSHOT_I18N_DOMAIN ), null );
 						?>
 						<?php $_snapshot_metaboxes->snapshot_metabox_show_backup_tables_options(
-							__( 'What Tables to Archive', 'cp-snapshot' ), null );
+							__( 'What Tables to Archive', SNAPSHOT_I18N_DOMAIN ), null );
 						?>
 						<?php $_snapshot_metaboxes->snapshot_metabox_show_schedule_options(
-							__( 'When to Archive', 'cp-snapshot' ), null );
+							__( 'When to Archive', SNAPSHOT_I18N_DOMAIN ), null );
 						?>
 						<?php $_snapshot_metaboxes->snapshot_metabox_show_destination_options(
-							__( 'Where to save the Archive ', 'cp-snapshot' ), null );
+							__( 'Where to save the Archive ', SNAPSHOT_I18N_DOMAIN ), null );
 						?>
 
 						<input id="snapshot-add-button" class="button-primary" type="submit"
-						       value="<?php _e( 'Create Snapshot', 'cp-snapshot' ); ?>"/>
+						       value="<?php _e( 'Create Snapshot', SNAPSHOT_I18N_DOMAIN ); ?>"/>
 					</form>
 				</div>
 			</div>
@@ -138,23 +138,23 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 			PSOURCESnapshot::instance()->items_table->prepare_items( PSOURCESnapshot::instance()->config_data['items'] );
 			?>
 			<div id="snapshot-edit-listing-panel" class="wrap snapshot-wrap">
-				<h2><?php _ex( "All Snapshots", "Snapshot New Page Title", 'cp-snapshot' ); ?> <?php if ( current_user_can( 'manage_snapshots_items' ) ) {
+				<h2><?php _ex( "All Snapshots", "Snapshot New Page Title", SNAPSHOT_I18N_DOMAIN ); ?> <?php if ( current_user_can( 'manage_snapshots_items' ) ) {
 						?><a class="add-new-h2"
 						     href="<?php echo PSOURCESnapshot::instance()->get_setting( 'SNAPSHOT_MENU_URL' ); ?>snapshots_new_panel">
 							Add New</a><?php
 					} ?></h2>
 
-				<p><?php _ex( "This is a listing of all Snapshots created within your site. To delete a snapshot set the checkbox then click the 'Delete Snapshots' button below the listing. To restore a snapshot click the 'Restore' button for that snapshot. To edit a snapshot click the name of the snapshot", 'Snapshot page description', 'cp-snapshot' ); ?></p>
+				<p><?php _ex( "This is a listing of all Snapshots created within your site. To delete a snapshot set the checkbox then click the 'Delete Snapshots' button below the listing. To restore a snapshot click the 'Restore' button for that snapshot. To edit a snapshot click the name of the snapshot", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
 
 				<div style="float: right" class="snapshot-system-time">
-					<?php echo __( 'Current time:', 'cp-snapshot' ) . ' <strong>' . Snapshot_Helper_Utility::show_date_time( time() ) . '</strong><br />'; ?>
+					<?php echo __( 'Current time:', SNAPSHOT_I18N_DOMAIN ) . ' <strong>' . Snapshot_Helper_Utility::show_date_time( time() ) . '</strong><br />'; ?>
 					<?php
 					$timestamp = wp_next_scheduled( PSOURCESnapshot::instance()->get_setting( 'remote_file_cron_hook' ) );
 					if ( $timestamp ) {
-						echo __( 'Next File Send:', 'cp-snapshot' ) . ' <strong>' . Snapshot_Helper_Utility::show_date_time( $timestamp ) . '</strong>';
+						echo __( 'Next File Send:', SNAPSHOT_I18N_DOMAIN ) . ' <strong>' . Snapshot_Helper_Utility::show_date_time( $timestamp ) . '</strong>';
 					}
 					?><br/>
-					<?php _e( '<span class="snapshot-error">(I)</span> indicates an imported archive', 'cp-snapshot' ); ?>
+					<?php _e( '<span class="snapshot-error">(I)</span> indicates an imported archive', SNAPSHOT_I18N_DOMAIN ); ?>
 				</div>
 
 				<?php //snapshot_utility_show_panel_messages(); ?>
@@ -198,9 +198,9 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 
 			?>
 			<div id="snapshot-settings-metaboxes-general" class="wrap snapshot-wrap">
-				<h2><?php _ex( "Edit Snapshot", "Snapshot Plugin Page Title", 'cp-snapshot' ); ?></h2>
+				<h2><?php _ex( "Edit Snapshot", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
 
-				<p><?php _ex( "Use this form to update the details for a previous snapshot. Also, provided is a link you can use to download the snapshot for sharing or archiving.", 'Snapshot page description', 'cp-snapshot' ); ?></p>
+				<p><?php _ex( "Use this form to update the details for a previous snapshot. Also, provided is a link you can use to download the snapshot for sharing or archiving.", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
 				<?php
 				$SNAPSHOT_FILE_MISSING = false;
 				?>
@@ -222,35 +222,35 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 
 						<?php
 						$_snapshot_metaboxes->snapshot_metaboxes_show_item_header_information(
-							__( 'Snapshot Information', 'cp-snapshot' ), $item ); ?>
+							__( 'Snapshot Information', SNAPSHOT_I18N_DOMAIN ), $item ); ?>
 
 						<?php
 						$_snapshot_metaboxes->snapshot_metabox_show_backup_files_options(
-							__( 'What Files to Archive?', 'cp-snapshot' ), $item );
+							__( 'What Files to Archive?', SNAPSHOT_I18N_DOMAIN ), $item );
 						?>
 						<?php
 						$_snapshot_metaboxes->snapshot_metabox_show_backup_tables_options(
-							__( 'What Tables to Archive', 'cp-snapshot' ), $item );
+							__( 'What Tables to Archive', SNAPSHOT_I18N_DOMAIN ), $item );
 						?>
 						<?php
 						$_snapshot_metaboxes->snapshot_metabox_show_schedule_options(
-							__( 'When to Archive', 'cp-snapshot' ), $item );
+							__( 'When to Archive', SNAPSHOT_I18N_DOMAIN ), $item );
 						?>
 						<?php
 						$_snapshot_metaboxes->snapshot_metabox_show_destination_options(
-							__( 'Where to save the Archive ', 'cp-snapshot' ), $item );
+							__( 'Where to save the Archive ', SNAPSHOT_I18N_DOMAIN ), $item );
 						?>
 
 						<?php
 						$_snapshot_metaboxes->snapshot_metabox_show_archive_files(
-							__( 'All Archives', 'cp-snapshot' ), $item );
+							__( 'All Archives', SNAPSHOT_I18N_DOMAIN ), $item );
 						?>
 
 						<input class="button-primary" id="snapshot-form-save-submit" type="submit"
-						       value="<?php _e( 'Save Snapshot', 'cp-snapshot' ); ?>"/>
+						       value="<?php _e( 'Save Snapshot', SNAPSHOT_I18N_DOMAIN ); ?>"/>
 						<a class="button-secondary"
 						   href="<?php echo PSOURCESnapshot::instance()->get_setting( 'SNAPSHOT_MENU_URL' );
-						   ?>snapshots_edit_panel"><?php _e( 'Cancel', 'cp-snapshot' ); ?></a>
+						   ?>snapshots_edit_panel"><?php _e( 'Cancel', SNAPSHOT_I18N_DOMAIN ); ?></a>
 
 					</form>
 				</div>
@@ -279,12 +279,12 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 				$data_item_key = intval( $_GET['snapshot-data-item'] );
 				?>
 				<div id="snapshot-settings-metaboxes-general" class="wrap snapshot-wrap">
-					<h2><?php _ex( "Restore Snapshot", "Snapshot Plugin Page Title", 'cp-snapshot' ); ?></h2>
+					<h2><?php _ex( "Restore Snapshot", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
 
-					<p class="snapshot-restore-description"><?php _ex( "On this page you can restore a previous snapshot. Using the 'Restore Options' section below you can also opt to turn off all plugins as well as switch to a different theme as part of the restore.", 'Snapshot page description', 'cp-snapshot' ); ?></p>
+					<p class="snapshot-restore-description"><?php _ex( "On this page you can restore a previous snapshot. Using the 'Restore Options' section below you can also opt to turn off all plugins as well as switch to a different theme as part of the restore.", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
 
 					<div id='snapshot-ajax-warning' class='updated fade'>
-						<p><?php _e( 'You are about to restore a previous version of your ClassicPress database. This will remove any new information added since the snapshot backup.', 'cp-snapshot' ); ?></p>
+						<p><?php _e( 'You are about to restore a previous version of your ClassicPress database. This will remove any new information added since the snapshot backup.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 					</div>
 
 					<?php
@@ -292,7 +292,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 						$current_timeout = ini_get( 'max_execution_time' );
 						?>
 						<div class='error snapshot-error'>
-						<p><?php printf( __( 'Your web server timeout is set very low, %d seconds. Also, it appears this timeout cannot be adjusted via the Snapshot restore process. Attempting a snapshot restore could result in a partial restore of your tables.', 'cp-snapshot' ), $current_timeout ); ?></p>
+						<p><?php printf( __( 'Your web server timeout is set very low, %d seconds. Also, it appears this timeout cannot be adjusted via the Snapshot restore process. Attempting a snapshot restore could result in a partial restore of your tables.', SNAPSHOT_I18N_DOMAIN ), $current_timeout ); ?></p>
 						</div><?php
 					}
 					?>
@@ -332,37 +332,37 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 							<?php wp_nonce_field( 'snapshot-restore', 'snapshot-noonce-field' ); ?>
 
 							<?php $this->_snapshot_metaboxes->snapshot_metaboxes_show_item_header_information(
-								__( 'Snapshot Information', 'cp-snapshot' ), $item, true ); ?>
+								__( 'Snapshot Information', SNAPSHOT_I18N_DOMAIN ), $item, true ); ?>
 
 							<?php
 							$this->_snapshot_metaboxes->snapshot_metabox_show_archive_files(
-								__( 'Selected Archive to Restore', 'cp-snapshot' ), $item, true );
+								__( 'Selected Archive to Restore', SNAPSHOT_I18N_DOMAIN ), $item, true );
 							?>
 							<?php
 							//if (is_multisite()) {
 							$this->_snapshot_metaboxes->snapshot_metabox_restore_blog_options(
-								__( 'Restore Blog Options', 'cp-snapshot' ), $item );
+								__( 'Restore Blog Options', SNAPSHOT_I18N_DOMAIN ), $item );
 							//}
 							?>
 							<?php
 							$this->_snapshot_metaboxes->snapshot_metabox_show_restore_tables_options(
-								__( 'What Tables to Restore?', 'cp-snapshot' ), $item, $data_item_key );
+								__( 'What Tables to Restore?', SNAPSHOT_I18N_DOMAIN ), $item, $data_item_key );
 							?>
 							<?php
 							$this->_snapshot_metaboxes->snapshot_metabox_show_restore_files_options(
-								__( 'What Files to Restore?', 'cp-snapshot' ), $item, $data_item_key );
+								__( 'What Files to Restore?', SNAPSHOT_I18N_DOMAIN ), $item, $data_item_key );
 
 							?>
 							<?php
-							$this->_snapshot_metaboxes->snapshot_metabox_restore_options( __( 'Restore Theme Options', 'cp-snapshot' ), $item );
+							$this->_snapshot_metaboxes->snapshot_metabox_restore_options( __( 'Restore Theme Options', SNAPSHOT_I18N_DOMAIN ), $item );
 							?>
 							<input id="snapshot-form-restore-submit" class="button-primary"
 								<?php
 								if ( ! $data_item_key ) { ?> disabled="disabled" <?php } ?>
-								   type="submit" value="<?php _e( 'Restore Snapshot', 'cp-snapshot' ); ?>"/>
+								   type="submit" value="<?php _e( 'Restore Snapshot', SNAPSHOT_I18N_DOMAIN ); ?>"/>
 							<a class="button-secondary"
 							   href="<?php echo PSOURCESnapshot::instance()->get_setting( 'SNAPSHOT_MENU_URL' ); ?>
-									snapshots_edit_panel"><?php _e( 'Cancel', 'cp-snapshot' ); ?></a>
+									snapshots_edit_panel"><?php _e( 'Cancel', SNAPSHOT_I18N_DOMAIN ); ?></a>
 						</form>
 					</div>
 				</div>
@@ -370,9 +370,9 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 			} else {
 				?>
 				<div id="snapshot-settings-metaboxes-general" class="wrap snapshot-wrap">
-					<h2><?php _ex( "Restore Snapshot", "Snapshot Plugin Page Title", 'cp-snapshot' ); ?></h2>
+					<h2><?php _ex( "Restore Snapshot", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
 
-					<p class="snapshot-restore-description"><?php _ex( "ERROR: Missing argument. Please return to the main Snapshot panel and select the archive to restore. ", 'Snapshot page description', 'cp-snapshot' ); ?>
+					<p class="snapshot-restore-description"><?php _ex( "ERROR: Missing argument. Please return to the main Snapshot panel and select the archive to restore. ", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?>
 						<a href="?page=snapshots_edit_panel">Snapshot</a>.</p>
 				</div>
 			<?php
@@ -395,9 +395,9 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 		function snapshot_admin_show_settings_panel() {
 			?>
 			<div id="snapshot-settings-metaboxes-general" class="wrap snapshot-wrap">
-				<h2><?php _ex( "Snapshot Settings", "Snapshot Plugin Page Title", 'cp-snapshot' ); ?></h2>
+				<h2><?php _ex( "Snapshot Settings", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
 
-				<p><?php _ex( "The Settings panel provides access to a number of configuration options you can customize Snapshot to meet you site needs.", 'Snapshot page description', 'cp-snapshot' ); ?></p>
+				<p><?php _ex( "The Settings panel provides access to a number of configuration options you can customize Snapshot to meet you site needs.", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
 
 				<div id="poststuff" class="metabox-holder">
 					<div id="post-body" class="">
@@ -439,13 +439,13 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 
 
 					<div style="float: right"
-					     class="snapshot-system-time"><?php _e( 'Current time:', 'cp-snapshot' ); ?>
+					     class="snapshot-system-time"><?php _e( 'Current time:', SNAPSHOT_I18N_DOMAIN ); ?>
 						<strong><?php
 							echo Snapshot_Helper_Utility::show_date_time( time() ) ?></strong></div>
 
 					<?php if ( $item['destination-sync'] == "mirror" ) {
 						?>
-						<p><?php _e( 'This Snapshot item is setup as <strong>files sync</strong>. You cannot perform a resend of the individual items like on a normal archive. But you can click the <strong>resend</strong> on any item below to clear the last send dates on all files. This will force all files to be re-synced.', 'cp-snapshot' ); ?></p><?php
+						<p><?php _e( 'This Snapshot item is setup as <strong>files sync</strong>. You cannot perform a resend of the individual items like on a normal archive. But you can click the <strong>resend</strong> on any item below to clear the last send dates on all files. This will force all files to be re-synced.', SNAPSHOT_I18N_DOMAIN ); ?></p><?php
 					}
 					?>
 					<!-- Now we can render the completed list table -->
@@ -461,12 +461,12 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 
 			?>
 			<div id="snapshot-settings-metaboxes-general" class="wrap snapshot-wrap">
-				<h2><?php _ex( "Snapshot Scan / Import", "Snapshot Plugin Page Title", 'cp-snapshot' ); ?></h2>
+				<h2><?php _ex( "Snapshot Scan / Import", "Snapshot Plugin Page Title", SNAPSHOT_I18N_DOMAIN ); ?></h2>
 
 				<div id="poststuff" class="metabox-holder">
 					<div id="post-body" class="">
 						<div id="post-body-content" class="snapshot-metabox-holder-main">
-							<p><?php _e( 'The Snapshot import form below is used to import snapshot archives from outside of this environment into view of the snapshot plugin. If you are attempting to restore an archive from a remote server for example you first need to import the archive here. This will then show the archive in the All Snapshots listing. From that page you can then perform the needed restore.', 'cp-snapshot' ); ?></p>
+							<p><?php _e( 'The Snapshot import form below is used to import snapshot archives from outside of this environment into view of the snapshot plugin. If you are attempting to restore an archive from a remote server for example you first need to import the archive here. This will then show the archive in the All Snapshots listing. From that page you can then perform the needed restore.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 
 							<form
 								action="<?php echo PSOURCESnapshot::instance()->get_setting( 'SNAPSHOT_MENU_URL' ); ?>snapshots_import_panel"
@@ -475,10 +475,10 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 								<?php wp_nonce_field( 'snapshot-import', 'snapshot-noonce-field' ); ?>
 
 								<?php $_snapshot_metaboxes->snapshot_metaboxes_show_import(
-									__( 'Import Options', 'cp-snapshot' ) ); ?>
+									__( 'Import Options', SNAPSHOT_I18N_DOMAIN ) ); ?>
 
 								<input id="snapshot-add-button" class="button-primary" type="submit"
-								       value="<?php _e( 'Scan / Import Snapshots', 'cp-snapshot' ); ?>"/>
+								       value="<?php _e( 'Scan / Import Snapshots', SNAPSHOT_I18N_DOMAIN ); ?>"/>
 							</form>
 						</div>
 					</div>
@@ -497,10 +497,10 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 
 										@set_time_limit( 900 ); // 15 minutes Technically, server to server should be quick for large files.
 
-										?><p><?php _e( "PHP max_execution_time", 'cp-snapshot' ); ?>
+										?><p><?php _e( "PHP max_execution_time", SNAPSHOT_I18N_DOMAIN ); ?>
 										: <?php echo ini_get( 'max_execution_time' ); ?>s</p><?php
 
-										?><p><?php _e( "Attempting to download remote file", 'cp-snapshot' ); ?>
+										?><p><?php _e( "Attempting to download remote file", SNAPSHOT_I18N_DOMAIN ); ?>
 										: <?php echo $remoteFile; ?></p><?php
 										flush();
 
@@ -514,7 +514,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 											$restoreFolder = trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupRestoreFolderFull' ) ) . "_imports";
 
 											echo "<ol>";
-											echo "<li><strong>" . __( 'Processing archive', 'cp-snapshot' ) . ": ", basename( $restoreFile ) . "</strong> (" .
+											echo "<li><strong>" . __( 'Processing archive', SNAPSHOT_I18N_DOMAIN ) . ": ", basename( $restoreFile ) . "</strong> (" .
 											                                                                               Snapshot_Helper_Utility::size_format( filesize( $restoreFile ) ) . ")<ul><li>";
 											flush();
 											$error_status = Snapshot_Helper_Utility::archives_import_proc( $restoreFile, $restoreFolder );
@@ -533,10 +533,10 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 											echo "</li></ul></li>";
 											echo "</ol>";
 										} else {
-											echo '<p>' . __( 'Error: Your server does not have lib_curl installed. So the import process cannot retrieve remote file.', 'cp-snapshot' ) . '</p>';
+											echo '<p>' . __( 'Error: Your server does not have lib_curl installed. So the import process cannot retrieve remote file.', SNAPSHOT_I18N_DOMAIN ) . '</p>';
 										}
 									} else {
-										echo "<p>" . __( 'local import file not found. This could mean either the entered URL was not valid or the file was not publicly accessible.', 'cp-snapshot' ) . "</p>";
+										echo "<p>" . __( 'local import file not found. This could mean either the entered URL was not valid or the file was not publicly accessible.', SNAPSHOT_I18N_DOMAIN ) . "</p>";
 									}
 								} else {
 									// Then a local directory
@@ -549,7 +549,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 									}
 									//echo "dir[". $dir ."]<br />";
 									if ( is_dir( $dir ) ) {
-										echo "<p>" . __( 'Importing archives from', 'cp-snapshot' ) . ": " . $dir . "</p>";
+										echo "<p>" . __( 'Importing archives from', SNAPSHOT_I18N_DOMAIN ) . ": " . $dir . "</p>";
 
 										if ( $dh = opendir( $dir ) ) {
 											$restoreFolder = trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupRestoreFolderFull' ) ) . "_imports";
@@ -574,7 +574,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 												if (Snapshot_Helper_Backup::is_full_backup($file)) continue;
 
 
-												echo "<li><strong>" . __( 'Processing archive', 'cp-snapshot' ) . ": ", basename( $restoreFile ) . "</strong> (" .
+												echo "<li><strong>" . __( 'Processing archive', SNAPSHOT_I18N_DOMAIN ) . ": ", basename( $restoreFile ) . "</strong> (" .
 												                                                                               Snapshot_Helper_Utility::size_format( filesize( $restoreFile ) ) . ")<ul><li>";
 												flush();
 												$error_status = Snapshot_Helper_Utility::archives_import_proc( $restoreFile, $restoreFolder );
@@ -598,7 +598,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 
 										}
 									} else {
-										echo "<p>" . sprintf( __( 'local import file not found %s. This could mean either the entered path was not valid or accessible.', 'cp-snapshot' ), $dir ) . "</p>";
+										echo "<p>" . sprintf( __( 'local import file not found %s. This could mean either the entered path was not valid or accessible.', SNAPSHOT_I18N_DOMAIN ), $dir ) . "</p>";
 
 									}
 								}
@@ -606,7 +606,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 							} else {
 
 								$dir = trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupBaseFolderFull' ) );
-								printf( '<p>%s: %s</p>', __( 'Importing archives from', 'cp-snapshot' ), $dir );
+								printf( '<p>%s: %s</p>', __( 'Importing archives from', SNAPSHOT_I18N_DOMAIN ), $dir );
 
 								if ( $dh = opendir( $dir ) ) {
 									$restoreFolder = trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupRestoreFolderFull' ) ) . "_imports";
@@ -632,7 +632,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 										if (Snapshot_Helper_Backup::is_full_backup($file)) continue;
 
 										printf( '<li><strong>%s: %s</strong> (%s)<ul><li>',
-											__( 'Processing archive', 'cp-snapshot' ),
+											__( 'Processing archive', SNAPSHOT_I18N_DOMAIN ),
 											basename( $restoreFile ),
 											Snapshot_Helper_Utility::size_format( filesize( $restoreFile ) )
 										);
@@ -644,11 +644,11 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 
 											if ( $error_status['errorStatus'] ) {
 												if ( ! empty( $error_status['errorText'] ) ) {
-													echo '<span class="snapshot-error">', sprintf( __( 'Error: %s', 'cp-snapshot' ), $error_status['errorText'] ), '</span></br />';
+													echo '<span class="snapshot-error">', sprintf( __( 'Error: %s', SNAPSHOT_I18N_DOMAIN ), $error_status['errorText'] ), '</span></br />';
 												}
 											} else {
 												if ( ! empty( $error_status['responseText'] ) ) {
-													echo '<span class="snapshot-success">', sprintf( __( 'Success: %s', 'cp-snapshot' ), $error_status['errorText'] ), '</span></br />';
+													echo '<span class="snapshot-success">', sprintf( __( 'Success: %s', SNAPSHOT_I18N_DOMAIN ), $error_status['errorText'] ), '</span></br />';
 												}
 											}
 										}
@@ -662,7 +662,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 								}
 							}
 						}
-						echo "<p>" . __( 'No errors were encountered during the import process.', 'cp-snapshot' ) . "</p>";
+						echo "<p>" . __( 'No errors were encountered during the import process.', SNAPSHOT_I18N_DOMAIN ) . "</p>";
 					}
 					?>
 				</div>

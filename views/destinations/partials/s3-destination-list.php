@@ -3,7 +3,7 @@
 
     <div class="wps-notice">
 
-        <p><?php _e( "You haven't added an Amazon S3 destination yet.", 'cp-snapshot' ); ?></p>
+        <p><?php _e( "You haven't added an Amazon S3 destination yet.", SNAPSHOT_I18N_DOMAIN ); ?></p>
 
     </div>
 
@@ -13,10 +13,10 @@
 
         <thead>
         <tr>
-            <th class="wps-destination-name"><?php _e( 'Name', 'cp-snapshot' ); ?></th>
-            <th class="wps-destination-bucket"><?php _e( 'Bucket', 'cp-snapshot' ); ?></th>
-            <th class="wps-destination-dir"><?php _e( 'Directory', 'cp-snapshot' ); ?></th>
-            <th class="wps-destination-shots"><?php _e( 'Snapshots', 'cp-snapshot' ); ?></th>
+            <th class="wps-destination-name"><?php _e( 'Name', SNAPSHOT_I18N_DOMAIN ); ?></th>
+            <th class="wps-destination-bucket"><?php _e( 'Bucket', SNAPSHOT_I18N_DOMAIN ); ?></th>
+            <th class="wps-destination-dir"><?php _e( 'Directory', SNAPSHOT_I18N_DOMAIN ); ?></th>
+            <th class="wps-destination-shots"><?php _e( 'Snapshots', SNAPSHOT_I18N_DOMAIN ); ?></th>
             <th class="wps-destination-config"></th>
         </tr>
         </thead>
@@ -40,7 +40,7 @@
                     </a>
 
 	                <?php if ( ! Snapshot_Model_Destination::has_required_fields( $destination, $required_fields ) ) : ?>
-                        <span class="incomplete-warning" title="<?php esc_html_e( 'This destination has not been fully configured.', 'cp-snapshot' ); ?>"></span>
+                        <span class="incomplete-warning" title="<?php esc_html_e( 'This destination has not been fully configured.', SNAPSHOT_I18N_DOMAIN ); ?>"></span>
 	                <?php endif; ?>
 
                 </td>
@@ -57,7 +57,7 @@
 						'snapshot-action' => 'edit',
 						'type'            => urlencode( $destination['type'] ),
 						'item'            => urlencode( $id )
-					), PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-destinations' ) ); ?>"><?php _e( 'Configure', 'cp-snapshot' ); ?></a>
+					), PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshots-newui-destinations' ) ); ?>"><?php _e( 'Configure', SNAPSHOT_I18N_DOMAIN ); ?></a>
 
                 </td>
 

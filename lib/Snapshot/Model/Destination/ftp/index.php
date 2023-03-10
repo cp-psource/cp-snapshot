@@ -28,7 +28,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 			$this->name_slug = 'ftp';
 
 			// The display name for listing on admin panels
-			$this->name_display = __( 'FTP/sFTP', 'cp-snapshot' );
+			$this->name_display = __( 'FTP/sFTP', SNAPSHOT_I18N_DOMAIN );
 
 			// On the details form we want to provide a 'test connection' button which will submit the form via AJAX to this script
 			// where the form fields will be validated and the connection tot he remote server tested.
@@ -36,10 +36,10 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 			$this->load_scripts();
 
 			$this->protocols = array(
-				'ftp'          => __( 'FTP', 'cp-snapshot' ),
-				'sftp'         => __( 'SFTP', 'cp-snapshot' ),
-//				'ftps-implicit-ssl'		=>	__('FTP with Implicit SSL', 'cp-snapshot'),
-				'ftps-tcl-ssl' => __( 'FTP with TSL/SSL', 'cp-snapshot' )
+				'ftp'          => __( 'FTP', SNAPSHOT_I18N_DOMAIN ),
+				'sftp'         => __( 'SFTP', SNAPSHOT_I18N_DOMAIN ),
+//				'ftps-implicit-ssl'		=>	__('FTP with Implicit SSL', SNAPSHOT_I18N_DOMAIN),
+				'ftps-tcl-ssl' => __( 'FTP with TSL/SSL', SNAPSHOT_I18N_DOMAIN )
 			);
 		}
 
@@ -115,11 +115,11 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 			$number_fields = array( 'port', 'timeout' );
 
 			$required_fields = array(
-				'name' => __( 'Name is required', 'cp-snapshot' ),
-				'address' => __( "Address is required", 'cp-snapshot' ),
-				'username' => __( "Username is required", 'cp-snapshot' ),
-				'password' => __( "Password is required", 'cp-snapshot' ),
-				'protocol' => __( "Connection type is required", 'cp-snapshot' ),
+				'name' => __( 'Name is required', SNAPSHOT_I18N_DOMAIN ),
+				'address' => __( "Address is required", SNAPSHOT_I18N_DOMAIN ),
+				'username' => __( "Username is required", SNAPSHOT_I18N_DOMAIN ),
+				'password' => __( "Password is required", SNAPSHOT_I18N_DOMAIN ),
+				'protocol' => __( "Connection type is required", SNAPSHOT_I18N_DOMAIN ),
 			);
 
 			$destination_info = $this->validate_text_fields( $text_fields, $d_info, $destination_info, $required_fields );
@@ -133,12 +133,12 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 			<table class="widefat">
 				<thead>
 				<tr class="form-field">
-					<th class="snapshot-col-delete"><?php _e( 'Delete', 'cp-snapshot' ); ?></th>
-					<th class="snapshot-col-name"><?php _e( 'Name', 'cp-snapshot' ); ?></th>
-					<th class="snapshot-col-server"><?php _e( 'Host', 'cp-snapshot' ); ?></th>
-					<th class="snapshot-col-login"><?php _e( 'Login', 'cp-snapshot' ); ?></th>
-					<th class="snapshot-col-directory"><?php _e( 'Directory', 'cp-snapshot' ); ?></th>
-					<th class="snapshot-col-used"><?php _e( 'Used', 'cp-snapshot' ); ?></th>
+					<th class="snapshot-col-delete"><?php _e( 'Delete', SNAPSHOT_I18N_DOMAIN ); ?></th>
+					<th class="snapshot-col-name"><?php _e( 'Name', SNAPSHOT_I18N_DOMAIN ); ?></th>
+					<th class="snapshot-col-server"><?php _e( 'Host', SNAPSHOT_I18N_DOMAIN ); ?></th>
+					<th class="snapshot-col-login"><?php _e( 'Login', SNAPSHOT_I18N_DOMAIN ); ?></th>
+					<th class="snapshot-col-directory"><?php _e( 'Directory', SNAPSHOT_I18N_DOMAIN ); ?></th>
+					<th class="snapshot-col-used"><?php _e( 'Used', SNAPSHOT_I18N_DOMAIN ); ?></th>
 				</tr>
 				<thead>
 				<tbody>
@@ -170,10 +170,10 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 
 								<div class="row-actions" style="margin:0; padding:0;">
 									<span class="edit"><a href="<?php echo $edit_url ?>item=<?php echo $idx; ?>"><?php
-											_e( 'edit', 'cp-snapshot' ); ?></a></span> | <span class="delete"><a
+											_e( 'edit', SNAPSHOT_I18N_DOMAIN ); ?></a></span> | <span class="delete"><a
 											href="<?php
 											echo $delete_url ?>item=<?php echo $idx; ?>&amp;snapshot-noonce-field=<?php
-											echo wp_create_nonce( 'snapshot-delete-destination' ); ?>"><?php _e( 'delete', 'cp-snapshot' ); ?></a></span>
+											echo wp_create_nonce( 'snapshot-delete-destination' ); ?>"><?php _e( 'delete', SNAPSHOT_I18N_DOMAIN ); ?></a></span>
 								</div>
 							</td>
 							<td class="snapshot-col-server"><?php
@@ -199,7 +199,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 				} else {
 					?>
 					<tr class="form-field">
-					<td colspan="4"><?php _e( 'No FTP Destinations', 'cp-snapshot' ); ?></td></tr><?php
+					<td colspan="4"><?php _e( 'No FTP Destinations', SNAPSHOT_I18N_DOMAIN ); ?></td></tr><?php
 				}
 				?>
 				</tbody>
@@ -210,7 +210,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 				<div class="tablenav">
 					<div class="alignleft actions">
 						<input class="button-secondary" type="submit"
-						       value="<?php _e( 'Delete Destination', 'cp-snapshot' ); ?>"/>
+						       value="<?php _e( 'Delete Destination', SNAPSHOT_I18N_DOMAIN ); ?>"/>
 					</div>
 				</div>
 			<?php
@@ -224,14 +224,14 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 
 			//echo "item<pre>"; print_r($item); echo "</pre>";
 			?>
-			<p><?php _e( 'Define an FTP destination connection. You can define multiple destinations which use FTP. Each destination can connect to different servers with different remote paths.', 'cp-snapshot' ); ?></p>
+			<p><?php _e( 'Define an FTP destination connection. You can define multiple destinations which use FTP. Each destination can connect to different servers with different remote paths.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 
 			<div id="poststuff" class="metabox-holder">
 			<div style="display: none" id="snapshot-destination-test-result"></div>
 			<div class="postbox" id="snapshot-destination-item">
 
 				<h3 class="hndle">
-					<span><?php echo $this->name_display; ?> <?php _e( 'Destination', 'cp-snapshot' ); ?></span>
+					<span><?php echo $this->name_display; ?> <?php _e( 'Destination', SNAPSHOT_I18N_DOMAIN ); ?></span>
 				</h3>
 
 				<div class="inside">
@@ -243,7 +243,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 						if ( ( isset( $this->form_errors ) ) && ( count( $this->form_errors ) ) ) {
 							?>
 							<tr class="form-field">
-								<th scope="row"><?php _e( "Form Errors", 'cp-snapshot' ); ?></th>
+								<th scope="row"><?php _e( "Form Errors", SNAPSHOT_I18N_DOMAIN ); ?></th>
 								<td>
 									<ul>
 										<?php
@@ -260,7 +260,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 						?>
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-name"><?php _e( 'Destination Name', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-name"><?php _e( 'Destination Name', SNAPSHOT_I18N_DOMAIN ); ?></label>
 								*
 							</th>
 							<td><input type="text" name="snapshot-destination[name]" id="snapshot-destination-name"
@@ -272,7 +272,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-address"><?php _e( 'Server Address', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-address"><?php _e( 'Server Address', SNAPSHOT_I18N_DOMAIN ); ?></label>
 								*
 							</th>
 							<td><input type="text" name="snapshot-destination[address]"
@@ -281,13 +281,13 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 								           echo $item['address'];
 							           } ?>"/>
 
-								<p class="description"><?php _e( 'This should remote server address as in somehost.co or ftp.somehost.com or maybe the IP address 123.456.789.255. Do not use ftp://somehost.com', 'cp-snapshot' ); ?></p>
+								<p class="description"><?php _e( 'This should remote server address as in somehost.co or ftp.somehost.com or maybe the IP address 123.456.789.255. Do not use ftp://somehost.com', SNAPSHOT_I18N_DOMAIN ); ?></p>
 							</td>
 						</tr>
 
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-username"><?php _e( 'Username', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-username"><?php _e( 'Username', SNAPSHOT_I18N_DOMAIN ); ?></label>
 								*
 							</th>
 							<td><input type="text" name="snapshot-destination[username]"
@@ -299,7 +299,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-password"><?php _e( 'Password', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-password"><?php _e( 'Password', SNAPSHOT_I18N_DOMAIN ); ?></label>
 								*
 							</th>
 							<td><input type="password" name="snapshot-destination[password]"
@@ -310,7 +310,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 						</tr>
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-directory"><?php _e( 'Remote Path', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-directory"><?php _e( 'Remote Path', SNAPSHOT_I18N_DOMAIN ); ?></label>
 							</th>
 							<td><input type="text" name="snapshot-destination[directory]"
 							           id="snapshot-destination-directory"
@@ -318,13 +318,13 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 								           echo $item['directory'];
 							           } ?>"/>
 
-								<p class="description"><?php _e( 'The remote path will be used to store the snapshot archives. The remote path must already existing on the server. If the remote path is blank then the FTP home directory will be used as the destination for snapshot files. This is a global setting and will be used by all snapshot configurations using this destination. You can also defined a directory used by a specific snapshot.', 'cp-snapshot' ); ?></p>
+								<p class="description"><?php _e( 'The remote path will be used to store the snapshot archives. The remote path must already existing on the server. If the remote path is blank then the FTP home directory will be used as the destination for snapshot files. This is a global setting and will be used by all snapshot configurations using this destination. You can also defined a directory used by a specific snapshot.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 							</td>
 						</tr>
 
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-protocol"><?php _e( 'Connection Protocol', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-protocol"><?php _e( 'Connection Protocol', SNAPSHOT_I18N_DOMAIN ); ?></label>
 							</th>
 							<td>
 								<select name="snapshot-destination[protocol]" id="snapshot-destination-protocol">
@@ -339,40 +339,40 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 									?>
 								</select>
 
-								<p class="description"><?php _e( 'FTP: uses standard PHP library functions.  (default)<br />SFTP: Implementation use the <a href="http://phpseclib.sourceforge.net" target="_blank">PHP Secure Communications Library</a>. This option may not work depending on how your PHP binaries are compiled.<br />FTPS with TSL/SSL. This option attempts a secure connection. Will only work if PHP and OpenSSL are properly configured on your host and the destination host. This option will not work under Windows using the default PHP binaries. Check the PHP docs for ftp_ssl_connection', 'cp-snapshot' ); ?></p>
+								<p class="description"><?php _e( 'FTP: uses standard PHP library functions.  (default)<br />SFTP: Implementation use the <a href="http://phpseclib.sourceforge.net" target="_blank">PHP Secure Communications Library</a>. This option may not work depending on how your PHP binaries are compiled.<br />FTPS with TSL/SSL. This option attempts a secure connection. Will only work if PHP and OpenSSL are properly configured on your host and the destination host. This option will not work under Windows using the default PHP binaries. Check the PHP docs for ftp_ssl_connection', SNAPSHOT_I18N_DOMAIN ); ?></p>
 							</td>
 						</tr>
 
 						<?php //if (!isset($item['ssl'])) { $item['ssl'] = "yes"; } ?>
 						<?php /* ?>
 					<tr class="form-field">
-						<th scope="row"><label for="snapshot-destination-ssl"><?php _e('Use sFTP Connection', 'cp-snapshot'); ?></label></th>
+						<th scope="row"><label for="snapshot-destination-ssl"><?php _e('Use sFTP Connection', SNAPSHOT_I18N_DOMAIN); ?></label></th>
 						<td>
 							<select name="snapshot-destination[ssl]" id="snapshot-destination-ssl">
 								<option value="yes" <?php if ($item['ssl'] == "yes") { echo ' selected="selected" '; } ?> >Yes</option>
 								<option value="no" <?php if ($item['ssl'] == "no") { echo ' selected="selected" '; } ?> >No</option>
 							</select>
 
-							<p class="description"><?php _e('Default: Yes. If set to yes, will attempt to connect to the remote server using a secure connection using the <a href="http://phpseclib.sourceforge.net" target="_blank">PHP Secure Communications Library</a>. This option may not work depending on how your PHP binaries are compiled. This option will not work under Windows. Suggestion is to try SSL. If the test connection fails then try setting SSL to no.', 'cp-snapshot'); ?></p>
+							<p class="description"><?php _e('Default: Yes. If set to yes, will attempt to connect to the remote server using a secure connection using the <a href="http://phpseclib.sourceforge.net" target="_blank">PHP Secure Communications Library</a>. This option may not work depending on how your PHP binaries are compiled. This option will not work under Windows. Suggestion is to try SSL. If the test connection fails then try setting SSL to no.', SNAPSHOT_I18N_DOMAIN); ?></p>
 						</td>
 					</tr>
 <?php */ ?>
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-port"><?php _e( 'Server Port (optional)', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-port"><?php _e( 'Server Port (optional)', SNAPSHOT_I18N_DOMAIN ); ?></label>
 							</th>
 							<td><input type="text" name="snapshot-destination[port]" id="snapshot-destination-port"
 							           value="<?php if ( isset( $item['port'] ) ) {
 								           echo $item['port'];
 							           } ?>"/>
 
-								<p class="description"><?php _e( 'In most normal cases the port should be left blank. Only in rare cases where the system administrator set the default FTP/sFTP port to some other value should the port be set here. If left blank the port will be assumed as 21 for FTP or 22 for sFTP.', 'cp-snapshot' ); ?></p>
+								<p class="description"><?php _e( 'In most normal cases the port should be left blank. Only in rare cases where the system administrator set the default FTP/sFTP port to some other value should the port be set here. If left blank the port will be assumed as 21 for FTP or 22 for sFTP.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 							</td>
 						</tr>
 
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-timeout"><?php _e( 'Server Timeout', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-timeout"><?php _e( 'Server Timeout', SNAPSHOT_I18N_DOMAIN ); ?></label>
 							</th>
 							<td><input type="text" name="snapshot-destination[timeout]"
 							           id="snapshot-destination-timeout"
@@ -380,7 +380,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 								           echo $item['timeout'];
 							           } ?>"/>
 
-								<p class="description"><?php _e( 'The default timeout for PHP FTP connections is 90 seconds. Sometimes this timeout needs to be longer for slower connections to busy servers.', 'cp-snapshot' ); ?></p>
+								<p class="description"><?php _e( 'The default timeout for PHP FTP connections is 90 seconds. Sometimes this timeout needs to be longer for slower connections to busy servers.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 							</td>
 						</tr>
 
@@ -389,7 +389,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 						} ?>
 						<tr class="form-field">
 							<th scope="row"><label
-									for="snapshot-destination-passive"><?php _e( 'Passive Mode', 'cp-snapshot' ); ?></label>
+									for="snapshot-destination-passive"><?php _e( 'Passive Mode', SNAPSHOT_I18N_DOMAIN ); ?></label>
 							</th>
 							<td>
 								<select name="snapshot-destination[passive]" id="snapshot-destination-passive">
@@ -403,7 +403,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 									</option>
 								</select>
 
-								<p class="description"><?php _e( 'Default: No. This options turns on or off passive mode. In passive mode, data connections are initiated by the client, rather than by the server. It may be needed if the client is behind firewall.', 'cp-snapshot' ); ?></p>
+								<p class="description"><?php _e( 'Default: No. This options turns on or off passive mode. In passive mode, data connections are initiated by the client, rather than by the server. It may be needed if the client is behind firewall.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 							</td>
 						</tr>
 
@@ -411,7 +411,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 							<th scope="row">&nbsp;</th>
 							<td>
 								<button id="snapshot-destination-test-connection" class="button-seconary" name=""><?php
-									_e( 'Test Connection', 'cp-snapshot' ); ?></button>
+									_e( 'Test Connection', SNAPSHOT_I18N_DOMAIN ); ?></button>
 								<div id="snapshot-ajax-destination-test-result" style="display:none"></div>
 
 							</td>

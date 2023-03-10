@@ -487,7 +487,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 
 			if ( ! $format ) {
 				$format = get_option( 'date_format' );
-				$format .= _x( ' @ ', 'date time sep', 'cp-snapshot' );
+				$format .= _x( ' @ ', 'date time sep', SNAPSHOT_I18N_DOMAIN );
 				$format .= get_option( 'time_format' );
 			}
 
@@ -725,43 +725,43 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 			$snapshot_schedules = array(
 				'snapshot-5minutes' => array(
 					'interval' => 60 * 5,
-					'display'  => __( 'Every 5 Minutes', 'cp-snapshot' ),
+					'display'  => __( 'Every 5 Minutes', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-15minutes' => array(
 					'interval' => 60 * 15,
-					'display'  => __( 'Every 15 Minutes', 'cp-snapshot' ),
+					'display'  => __( 'Every 15 Minutes', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-30minutes' => array(
 					'interval' => 60 * 30,
-					'display'  => __( 'Every 30 Minutes', 'cp-snapshot' ),
+					'display'  => __( 'Every 30 Minutes', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-hourly' => array(
 					'interval' => 60 * 60,
-					'display'  => __( 'Once Hourly', 'cp-snapshot' ),
+					'display'  => __( 'Once Hourly', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-daily' => array(
 					'interval' => 1 * 24 * 60 * 60,                //	86,400
-					'display'  => __( 'Daily', 'cp-snapshot' ),
+					'display'  => __( 'Daily', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-twicedaily' => array(
 					'interval' => 1 * 12 * 60 * 60,                // 43,200
-					'display'  => __( 'Twice Daily', 'cp-snapshot' ),
+					'display'  => __( 'Twice Daily', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-weekly' => array(
 					'interval' => 7 * 24 * 60 * 60,                // 604,800
-					'display'  => __( 'Weekly', 'cp-snapshot' ),
+					'display'  => __( 'Weekly', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-twiceweekly' => array(
 					'interval' => 7 * 12 * 60 * 60,                // 302,400
-					'display'  => __( 'Twice Weekly', 'cp-snapshot' ),
+					'display'  => __( 'Twice Weekly', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-monthly' => array(
 					'interval' => 30 * 24 * 60 * 60,                // 2,592,000
-					'display'  => __( 'Monthly', 'cp-snapshot' ),
+					'display'  => __( 'Monthly', SNAPSHOT_I18N_DOMAIN ),
 				),
 				'snapshot-twicemonthly' => array(
 					'interval' => 15 * 24 * 60 * 60,                // 1,296,000
-					'display'  => __( 'Twice Monthly', 'cp-snapshot' ),
+					'display'  => __( 'Twice Monthly', SNAPSHOT_I18N_DOMAIN ),
 				),
 			);
 
@@ -1135,22 +1135,22 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 			//echo "item<pre>"; print_r($item); echo "</pre>";
 
 			if ( isset( $item['tables-option'] ) ) {
-				$tables_sections_out['click'] .= __( 'Tables:', 'cp-snapshot' ) . " (" . $item['tables-option'] . ")";
+				$tables_sections_out['click'] .= __( 'Tables:', SNAPSHOT_I18N_DOMAIN ) . " (" . $item['tables-option'] . ")";
 
 				if ( isset( $item['tables-sections'] ) ) {
 
 					foreach ( $item['tables-sections'] as $section_key => $section_tables ) {
 
 						if ( $section_key == "wp" ) {
-							$section_label = __( 'core', 'cp-snapshot' );
+							$section_label = __( 'core', SNAPSHOT_I18N_DOMAIN );
 						} else if ( $section_key == "non" ) {
-							$section_label = __( 'non-core', 'cp-snapshot' );
+							$section_label = __( 'non-core', SNAPSHOT_I18N_DOMAIN );
 						} else if ( $section_key == "other" ) {
-							$section_label = __( 'other', 'cp-snapshot' );
+							$section_label = __( 'other', SNAPSHOT_I18N_DOMAIN );
 						} else if ( $section_key == "error" ) {
-							$section_label = __( 'error', 'cp-snapshot' );
+							$section_label = __( 'error', SNAPSHOT_I18N_DOMAIN );
 						} else if ( $section_key == "global" ) {
-							$section_label = __( 'global', 'cp-snapshot' );
+							$section_label = __( 'global', SNAPSHOT_I18N_DOMAIN );
 						}
 
 						if ( count( $section_tables ) ) {
@@ -1182,7 +1182,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 			$files_sections_out['hidden'] = '';
 
 			if ( isset( $data_item['files-option'] ) ) {
-				$files_sections_out['click'] .= __( 'Files:', 'cp-snapshot' ) . ' (';
+				$files_sections_out['click'] .= __( 'Files:', SNAPSHOT_I18N_DOMAIN ) . ' (';
 				$files_sections_out['click'] .= $data_item['files-option'] . ") ";
 
 				//if ((isset($data_item['files-count'])) && (intval($data_item['files-count']))) {
@@ -1536,14 +1536,14 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 
 				if ( empty( $manifest_data ) ) {
 					$error_status['errorStatus'] = true;
-					$error_status['errorText']   = __( "Manifest data not found in archive.", 'cp-snapshot' );
+					$error_status['errorText']   = __( "Manifest data not found in archive.", SNAPSHOT_I18N_DOMAIN );
 
 					return $error_status;
 				}
 
 				if ( ( ! isset( $manifest_data['ITEM'] ) ) || ( empty( $manifest_data['ITEM'] ) ) ) {
 					$error_status['errorStatus'] = true;
-					$error_status['errorText']   = __( "Manifest data does not contain ITEM section.", 'cp-snapshot' );
+					$error_status['errorText']   = __( "Manifest data does not contain ITEM section.", SNAPSHOT_I18N_DOMAIN );
 
 					return $error_status;
 				}
@@ -1551,7 +1551,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 
 				if ( ( ! isset( $item['timestamp'] ) ) || ( empty( $item['timestamp'] ) ) ) {
 					$error_status['errorStatus'] = true;
-					$error_status['errorText']   = __( "Manifest ITEM does not contain 'timestamp' item.", 'cp-snapshot' );
+					$error_status['errorText']   = __( "Manifest ITEM does not contain 'timestamp' item.", SNAPSHOT_I18N_DOMAIN );
 
 					return $error_status;
 				}
@@ -1698,7 +1698,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 
 				if ( ( ! isset( $item['data'] ) ) || ( ! count( $item['data'] ) ) ) {
 					$error_status['errorStatus'] = true;
-					$error_status['errorText']   = __( "Manifest ITEM does not contain 'data' section.", 'cp-snapshot' );
+					$error_status['errorText']   = __( "Manifest ITEM does not contain 'data' section.", SNAPSHOT_I18N_DOMAIN );
 
 					return $error_status;
 				}
@@ -1720,7 +1720,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 					$CONFIG_CHANGED                                                = true;
 
 					$error_status['errorStatus']  = false;
-					$error_status['responseText'] = __( "Archive imported successfully.", 'cp-snapshot' );
+					$error_status['responseText'] = __( "Archive imported successfully.", SNAPSHOT_I18N_DOMAIN );
 
 				} else {
 					foreach ( $item['data'] as $data_item_key => $data_item ) {
@@ -1730,11 +1730,11 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 							$CONFIG_CHANGED                                                                          = true;
 
 							$error_status['errorStatus']  = false;
-							$error_status['responseText'] = __( "Archive imported successfully.", 'cp-snapshot' );
+							$error_status['responseText'] = __( "Archive imported successfully.", SNAPSHOT_I18N_DOMAIN );
 
 						} else {
 							$error_status['errorStatus']  = false;
-							$error_status['responseText'] = __( "already present. not importing.", 'cp-snapshot' );
+							$error_status['responseText'] = __( "already present. not importing.", SNAPSHOT_I18N_DOMAIN );
 						}
 					}
 				}
@@ -1744,7 +1744,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 				}
 			} else {
 				$error_status['errorStatus'] = true;
-				$error_status['errorText']   = __( "Manifest data not found in archive.", 'cp-snapshot' );
+				$error_status['errorText']   = __( "Manifest data not found in archive.", SNAPSHOT_I18N_DOMAIN );
 			}
 
 			return $error_status;

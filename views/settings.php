@@ -7,7 +7,7 @@ $custom_directory = $use_folder;
 ?>
 
 <section id="header">
-	<h1><?php esc_html_e( 'Settings', 'cp-snapshot' ); ?></h1>
+	<h1><?php esc_html_e( 'Settings', SNAPSHOT_I18N_DOMAIN ); ?></h1>
 </section>
 
 <div id="container" class="snapshot-three wps-page-settings">
@@ -16,7 +16,7 @@ $custom_directory = $use_folder;
 
 		<div class="wpmud-box-title">
 
-			<h3><?php _e('General', 'cp-snapshot');?> </h3>
+			<h3><?php _e('General', SNAPSHOT_I18N_DOMAIN);?> </h3>
 
 		</div>
 
@@ -34,7 +34,7 @@ $custom_directory = $use_folder;
 
 					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-						<label class="label-box"><?php _e('Local Directory', 'cp-snapshot'); ?></label>
+						<label class="label-box"><?php _e('Local Directory', SNAPSHOT_I18N_DOMAIN); ?></label>
 
 					</div>
 
@@ -42,7 +42,7 @@ $custom_directory = $use_folder;
 
 						<div class="wpmud-box-mask">
 
-							<label class="label-title"><?php _e('Choose where your snapshots will be stored whilst they are being uploaded to your third party integrations.', 'cp-snapshot'); ?></label>
+							<label class="label-title"><?php _e('Choose where your snapshots will be stored whilst they are being uploaded to your third party integrations.', SNAPSHOT_I18N_DOMAIN); ?></label>
 
 							<div id="wps-localdir-options" class="wps-input--group">
 
@@ -56,7 +56,7 @@ $custom_directory = $use_folder;
 
 									</div>
 
-									<label for="no_files"><?php _e('Use default directory', 'cp-snapshot');?></label>
+									<label for="no_files"><?php _e('Use default directory', SNAPSHOT_I18N_DOMAIN);?></label>
 
 								</div>
 
@@ -70,7 +70,7 @@ $custom_directory = $use_folder;
 
 									</div>
 
-									<label for="common_files"><?php _e('Use custom directory', 'cp-snapshot');?></label>
+									<label for="common_files"><?php _e('Use custom directory', SNAPSHOT_I18N_DOMAIN);?></label>
 
 								</div>
 
@@ -78,9 +78,9 @@ $custom_directory = $use_folder;
 
 							<div class="wpmud-box-gray hidden">
 
-								<input type="text" name="backupFolder" id="snapshot-settings-backupFolder" value="<?php echo $backup_folder; ?>" placeholder="<?php _e('Enter directory URL here', 'cp-snapshot');?>" />
+								<input type="text" name="backupFolder" id="snapshot-settings-backupFolder" value="<?php echo $backup_folder; ?>" placeholder="<?php _e('Enter directory URL here', SNAPSHOT_I18N_DOMAIN);?>" />
 
-								<p><small><?php printf(__('Your current snapshot directory lives at: <a href="#">%s</a>. If you choose a custom directory, Snapshot will automatically transfer any archives to the new directory for you.', 'cp-snapshot'),trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupBaseFolderFull' ) ));?></small></p>
+								<p><small><?php printf(__('Your current snapshot directory lives at: <a href="#">%s</a>. If you choose a custom directory, Snapshot will automatically transfer any archives to the new directory for you.', SNAPSHOT_I18N_DOMAIN),trailingslashit( PSOURCESnapshot::instance()->get_setting( 'backupBaseFolderFull' ) ));?></small></p>
 
 							</div>
 
@@ -94,7 +94,7 @@ $custom_directory = $use_folder;
 
 					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-						<label class="label-box"><?php _e('Global File Exclusions', 'cp-snapshot'); ?></label>
+						<label class="label-box"><?php _e('Global File Exclusions', SNAPSHOT_I18N_DOMAIN); ?></label>
 
 					</div>
 
@@ -102,11 +102,11 @@ $custom_directory = $use_folder;
 
 						<div class="wpmud-box-mask">
 
-							<label class="label-title"><?php _e('Define specific files or folders you want to exclude from any Snapshot or Full Backup.', 'cp-snapshot'); ?></label>
+							<label class="label-title"><?php _e('Define specific files or folders you want to exclude from any Snapshot or Full Backup.', SNAPSHOT_I18N_DOMAIN); ?></label>
 
-							<textarea name="filesIgnore" id="filesIgnore" placeholder="<?php _e('Enter file URLs to be excluded, one per line.', 'cp-snapshot');?>"><?php if ( ( isset( PSOURCESnapshot::instance()->config_data['config']['filesIgnore'] ) ) && ( is_array( PSOURCESnapshot::instance()->config_data['config']['filesIgnore'] ) ) && ( count( PSOURCESnapshot::instance()->config_data['config']['filesIgnore'] ) ) ) { echo implode( "\n", PSOURCESnapshot::instance()->config_data['config']['filesIgnore'] ); } ?></textarea>
+							<textarea name="filesIgnore" id="filesIgnore" placeholder="<?php _e('Enter file URLs to be excluded, one per line.', SNAPSHOT_I18N_DOMAIN);?>"><?php if ( ( isset( PSOURCESnapshot::instance()->config_data['config']['filesIgnore'] ) ) && ( is_array( PSOURCESnapshot::instance()->config_data['config']['filesIgnore'] ) ) && ( count( PSOURCESnapshot::instance()->config_data['config']['filesIgnore'] ) ) ) { echo implode( "\n", PSOURCESnapshot::instance()->config_data['config']['filesIgnore'] ); } ?></textarea>
 
-							<p><small><?php _e('The exclude feature uses pattern matching so you can easily select files to exclude from your backups. Example: to exclude the Twenty Ten theme, you can use twentyten, theme/twentyten or public/wp-content/theme/twentyten. <strong>The local folder is excluded from Snapshot backups by default.</strong>', 'cp-snapshot');?></small></p>
+							<p><small><?php _e('The exclude feature uses pattern matching so you can easily select files to exclude from your backups. Example: to exclude the Twenty Ten theme, you can use twentyten, theme/twentyten or public/wp-content/theme/twentyten. <strong>The local folder is excluded from Snapshot backups by default.</strong>', SNAPSHOT_I18N_DOMAIN);?></small></p>
 
 						</div>
 
@@ -116,19 +116,19 @@ $custom_directory = $use_folder;
 
 				<?php $error_reporting_errors = array(
 					E_ERROR   => array(
-						'label_log' => __( 'Errors', 'cp-snapshot' ),
-						'description' => __( 'Fatal run-time errors. These indicate errors that can not be recovered from, such as a memory allocation problem. Execution of the script is halted.', 'cp-snapshot' ),
-						'label_stop' => __( 'Stop the backup process if an error occurs', 'cp-snapshot' )
+						'label_log' => __( 'Errors', SNAPSHOT_I18N_DOMAIN ),
+						'description' => __( 'Fatal run-time errors. These indicate errors that can not be recovered from, such as a memory allocation problem. Execution of the script is halted.', SNAPSHOT_I18N_DOMAIN ),
+						'label_stop' => __( 'Stop the backup process if an error occurs', SNAPSHOT_I18N_DOMAIN )
 					),
 					E_WARNING => array(
-						'label_log' => __( 'Warnings', 'cp-snapshot' ),
-						'description' => __( 'Run-time warnings (non-fatal errors). Executeion of the script is not halted.', 'cp-snapshot' ),
-						'label_stop' => __( 'Stop the backup process if a warning occurs', 'cp-snapshot' )
+						'label_log' => __( 'Warnings', SNAPSHOT_I18N_DOMAIN ),
+						'description' => __( 'Run-time warnings (non-fatal errors). Executeion of the script is not halted.', SNAPSHOT_I18N_DOMAIN ),
+						'label_stop' => __( 'Stop the backup process if a warning occurs', SNAPSHOT_I18N_DOMAIN )
 					),
 					E_NOTICE  => array(
-						'label_log' => __( 'Notices', 'cp-snapshot' ),
-						'description' => __( 'Run-time notices. Indicate that the script encountered something that could indicate an error, but could also happen in the normal course of running a script.', 'cp-snapshot' ),
-						'label_stop' => __( 'Stop the backup process if a notice occurs', 'cp-snapshot' )
+						'label_log' => __( 'Notices', SNAPSHOT_I18N_DOMAIN ),
+						'description' => __( 'Run-time notices. Indicate that the script encountered something that could indicate an error, but could also happen in the normal course of running a script.', SNAPSHOT_I18N_DOMAIN ),
+						'label_stop' => __( 'Stop the backup process if a notice occurs', SNAPSHOT_I18N_DOMAIN )
 					),
 				); ?>
 
@@ -136,7 +136,7 @@ $custom_directory = $use_folder;
 
 					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-						<label class="label-box"><?php _e('Error Reporting', 'cp-snapshot'); ?></label>
+						<label class="label-box"><?php _e('Error Reporting', SNAPSHOT_I18N_DOMAIN); ?></label>
 
 					</div>
 
@@ -144,7 +144,7 @@ $custom_directory = $use_folder;
 
 						<div class="wpmud-box-mask">
 
-							<label class="label-title"><?php _e('Choose how you want Snapshot to handle error conditions during the backup and restore process.', 'cp-snapshot'); ?></label>
+							<label class="label-title"><?php _e('Choose how you want Snapshot to handle error conditions during the backup and restore process.', SNAPSHOT_I18N_DOMAIN); ?></label>
 
 							<?php foreach ( $error_reporting_errors as $error_key => $error_label ){
 
@@ -206,7 +206,7 @@ $custom_directory = $use_folder;
 
 						<div class="form-button-container">
 
-							<input class="button button-blue" type="submit" value="<?php _e('Save Changes', 'cp-snapshot');?>">
+							<input class="button button-blue" type="submit" value="<?php _e('Save Changes', SNAPSHOT_I18N_DOMAIN);?>">
 
 						</div>
 

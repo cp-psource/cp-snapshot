@@ -78,7 +78,7 @@ class Snapshot_Helper_Backup {
 	public function create ($idx) {
 		$status = false; // Start with assumed failure
 
-		if (!preg_match('/^[-_a-z0-9]+$/', $idx)) return $this->_set_error(sprintf(__('Invalid destination: %s', 'cp-snapshot'), $idx));
+		if (!preg_match('/^[-_a-z0-9]+$/', $idx)) return $this->_set_error(sprintf(__('Invalid destination: %s', SNAPSHOT_I18N_DOMAIN), $idx));
 
 		$path = $this->resolve_backup($idx);
 		if (empty($path)) return $status;
@@ -359,7 +359,7 @@ class Snapshot_Helper_Backup {
 	 */
 	public function get_path ($idx) {
 		$destination = preg_replace('/[^-_a-z0-9]/', '', Snapshot_Helper_String::conceal(basename($idx)));
-		if (empty($destination)) return $this->_set_error(sprintf(__('Invalid destination: %s', 'cp-snapshot'), $idx));
+		if (empty($destination)) return $this->_set_error(sprintf(__('Invalid destination: %s', SNAPSHOT_I18N_DOMAIN), $idx));
 
 		return trailingslashit(PSOURCESnapshot::instance()->get_setting('backupBackupFolderFull')) . $destination;
 	}
@@ -400,8 +400,8 @@ class Snapshot_Helper_Backup {
 
 		wp_mkdir_p($path);
 
-		if (!file_exists($path)) return $this->_set_error(sprintf(__('Backup path creation failed: %s', 'cp-snapshot'), $path));
-		if (!is_writable($path)) return $this->_set_error(sprintf(__('Backup path not writable: %s', 'cp-snapshot'), $path));
+		if (!file_exists($path)) return $this->_set_error(sprintf(__('Backup path creation failed: %s', SNAPSHOT_I18N_DOMAIN), $path));
+		if (!is_writable($path)) return $this->_set_error(sprintf(__('Backup path not writable: %s', SNAPSHOT_I18N_DOMAIN), $path));
 
 		return $path;
 	}

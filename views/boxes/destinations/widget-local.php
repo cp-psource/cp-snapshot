@@ -16,7 +16,7 @@ foreach ( PSOURCESnapshot::instance()->config_data['destinations'] as $key => $i
 
 		<i class="wps-typecon local"></i>
 
-		<h3><?php _e( 'Local', 'cp-snapshot' ); ?></h3>
+		<h3><?php _e( 'Local', SNAPSHOT_I18N_DOMAIN ); ?></h3>
 
 	</div>
 

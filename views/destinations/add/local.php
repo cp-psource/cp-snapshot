@@ -4,7 +4,7 @@
 
         <div class="form-col-left">
 
-            <label><?php _e( "Type", 'cp-snapshot' ); ?></label>
+            <label><?php _e( "Type", SNAPSHOT_I18N_DOMAIN ); ?></label>
 
         </div>
 
@@ -12,7 +12,7 @@
 
             <i class="wps-typecon local"></i>
 
-            <label><?php _e( 'Local', 'cp-snapshot' ); ?></label>
+            <label><?php _e( 'Local', SNAPSHOT_I18N_DOMAIN ); ?></label>
 
         </div>
 
@@ -22,7 +22,7 @@
 
         <div class="form-col-left">
 
-            <label><?php _e( "Name", 'cp-snapshot' ); ?> <span class="required">*</span></label>
+            <label><?php _e( "Name", SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
 
         </div>
 
@@ -38,7 +38,7 @@
 
         <div class="form-col-left">
 
-            <label><?php _e( "Directory", 'cp-snapshot' ); ?> <span class="required">*</span></label>
+            <label><?php _e( "Directory", SNAPSHOT_I18N_DOMAIN ); ?> <span class="required">*</span></label>
 
         </div>
 

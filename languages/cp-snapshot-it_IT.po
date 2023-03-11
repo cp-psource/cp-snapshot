@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: CP BackUp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-10 10:22+0000\n"
-"PO-Revision-Date: 2023-03-10 11:12+0000\n"
+"PO-Revision-Date: 2023-03-11 17:48+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -19,6 +19,19 @@ msgstr ""
 #, fuzzy
 msgid " Once the form is submitted this cannot be changed."
 msgstr " Una volta inviato il modulo, questo non può essere modificato."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2334
+#, fuzzy
+msgid " The value displayed can be adjusted by Snapshot PHP scripts."
+msgstr ""
+" Il valore visualizzato può essere regolato dagli script PHP dell'istantanea."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2336
+#, fuzzy
+msgid " The value displayed cannot be adjusted by Snapshot PHP scripts."
+msgstr ""
+" Il valore visualizzato non può essere regolato dagli script PHP "
+"dell'istantanea."
 
 #: views/boxes/dashboard/widget-status.php:34
 #, fuzzy, php-format
@@ -40,7 +53,7 @@ msgstr ""
 "%s, avete attivato i backup gestiti ma non avete ancora creato il primo "
 "backup. Fatelo ora!"
 
-#: views/snapshots/restore.php:461
+#: lib/Snapshot/View/Metabox/Admin.php:2906 views/snapshots/restore.php:461
 #, fuzzy
 msgid "(excluding .htaccess & wp-config.php files)"
 msgstr "(esclusi i file .htaccess e wp-config.php)"
@@ -50,7 +63,7 @@ msgstr "(esclusi i file .htaccess e wp-config.php)"
 msgid "-"
 msgstr "-"
 
-#: views/snapshots/restore.php:678
+#: lib/Snapshot/View/Metabox/Admin.php:2799 views/snapshots/restore.php:678
 #, fuzzy
 msgid ""
 "- If a match is found but the user ID is different. The found user ID will "
@@ -59,7 +72,7 @@ msgstr ""
 "- Se viene trovata una corrispondenza ma l'ID utente è diverso. Verrà "
 "utilizzato l'ID utente trovato."
 
-#: views/snapshots/restore.php:677
+#: lib/Snapshot/View/Metabox/Admin.php:2798 views/snapshots/restore.php:677
 #, fuzzy
 msgid ""
 "- If a match is not found a new user will be created. This means a new user "
@@ -68,10 +81,17 @@ msgstr ""
 "- Se non viene trovata una corrispondenza, verrà creato un nuovo utente. Ciò "
 "significa che verrà assegnato un nuovo ID utente."
 
-#: views/snapshots/restore.php:532 views/snapshots/snapshot.php:475
+#: lib/Snapshot/View/Metabox/Admin.php:2985 views/snapshots/restore.php:532
+#: views/snapshots/snapshot.php:475
 #, fuzzy
 msgid ".htaccess"
 msgstr ".htaccess"
+
+#: lib/Snapshot/View/Metabox/Admin.php:647
+#, fuzzy
+msgid ".htaccess - Your current root .htaccess / web.config file"
+msgstr ""
+".htaccess - Il file .htaccess / web.config correntemente utilizzato come root"
 
 #: views/common/requirements-test.php:50
 #, fuzzy, php-format
@@ -155,6 +175,33 @@ msgstr ""
 msgid "<span class=\"snapshot-error\">(I)</span> indicates an imported archive"
 msgstr "<span class=\"snapshot-error\">(I)</span> indica un archivio importato"
 
+#: cp-snapshot.php:1315
+#, fuzzy
+msgid ""
+"<strong>All Archives</strong> - This section lists the various archive files "
+"creates from this snapshot configuration. From the listing select the "
+"archive to be used for the restore."
+msgstr ""
+"<strong>Tutti gli archivi</strong> - Questa sezione elenca i vari file di "
+"archivio creati da questa configurazione di snapshot. Dall'elenco "
+"selezionare l'archivio da utilizzare per il ripristino."
+
+#: cp-snapshot.php:1309
+#, fuzzy
+msgid ""
+"<strong>All Archives</strong> - This section lists the various archive files "
+"creates from this snapshot configuration. Here you can click the archive "
+"filename to download. On the same row you will also see a link to view the "
+"log entries related to the creation of this archive instance. At the bottom "
+"is a link to download the full snapshot log file."
+msgstr ""
+"<strong>Tutti gli archivi</strong> - Questa sezione elenca i vari file di "
+"archivio creati da questa configurazione di snapshot. È possibile fare clic "
+"sul nome del file di archivio per scaricarlo. Sulla stessa riga è presente "
+"anche un link per visualizzare le voci di registro relative alla creazione "
+"di questa istanza di archivio. In fondo è presente un link per scaricare il "
+"file di registro completo dell'istantanea."
+
 #: views/import.php:214
 #, fuzzy
 msgid ""
@@ -164,7 +211,28 @@ msgstr ""
 "<strong>Amazon S3:</strong> Quando si scarica un file da S3 è necessario "
 "assicurarsi che il file sia pubblico."
 
-#: views/snapshots/snapshot.php:527
+#: lib/Snapshot/View/Metabox/Admin.php:3044
+#, fuzzy
+msgid ""
+"<strong>Amazon S3:</strong> When downloading a file from S3 you need to "
+"ensure the file is public. "
+msgstr ""
+"<strong>Amazon S3:</strong> Quando si scarica un file da S3 è necessario "
+"assicurarsi che il file sia pubblico."
+
+#: cp-snapshot.php:1328
+#, fuzzy
+msgid ""
+"<strong>Archive Import</strong> - Do you have some snapshot zip file from an "
+"older version that somehow became disconnected with the settings. You can "
+"now import the zip file and snapshot will add it to the listing."
+msgstr ""
+"<strong>Importazione dell'archivio</strong> - Avete un file zip di "
+"un'istantanea di una versione precedente che in qualche modo si è scollegato "
+"dalle impostazioni. Ora è possibile importare il file zip e snapshot lo "
+"aggiungerà all'elenco."
+
+#: lib/Snapshot/View/Metabox/Admin.php:691 views/snapshots/snapshot.php:527
 #, fuzzy
 msgid ""
 "<strong>Archive</strong> - (Default) Selecting archive will produce a zip "
@@ -174,6 +242,72 @@ msgstr ""
 "<strong>Archivio</strong> - (Predefinito) Selezionando l'archivio si "
 "produrrà un archivio zip. Questo è il metodo standard per il backup del sito."
 " Verrà creato un singolo archivio zip per i file e le tabelle del database."
+
+#: cp-snapshot.php:1322
+#, fuzzy
+msgid ""
+"<strong>Archive</strong> - The Archives column shows the last snapshot "
+"archive created."
+msgstr ""
+"<strong>Archivio</strong> - La colonna Archivi mostra l'ultimo archivio "
+"snapshot creato."
+
+#: lib/Snapshot/Model/Destination/google-drive/index.php:575
+#: lib/Snapshot/Model/Destination/google-drive/index.php:632
+#: lib/Snapshot/Model/Destination/google-drive/index.php:709
+#, fuzzy
+msgid "<strong>COMPLETE</strong>"
+msgstr "<strong>COMPLETO</strong>"
+
+#: cp-snapshot.php:1326
+#, fuzzy
+msgid ""
+"<strong>Database Segment Size</strong> - The Segment Size can be defined as "
+"the number of rows to backup per table per request. The Segment Size "
+"controls the backup processing when you create a new snapshot. During the "
+"backup processing Snapshot will make a request to the server to backup each "
+"table. You can see this in the progress meters when you create a new "
+"snapshot. In most situations this backup process will attempt to backup the "
+"table in one step. But on some server configurations the timeout is set very "
+"low or the table size is very large and prevents the backup process from "
+"finishing. To control this the Snapshot backup process will breakup the "
+"requests into smaller 'chunks of work' requested to the server. "
+msgstr ""
+"<strong>Dimensione segmento database</strong> - La dimensione del segmento "
+"può essere definita come il numero di righe di cui eseguire il backup per "
+"tabella e per richiesta. La dimensione del segmento controlla l'elaborazione "
+"del backup quando si crea una nuova istantanea. Durante l'elaborazione del "
+"backup, l'istantanea farà una richiesta al server per eseguire il backup di "
+"ogni tabella. Questo è visibile nei contatori di avanzamento quando si crea "
+"una nuova istantanea. Nella maggior parte delle situazioni il processo di "
+"backup tenterà di eseguire il backup della tabella in un unico passaggio. "
+"Tuttavia, in alcune configurazioni di server il timeout è impostato su un "
+"valore molto basso o le dimensioni della tabella sono molto grandi e "
+"impediscono al processo di backup di terminare. Per controllare questo "
+"problema, il processo di backup delle istantanee suddivide le richieste in "
+"\"pezzi di lavoro\" più piccoli richiesti al server."
+
+#: cp-snapshot.php:1317
+#, fuzzy
+msgid ""
+"<strong>Delete</strong> - On each row you will see a checkbox. To delete one "
+"or more existing Snapshots click checkbox then click the \"Delete "
+"Snapshots\" button below the listing."
+msgstr ""
+"<strong>Elimina</strong> - Su ogni riga è presente una casella di controllo. "
+"Per eliminare una o più istantanee esistenti, fare clic sulla casella di "
+"controllo e poi sul pulsante \"Elimina istantanee\" sotto l'elenco."
+
+#: cp-snapshot.php:1321
+#, fuzzy
+msgid ""
+"<strong>Destination</strong> - The Destinations column shows where the "
+"archive is stored. This can be local, Amazon S3, Dropbox, or any custom "
+"destination."
+msgstr ""
+"<strong>Destinazione</strong> - La colonna Destinazioni mostra dove viene "
+"memorizzato l'archivio. Può essere locale, Amazon S3, Dropbox o qualsiasi "
+"destinazione personalizzata."
 
 #: views/import.php:213
 #, fuzzy
@@ -188,6 +322,71 @@ msgstr ""
 "necessario copiare il file in una cartella pubblica all'interno del proprio "
 "account Dropbox prima di prendere il link pubblico."
 
+#: lib/Snapshot/View/Metabox/Admin.php:3043
+#, fuzzy
+msgid ""
+"<strong>Dropbox:</strong> If you are attempting to download a Dropbox "
+"Snapshot archive written to the App/PSOURCE Snapshot you first need to copy "
+"the file to a public folder within your Dropbox account before grabbing the "
+"public link."
+msgstr ""
+"<strong>Dropbox:</strong> Se si sta cercando di scaricare un archivio di "
+"istantanee Dropbox scritto nell'istantanea App/PSOURCE, è necessario copiare "
+"il file in una cartella pubblica all'interno del proprio account Dropbox "
+"prima di prendere il link pubblico."
+
+#: cp-snapshot.php:1318
+#, fuzzy
+msgid ""
+"<strong>Edit/Restore/Delete</strong> - Hover over the Name to reveal options "
+"for Edit, Restore, Delete. The Edit option will show the Snapshot detail "
+"form where you can change many of the configuration options. The Restore "
+"option will show a form where you can select from the various restore "
+"options. The Delete option will delete this snapshot only"
+msgstr ""
+"<strong>Modifica/Ripristino/Elimina</strong> - Passare il mouse sul nome per "
+"visualizzare le opzioni di Modifica, Ripristino, Eliminazione. L'opzione "
+"Modifica mostra il modulo dei dettagli dell'istantanea, dove è possibile "
+"modificare molte delle opzioni di configurazione. L'opzione Ripristina "
+"mostra un modulo in cui è possibile selezionare le varie opzioni di "
+"ripristino. L'opzione Elimina elimina solo l'istantanea"
+
+#: cp-snapshot.php:1325
+#, fuzzy
+msgid ""
+"<strong>Folder Location</strong> - By default the snapshot files are stored "
+"under your site's /wp-content/uploads/ directory in a new folder named "
+"'snapshots'. If for some reason you already use a folder of this name you "
+"can set a different folder name to be used. If you change the folder name "
+"after some snapshots have been generated these files will be moved to the "
+"new folder. Note you cannot move the folder outside the /wp-content/uploads/ "
+"directory."
+msgstr ""
+"<strong>Posizione della cartella</strong> - Per impostazione predefinita, i "
+"file delle istantanee sono memorizzati nella directory /wp-content/uploads/ "
+"del vostro sito, in una nuova cartella denominata \"snapshots\". Se per "
+"qualche motivo si utilizza già una cartella con questo nome, è possibile "
+"impostare un nome diverso per la cartella. Se si cambia il nome della "
+"cartella dopo che sono state generate alcune istantanee, i file verranno "
+"spostati nella nuova cartella. Si noti che non è possibile spostare la "
+"cartella al di fuori della directory /wp-content/uploads/."
+
+#: cp-snapshot.php:1320
+#, fuzzy
+msgid ""
+"<strong>Interval</strong> - The Interval column shows how often the snapshot "
+"will be generated. When you created the snapshot instance you had the option "
+"to create a manual snapshot or schedule the snapshot to be created on "
+"certain interval (once an hour, once a day, etc.). If the interval is "
+"scheduled this column will show the estimated time for the next backup."
+msgstr ""
+"<strong>Intervallo</strong> - La colonna Intervallo mostra la frequenza con "
+"cui verrà generata l'istantanea. Quando si è creata l'istanza di snapshot, "
+"si può scegliere di creare una snapshot manuale o di pianificare la "
+"creazione di snapshot a determinati intervalli (una volta all'ora, una volta "
+"al giorno, ecc.). Se l'intervallo è pianificato, questa colonna mostra l'ora "
+"stimata per il backup successivo."
+
 #: views/boxes/modals/popup-welcome.php:61
 #, fuzzy
 msgid ""
@@ -196,6 +395,16 @@ msgid ""
 msgstr ""
 "<strong>Iniziamo con l'aggiunta di una nuova destinazione</strong>; dove si "
 "desidera memorizzare la prima istantanea?"
+
+#: cp-snapshot.php:1327
+#, fuzzy
+msgid ""
+"<strong>Memory Limit</strong> - This section can control the amount of "
+"memory used/needed by Snapshot when created/restoring an archive."
+msgstr ""
+"<strong>Limite di memoria</strong> - Questa sezione può controllare la "
+"quantità di memoria utilizzata/richiesta da Snapshot durante la creazione/il "
+"ripristino di un archivio."
 
 #: views/snapshots/snapshot.php:543
 #, fuzzy
@@ -211,7 +420,54 @@ msgstr ""
 "archivio zippato. <strong>Al momento non esiste un'opzione di ripristino per "
 "Mirror/Sync</strong>"
 
-#: views/import.php:212
+#: lib/Snapshot/View/Metabox/Admin.php:702
+#, fuzzy
+msgid ""
+"<strong>Mirror/Sync</strong> - <strong>Dropbox ONLY</strong> Selecting "
+"mirroring if you want to replicate the file structure of this site to a "
+"Dropbox destination. You can include Database tables. If selected they will "
+"still be send as a zip archive to the destination root folder. <strong>There "
+"is currently no restore with this option</strong>"
+msgstr ""
+"<strong>Mirror/Sync</strong> - <strong>Solo Dropbox</strong> Selezionare il "
+"mirroring se si desidera replicare la struttura dei file di questo sito in "
+"una destinazione Dropbox. È possibile includere le tabelle del database. Se "
+"si seleziona questa opzione, le tabelle saranno comunque inviate come "
+"archivio zip alla cartella principale di destinazione. <strong>Al momento "
+"non è previsto il ripristino con questa opzione</strong>"
+
+#: cp-snapshot.php:1297 cp-snapshot.php:1304
+#, fuzzy
+msgid ""
+"<strong>Name</strong> - Provide a custom name for this snapshot. Default "
+"name is \"snapshot\"."
+msgstr ""
+"<strong>Nome</strong> - Fornisce un nome personalizzato per questa "
+"istantanea. Il nome predefinito è \"snapshot\"."
+
+#: cp-snapshot.php:1298 cp-snapshot.php:1305
+#, fuzzy
+msgid ""
+"<strong>Notes</strong> - Add some optional notes about the snapshot. Maybe "
+"some details on what plugins or theme were active. Or some note before you "
+"activate some new plugin."
+msgstr ""
+"<strong>Note</strong> - Aggiungere alcune note facoltative sull'istantanea. "
+"Magari alcuni dettagli su quali plugin o temi erano attivi. Oppure qualche "
+"nota prima di attivare un nuovo plugin."
+
+#: cp-snapshot.php:1319
+#, fuzzy
+msgid ""
+"<strong>Notes</strong> - The Notes columns shows the description you "
+"assigned to the Snapshot. Also in this column are the tabls included in this "
+"snapshot."
+msgstr ""
+"<strong>Note</strong> - La colonna Note mostra la descrizione assegnata "
+"all'istantanea. In questa colonna sono presenti anche le schede incluse "
+"nell'istantanea."
+
+#: lib/Snapshot/View/Metabox/Admin.php:3041 views/import.php:212
 #, fuzzy
 msgid ""
 "<strong>Remote FTP:</strong> When downloading from a remote FTP server you "
@@ -221,6 +477,113 @@ msgstr ""
 "<strong>FTP remoto:</strong> Quando si scarica da un server FTP remoto, è "
 "necessario assicurarsi che il file sia spostato in una posizione in cui sarà "
 "accessibile tramite un semplice URL http:// o https://."
+
+#: cp-snapshot.php:1327
+#, fuzzy
+msgid ""
+"<strong>Server Info</strong> - This section provides useful details about "
+"your site configuration and should be used when contacting support."
+msgstr ""
+"<strong>Informazioni sul server</strong> - Questa sezione fornisce dettagli "
+"utili sulla configurazione del sito e deve essere utilizzata per contattare "
+"l'assistenza."
+
+#: cp-snapshot.php:1314
+#, fuzzy
+msgid ""
+"<strong>Set a theme to active</strong> - Similar to the Plugins option you "
+"can select to have a specific theme set to active as part of the restore "
+"process. Again, this is helpful if you installed a new theme that broke your "
+"site and you want to return your site back to a stable state."
+msgstr ""
+"<strong>Imposta un tema come attivo</strong> - Analogamente all'opzione "
+"Plugin, è possibile selezionare l'impostazione di un tema specifico come "
+"parte del processo di ripristino. Anche in questo caso, ciò è utile se è "
+"stato installato un nuovo tema che ha danneggiato il sito e si desidera "
+"riportarlo a uno stato stabile."
+
+#: cp-snapshot.php:1307
+#, fuzzy
+msgid ""
+"<strong>Tables in Archive</strong> - This sections lists the tables included "
+"in the snapshot archives. The table selection is set when you create a new "
+"snapshot configuration."
+msgstr ""
+"<strong>Tabelle nell'archivio</strong> - Questa sezione elenca le tabelle "
+"incluse negli archivi delle istantanee. La selezione delle tabelle viene "
+"impostata quando si crea una nuova configurazione di snapshot."
+
+#: cp-snapshot.php:1313
+#, fuzzy
+msgid ""
+"<strong>Turn off all plugins</strong> - As part of the restore process you "
+"can automatically deactivate all plugins. This is helpful if you had trouble "
+"with a plugin and are trying to return your site back to some stable state."
+msgstr ""
+"<strong>Disattivare tutti i plugin</strong> - Come parte del processo di "
+"ripristino, è possibile disattivare automaticamente tutti i plugin. Questo è "
+"utile se avete avuto problemi con un plugin e state cercando di riportare il "
+"vostro sito a uno stato stabile."
+
+#: cp-snapshot.php:1299
+#, fuzzy
+msgid ""
+"<strong>What to Backup</strong> - This section lists all tables for your "
+"site. Select the table you want to include in the backup. The tables are "
+"grouped by ClassicPress Core and Other tables. These Other tables could have "
+"been created and used by some of the plugins you installed."
+msgstr ""
+"<strong>Cosa fare per il backup</strong> - Questa sezione elenca tutte le "
+"tabelle del sito. Selezionare la tabella che si desidera includere nel "
+"backup. Le tabelle sono raggruppate in ClassicPress Core e Altre tabelle. "
+"Queste altre tabelle potrebbero essere state create e utilizzate da alcuni "
+"dei plugin installati."
+
+#: cp-snapshot.php:1306
+#, fuzzy
+msgid ""
+"<strong>When to Archive</strong> - This section shows a dropdown where you "
+"can select how often to create a backup of the selected tables. The default "
+"is \"Manual\". If selected will create a one time on demand backup. You can "
+"also select to schedule the backup by selecting one of the many options "
+"available."
+msgstr ""
+"<strong>Quando archiviare</strong> - Questa sezione mostra un menu a tendina "
+"in cui è possibile selezionare la frequenza con cui creare un backup delle "
+"tabelle selezionate. L'impostazione predefinita è \"Manuale\". Se "
+"selezionato, verrà creato un backup una tantum su richiesta. È anche "
+"possibile pianificare il backup selezionando una delle numerose opzioni "
+"disponibili."
+
+#: cp-snapshot.php:1300
+#, fuzzy
+msgid ""
+"<strong>When to Archive</strong> - This section shows a dropdown where you "
+"can select how often to create a backup of the selected tables. The default "
+"is \"Manual\". If selected will create a one time on demand backup. You can "
+"also select to schedule the backup by selecting one of the many options "
+"available. If the backup is scheduled you will also be able to set the "
+"number of archives to keep."
+msgstr ""
+"<strong>Quando archiviare</strong> - Questa sezione mostra un menu a tendina "
+"in cui è possibile selezionare la frequenza con cui creare un backup delle "
+"tabelle selezionate. L'impostazione predefinita è \"Manuale\". Se "
+"selezionato, verrà creato un backup una tantum su richiesta. Si può anche "
+"scegliere di pianificare il backup selezionando una delle numerose opzioni "
+"disponibili. Se il backup è pianificato, si potrà anche impostare il numero "
+"di archivi da conservare."
+
+#: cp-snapshot.php:1301 cp-snapshot.php:1308
+#, fuzzy
+msgid ""
+"<strong>Where to save the Archive</strong> - The only available option at "
+"this time is local. This means the files will be stored on the local server. "
+"Future options will be remote systems like Dropbox, Amazon S3, FTP, etc."
+msgstr ""
+"<strong>Dove salvare l'archivio</strong> - L'unica opzione disponibile al "
+"momento è quella locale. Ciò significa che i file saranno archiviati sul "
+"server locale. Le opzioni future saranno sistemi remoti come Dropbox, Amazon "
+"S3, FTP, ecc."
 
 #: lib/Snapshot/Model/Destination/google-drive/index.php:426
 #, fuzzy
@@ -246,6 +609,11 @@ msgstr "È richiesta una directory"
 #, fuzzy
 msgid "A name for the destination is required"
 msgstr "È richiesto un nome per la destinazione"
+
+#: cp-snapshot.php:653
+#, fuzzy
+msgid "Abort"
+msgstr "Interruzione"
 
 #: lib/Snapshot/View/Table/Items.php:287 lib/Snapshot/View/Table/Items.php:338
 #, fuzzy
@@ -277,6 +645,11 @@ msgstr "Attivare i backup gestiti"
 msgid "Active Destinations"
 msgstr "Destinazioni attive"
 
+#: cp-snapshot.php:1378
+#, fuzzy
+msgid "Activity Log"
+msgstr "Registro delle attività"
+
 #: views/snapshots/snapshot.php:561
 #, fuzzy
 msgid "Add any custom URLs you want to not include in this snapshot."
@@ -296,8 +669,13 @@ msgstr ""
 msgid "Add Destination"
 msgstr "Aggiungi destinazione"
 
-#: views/boxes/dashboard/widget-destinations.php:28
+#: lib/Snapshot/View/Metabox/Admin.php:1088
+#, fuzzy
+msgid "Add more Destinations"
+msgstr "Aggiungi altre destinazioni"
+
 #: lib/Snapshot/View/Destination/Listing.php:61
+#: views/boxes/dashboard/widget-destinations.php:28
 #, fuzzy
 msgid "Add New"
 msgstr "Aggiungi nuovo"
@@ -360,10 +738,24 @@ msgstr "Tutte le destinazioni"
 msgid "All Files"
 msgstr "Tutti i file"
 
+#: cp-snapshot.php:1317
+#, fuzzy
+msgid ""
+"All of your snapshots are listed here. Within the listing there are a number "
+"of options you can take."
+msgstr ""
+"Tutte le istantanee sono elencate qui. All'interno dell'elenco sono "
+"disponibili diverse opzioni."
+
 #: views/snapshots/snapshot.php:406
 #, fuzzy
 msgid "All Plugins"
 msgstr "Tutti i plugin"
+
+#: cp-snapshot.php:1369
+#, fuzzy
+msgid "All Snapshots"
+msgstr "Tutte le istantanee"
 
 #: views/snapshots/snapshot.php:390
 #, fuzzy
@@ -380,8 +772,8 @@ msgstr "già presente. non importare."
 msgid "Also run a backup now"
 msgstr "Eseguire anche un backup ora"
 
-#: views/destinations/add/aws.php:111
 #: lib/Snapshot/Model/Destination/aws/index.php:707
+#: views/destinations/add/aws.php:111
 #, fuzzy
 msgid "Alternate Region host"
 msgstr "Ospite alternativo della regione"
@@ -396,9 +788,9 @@ msgstr "sono"
 msgid "Amazon AWS"
 msgstr "Amazon AWS"
 
+#: lib/Snapshot/Model/Destination/aws/index.php:52
 #: views/boxes/destinations/widget-amazon.php:19
 #: views/boxes/modals/popup-welcome.php:89 views/destinations/add/aws.php:13
-#: lib/Snapshot/Model/Destination/aws/index.php:52
 #, fuzzy
 msgid "Amazon S3"
 msgstr "Amazon S3"
@@ -423,9 +815,9 @@ msgstr "Si è verificato un errore nell'autenticazione con Google:"
 msgid "An error occurred during the most recent upload attempt:"
 msgstr "Si è verificato un errore durante l'ultimo tentativo di caricamento:"
 
+#: lib/Snapshot/Model/Destination/dropbox/index.php:193
 #: views/destinations/add/dropbox.php:92 views/destinations/add/dropbox.php:96
 #: views/destinations/add/dropbox.php:100
-#: lib/Snapshot/Model/Destination/dropbox/index.php:193
 #, fuzzy
 msgid "An error occurred when attempting to connect to Dropbox: "
 msgstr ""
@@ -440,11 +832,33 @@ msgstr ""
 "Si è verificato un errore sconosciuto durante l'ultimo tentativo di "
 "caricamento. Verranno effettuati ulteriori tentativi di caricamento."
 
-#: views/snapshots/restore.php:358 lib/Snapshot/View/Table/Archives.php:17
+#: cp-snapshot.php:657 cp-snapshot.php:675
+#, fuzzy
+msgid ""
+"An unknown response returned from Snapshot backup attempt. Aborting. Double "
+"check Snapshot settings."
+msgstr ""
+"Risposta sconosciuta restituita dal tentativo di backup dell'istantanea. "
+"Interruzione. Ricontrollare le impostazioni dell'istantanea."
+
+#: lib/Snapshot/Model/Full/Remote/Api.php:113
+#, fuzzy, php-format
+msgctxt "API error, then connection check message"
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: views/managed-backups/partials/filter.php:11
+#: views/snapshots/partials/filter.php:11
+#, fuzzy
+msgid "Apply"
+msgstr "Applicare"
+
+#: lib/Snapshot/View/Table/Archives.php:17
 #: lib/Snapshot/View/Table/Archives.php:18
 #: lib/Snapshot/View/Table/FullBackups.php:12
 #: lib/Snapshot/View/Table/FullBackups.php:13
 #: lib/Snapshot/View/Table/Items.php:18 lib/Snapshot/View/Table/Items.php:19
+#: views/snapshots/restore.php:358
 #, fuzzy
 msgid "Archive"
 msgstr "Archivio"
@@ -496,8 +910,8 @@ msgstr "Regione Asia Pacifico (Sydney)"
 msgid "Asia Pacific (Tokyo) Region"
 msgstr "Regione Asia-Pacifico (Tokyo)"
 
-#: views/snapshots/snapshot.php:895 views/snapshots/snapshot.php:930
-#: views/snapshots/snapshot.php:962
+#: views/managed_backups.php:87 views/snapshots/snapshot.php:895
+#: views/snapshots/snapshot.php:930 views/snapshots/snapshot.php:962
 #, fuzzy
 msgid "at"
 msgstr "a"
@@ -508,10 +922,15 @@ msgstr "a"
 msgid "at %s"
 msgstr "a %s"
 
-#: views/import.php:122 lib/Snapshot/View/Settings.php:503
+#: lib/Snapshot/View/Settings.php:503 views/import.php:122
 #, fuzzy
 msgid "Attempting to download remote file"
 msgstr "Tentativo di scaricare un file remoto"
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:130
+#, fuzzy
+msgid "Auf neuere Version prüfen"
+msgstr "La nuova versione è da preferire"
 
 #: views/destinations/add/index.php:195
 #, fuzzy
@@ -524,9 +943,9 @@ msgstr "Autenticare"
 msgid "Authenticated"
 msgstr "Autenticato"
 
-#: views/destinations/add/aws.php:200
 #: lib/Snapshot/Model/Destination/aws/index.php:127
 #: lib/Snapshot/Model/Destination/aws/index.php:781
+#: views/destinations/add/aws.php:200
 #, fuzzy
 msgid "Authenticated Read"
 msgstr "Lettura autenticata"
@@ -542,8 +961,8 @@ msgstr "Codice di autorizzazione"
 msgid "Authorization complete."
 msgstr "Autorizzazione completata."
 
-#: views/destinations/add/google-drive.php:243
 #: lib/Snapshot/Model/Destination/google-drive/index.php:736
+#: views/destinations/add/google-drive.php:243
 #, fuzzy
 msgid "Authorize"
 msgstr "Autorizzare"
@@ -572,9 +991,9 @@ msgstr ""
 "Oh, accidenti, qualcosa è andato storto :( Invece della bella risposta che "
 "ci aspettavamo, abbiamo ricevuto questo:"
 
-#: views/destinations/add/aws.php:36
 #: lib/Snapshot/Model/Destination/aws/index.php:530
 #: lib/Snapshot/Model/Destination/aws/index.php:635
+#: views/destinations/add/aws.php:36
 #, fuzzy
 msgid "AWS Access Key ID"
 msgstr "ID chiave di accesso AWS"
@@ -584,14 +1003,14 @@ msgstr "ID chiave di accesso AWS"
 msgid "AWS Key is required"
 msgstr "È richiesta la chiave AWS"
 
-#: views/destinations/add/aws.php:87
 #: lib/Snapshot/Model/Destination/aws/index.php:685
+#: views/destinations/add/aws.php:87
 #, fuzzy
 msgid "AWS Region"
 msgstr "Regione AWS"
 
-#: views/destinations/add/aws.php:53
 #: lib/Snapshot/Model/Destination/aws/index.php:647
+#: views/destinations/add/aws.php:53
 #, fuzzy
 msgid "AWS Secret Access Key"
 msgstr "Chiave di accesso segreta AWS"
@@ -601,13 +1020,13 @@ msgstr "Chiave di accesso segreta AWS"
 msgid "AWS Secret Key is required"
 msgstr "È necessaria la chiave segreta AWS"
 
-#: views/managed-backups/new-backup.php:46 views/managed-backups/restore.php:29
-#: views/snapshots/item.php:33 views/snapshots/restore.php:52
-#: views/snapshots/snapshot.php:56 views/destinations/add/index.php:62
+#: views/destinations/add/index.php:62 views/managed-backups/new-backup.php:46
 #: views/managed-backups/partials/create-backup-progress.php:22
 #: views/managed-backups/partials/restore-backup-progress.php:36
+#: views/managed-backups/restore.php:29 views/snapshots/item.php:33
 #: views/snapshots/partials/create-snapshot-progress.php:39
 #: views/snapshots/partials/restore-snapshot-progress.php:29
+#: views/snapshots/restore.php:52 views/snapshots/snapshot.php:56
 #, fuzzy
 msgid "Back"
 msgstr "Indietro"
@@ -617,10 +1036,25 @@ msgstr "Indietro"
 msgid "Backing up... %d%"
 msgstr "Backup... %d%"
 
+#: lib/Snapshot/View/Metabox/Admin.php:1087
+#, fuzzy
+msgid "Backup Destination"
+msgstr "Destinazione di backup"
+
 #: views/managed_backups.php:233
 #, fuzzy
 msgid "Backup Details"
 msgstr "Dettagli di backup"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1990
+#, fuzzy
+msgid "Backup Folder"
+msgstr "Cartella di backup"
+
+#: lib/Snapshot/View/Metabox/Admin.php:774
+#, fuzzy
+msgid "Backup Interval"
+msgstr "Intervallo di backup"
 
 #: lib/Snapshot/Helper/Backup.php:403
 #, fuzzy, php-format
@@ -653,7 +1087,7 @@ msgstr "Errore di caricamento del backup"
 msgid "Backups"
 msgstr "Backup"
 
-#: views/managed_backups.php:479 views/managed-backups/new-backup.php:229
+#: views/managed-backups/new-backup.php:229 views/managed_backups.php:479
 #: views/snapshots/snapshot.php:995
 #, fuzzy
 msgid "backups before removing older archives."
@@ -669,13 +1103,28 @@ msgstr "Programma di backup"
 msgid "Backups Wizard"
 msgstr "Procedura guidata per i backup"
 
+#: lib/Snapshot/View/Metabox/Admin.php:1381
+#, fuzzy
+msgid ""
+"Below is a listing of your archives showing at most the most recent 6 "
+"entries. If the archive is local you can click on the filename to download "
+"it. You can also view or download the load file the archive."
+msgstr ""
+"Di seguito è riportato un elenco dei vostri archivi che mostra al massimo le "
+"6 voci più recenti. Se l'archivio è locale, è possibile fare clic sul nome "
+"del file per scaricarlo. È inoltre possibile visualizzare o scaricare il "
+"file di caricamento dell'archivio."
+
+#: lib/Snapshot/View/Metabox/Admin.php:65
+#: lib/Snapshot/View/Metabox/Admin.php:131
 #: lib/Snapshot/View/Table/Items.php:684
 #, fuzzy
 msgid "Blog"
 msgstr "Blog"
 
-#: views/snapshots/restore.php:154 views/snapshots/restore.php:163
-#: views/snapshots/restore.php:200
+#: lib/Snapshot/View/Metabox/Admin.php:1731
+#: lib/Snapshot/View/Metabox/Admin.php:1815 views/snapshots/restore.php:154
+#: views/snapshots/restore.php:163 views/snapshots/restore.php:200
 #, fuzzy
 msgid "Blog ID:"
 msgstr "ID blog:"
@@ -685,14 +1134,14 @@ msgstr "ID blog:"
 msgid "Blog options"
 msgstr "Opzioni del blog"
 
-#: views/snapshots/snapshot.php:103
+#: lib/Snapshot/View/Metabox/Admin.php:152 views/snapshots/snapshot.php:103
 #, fuzzy
 msgid "Blog to backup"
 msgstr "Dal blog al backup"
 
+#: lib/Snapshot/Model/Destination/aws/index.php:531
 #: views/destinations/add/aws.php:150
 #: views/destinations/partials/s3-destination-list.php:17
-#: lib/Snapshot/Model/Destination/aws/index.php:531
 #, fuzzy
 msgid "Bucket"
 msgstr "Secchio"
@@ -701,6 +1150,24 @@ msgstr "Secchio"
 #, fuzzy
 msgid "Bucket Name"
 msgstr "Nome del secchio"
+
+#: views/managed-backups/partials/filter.php:6
+#: views/snapshots/partials/filter.php:6
+#, fuzzy
+msgid "Bulk Actions"
+msgstr "Azioni di massa"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1121
+#, fuzzy
+msgid ""
+"By default, Snapshot keeps a local copy of your backup, as well as uploading "
+"the archive to your chosen destination. Choose <strong>No</strong> if you "
+"wish just remove the local copy after the upload is complete."
+msgstr ""
+"Per impostazione predefinita, Snapshot conserva una copia locale del backup, "
+"oltre a caricare l'archivio nella destinazione scelta. Scegliere <strong>"
+"No</strong> se si desidera rimuovere la copia locale al termine del "
+"caricamento."
 
 #: views/managed_backups.php:467
 #, fuzzy
@@ -727,16 +1194,21 @@ msgstr ""
 "gli archivi di backup, è sufficiente impostare il limite di archiviazione a "
 "0."
 
-#: views/managed-backups/restore.php:104 views/snapshots/item.php:346
-#: views/snapshots/restore.php:285 views/snapshots/restore.php:837
-#: views/snapshots/snapshot.php:185 views/snapshots/snapshot.php:1075
-#: lib/Snapshot/View/Settings.php:253 lib/Snapshot/View/Settings.php:365
-#: views/destinations/add/index.php:167 views/destinations/add/index.php:179
+#: lib/Snapshot/View/Destination/Listing.php:176
+#: lib/Snapshot/View/Metabox/Admin.php:91
+#: lib/Snapshot/View/Metabox/Admin.php:100
+#: lib/Snapshot/View/Metabox/Admin.php:181
+#: lib/Snapshot/View/Metabox/Admin.php:190
+#: lib/Snapshot/View/Metabox/Admin.php:1857
+#: lib/Snapshot/View/Metabox/Admin.php:1872 lib/Snapshot/View/Settings.php:253
+#: lib/Snapshot/View/Settings.php:365 views/destinations/add/index.php:167
+#: views/destinations/add/index.php:179
 #: views/managed-backups/partials/create-backup-progress.php:47
 #: views/managed-backups/partials/restore-backup-progress.php:68
 #: views/managed-backups/partials/restore-backup-progress.php:118
 #: views/managed-backups/partials/restore-backup-progress.php:147
 #: views/managed-backups/partials/restore-backup-progress.php:175
+#: views/managed-backups/restore.php:104 views/snapshots/item.php:346
 #: views/snapshots/partials/create-snapshot-progress.php:71
 #: views/snapshots/partials/create-snapshot-progress.php:159
 #: views/snapshots/partials/create-snapshot-progress.php:194
@@ -745,12 +1217,16 @@ msgstr ""
 #: views/snapshots/partials/restore-snapshot-progress.php:130
 #: views/snapshots/partials/restore-snapshot-progress.php:154
 #: views/snapshots/partials/restore-snapshot-progress.php:186
-#: lib/Snapshot/View/Destination/Listing.php:176
+#: views/snapshots/restore.php:285 views/snapshots/restore.php:837
+#: views/snapshots/snapshot.php:185 views/snapshots/snapshot.php:1075
 #, fuzzy
 msgid "Cancel"
 msgstr "Annullamento"
 
-#: views/snapshots/restore.php:229 views/snapshots/snapshot.php:140
+#: lib/Snapshot/View/Metabox/Admin.php:76
+#: lib/Snapshot/View/Metabox/Admin.php:162
+#: lib/Snapshot/View/Metabox/Admin.php:1837 views/snapshots/restore.php:229
+#: views/snapshots/snapshot.php:140
 #, fuzzy
 msgid "Change"
 msgstr "Cambiamento"
@@ -787,16 +1263,43 @@ msgstr ""
 msgid "Choose which folder you would like to restore your website to."
 msgstr "Scegliere la cartella in cui si desidera ripristinare il sito web."
 
-#: views/destinations/add/google-drive.php:96
-#: views/destinations/partials/google-drive-destination-list.php:15
+#: lib/Snapshot/View/Metabox/Admin.php:2762 views/snapshots/restore.php:648
+#, fuzzy
+msgid "ClassicPress Blog Tables"
+msgstr "Tabelle del blog ClassicPress"
+
+#: lib/Snapshot/View/Metabox/Admin.php:367 views/snapshots/snapshot.php:682
+#, fuzzy
+msgid "ClassicPress core Tables"
+msgstr "Tabelle del nucleo di ClassicPress"
+
+#: lib/Snapshot/View/Metabox/Admin.php:366
+#: lib/Snapshot/View/Metabox/Admin.php:2761 views/snapshots/restore.php:647
+#: views/snapshots/snapshot.php:681
+#, fuzzy
+msgid "ClassicPress Global Tables"
+msgstr "Tabelle globali ClassicPress"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2159
+#, fuzzy
+msgid "ClassicPress Version"
+msgstr "Versione ClassicPress"
+
+#: cp-snapshot.php:410
+#, fuzzy
+msgid "Click to dismiss"
+msgstr "Fare clic per chiudere"
+
 #: lib/Snapshot/Model/Destination/google-drive/index.php:471
 #: lib/Snapshot/Model/Destination/google-drive/index.php:637
+#: views/destinations/add/google-drive.php:96
+#: views/destinations/partials/google-drive-destination-list.php:15
 #, fuzzy
 msgid "Client ID"
 msgstr "ID cliente"
 
-#: views/destinations/add/google-drive.php:129
 #: lib/Snapshot/Model/Destination/google-drive/index.php:657
+#: views/destinations/add/google-drive.php:129
 #, fuzzy
 msgid "Client Secret"
 msgstr "Segreto del cliente"
@@ -819,12 +1322,12 @@ msgstr "Completo"
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: views/managed_backups.php:139
 #: views/destinations/partials/dropbox-destination-list.php:59
 #: views/destinations/partials/ftp-destination-list.php:63
 #: views/destinations/partials/google-drive-destination-list.php:62
 #: views/destinations/partials/local-destination-list.php:55
 #: views/destinations/partials/s3-destination-list.php:60
+#: views/managed_backups.php:139
 #, fuzzy
 msgid "Configure"
 msgstr "Configurare"
@@ -849,6 +1352,24 @@ msgstr "Tipo di connessione"
 msgid "Connection type is required"
 msgstr "Il tipo di connessione è richiesto"
 
+#: lib/Snapshot/View/Metabox/Admin.php:1030
+#, fuzzy
+msgid ""
+"Control the total number of <strong>local</strong> archives to keep for this "
+"snapshot. Once the archive limit is reached, older locally stored archives "
+"will be removed. In common cases you may want to set the backup interval to "
+"once a week. Then set the number of archives to keep to 52 which would give "
+"you a year or backups. But keep in mind on a large site this will be a lot "
+"of extra disk space required."
+msgstr ""
+"Controlla il numero totale di archivi <strong>locali</strong> da conservare "
+"per questa istantanea. Una volta raggiunto il limite di archivi, gli archivi "
+"più vecchi memorizzati localmente verranno rimossi. Nei casi più comuni, si "
+"consiglia di impostare l'intervallo di backup a una volta alla settimana. "
+"Quindi impostare il numero di archivi da conservare a 52, per un anno di "
+"backup. Ma si tenga presente che su un sito di grandi dimensioni questo "
+"richiederà molto spazio extra su disco."
+
 #: views/destinations/add/aws.php:205
 #, fuzzy
 msgid "Control who will have access to your backup files."
@@ -859,7 +1380,7 @@ msgstr "Controllare chi può accedere ai file di backup."
 msgid "Copy URL"
 msgstr "Copiare l'URL"
 
-#: views/snapshots/item.php:266 lib/Snapshot/Helper/Utility.php:1145
+#: lib/Snapshot/Helper/Utility.php:1145 views/snapshots/item.php:266
 #, fuzzy
 msgid "core"
 msgstr "nucleo"
@@ -874,10 +1395,11 @@ msgstr "Impossibile comunicare con il servizio remoto"
 msgid "Country"
 msgstr "Paese"
 
-#. Name of the plugin
+#. Plugin Name of the plugin/theme
+#: cp-snapshot.php:127
 #, fuzzy
-msgid "CP BackUp"
-msgstr "BackUp CP"
+msgid "CP Snapshot"
+msgstr "Istantanea del PC"
 
 #: views/boxes/dashboard/widget-snapshots.php:35
 #, fuzzy
@@ -898,17 +1420,51 @@ msgstr ""
 msgid "Create Backup"
 msgstr "Creare il backup"
 
-#: views/snapshots.php:40 lib/Snapshot/View/Settings.php:80
-#: views/boxes/dashboard/widget-snapshots.php:54
+#: lib/Snapshot/View/Settings.php:80
+#: views/boxes/dashboard/widget-snapshots.php:54 views/snapshots.php:40
 #: views/snapshots/partials/create-snapshot-progress.php:9
 #, fuzzy
 msgid "Create Snapshot"
 msgstr "Creare un'istantanea"
 
+#: cp-snapshot.php:6739
+#, fuzzy
+msgid "Creating Archive"
+msgstr "Creazione dell'archivio"
+
 #: lib/Snapshot/Helper/Log.php:131
 #, fuzzy
 msgid "Cron"
 msgstr "Cron"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2273
+#, fuzzy
+msgid "cURL"
+msgstr "cURL"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2283
+#, fuzzy
+msgid "cURL installed"
+msgstr "cURL installato"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2278
+#, fuzzy
+msgid ""
+"cURL is used when connecting to remote destinations like Dropbox and Amazon "
+"AWS."
+msgstr ""
+"cURL viene utilizzato per la connessione a destinazioni remote come Dropbox "
+"e Amazon AWS."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2281
+#, fuzzy
+msgid "cURL not installed."
+msgstr "cURL non è installato."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2000
+#, fuzzy
+msgid "Current folder"
+msgstr "Cartella corrente"
 
 #: lib/Snapshot/View/Settings.php:150 lib/Snapshot/View/Settings.php:442
 #, fuzzy
@@ -940,17 +1496,23 @@ msgstr "Cruscotto"
 msgid "Database"
 msgstr "Database"
 
-#: views/snapshots/restore.php:157 views/snapshots/restore.php:302
+#: lib/Snapshot/View/Metabox/Admin.php:1771
+#: lib/Snapshot/View/Metabox/Admin.php:1909 views/snapshots/restore.php:157
+#: views/snapshots/restore.php:302
 #, fuzzy
 msgid "Database Base Prefix:"
 msgstr "Prefisso di base del database:"
 
-#: views/snapshots/restore.php:156 views/snapshots/restore.php:294
+#: lib/Snapshot/View/Metabox/Admin.php:1758
+#: lib/Snapshot/View/Metabox/Admin.php:1893 views/snapshots/restore.php:156
+#: views/snapshots/restore.php:294
 #, fuzzy
 msgid "Database Name:"
 msgstr "Nome del database:"
 
-#: views/snapshots/restore.php:158 views/snapshots/restore.php:310
+#: lib/Snapshot/View/Metabox/Admin.php:1785
+#: lib/Snapshot/View/Metabox/Admin.php:1926 views/snapshots/restore.php:158
+#: views/snapshots/restore.php:310
 #, fuzzy
 msgid "Database Prefix:"
 msgstr "Prefisso del database:"
@@ -960,10 +1522,16 @@ msgstr "Prefisso del database:"
 msgid "Database Tables"
 msgstr "Tabelle del database"
 
-#: views/managed_backups.php:235 views/managed_backups.php:285
-#: views/snapshots.php:128 views/snapshots.php:247
-#: views/boxes/dashboard/widget-snapshots.php:69
+#: cp-snapshot.php:654
+#, fuzzy
+msgid "Database:"
+msgstr "Database:"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1412
 #: lib/Snapshot/View/Table/Archives.php:375
+#: views/boxes/dashboard/widget-snapshots.php:69 views/managed_backups.php:235
+#: views/managed_backups.php:285 views/snapshots.php:128
+#: views/snapshots.php:247
 #, fuzzy
 msgid "Date"
 msgstr "Data"
@@ -985,6 +1553,11 @@ msgctxt "date time sep"
 msgid " @ "
 msgstr " @"
 
+#: lib/Snapshot/View/Metabox/Admin.php:978
+#, fuzzy
+msgid "Day"
+msgstr "Giorno"
+
 #: views/snapshots/restore.php:762
 #, fuzzy
 msgid "Deactivate plugins"
@@ -994,6 +1567,15 @@ msgstr "Disattivare i plugin"
 #, fuzzy
 msgid "Default"
 msgstr "Predefinito"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1997
+#, fuzzy, php-format
+msgid ""
+"Default folder is %s. If you change the folder name the previous snapshot "
+"files will be moved to the new folder."
+msgstr ""
+"La cartella predefinita è %s. Se si cambia il nome della cartella, i file "
+"delle istantanee precedenti verranno spostati nella nuova cartella."
 
 #: lib/Snapshot/Model/Destination/ftp/index.php:406
 #, fuzzy
@@ -1048,22 +1630,24 @@ msgstr ""
 "Definire file o cartelle specifici da escludere da qualsiasi istantanea o "
 "backup completo."
 
-#: views/managed_backups.php:343 views/snapshots.php:300
-#: views/snapshots/item.php:66 views/snapshots/item.php:313
-#: views/destinations/add/index.php:153 lib/Snapshot/View/Table/Archives.php:33
-#: lib/Snapshot/View/Table/FullBackups.php:91
 #: lib/Snapshot/Model/Destination/aws/index.php:528
 #: lib/Snapshot/Model/Destination/ftp/index.php:136
 #: lib/Snapshot/Model/Destination/google-drive/index.php:469
+#: lib/Snapshot/View/Table/Archives.php:33
+#: lib/Snapshot/View/Table/FullBackups.php:91
+#: views/destinations/add/index.php:153
+#: views/managed-backups/partials/filter.php:7 views/managed_backups.php:343
+#: views/snapshots.php:300 views/snapshots/item.php:66
+#: views/snapshots/item.php:313 views/snapshots/partials/filter.php:7
 #, fuzzy
 msgid "Delete"
 msgstr "Cancellare"
 
-#: lib/Snapshot/View/Table/Archives.php:174
-#: lib/Snapshot/View/Table/Items.php:199
 #: lib/Snapshot/Model/Destination/aws/index.php:564
 #: lib/Snapshot/Model/Destination/ftp/index.php:176
 #: lib/Snapshot/Model/Destination/google-drive/index.php:503
+#: lib/Snapshot/View/Table/Archives.php:174
+#: lib/Snapshot/View/Table/Items.php:199
 #, fuzzy
 msgid "delete"
 msgstr "cancellare"
@@ -1075,9 +1659,15 @@ msgstr "cancellare"
 msgid "Delete Destination"
 msgstr "Cancellare la destinazione"
 
-#: views/managed-backups/new-backup.php:97 views/snapshots/item.php:171
-#: views/snapshots/snapshot.php:211 lib/Snapshot/View/Table/Items.php:688
+#: lib/Snapshot/View/Metabox/Admin.php:252
+#, fuzzy
+msgid "Description about this configuration."
+msgstr "Descrizione della configurazione."
+
 #: lib/Snapshot/Model/Destination/ftp/index.php:234
+#: lib/Snapshot/View/Table/Items.php:688
+#: views/managed-backups/new-backup.php:97 views/snapshots/item.php:171
+#: views/snapshots/snapshot.php:211
 #, fuzzy
 msgid "Destination"
 msgstr "Destinazione"
@@ -1100,7 +1690,7 @@ msgstr "Nome della destinazione"
 msgid "Destination:"
 msgstr "Destinazione:"
 
-#: views/destinations.php:10 views/boxes/dashboard/widget-destinations.php:26
+#: views/boxes/dashboard/widget-destinations.php:26 views/destinations.php:10
 #: views/destinations/add/index.php:49
 #, fuzzy
 msgid "Destinations"
@@ -1116,7 +1706,7 @@ msgstr ""
 "archiviate. È possibile archiviare i file su Dropbox, Google Drive, Amazon "
 "S3, FTP/SFTP o sul computer locale."
 
-#. Description of the plugin
+#. Description of the plugin/theme
 #, fuzzy
 msgid ""
 "Dieses Plugin ermöglicht es Dir, bei Bedarf schnelle Backup-Snapshots Deiner "
@@ -1131,6 +1721,9 @@ msgstr ""
 "Plugin ben definite all'interno della struttura della banca dati. Tutte le "
 "istantanee sono protocollate e si possono creare istantanee dopo la chiusura."
 
+#: lib/Snapshot/Model/Destination/aws/index.php:532
+#: lib/Snapshot/Model/Destination/ftp/index.php:140
+#: lib/Snapshot/Model/Destination/google-drive/index.php:472
 #: views/destinations/add/dropbox.php:48 views/destinations/add/ftp.php:111
 #: views/destinations/add/local.php:41
 #: views/destinations/partials/dropbox-destination-list.php:15
@@ -1138,15 +1731,13 @@ msgstr ""
 #: views/destinations/partials/google-drive-destination-list.php:16
 #: views/destinations/partials/local-destination-list.php:16
 #: views/destinations/partials/s3-destination-list.php:18
-#: lib/Snapshot/Model/Destination/aws/index.php:532
-#: lib/Snapshot/Model/Destination/ftp/index.php:140
-#: lib/Snapshot/Model/Destination/google-drive/index.php:472
 #, fuzzy
 msgid "Directory"
 msgstr "Elenco"
 
-#: views/snapshots/snapshot.php:249 views/destinations/add/aws.php:213
 #: lib/Snapshot/Model/Destination/aws/index.php:788
+#: lib/Snapshot/View/Metabox/Admin.php:1128 views/destinations/add/aws.php:213
+#: views/snapshots/snapshot.php:249
 #, fuzzy
 msgid "Directory (optional)"
 msgstr "Elenco (opzionale)"
@@ -1171,6 +1762,32 @@ msgstr "URL della directory"
 msgid "Disabled"
 msgstr "Disabili"
 
+#: assets/shared-ui/plugin-ui.php:301
+#, fuzzy
+msgid "Dismiss"
+msgstr "Congedo"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2311
+#, fuzzy
+msgid "Display Errors"
+msgstr "Errori di visualizzazione"
+
+#: lib/Snapshot/View/Metabox/Admin.php:337
+#, fuzzy
+msgid "Do not include database tables in this Snapshot"
+msgstr "Non includere le tabelle del database in questa istantanea"
+
+#: lib/Snapshot/View/Metabox/Admin.php:531
+#: lib/Snapshot/View/Metabox/Admin.php:2916
+#, fuzzy
+msgid "Do not include files"
+msgstr "Non includere i file"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2747
+#, fuzzy
+msgid "Do not restore any database tables"
+msgstr "Non ripristinare le tabelle del database"
+
 #: views/snapshots/restore.php:625 views/snapshots/snapshot.php:637
 #, fuzzy
 msgid "Don't include any database tables"
@@ -1181,14 +1798,15 @@ msgstr "Non includere tabelle di database"
 msgid "Don't include any files"
 msgstr "Non includere alcun file"
 
-#: views/snapshots/item.php:344 lib/Snapshot/View/Table/FullBackups.php:46
+#: lib/Snapshot/View/Table/FullBackups.php:46 views/snapshots/item.php:344
 #, fuzzy
 msgid "Download"
 msgstr "Scaricare"
 
-#: views/snapshots/item.php:299 lib/Snapshot/View/Table/Archives.php:152
+#: lib/Snapshot/View/Metabox/Admin.php:1545
+#: lib/Snapshot/View/Table/Archives.php:152
 #: lib/Snapshot/View/Table/Archives.php:238
-#: lib/Snapshot/View/Table/Items.php:501
+#: lib/Snapshot/View/Table/Items.php:501 views/snapshots/item.php:299
 #, fuzzy
 msgid "download"
 msgstr "scaricare"
@@ -1197,6 +1815,11 @@ msgstr "scaricare"
 #, fuzzy
 msgid "Download the snapshot archive"
 msgstr "Scaricare l'archivio delle istantanee"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1187
+#, fuzzy
+msgid "Drive account"
+msgstr "Conto guida"
 
 #: lib/Snapshot/Model/Destination/google-drive/index.php:621
 #, fuzzy
@@ -1209,17 +1832,17 @@ msgstr ""
 "archivi delle istantanee. Assicurarsi di visualizzare la directory di "
 "destinazione."
 
-#: lib/Snapshot/Model/Destination.php:157
+#: cp-snapshot.php:648 lib/Snapshot/Model/Destination.php:157
+#: lib/Snapshot/Model/Destination/dropbox/index.php:46
 #: views/boxes/destinations/widget-dropbox.php:19
 #: views/boxes/modals/popup-welcome.php:67
 #: views/destinations/add/dropbox-error.php:18
 #: views/destinations/add/dropbox.php:23
-#: lib/Snapshot/Model/Destination/dropbox/index.php:46
 #, fuzzy
 msgid "Dropbox"
 msgstr "Dropbox"
 
-#: views/snapshots/snapshot.php:491
+#: lib/Snapshot/View/Metabox/Admin.php:671 views/snapshots/snapshot.php:491
 #, fuzzy
 msgid "Dropbox Only - Select Archive or Mirroring option for this Snapshot."
 msgstr ""
@@ -1240,15 +1863,15 @@ msgstr ""
 msgid "Edit"
 msgstr "Modifica"
 
-#: lib/Snapshot/View/Table/Items.php:164
 #: lib/Snapshot/Model/Destination/aws/index.php:562
 #: lib/Snapshot/Model/Destination/ftp/index.php:173
 #: lib/Snapshot/Model/Destination/google-drive/index.php:501
+#: lib/Snapshot/View/Table/Items.php:164
 #, fuzzy
 msgid "edit"
 msgstr "modifica"
 
-#: views/snapshots/snapshot.php:47
+#: cp-snapshot.php:1353 views/snapshots/snapshot.php:47
 #, fuzzy
 msgid "Edit Snapshot"
 msgstr "Modifica dell'istantanea"
@@ -1258,7 +1881,7 @@ msgstr "Modifica dell'istantanea"
 msgid "Email"
 msgstr "Email"
 
-#: views/managed_backups.php:138 views/boxes/dashboard/widget-status.php:101
+#: views/boxes/dashboard/widget-status.php:101 views/managed_backups.php:138
 #, fuzzy
 msgid "Enable"
 msgstr "Abilitazione"
@@ -1288,6 +1911,20 @@ msgstr "Inserire qui l'URL della directory"
 msgid "Enter file URLs to be excluded, one per line."
 msgstr "Immettere gli URL dei file da escludere, uno per riga."
 
+#: lib/Snapshot/View/Metabox/Admin.php:101
+#, fuzzy
+msgid ""
+"Enter the blog domain \"myblog.com\" or blog ID \"22\". Once the form is "
+"submitted this cannot be changed."
+msgstr ""
+"Inserire il dominio del blog \"myblog.com\" o l'ID del blog \"22\". Una "
+"volta inviato il modulo, questo non può essere modificato."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1873
+#, fuzzy
+msgid "Enter the blog path \"site1\" or blog ID \"22\"."
+msgstr "Inserire il percorso del blog \"site1\" o l'ID del blog \"22\"."
+
 #: views/snapshots/restore.php:276
 #, fuzzy
 msgid ""
@@ -1296,6 +1933,36 @@ msgid ""
 msgstr ""
 "Inserire il percorso del blog (ad esempio, site1) o l'ID del blog (ad "
 "esempio, 22), oppure lasciare vuoto per il sito principale"
+
+#: lib/Snapshot/View/Metabox/Admin.php:191
+#, fuzzy
+msgid ""
+"Enter the blog path or blog ID or blank for primary blog. Once the form is "
+"submitted this cannot be changed."
+msgstr ""
+"Immettere il percorso del blog o l'ID del blog o lo spazio vuoto per il blog "
+"principale. Una volta inviato il modulo, questo non può essere modificato."
+
+#: lib/Snapshot/View/Metabox/Admin.php:92
+#: lib/Snapshot/View/Metabox/Admin.php:1858
+#, fuzzy
+msgid ""
+"Enter the blog sub-domain prefix \"site1\" or blog ID \"22\" or mapped "
+"domain or leave blank for primary site."
+msgstr ""
+"Inserire il prefisso del sottodominio del blog \"site1\" o l'ID del blog "
+"\"22\" o il dominio mappato o lasciare vuoto per il sito primario."
+
+#: lib/Snapshot/View/Metabox/Admin.php:182
+#, fuzzy
+msgid ""
+"Enter the blog sub-domain prefix \"site1\" or blog ID \"22\" or mapped "
+"domain or leave blank for primary site. Once the form is submitted this "
+"cannot be changed."
+msgstr ""
+"Immettere il prefisso del sottodominio del blog \"site1\" o l'ID del blog "
+"\"22\" o il dominio mappato o lasciare vuoto per il sito primario. Una volta "
+"inviato il modulo, questo non può essere modificato."
 
 #: views/snapshots/restore.php:274
 #, fuzzy
@@ -1334,7 +2001,7 @@ msgstr "Inserite qui la vostra chiave"
 msgid "Error"
 msgstr "Errore"
 
-#: views/snapshots/item.php:272 lib/Snapshot/Helper/Utility.php:1151
+#: lib/Snapshot/Helper/Utility.php:1151 views/snapshots/item.php:272
 #, fuzzy
 msgid "error"
 msgstr "errore"
@@ -1343,6 +2010,11 @@ msgstr "errore"
 #, fuzzy, php-format
 msgid "Error deleting file: %s"
 msgstr "Errore nell'eliminazione del file: %s"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2579
+#, fuzzy
+msgid "Error Description"
+msgstr "Descrizione dell'errore"
 
 #: lib/Snapshot/Model/Full/Remote/Storage.php:740
 #, fuzzy
@@ -1354,12 +2026,15 @@ msgstr "Errore nel recuperare il file"
 msgid "Error getting table details"
 msgstr "Errore nell'ottenere i dettagli della tabella"
 
-#: views/snapshots/restore.php:238 views/snapshots/snapshot.php:145
+#: lib/Snapshot/View/Metabox/Admin.php:80
+#: lib/Snapshot/View/Metabox/Admin.php:167
+#: lib/Snapshot/View/Metabox/Admin.php:1843 views/snapshots/restore.php:238
+#: views/snapshots/snapshot.php:145
 #, fuzzy
 msgid "Error on blog lookup. Try again"
 msgstr "Errore nella ricerca del blog. Riprovare"
 
-#: views/settings.php:139
+#: lib/Snapshot/View/Metabox/Admin.php:2310 views/settings.php:139
 #, fuzzy
 msgid "Error Reporting"
 msgstr "Segnalazione degli errori"
@@ -1369,7 +2044,7 @@ msgstr "Segnalazione degli errori"
 msgid "Error rotating backups"
 msgstr "Errore nella rotazione dei backup"
 
-#: views/snapshots/snapshot.php:685
+#: lib/Snapshot/View/Metabox/Admin.php:370 views/snapshots/snapshot.php:685
 #, fuzzy
 msgid "Error Tables - These tables are skipped for the noted reasons."
 msgstr ""
@@ -1380,10 +2055,46 @@ msgstr ""
 msgid "Error with %1$s queue, source: %2$s"
 msgstr "Errore con la coda %1$s, fonte: %2$s"
 
-#: views/import.php:26 lib/Snapshot/View/Settings.php:647
+#: lib/Snapshot/View/Settings.php:647 views/import.php:26
 #, fuzzy, php-format
 msgid "Error: %s"
 msgstr "Errore: %s"
+
+#: cp-snapshot.php:2702
+#, fuzzy
+msgid ""
+"ERROR: Cannot create snapshot folder. Check that the parent folder is "
+"writable"
+msgstr ""
+"ERRORE: Impossibile creare una cartella snapshot. Verificare che la cartella "
+"madre sia scrivibile"
+
+#: cp-snapshot.php:2874
+#, fuzzy
+msgid ""
+"ERROR: Cannot create snapshot Lock folder. Check that the parent folder is "
+"writeable"
+msgstr ""
+"ERRORE: Impossibile creare un'istantanea Cartella di blocco. Verificare che "
+"la cartella madre sia scrivibile"
+
+#: cp-snapshot.php:2751 cp-snapshot.php:2806 cp-snapshot.php:2834
+#, fuzzy
+msgid ""
+"ERROR: Cannot create snapshot Log folder. Check that the parent folder is "
+"writeable"
+msgstr ""
+"ERRORE: Impossibile creare la cartella snapshot Log. Verificare che la "
+"cartella madre sia scrivibile"
+
+#: cp-snapshot.php:2779
+#, fuzzy
+msgid ""
+"ERROR: Cannot create snapshot Restore folder. Check that the parent folder "
+"is writeable"
+msgstr ""
+"ERRORE: Impossibile creare la cartella snapshot Restore. Verificare che la "
+"cartella madre sia scrivibile"
 
 #: lib/Snapshot/Model/Destination/google-drive/index.php:240
 #, fuzzy, php-format
@@ -1395,7 +2106,92 @@ msgstr "Errore: Impossibile connettersi a %s: Errore: %s"
 msgid "Error: Could not send file <pre>%s</pre> :"
 msgstr "Errore: Impossibile inviare il file <pre>%s</pre> :"
 
-#: views/import.php:178 lib/Snapshot/View/Settings.php:536
+#: cp-snapshot.php:3601
+#, fuzzy
+msgid "ERROR: Snapshot backup aborted."
+msgstr "ERRORE: backup dell'istantanea interrotto."
+
+#: cp-snapshot.php:3247
+#, fuzzy
+msgid ""
+"ERROR: Snapshot backup aborted.<br />The Snapshot folder is not writeable. "
+"Check the settings."
+msgstr ""
+"ERRORE: backup dell'istantanea interrotto.<br />La cartella dell'istantanea "
+"non è scrivibile. Controllare le impostazioni."
+
+#: cp-snapshot.php:2046
+#, fuzzy
+msgid "ERROR: The new Snapshot folder already exists. "
+msgstr "ERRORE: La nuova cartella di istantanee esiste già."
+
+#: cp-snapshot.php:2718 cp-snapshot.php:2766 cp-snapshot.php:2820
+#: cp-snapshot.php:2849
+#, fuzzy
+msgid "ERROR: The Snapshot destination folder is not writable"
+msgstr "ERRORE: la cartella di destinazione dell'istantanea non è scrivibile"
+
+#: cp-snapshot.php:4760 cp-snapshot.php:4768
+#, fuzzy
+msgid "ERROR: The Snapshot file not found:"
+msgstr "ERRORE: Il file dell'istantanea non è stato trovato:"
+
+#: cp-snapshot.php:4780
+#, fuzzy
+msgid "ERROR: The Snapshot folder is not writeable. Check the settings"
+msgstr ""
+"ERRORE: La cartella Snapshot non è scrivibile. Controllare le impostazioni"
+
+#: cp-snapshot.php:4745
+#, fuzzy
+msgid "ERROR: The Snapshot incorrect 'item_data' ["
+msgstr "ERRORE: L'istantanea non corretta 'item_data' ["
+
+#: cp-snapshot.php:2889
+#, fuzzy
+msgid "ERROR: The Snapshot locks folder is not writable"
+msgstr "ERRORE: la cartella dei blocchi delle istantanee non è scrivibile"
+
+#: cp-snapshot.php:5163
+#, fuzzy
+msgid "ERROR: The Snapshot missing 'file_data_idx' key"
+msgstr "ERRORE: L'istantanea manca della chiave 'file_data_idx'"
+
+#: cp-snapshot.php:4735
+#, fuzzy
+msgid "ERROR: The Snapshot missing 'item_data' key"
+msgstr "ERRORE: L'istantanea manca della chiave 'item_data'"
+
+#: cp-snapshot.php:5181
+#, fuzzy
+msgid "ERROR: The Snapshot missing restore file at idx ["
+msgstr "ERRORE: l'istantanea manca del file di ripristino a idx ["
+
+#: cp-snapshot.php:5173
+#, fuzzy
+msgid "ERROR: The Snapshot missing session 'FILES-DATA' object."
+msgstr "ERRORE: L'istantanea manca dell'oggetto di sessione 'FILES-DATA'."
+
+#: cp-snapshot.php:2793
+#, fuzzy
+msgid "ERROR: The Snapshot restore folder is not writable"
+msgstr "ERRORE: la cartella di ripristino dell'istantanea non è scrivibile"
+
+#: cp-snapshot.php:663 cp-snapshot.php:683
+#, fuzzy
+msgid "ERROR: The Snapshot timekey is not set. Try reloading the page"
+msgstr ""
+"ERRORE: La chiave temporale dell'istantanea non è impostata. Provare a "
+"ricaricare la pagina"
+
+#: cp-snapshot.php:5130
+#, fuzzy
+msgid "ERROR: Unable to locate table restore file from archive: "
+msgstr ""
+"ERRORE: Impossibile individuare il file di ripristino della tabella "
+"dall'archivio:"
+
+#: lib/Snapshot/View/Settings.php:536 views/import.php:178
 #, fuzzy
 msgid ""
 "Error: Your server does not have lib_curl installed. So the import process "
@@ -1408,6 +2204,17 @@ msgstr ""
 #, fuzzy
 msgid "Errors"
 msgstr "Errori"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2560
+#, fuzzy
+msgid ""
+"Errors - Fatal run-time errors. These indicate errors that can not be "
+"recovered from, such as a memory allocation problem. Execution of the script "
+"is halted."
+msgstr ""
+"Errori - Errori di esecuzione fatali. Indicano errori che non possono essere "
+"recuperati, come ad esempio un problema di allocazione della memoria. "
+"L'esecuzione dello script viene interrotta."
 
 #: lib/Snapshot/View/Full/Backup.php:242
 #, fuzzy
@@ -1435,6 +2242,11 @@ msgstr "Ogni 30 minuti"
 msgid "Every 5 Minutes"
 msgstr "Ogni 5 minuti"
 
+#: lib/Snapshot/View/Metabox/Admin.php:1050
+#, fuzzy
+msgid "Example: 10, 100. Enter 0 to keep all"
+msgstr "Esempio: 10, 100. Immettere 0 per mantenere tutti"
+
 #: views/snapshots/snapshot.php:575
 #, fuzzy
 msgid ""
@@ -1445,6 +2257,12 @@ msgstr ""
 "Esempio: per escludere il tema Twenty Ten, si può usare twentyten, "
 "theme/twentyten o public/wp-content/theme/twentyten. <strong>La cartella "
 "locale è esclusa dai backup istantanei per impostazione predefinita"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2474
+#: lib/Snapshot/View/Metabox/Admin.php:2476
+#, fuzzy
+msgid "Export"
+msgstr "Esportazione"
 
 #: views/common/requirements-test.php:7 views/common/requirements-test.php:25
 #: views/common/requirements-test.php:60 views/common/requirements-test.php:79
@@ -1469,6 +2287,7 @@ msgstr ""
 "recuperati, come ad esempio un problema di allocazione della memoria. "
 "L'esecuzione dello script viene interrotta."
 
+#: lib/Snapshot/View/Metabox/Admin.php:1413
 #: lib/Snapshot/View/Table/Archives.php:374
 #, fuzzy
 msgid "File"
@@ -1484,19 +2303,40 @@ msgstr "Nome del file"
 msgid "File Permissions"
 msgstr "Permessi dei file"
 
+#: lib/Snapshot/Model/Destination/aws/index.php:762
+#, fuzzy
+msgid "File permissions for uploaded files"
+msgstr "Autorizzazioni per i file caricati"
+
 #: lib/Snapshot/View/Table/Archives.php:146
 #, fuzzy
 msgid "File sync has no restore at this time"
 msgstr ""
 "La sincronizzazione dei file non prevede il ripristino in questo momento"
 
-#: views/snapshots/item.php:96
+#: cp-snapshot.php:6955
+#, fuzzy
+msgid ""
+"file: The following files are excluded because snapshot cannot open them. "
+"Check file permissions or locks"
+msgstr ""
+"file: I seguenti file sono esclusi perché snapshot non può aprirli. "
+"Controllare le autorizzazioni o i blocchi dei file"
+
+#: cp-snapshot.php:6944
+#, fuzzy
+msgid "file: The following files are excluded due to match exclusion patterns."
+msgstr ""
+"file: I seguenti file sono esclusi a causa dei modelli di esclusione delle "
+"corrispondenze."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1245 views/snapshots/item.php:96
 #, fuzzy
 msgid "Filename"
 msgstr "Nome del file"
 
-#: views/snapshots/item.php:215 views/snapshots/restore.php:411
-#: views/snapshots/snapshot.php:291
+#: cp-snapshot.php:659 views/snapshots/item.php:215
+#: views/snapshots/restore.php:411 views/snapshots/snapshot.php:291
 #, fuzzy
 msgid "Files"
 msgstr "File"
@@ -1510,6 +2350,11 @@ msgstr "file sincronizzati con la destinazione"
 #: lib/Snapshot/Helper/Utility.php:1185
 #, fuzzy
 msgid "Files:"
+msgstr "File:"
+
+#: cp-snapshot.php:655
+#, fuzzy
+msgid "Files: "
 msgstr "File:"
 
 #: views/snapshots/item.php:201
@@ -1538,6 +2383,11 @@ msgstr "Finitura del restauro"
 msgid "Finishing up"
 msgstr "Rifinitura"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2224
+#, fuzzy
+msgid "Folder Permissions"
+msgstr "Autorizzazioni per le cartelle"
+
 #: views/destinations/add/google-drive.php:108
 #, fuzzy, php-format
 msgid ""
@@ -1561,6 +2411,41 @@ msgstr ""
 "/media/storage/www/wp/snapshotold/wp-content/uploads/snapshots</strong> per "
 "individuare eventuali archivi mancanti e aggiungerli all'elenco."
 
+#: lib/Snapshot/View/Metabox/Admin.php:3053
+#, fuzzy, php-format
+msgid ""
+"For archives already on your server but not showing in the All Snapshots "
+"listing you can simply submit this form without entering a value below. This "
+"will scan the snapshot archivs directory (<em>%s</em>) for any missing "
+"archives and add them to the listing."
+msgstr ""
+"Per gli archivi già presenti sul server ma che non compaiono nell'elenco "
+"Tutte le istantanee, è possibile inviare semplicemente questo modulo senza "
+"inserire un valore in basso. In questo modo verrà eseguita una scansione "
+"della directory degli archivi delle istantanee (<em>%s</em>) per trovare gli "
+"archivi mancanti e aggiungerli all'elenco."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1187
+#, fuzzy, php-format
+msgid ""
+"For Google Drive destinations this is not a normal directory path. Instead "
+"you must provide the Directory ID. Go to your %s. Navigate to or create a "
+"new directory where you want to upload the Snapshot archives. Make sure you "
+"are viewing the destination directory. The URL for the directory will be "
+"something similar to <em>https://drive.google."
+"com/#folders/0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>. The Directory ID would be "
+"the last part after /#folders/ <strong><em>0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>"
+"</strong>."
+msgstr ""
+"Per le destinazioni di Google Drive non si tratta di un normale percorso di "
+"directory. È invece necessario fornire l'ID della directory. Andare al "
+"proprio %s. Navigare o creare una nuova directory in cui caricare gli "
+"archivi delle istantanee. Assicurarsi di visualizzare la directory di "
+"destinazione. L'URL della directory sarà simile a <em>https://drive.google."
+"com/#folders/0B6GD66ctHXXCOWZKNDRIRGJJXS3</em>. L'ID della directory sarà "
+"l'ultima parte dopo /#folders/ <strong><em>0B6GD66ctHXXCOWZKNDRIRGJXS3</em>"
+"</strong>."
+
 #: views/destinations/add/dropbox.php:125
 #, fuzzy
 msgid "Force Re-Authorize with Dropbox"
@@ -1571,9 +2456,9 @@ msgstr "Forzare la ri-autorizzazione con Dropbox"
 msgid "Form Errors"
 msgstr "Errori di forma"
 
-#: views/managed_backups.php:434 views/snapshots.php:124
-#: views/snapshots.php:220 views/managed-backups/new-backup.php:147
-#: views/snapshots/item.php:181 views/snapshots/snapshot.php:802
+#: views/managed-backups/new-backup.php:147 views/managed_backups.php:434
+#: views/snapshots.php:124 views/snapshots.php:220 views/snapshots/item.php:181
+#: views/snapshots/snapshot.php:802
 #, fuzzy
 msgid "Frequency"
 msgstr "Frequenza"
@@ -1583,8 +2468,23 @@ msgstr "Frequenza"
 msgid "Friday"
 msgstr "Venerdì"
 
-#: views/destinations/add/ftp.php:12
+#: cp-snapshot.php:1311
+#, fuzzy
+msgid ""
+"From this screen you can restore a snapshot. The restore will reload the "
+"database export into you current live site. Each table selected during the "
+"snapshot creation will be emptied before the snapshot information is loaded. "
+"It is important to understand this restore will be removing and new "
+"information added since the snapshot."
+msgstr ""
+"Da questa schermata è possibile ripristinare un'istantanea. Il ripristino "
+"ricaricherà l'esportazione del database nel sito live corrente. Ogni tabella "
+"selezionata durante la creazione dell'istantanea verrà svuotata prima che "
+"vengano caricate le informazioni dell'istantanea. È importante capire che "
+"questo ripristino rimuoverà le informazioni aggiunte dopo l'istantanea."
+
 #: lib/Snapshot/Model/Destination/ftp/index.php:39
+#: views/destinations/add/ftp.php:12
 #, fuzzy
 msgid "FTP"
 msgstr "FTP"
@@ -1604,8 +2504,8 @@ msgstr "FTP con TSL/SSL"
 msgid "FTP/SFTP"
 msgstr "FTP/SFTP"
 
-#: views/boxes/destinations/widget-sftp.php:19
 #: lib/Snapshot/Model/Destination/ftp/index.php:31
+#: views/boxes/destinations/widget-sftp.php:19
 #, fuzzy
 msgid "FTP/sFTP"
 msgstr "FTP/sFTP"
@@ -1657,6 +2557,11 @@ msgstr "Errore generale di backup"
 msgid "Get authorization code"
 msgstr "Ottenere il codice di autorizzazione"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2128
+#, fuzzy
+msgid "Get Dashboard plugin now"
+msgstr "Scarica subito il plugin Dashboard"
+
 #: views/boxes/modals/popup-snapshot.php:38
 #, fuzzy
 msgid "Get My Key"
@@ -1672,23 +2577,33 @@ msgstr "Iniziare"
 msgid "Getting Older"
 msgstr "Invecchiare"
 
+#: lib/Snapshot/View/Metabox/Admin.php:227
+#, fuzzy
+msgid "Give this configuration a name"
+msgstr "Assegnare un nome alla configurazione"
+
 #: views/snapshots/snapshot.php:1039
 #, fuzzy
 msgid "Give your snapshot a nice name!"
 msgstr "Date un bel nome alla vostra istantanea!"
 
-#: views/snapshots/item.php:274 lib/Snapshot/Helper/Utility.php:1153
+#: lib/Snapshot/Helper/Utility.php:1153 views/snapshots/item.php:274
 #, fuzzy
 msgid "global"
 msgstr "globale"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2530
+#, fuzzy
+msgid "Global Exclusions"
+msgstr "Esclusioni globali"
 
 #: views/settings.php:97
 #, fuzzy
 msgid "Global File Exclusions"
 msgstr "Esclusioni globali di file"
 
-#: views/destinations/add/google-drive.php:115
 #: lib/Snapshot/Model/Destination/google-drive/index.php:647
+#: views/destinations/add/google-drive.php:115
 #, fuzzy, php-format
 msgid "Go to the %s"
 msgstr "Vai al %s"
@@ -1722,9 +2637,9 @@ msgid "Google API Console"
 msgstr "Console API di Google"
 
 #: lib/Snapshot/Model/Destination.php:159
+#: lib/Snapshot/Model/Destination/google-drive/index.php:52
 #: views/boxes/destinations/widget-google.php:19
 #: views/destinations/add/google-drive.php:39
-#: lib/Snapshot/Model/Destination/google-drive/index.php:52
 #, fuzzy
 msgid "Google Drive"
 msgstr "Google Drive"
@@ -1764,19 +2679,26 @@ msgstr ""
 msgid "Hide Full Log"
 msgstr "Nascondi registro completo"
 
+#: lib/Snapshot/Model/Destination/ftp/index.php:138
 #: views/destinations/add/ftp.php:62
 #: views/destinations/partials/ftp-destination-list.php:18
-#: lib/Snapshot/Model/Destination/ftp/index.php:138
 #, fuzzy
 msgid "Host"
 msgstr "Ospite"
 
-#. Author URI of the plugin
+#: lib/Snapshot/View/Metabox/Admin.php:897
+#: lib/Snapshot/View/Metabox/Admin.php:943
+#: lib/Snapshot/View/Metabox/Admin.php:991
+#, fuzzy
+msgid "Hour"
+msgstr "Ora"
+
+#. Author URI of the plugin/theme
 #, fuzzy
 msgid "https://n3rds.work/"
 msgstr "https://n3rds.work/"
 
-#. URI of the plugin
+#. Plugin URI of the plugin/theme
 #, fuzzy
 msgid "https://n3rds.work/project/snapshot/"
 msgstr "https://n3rds.work/project/snapshot/"
@@ -1818,7 +2740,7 @@ msgstr ""
 "configurazioni di snapshot che utilizzano questa destinazione. È anche "
 "possibile definire una directory utilizzata da un'istantanea specifica."
 
-#: views/snapshots/restore.php:675
+#: lib/Snapshot/View/Metabox/Admin.php:2796 views/snapshots/restore.php:675
 #, fuzzy
 msgid ""
 "If restoring to a non-primary blog, the user's ID and user_name fields are "
@@ -1827,14 +2749,14 @@ msgstr ""
 "Se si esegue il ripristino di un blog non primario, i campi ID e nome_utente "
 "dell'utente vengono controllati rispetto agli utenti esistenti."
 
-#: views/snapshots/restore.php:674
+#: lib/Snapshot/View/Metabox/Admin.php:2795 views/snapshots/restore.php:674
 #, fuzzy
 msgid "If restoring to the primary blog ALL user entries will be replaced!"
 msgstr ""
 "Se si ripristina il blog principale, tutte le voci degli utenti saranno "
 "sostituite!"
 
-#: views/import.php:218
+#: lib/Snapshot/View/Metabox/Admin.php:3055 views/import.php:218
 #, fuzzy
 msgid ""
 "If the missing archive is on the server but saved to a different path. Maybe "
@@ -1848,6 +2770,37 @@ msgstr ""
 "completo del server alla <strong>directory</strong> in cui risiede "
 "l'archivio."
 
+#: lib/Snapshot/View/Metabox/Admin.php:2802 views/snapshots/restore.php:681
+#, fuzzy
+msgid ""
+"If the restored user ID is changed, Snapshot will update usermeta, posts and "
+"comments records with the new user ID. A new usermeta record will be added "
+"with the key '_old_user_id' with the value of the previous user ID. Snapshot "
+"cannot attempt updates to other tables like BuddyPress where the user ID "
+"fields are not known. These will need to be updated manually."
+msgstr ""
+"Se l'ID utente ripristinato viene modificato, Snapshot aggiornerà i record "
+"usermeta, post e commenti con il nuovo ID utente. Verrà aggiunto un nuovo "
+"record usermeta con la chiave '_old_user_id' con il valore dell'ID utente "
+"precedente. Snapshot non può tentare di aggiornare altre tabelle, come "
+"BuddyPress, dove i campi dell'ID utente non sono noti. Questi dovranno "
+"essere aggiornati manualmente."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1102
+#, fuzzy
+msgid ""
+"If you select a remote destination and the 'Interval' is set as Immediate, "
+"the snapshot backup file will not be sent during the normal backup step. "
+"Instead the transfer of the backup file will be scheduled at a later time. "
+"This is to prevent the screen from locking while the backup file is sent to "
+"the remote destination."
+msgstr ""
+"Se si seleziona una destinazione remota e 'Intervallo' è impostato come "
+"Immediato, il file di backup dell'istantanea non verrà inviato durante la "
+"normale fase di backup. Il trasferimento del file di backup sarà invece "
+"programmato in un momento successivo. Questo per evitare che lo schermo si "
+"blocchi durante l'invio del file di backup alla destinazione remota."
+
 #: lib/Snapshot/View/Full/Backup.php:78
 #, fuzzy, php-format
 msgid ""
@@ -1857,10 +2810,27 @@ msgstr ""
 "Se il problema persiste, non esitate ad aprire un ticket <a href=\"%s\" "
 "target=\"_blank\">qui</a>."
 
+#: lib/Snapshot/View/Metabox/Admin.php:803
+#, fuzzy
+msgid "Immediate Options"
+msgstr "Opzioni immediate"
+
 #: views/import.php:189 views/import.php:260
 #, fuzzy
 msgid "Import"
 msgstr "Importazione"
+
+#: lib/Snapshot/View/Metabox/Admin.php:3047
+#, fuzzy, php-format
+msgid ""
+"Import cannot be used to retreive remote files because your PHP install does "
+"not have cURL installed. This means you will need to manually upload the "
+"file to your server into the snapshot archives directory <em>%s</em>"
+msgstr ""
+"L'importazione non può essere usata per recuperare file remoti perché "
+"l'installazione di PHP non ha installato cURL. Ciò significa che è "
+"necessario caricare manualmente il file sul server nella cartella degli "
+"archivi snapshot <em>%s</em>"
 
 #: lib/Snapshot/View/Settings.php:478
 #, fuzzy
@@ -1871,6 +2841,15 @@ msgstr "Opzioni di importazione"
 #, fuzzy
 msgid "Import options"
 msgstr "Opzioni di importazione"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2451
+#, fuzzy
+msgid ""
+"Important to include the size M = Megabytes, G = Gigbytes as in 256M, 1G, "
+"etc."
+msgstr ""
+"È importante includere la dimensione M = Megabyte, G = Gigbyte come 256M, 1G,"
+" ecc."
 
 #: lib/Snapshot/View/Settings.php:552 lib/Snapshot/View/Settings.php:609
 #, fuzzy
@@ -1906,6 +2885,33 @@ msgstr ""
 "dal server. Può essere necessaria se il client si trova dietro un firewall. "
 "La modalità passiva è disattivata per impostazione predefinita."
 
+#: lib/Snapshot/View/Metabox/Admin.php:347
+#, fuzzy
+msgid ""
+"Include <strong>all</strong> blog database tables in this archive. This will "
+"automatically include new tables."
+msgstr ""
+"Include <strong>tutte</strong> le tabelle del database del blog in questo "
+"archivio. Questo includerà automaticamente le nuove tabelle."
+
+#: lib/Snapshot/View/Metabox/Admin.php:545
+#, fuzzy
+msgid "Include <strong>common</strong> files:"
+msgstr "Includere i file <strong>comuni</strong>:"
+
+#: lib/Snapshot/View/Metabox/Admin.php:357
+#, fuzzy
+msgid "Include <strong>selected</strong> database tables in this Snapshot"
+msgstr ""
+"Includere le tabelle del database <strong>selezionate</strong> in questa "
+"istantanea"
+
+#: lib/Snapshot/View/Metabox/Admin.php:571
+#: lib/Snapshot/View/Metabox/Admin.php:2925
+#, fuzzy
+msgid "Include <strong>selected</strong> files:"
+msgstr "Include i file <strong>selezionati</strong>:"
+
 #: views/snapshots/snapshot.php:653
 #, fuzzy
 msgid "Include all database tables"
@@ -1920,6 +2926,11 @@ msgstr "Includere i file comuni"
 #, fuzzy
 msgid "Info"
 msgstr "Info"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1720
+#, fuzzy
+msgid "Information from Archive"
+msgstr "Informazioni dall'archivio"
 
 #: views/snapshots/restore.php:148
 #, fuzzy
@@ -1959,6 +2970,11 @@ msgstr "Destinazione non valida: %s"
 msgid "Invalid endpoint"
 msgstr "Endpoint non valido"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2188
+#, fuzzy
+msgid "Is Multisite"
+msgstr "È Multisito"
+
 #: lib/Snapshot/View/Full/Backup.php:76
 #, fuzzy
 msgid "It seems we encountered an issue communicating with the remote service."
@@ -1966,10 +2982,20 @@ msgstr ""
 "Sembra che si sia verificato un problema di comunicazione con il servizio "
 "remoto."
 
+#: cp-snapshot.php:557
+#, fuzzy
+msgid "Item scheduled to run."
+msgstr "Articolo programmato per l'esecuzione."
+
 #: views/managed_backups.php:474
 #, fuzzy
 msgid "Keep"
 msgstr "Mantenere"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1109
+#, fuzzy
+msgid "Keep local archives?"
+msgstr "Conservare gli archivi locali?"
 
 #: lib/Snapshot/View/Table/Items.php:353
 #, fuzzy
@@ -1996,12 +3022,45 @@ msgstr "Ultima istantanea"
 msgid "Latest Log:"
 msgstr "Ultimo registro:"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2288
+#, fuzzy
+msgid "Libz Version"
+msgstr "Versione Libz"
+
+#: cp-snapshot.php:650
+#, fuzzy
+msgid "Limit"
+msgstr "Limite"
+
+#: lib/Snapshot/View/Metabox/Admin.php:716
+#, fuzzy
+msgid ""
+"List files here to exclude from this snapshot. This is handy to exclude very "
+"large files like videos. Files should be listed one per line. You can also "
+"exclude files for all snapshots by using the Global File Exclusions on the "
+"Settings panel."
+msgstr ""
+"Elencare qui i file da escludere da questa istantanea. È utile per escludere "
+"file molto grandi come i video. I file devono essere elencati uno per riga. "
+"È anche possibile escludere i file per tutte le istantanee utilizzando le "
+"Esclusioni globali dei file nel pannello Impostazioni."
+
+#: cp-snapshot.php:646 cp-snapshot.php:679
+#, fuzzy
+msgid "Loading..."
+msgstr "Caricamento..."
+
+#: lib/Snapshot/View/Table/FullBackups.php:54
 #: views/boxes/destinations/widget-local.php:19
 #: views/boxes/modals/popup-welcome.php:111 views/destinations/add/local.php:15
-#: lib/Snapshot/View/Table/FullBackups.php:54
 #, fuzzy
 msgid "Local"
 msgstr "Locale"
+
+#: lib/Snapshot/View/Metabox/Admin.php:3052
+#, fuzzy
+msgid "Local Archives"
+msgstr "Archivio locale"
 
 #: views/import.php:216
 #, fuzzy
@@ -2018,7 +3077,7 @@ msgstr "Elenco locale"
 msgid "Local Import"
 msgstr "Importazione locale"
 
-#: views/import.php:171 lib/Snapshot/View/Settings.php:601
+#: lib/Snapshot/View/Settings.php:601 views/import.php:171
 #, fuzzy, php-format
 msgid ""
 "local import file not found %s. This could mean either the entered path was "
@@ -2027,7 +3086,7 @@ msgstr ""
 "file di importazione locale non trovato %s. Questo potrebbe significare che "
 "il percorso inserito non era valido o accessibile."
 
-#: views/import.php:132 lib/Snapshot/View/Settings.php:539
+#: lib/Snapshot/View/Settings.php:539 views/import.php:132
 #, fuzzy
 msgid ""
 "local import file not found. This could mean either the entered URL was not "
@@ -2041,12 +3100,17 @@ msgstr ""
 msgid "Local Server"
 msgstr "Server locale"
 
+#: cp-snapshot.php:2293
+#, fuzzy
+msgid "Local Snapshot"
+msgstr "Istantanea locale"
+
 #: views/managed-backups/restore.php:68
 #, fuzzy
 msgid "Location"
 msgstr "Posizione"
 
-#: views/snapshots/item.php:295
+#: lib/Snapshot/View/Metabox/Admin.php:2578 views/snapshots/item.php:295
 #, fuzzy
 msgid "Log"
 msgstr "Log"
@@ -2056,23 +3120,35 @@ msgstr "Log"
 msgid "Login"
 msgstr "Accesso"
 
+#: lib/Snapshot/View/Metabox/Admin.php:1420
 #: lib/Snapshot/View/Table/Archives.php:378
 #, fuzzy
 msgid "Logs"
 msgstr "Registri"
 
-#: views/snapshots/restore.php:282 views/snapshots/snapshot.php:182
+#: lib/Snapshot/View/Metabox/Admin.php:89
+#: lib/Snapshot/View/Metabox/Admin.php:98
+#: lib/Snapshot/View/Metabox/Admin.php:179
+#: lib/Snapshot/View/Metabox/Admin.php:188
+#: lib/Snapshot/View/Metabox/Admin.php:1855
+#: lib/Snapshot/View/Metabox/Admin.php:1870 views/snapshots/restore.php:282
+#: views/snapshots/snapshot.php:182
 #, fuzzy
 msgid "Lookup"
 msgstr "Ricerca"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2309
+#, fuzzy
+msgid "Magic Quotes"
+msgstr "Citazioni di magia"
 
 #: lib/Snapshot/Controller/Full/Cron.php:161
 #, fuzzy
 msgid "Managed Backup Processing"
 msgstr "Elaborazione di backup gestita"
 
-#: views/managed_backups.php:29 views/managed-backups/new-backup.php:23
-#: views/managed-backups/restore.php:11
+#: views/managed-backups/new-backup.php:23 views/managed-backups/restore.php:11
+#: views/managed_backups.php:29
 #, fuzzy
 msgid "Managed Backups"
 msgstr "Backup gestiti"
@@ -2116,6 +3192,7 @@ msgstr "Il manifesto ITEM non contiene la sezione \"dati\"."
 msgid "Manifest ITEM does not contain 'timestamp' item."
 msgstr "Il manifesto ITEM non contiene l'elemento 'timestamp'."
 
+#: lib/Snapshot/View/Metabox/Admin.php:813
 #: lib/Snapshot/View/Table/Items.php:274
 #, fuzzy
 msgid "Manual"
@@ -2126,20 +3203,46 @@ msgstr "Manuale"
 msgid "Max Execution Time"
 msgstr "Tempo massimo di esecuzione"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2308
+#, fuzzy
+msgid "Max Execution Time (seconds)"
+msgstr "Tempo massimo di esecuzione (secondi)"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1037
+#, fuzzy
+msgid "Maximum number of local archives"
+msgstr "Numero massimo di archivi locali"
+
+#: lib/Snapshot/View/Metabox/Admin.php:551
+#, fuzzy
+msgid "Media"
+msgstr "Media"
+
 #: views/snapshots/snapshot.php:353
 #, fuzzy
 msgid "media"
 msgstr "media"
 
-#: views/snapshots/restore.php:514
+#: lib/Snapshot/View/Metabox/Admin.php:2965 views/snapshots/restore.php:514
 #, fuzzy
 msgid "Media Files"
 msgstr "File multimediali"
+
+#: lib/Snapshot/View/Metabox/Admin.php:624
+#, fuzzy
+msgid "Media Files:"
+msgstr "File multimediali:"
 
 #: views/snapshots/snapshot.php:442
 #, fuzzy
 msgid "Media files:"
 msgstr "File multimediali:"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2312
+#: lib/Snapshot/View/Metabox/Admin.php:2444
+#, fuzzy
+msgid "Memory Limit"
+msgstr "Limite di memoria"
 
 #: views/managed-backups/partials/restore-backup-progress.php:78
 #: views/snapshots/partials/create-snapshot-progress.php:117
@@ -2148,16 +3251,75 @@ msgstr "File multimediali:"
 msgid "Memory limit"
 msgstr "Limite di memoria"
 
+#: cp-snapshot.php:649
+#, fuzzy
+msgid "Memory: "
+msgstr "Memoria:"
+
+#: cp-snapshot.php:466
+#, fuzzy
+msgctxt "menu label"
+msgid "Dashboard"
+msgstr "Cruscotto"
+
+#: cp-snapshot.php:482
+#, fuzzy
+msgctxt "menu label"
+msgid "Destinations"
+msgstr "Destinazioni"
+
+#: cp-snapshot.php:490
+#, fuzzy
+msgctxt "menu label"
+msgid "Import"
+msgstr "Importazione"
+
 #: lib/Snapshot/View/Full/Backup.php:109
 #, fuzzy
 msgctxt "menu label"
 msgid "Managed Backups"
 msgstr "Backup gestiti"
 
+#: cp-snapshot.php:498
+#, fuzzy
+msgctxt "menu label"
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: cp-snapshot.php:457
+#, fuzzy
+msgctxt "menu label"
+msgid "Snapshot"
+msgstr "Istantanea"
+
+#: cp-snapshot.php:474
+#, fuzzy
+msgctxt "menu label"
+msgid "Snapshots"
+msgstr "Istantanee"
+
 #: lib/Snapshot/Helper/UI.php:42
 #, fuzzy
 msgid "Midnight"
 msgstr "Mezzanotte"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1232
+#, fuzzy
+msgid "Migrate old Snapshots"
+msgstr "Migrare le vecchie istantanee"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1235
+#, fuzzy
+msgid "Migrate Snapshots"
+msgstr "Migrare le istantanee"
+
+#: lib/Snapshot/View/Metabox/Admin.php:878
+#: lib/Snapshot/View/Metabox/Admin.php:911
+#: lib/Snapshot/View/Metabox/Admin.php:957
+#: lib/Snapshot/View/Metabox/Admin.php:1004
+#, fuzzy
+msgid "Minute"
+msgstr "Minuto"
 
 #: views/import.php:206
 #, fuzzy
@@ -2176,6 +3338,11 @@ msgstr ""
 #, fuzzy
 msgid "Missing API key"
 msgstr "Chiave API mancante"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2240
+#, fuzzy
+msgid "Missing Folder"
+msgstr "Cartella mancante"
 
 #: lib/Snapshot/Helper/UI.php:86
 #, fuzzy
@@ -2197,10 +3364,15 @@ msgstr "mensile"
 msgid "Monthly Managed Snapshot"
 msgstr "Istantanea mensile gestita"
 
-#: views/snapshots/snapshot.php:424
+#: lib/Snapshot/View/Metabox/Admin.php:614 views/snapshots/snapshot.php:424
 #, fuzzy
 msgid "MU-Plugins: All active and inactive plugins will be included"
 msgstr "MU-Plugins: Tutti i plugin attivi e inattivi saranno inclusi"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2179
+#, fuzzy
+msgid "MySQL Version"
+msgstr "Versione di MySQL"
 
 #: views/common/requirements-test.php:58
 #, fuzzy
@@ -2212,8 +3384,12 @@ msgstr "MySQLi"
 msgid "N/A"
 msgstr "N/D"
 
-#: views/snapshots.php:120 views/snapshots/item.php:88
-#: views/snapshots/snapshot.php:1031
+#: lib/Snapshot/Model/Destination/aws/index.php:529
+#: lib/Snapshot/Model/Destination/ftp/index.php:137
+#: lib/Snapshot/Model/Destination/google-drive/index.php:470
+#: lib/Snapshot/View/Metabox/Admin.php:209
+#: lib/Snapshot/View/Metabox/Admin.php:1243
+#: lib/Snapshot/View/Table/Items.php:681
 #: views/boxes/dashboard/widget-snapshots.php:67
 #: views/destinations/add/aws.php:21
 #: views/destinations/add/dropbox-error.php:26
@@ -2225,10 +3401,8 @@ msgstr "N/D"
 #: views/destinations/partials/google-drive-destination-list.php:14
 #: views/destinations/partials/local-destination-list.php:15
 #: views/destinations/partials/s3-destination-list.php:16
-#: lib/Snapshot/View/Table/Items.php:681
-#: lib/Snapshot/Model/Destination/aws/index.php:529
-#: lib/Snapshot/Model/Destination/ftp/index.php:137
-#: lib/Snapshot/Model/Destination/google-drive/index.php:470
+#: views/snapshots.php:120 views/snapshots/item.php:88
+#: views/snapshots/snapshot.php:1031
 #, fuzzy
 msgid "Name"
 msgstr "Nome"
@@ -2239,8 +3413,8 @@ msgstr "Nome"
 msgid "Name is required"
 msgstr "Il nome è obbligatorio"
 
-#: views/managed_backups.php:90 views/boxes/dashboard/widget-status.php:8
-#: views/boxes/dashboard/widget-status.php:77
+#: views/boxes/dashboard/widget-status.php:8
+#: views/boxes/dashboard/widget-status.php:77 views/managed_backups.php:90
 #, fuzzy
 msgid "Never"
 msgstr "Mai"
@@ -2250,7 +3424,7 @@ msgstr "Mai"
 msgid "New Backup"
 msgstr "Nuovo backup"
 
-#: views/snapshots.php:61
+#: cp-snapshot.php:1343 views/snapshots.php:61
 #, fuzzy
 msgid "New Snapshot"
 msgstr "Nuova istantanea"
@@ -2301,6 +3475,12 @@ msgstr ""
 "campo <strong>URI di reindirizzamento</strong> sottostante. Fare quindi clic "
 "sul pulsante <strong>Crea ID cliente</strong>."
 
+#: lib/Snapshot/View/Metabox/Admin.php:1118
+#: lib/Snapshot/View/Metabox/Admin.php:2197
+#, fuzzy
+msgid "No"
+msgstr "No"
+
 #: lib/Snapshot/Model/Destination/google-drive/index.php:522
 #, fuzzy, php-format
 msgid "No %s Destinations"
@@ -2311,12 +3491,17 @@ msgstr "No %s Destinazioni"
 msgid "No Amazon S3 Destinations"
 msgstr "Nessuna destinazione Amazon S3"
 
+#: lib/Snapshot/View/Metabox/Admin.php:1560
+#, fuzzy
+msgid "No Archives"
+msgstr "Nessun archivio"
+
 #: views/boxes/dashboard/widget-status.php:6
 #, fuzzy
 msgid "No Backups"
 msgstr "Nessun backup"
 
-#: views/import.php:284 lib/Snapshot/View/Settings.php:665
+#: lib/Snapshot/View/Settings.php:665 views/import.php:284
 #, fuzzy
 msgid "No errors were encountered during the import process."
 msgstr "Non sono stati riscontrati errori durante il processo di importazione."
@@ -2331,27 +3516,30 @@ msgstr "Nessuna destinazione FTP"
 msgid "No Snapshot file found"
 msgstr "Nessun file di istantanea trovato"
 
-#: views/snapshots/snapshot.php:781
+#: lib/Snapshot/View/Metabox/Admin.php:462 views/snapshots/snapshot.php:781
 #, fuzzy
 msgid "No Tables"
 msgstr "Nessun tavolo"
 
-#: views/snapshots/restore.php:721
+#: lib/Snapshot/View/Metabox/Admin.php:2843 views/snapshots/restore.php:721
 #, fuzzy
 msgid "No tables"
 msgstr "Nessun tavolo"
 
-#: views/snapshots/item.php:268 lib/Snapshot/Helper/Utility.php:1147
-#, fuzzy
-msgid "non-core"
-msgstr "non-core"
-
-#: views/snapshots/restore.php:649 views/snapshots/snapshot.php:683
+#: lib/Snapshot/View/Metabox/Admin.php:368
+#: lib/Snapshot/View/Metabox/Admin.php:2763 views/snapshots/restore.php:649
+#: views/snapshots/snapshot.php:683
 #, fuzzy
 msgid "Non-ClassicPress Tables"
 msgstr "Tabelle non ClassicPress"
 
-#: views/snapshots/item.php:219 views/snapshots/item.php:257
+#: lib/Snapshot/Helper/Utility.php:1147 views/snapshots/item.php:268
+#, fuzzy
+msgid "non-core"
+msgstr "non-core"
+
+#: lib/Snapshot/View/Metabox/Admin.php:869 views/snapshots/item.php:219
+#: views/snapshots/item.php:257
 #, fuzzy
 msgid "None"
 msgstr "Nessuno"
@@ -2360,6 +3548,11 @@ msgstr "Nessuno"
 #, fuzzy
 msgid "Noon"
 msgstr "Mezzogiorno"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2243
+#, fuzzy
+msgid "Not Writable "
+msgstr "Non scrivibile"
 
 #: lib/Snapshot/Model/Destination/google-drive/index.php:616
 #, fuzzy
@@ -2373,11 +3566,19 @@ msgstr ""
 "con Drive. Vedere le istruzioni a destra su come ottenere l'ID della "
 "directory."
 
+#: lib/Snapshot/View/Metabox/Admin.php:235
+#: lib/Snapshot/View/Metabox/Admin.php:1244
+#: lib/Snapshot/View/Metabox/Admin.php:1414
 #: lib/Snapshot/View/Table/Archives.php:376
 #: lib/Snapshot/View/Table/Items.php:686
 #, fuzzy
 msgid "Notes"
 msgstr "Note"
+
+#: assets/shared-ui/plugin-ui.php:49
+#, fuzzy
+msgid "Nothing found"
+msgstr "Non è stato trovato nulla"
 
 #: lib/Snapshot/Helper/Log.php:115
 #, fuzzy
@@ -2388,6 +3589,17 @@ msgstr "Avviso"
 #, fuzzy
 msgid "Notices"
 msgstr "Avvisi"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2562
+#, fuzzy
+msgid ""
+"Notices - Run-time notices. Indicate that the script encountered something "
+"that could indicate an error, but could also happen in the normal course of "
+"running a script."
+msgstr ""
+"Avvisi - Avvisi di esecuzione. Indicano che lo script ha incontrato qualcosa "
+"che potrebbe indicare un errore, ma che potrebbe anche verificarsi nel corso "
+"della normale esecuzione di uno script."
 
 #: lib/Snapshot/View/Table/Items.php:291 lib/Snapshot/View/Table/Items.php:317
 #, fuzzy
@@ -2405,10 +3617,35 @@ msgstr ""
 "correttamente. Controllare i registri delle istantanee per maggiori dettagli "
 "o riprovare a ripristinare tra qualche istante."
 
+#: assets/shared-ui/plugin-ui.php:50
+#, fuzzy
+msgid "Okay, we saved your changes!"
+msgstr "Ok, abbiamo salvato le modifiche!"
+
 #: views/snapshots/snapshot.php:918 views/snapshots/snapshot.php:950
 #, fuzzy
 msgid "on"
 msgstr "su"
+
+#: cp-snapshot.php:1303
+#, fuzzy
+msgid ""
+"On the Edit Snapshot panel you can rename or add notes to the snapshot item. "
+"Also provided is a link to the snapshot file which you can download and "
+"archive to your local system."
+msgstr ""
+"Nel pannello Modifica istantanea è possibile rinominare o aggiungere note "
+"all'elemento dell'istantanea. È inoltre disponibile un link al file "
+"dell'istantanea che può essere scaricato e archiviato nel sistema locale."
+
+#: cp-snapshot.php:1312
+#, fuzzy
+msgid ""
+"On the restore screen you will see a section for \"Restore Option\". The "
+"details for each option are discussed below"
+msgstr ""
+"Nella schermata di ripristino viene visualizzata la sezione \"Opzione di "
+"ripristino\". I dettagli di ciascuna opzione sono illustrati di seguito"
 
 #: lib/Snapshot/Helper/Utility.php:740
 #, fuzzy
@@ -2421,8 +3658,8 @@ msgstr "Una volta all'ora"
 msgid "Once off"
 msgstr "Una volta spento"
 
-#: views/destinations/add/google-drive.php:117
 #: lib/Snapshot/Model/Destination/google-drive/index.php:649
+#: views/destinations/add/google-drive.php:117
 #, fuzzy
 msgid ""
 "Once the Project creation is completed go to the <strong>API Manager</strong>"
@@ -2456,6 +3693,31 @@ msgstr "Include solo i file selezionati"
 msgid "Only include selected tables"
 msgstr "Includere solo le tabelle selezionate"
 
+#: assets/shared-ui/plugin-ui.php:51
+#, fuzzy
+msgid "Oops, we could not do this..."
+msgstr "Ops, non siamo riusciti a farlo..."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2314
+#, fuzzy
+msgid "Open Basedir"
+msgstr "Base aperta"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2256
+#, fuzzy
+msgid "OpenSSL"
+msgstr "OpenSSL"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2266
+#, fuzzy
+msgid "OpenSSL installed"
+msgstr "OpenSSL installato"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2264
+#, fuzzy
+msgid "OpenSSL not installed."
+msgstr "OpenSSL non è installato."
+
 #: views/managed-backups/new-backup.php:237 views/snapshots/snapshot.php:1003
 #, fuzzy
 msgid "Optional"
@@ -2467,8 +3729,9 @@ msgstr "Opzionale"
 msgid "Options"
 msgstr "Opzioni"
 
-#: views/snapshots/item.php:270 lib/Snapshot/Helper/Utility.php:1149
+#: lib/Snapshot/Helper/Utility.php:1149
 #: lib/Snapshot/Model/Destination/aws/index.php:115
+#: views/snapshots/item.php:270
 #, fuzzy
 msgid "other"
 msgstr "altro"
@@ -2478,16 +3741,59 @@ msgstr "altro"
 msgid "Other kind of backup error"
 msgstr "Altro tipo di errore di backup"
 
-#: views/snapshots/restore.php:650 views/snapshots/snapshot.php:684
+#: lib/Snapshot/View/Metabox/Admin.php:369
+#: lib/Snapshot/View/Metabox/Admin.php:2764 views/snapshots/restore.php:650
+#: views/snapshots/snapshot.php:684
 #, fuzzy
 msgid "Other Tables"
 msgstr "Altri tavoli"
+
+#: cp-snapshot.php:1334
+#, fuzzy
+msgid "Overview"
+msgstr "Panoramica"
+
+#: cp-snapshot.php:465
+#, fuzzy
+msgctxt "page label"
+msgid "Dashboard"
+msgstr "Cruscotto"
+
+#: cp-snapshot.php:481
+#, fuzzy
+msgctxt "page label"
+msgid "Destinations"
+msgstr "Destinazioni"
+
+#: cp-snapshot.php:489
+#, fuzzy
+msgctxt "page label"
+msgid "Import"
+msgstr "Importazione"
 
 #: lib/Snapshot/View/Full/Backup.php:108
 #, fuzzy
 msgctxt "page label"
 msgid "Managed Backups"
 msgstr "Backup gestiti"
+
+#: cp-snapshot.php:497
+#, fuzzy
+msgctxt "page label"
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: cp-snapshot.php:456
+#, fuzzy
+msgctxt "page label"
+msgid "Snapshot Pro"
+msgstr "Istantanea Pro"
+
+#: cp-snapshot.php:473
+#, fuzzy
+msgctxt "page label"
+msgid "Snapshots"
+msgstr "Istantanee"
 
 #: views/common/requirements-test.php:11 views/common/requirements-test.php:27
 #: views/common/requirements-test.php:45 views/common/requirements-test.php:62
@@ -2501,8 +3807,8 @@ msgstr "PASSO"
 msgid "Passive Mode"
 msgstr "Modalità passiva"
 
-#: views/destinations/add/ftp.php:97
 #: lib/Snapshot/Model/Destination/ftp/index.php:302
+#: views/destinations/add/ftp.php:97
 #, fuzzy
 msgid "Password"
 msgstr "Password"
@@ -2512,12 +3818,29 @@ msgstr "Password"
 msgid "Password is required"
 msgstr "La password è necessaria"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2654
+#, fuzzy
+msgid ""
+"PclZip - is part of the ClassicPress core libraries. It will be slower than "
+"built-in PHP functions like ZipArchive. This library  uses memory instead of "
+"files for temporary storage when compressing large files."
+msgstr ""
+"PclZip - fa parte delle librerie di base di ClassicPress. Sarà più lenta "
+"delle funzioni PHP integrate, come ZipArchive. Questa libreria utilizza la "
+"memoria invece dei file per l'archiviazione temporanea quando comprime file "
+"di grandi dimensioni."
+
 #: views/managed-backups/partials/restore-backup-progress.php:90
 #: views/snapshots/partials/create-snapshot-progress.php:129
 #: views/snapshots/partials/restore-snapshot-progress.php:109
 #, fuzzy
 msgid "Peak"
 msgstr "Picco"
+
+#: cp-snapshot.php:652
+#, fuzzy
+msgid "Peak:"
+msgstr "Picco:"
 
 #: lib/Snapshot/View/Table/Archives.php:304
 #: lib/Snapshot/View/Table/Archives.php:342
@@ -2526,6 +3849,11 @@ msgstr "Picco"
 msgid "Pending"
 msgstr "In attesa"
 
+#: cp-snapshot.php:1100 cp-snapshot.php:1142
+#, fuzzy
+msgid "per Page"
+msgstr "per pagina"
+
 #: lib/Snapshot/Model/Full/Remote/Api.php:358
 #: lib/Snapshot/Model/Full/Remote/Api.php:365
 #: lib/Snapshot/Model/Full/Remote/Api.php:488
@@ -2533,11 +3861,17 @@ msgstr "In attesa"
 msgid "Persistent connection error"
 msgstr "Errore di connessione persistente"
 
-#: views/import.php:121 lib/Snapshot/View/Settings.php:500
+#: lib/Snapshot/View/Settings.php:500 views/import.php:121
 #, fuzzy
 msgid "PHP max_execution_time"
 msgstr "PHP max_execution_time"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2301
+#, fuzzy
+msgid "PHP runtime information"
+msgstr "Informazioni sul runtime PHP"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2170
 #: views/common/requirements-test.php:23
 #, fuzzy
 msgid "PHP Version"
@@ -2576,10 +3910,17 @@ msgstr ""
 "Assicuratevi che il vostro sito sia in grado di eseguire richieste remote a "
 "<code>%1$s</code>."
 
-#: views/snapshots/restore.php:505 views/snapshots/restore.php:743
+#: lib/Snapshot/View/Metabox/Admin.php:1589
+#: lib/Snapshot/View/Metabox/Admin.php:2954 views/snapshots/restore.php:505
+#: views/snapshots/restore.php:743
 #, fuzzy
 msgid "Plugins"
 msgstr "Plugin"
+
+#: lib/Snapshot/View/Metabox/Admin.php:605
+#, fuzzy
+msgid "Plugins: All active and inactive plugins will be included"
+msgstr "Plugin: Saranno inclusi tutti i plugin attivi e inattivi"
 
 #: lib/Snapshot/Helper/UI.php:48
 #, fuzzy
@@ -2591,9 +3932,9 @@ msgstr "pm"
 msgid "Port"
 msgstr "Porto"
 
-#: views/destinations/add/aws.php:194
 #: lib/Snapshot/Model/Destination/aws/index.php:124
 #: lib/Snapshot/Model/Destination/aws/index.php:769
+#: views/destinations/add/aws.php:194
 #, fuzzy
 msgid "Private"
 msgstr "Privato"
@@ -2610,8 +3951,8 @@ msgstr "Processo"
 msgid "Processing (step %d)"
 msgstr "Elaborazione (passo %d)"
 
-#: views/import.php:96 views/import.php:141 lib/Snapshot/View/Settings.php:517
-#: lib/Snapshot/View/Settings.php:577 lib/Snapshot/View/Settings.php:635
+#: lib/Snapshot/View/Settings.php:517 lib/Snapshot/View/Settings.php:577
+#: lib/Snapshot/View/Settings.php:635 views/import.php:96 views/import.php:141
 #, fuzzy
 msgid "Processing archive"
 msgstr "Archivio di elaborazione"
@@ -2623,16 +3964,31 @@ msgstr "Archivio di elaborazione"
 msgid "Progress"
 msgstr "Progressi"
 
-#: views/destinations/add/aws.php:196
+#: lib/Snapshot/View/Metabox/Admin.php:2289
+#, fuzzy
+msgid "Protocols"
+msgstr "Protocolli"
+
+#: views/managed-backups/new-backup.php:130
+#, fuzzy
+msgid "PSOURCE Cloud"
+msgstr "Nuvola PSOURCE"
+
+#: views/boxes/modals/popup-welcome.php:45
+#, fuzzy
+msgid "PSOURCE Managed Backups"
+msgstr "Backup gestiti da PSOURCE"
+
 #: lib/Snapshot/Model/Destination/aws/index.php:125
 #: lib/Snapshot/Model/Destination/aws/index.php:773
+#: views/destinations/add/aws.php:196
 #, fuzzy
 msgid "Public Read"
 msgstr "Lettura pubblica"
 
-#: views/destinations/add/aws.php:198
 #: lib/Snapshot/Model/Destination/aws/index.php:126
 #: lib/Snapshot/Model/Destination/aws/index.php:777
+#: views/destinations/add/aws.php:198
 #, fuzzy
 msgid "Public Read/Write"
 msgstr "Pubblico Lettura/Scrittura"
@@ -2642,8 +3998,8 @@ msgstr "Pubblico Lettura/Scrittura"
 msgid "Queue"
 msgstr "Coda"
 
-#: views/destinations/add/google-drive.php:244
 #: lib/Snapshot/Model/Destination/google-drive/index.php:734
+#: views/destinations/add/google-drive.php:244
 #, fuzzy
 msgid "Re-Authorize"
 msgstr "Ri-autorizzare"
@@ -2678,6 +4034,11 @@ msgstr "Rigenerare"
 msgid "Remote"
 msgstr "Remoto"
 
+#: lib/Snapshot/View/Metabox/Admin.php:3037
+#, fuzzy
+msgid "Remote Archives"
+msgstr "Archivi remoti"
+
 #: views/import.php:209
 #, fuzzy
 msgid "Remote archives"
@@ -2697,6 +4058,21 @@ msgstr "Rimuovere"
 #, fuzzy
 msgid "Remove Destination"
 msgstr "Rimuovere la destinazione"
+
+#: lib/Snapshot/Model/Full/Remote/Api.php:273
+#, fuzzy, php-format
+msgctxt ""
+"Request error message, then key reset message, then open ticket message"
+msgid "%1$s <br /> %2$s <br /> %3$s"
+msgstr "%1$s <br /> %2$s <br /> %3$s"
+
+#: lib/Snapshot/Model/Full/Remote/Api.php:144
+#: lib/Snapshot/Model/Full/Remote/Api.php:245
+#, fuzzy, php-format
+msgctxt ""
+"Request error, then connection check message, then open ticket message"
+msgid "%1$s %2$s <br /> %3$s"
+msgstr "%1$s %2$s <br /> %3$s"
 
 #: views/common/requirements-test.php:3
 #, fuzzy
@@ -2724,10 +4100,10 @@ msgstr "Tasto di reset"
 msgid "Restoration Log"
 msgstr "Registro di restauro"
 
-#: views/managed_backups.php:329 views/snapshots.php:296
-#: views/snapshots/item.php:62 views/snapshots/item.php:327
 #: lib/Snapshot/View/Table/FullBackups.php:47
-#: lib/Snapshot/View/Table/FullBackups.php:86
+#: lib/Snapshot/View/Table/FullBackups.php:86 views/managed_backups.php:329
+#: views/snapshots.php:296 views/snapshots/item.php:62
+#: views/snapshots/item.php:327
 #, fuzzy
 msgid "Restore"
 msgstr "Ripristino"
@@ -2739,7 +4115,7 @@ msgstr "Ripristino"
 msgid "restore"
 msgstr "ripristino"
 
-#: views/snapshots/restore.php:610
+#: lib/Snapshot/View/Metabox/Admin.php:2739 views/snapshots/restore.php:610
 #, fuzzy
 msgid ""
 "Restore <strong>all</strong> blog database tables contained in this archive "
@@ -2747,7 +4123,7 @@ msgstr ""
 "Ripristinare <strong>tutte</strong> le tabelle del database del blog "
 "contenute in questo archivio"
 
-#: views/snapshots/restore.php:610
+#: lib/Snapshot/View/Metabox/Admin.php:2737 views/snapshots/restore.php:610
 #, fuzzy
 msgid ""
 "Restore <strong>all</strong> blog database tables contained in this archive "
@@ -2757,7 +4133,12 @@ msgstr ""
 "contenute in questo archivio <strong>(escluse le tabelle globali users e "
 "usermeta)</strong>"
 
-#: views/snapshots/restore.php:455
+#: lib/Snapshot/View/Metabox/Admin.php:2755
+#, fuzzy
+msgid "Restore <strong>selected</strong> database tables"
+msgstr "Ripristino delle tabelle del database <strong>selezionate</strong>"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2900 views/snapshots/restore.php:455
 #, fuzzy
 msgid "Restore all files"
 msgstr "Ripristino di tutti i file"
@@ -2767,7 +4148,7 @@ msgstr "Ripristino di tutti i file"
 msgid "Restore Blog Options"
 msgstr "Ripristino delle opzioni del blog"
 
-#: views/snapshots/restore.php:591
+#: lib/Snapshot/View/Metabox/Admin.php:2723 views/snapshots/restore.php:591
 #, fuzzy, php-format
 msgid ""
 "Restore Note: The archive contains tables names with a different database "
@@ -2778,7 +4159,7 @@ msgstr ""
 "database ( %s ) diverso da quello di questo sito ( %s ). Le tabelle "
 "ripristinate saranno automaticamente rinominate con il prefisso del sito"
 
-#: views/snapshots/restore.php:424
+#: lib/Snapshot/View/Metabox/Admin.php:2887 views/snapshots/restore.php:424
 #, fuzzy
 msgid ""
 "Restore Note: The archive you are about to restore includes the .htaccess "
@@ -2791,7 +4172,7 @@ msgstr ""
 "file, a meno che il sito non sia danneggiato. Per ripristinare uno di questi "
 "file è necessario selezionarli dalla sezione \"include i file selezionati\"."
 
-#: views/snapshots/restore.php:585
+#: lib/Snapshot/View/Metabox/Admin.php:2718 views/snapshots/restore.php:585
 #, fuzzy
 msgid ""
 "Restore Note: The archive you are about to restore includes the global "
@@ -2808,7 +4189,7 @@ msgstr ""
 "\"Ripristino delle tabelle del database selezionate\". I dati contenuti in "
 "queste tabelle saranno uniti alle tabelle globali correnti"
 
-#: views/snapshots/restore.php:486
+#: lib/Snapshot/View/Metabox/Admin.php:2931 views/snapshots/restore.php:486
 #, fuzzy
 msgid ""
 "Restore Note: The files wp-config.php and .htaccess can only be restored for "
@@ -2831,6 +4212,18 @@ msgstr ""
 "essere stato creato dal sistema ClassicPress corrente. Si cercherà di "
 "sostituire l'URL di origine con l'URL di destinazione."
 
+#: lib/Snapshot/View/Metabox/Admin.php:1709
+#, fuzzy
+msgid ""
+"Restore Note: URL mismatch!. The Snapshot archive does not appear made from "
+"the current ClassicPress system. Every attempt will be made to replace the "
+"source URL with the URL from the destination."
+msgstr ""
+"Nota di ripristino: errore di corrispondenza dell'URL! L'archivio "
+"dell'istantanea non sembra essere stato creato dal sistema ClassicPress "
+"corrente. Si cercherà di sostituire l'URL di origine con l'URL di "
+"destinazione."
+
 #: views/managed-backups/restore.php:105 views/snapshots/restore.php:838
 #, fuzzy
 msgid "Restore Now"
@@ -2842,7 +4235,7 @@ msgstr "Ripristina ora"
 msgid "Restore Result"
 msgstr "Ripristino del risultato"
 
-#: lib/Snapshot/View/Settings.php:362
+#: cp-snapshot.php:1361 lib/Snapshot/View/Settings.php:362
 #, fuzzy
 msgid "Restore Snapshot"
 msgstr "Ripristino dell'istantanea"
@@ -2857,15 +4250,16 @@ msgstr "Ripristino delle opzioni del tema"
 msgid "Restore to"
 msgstr "Ripristino a"
 
-#: views/managed-backups/restore.php:27 views/snapshots/restore.php:49
 #: views/managed-backups/partials/restore-backup-progress.php:8
+#: views/managed-backups/restore.php:27
 #: views/snapshots/partials/restore-snapshot-progress.php:8
+#: views/snapshots/restore.php:49
 #, fuzzy
 msgid "Restore Wizard"
 msgstr "Ripristino guidato"
 
-#: views/managed_backups.php:210 views/managed-backups/new-backup.php:269
-#: views/managed-backups/new-backup.php:270
+#: views/managed-backups/new-backup.php:269
+#: views/managed-backups/new-backup.php:270 views/managed_backups.php:210
 #, fuzzy
 msgid "Run Backup"
 msgstr "Eseguire il backup"
@@ -2874,6 +4268,12 @@ msgstr "Eseguire il backup"
 #, fuzzy
 msgid "Run daily, weekly or monthly"
 msgstr "Esecuzione giornaliera, settimanale o mensile"
+
+#: lib/Snapshot/View/Metabox/Admin.php:808
+#: lib/Snapshot/View/Metabox/Admin.php:822
+#, fuzzy
+msgid "Run immediate"
+msgstr "Esecuzione immediata"
 
 #: lib/Snapshot/View/Table/Items.php:179
 #, fuzzy
@@ -2899,6 +4299,16 @@ msgstr ""
 "Avvisi di esecuzione (errori non fatali). L'esecuzione dello script non "
 "viene interrotta."
 
+#: lib/Snapshot/View/Metabox/Admin.php:2307
+#, fuzzy
+msgid "Running PHP in Safe Mode"
+msgstr "Esecuzione di PHP in modalità sicura"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2315
+#, fuzzy
+msgid "Safe Mode"
+msgstr "Modalità provvisoria"
+
 #: lib/Snapshot/Helper/UI.php:91
 #, fuzzy
 msgid "Saturday"
@@ -2919,8 +4329,8 @@ msgstr "Salva ed esegui il backup"
 msgid "Save Changes"
 msgstr "Salva le modifiche"
 
-#: views/destinations/add/index.php:194 views/destinations/add/index.php:198
 #: lib/Snapshot/View/Destination/Listing.php:174
+#: views/destinations/add/index.php:194 views/destinations/add/index.php:198
 #, fuzzy
 msgid "Save Destination"
 msgstr "Salva la destinazione"
@@ -2930,23 +4340,73 @@ msgstr "Salva la destinazione"
 msgid "Save Key"
 msgstr "Chiave di salvataggio"
 
+#: lib/Snapshot/View/Metabox/Admin.php:818
+#, fuzzy
+msgid "Save only"
+msgstr "Risparmia solo"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2030
+#: lib/Snapshot/View/Metabox/Admin.php:2091
+#: lib/Snapshot/View/Metabox/Admin.php:2458
+#: lib/Snapshot/View/Metabox/Admin.php:2550
+#: lib/Snapshot/View/Metabox/Admin.php:2606
+#: lib/Snapshot/View/Metabox/Admin.php:2663
+#, fuzzy
+msgid "Save Settings"
+msgstr "Salva le impostazioni"
+
 #: lib/Snapshot/View/Settings.php:250
 #, fuzzy
 msgid "Save Snapshot"
 msgstr "Salva l'istantanea"
+
+#: assets/shared-ui/plugin-ui.php:272
+#, fuzzy
+msgid "Saving"
+msgstr "Risparmio"
 
 #: lib/Snapshot/View/Settings.php:481
 #, fuzzy
 msgid "Scan / Import Snapshots"
 msgstr "Scansione/importazione di istantanee"
 
-#: views/managed_backups.php:403 views/managed-backups/new-backup.php:188
+#: views/managed-backups/new-backup.php:188 views/managed_backups.php:403
 #: views/snapshots/snapshot.php:848
 #, fuzzy
 msgid "Schedule"
 msgstr "Programma"
 
-#: views/snapshots/restore.php:666 views/snapshots/snapshot.php:703
+#: lib/Snapshot/View/Metabox/Admin.php:828
+#, fuzzy
+msgid "Scheduled Options"
+msgstr "Opzioni programmate"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2077
+#, fuzzy
+msgid "Segment Size"
+msgstr "Dimensione del segmento"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1411
+#, fuzzy
+msgid "Select"
+msgstr "Selezionare"
+
+#: lib/Snapshot/View/Metabox/Admin.php:757
+#, fuzzy
+msgid ""
+"Select a backup interval from the options below. If you select 'Immediate' "
+"the backup will start immediately and will only occur once. If you select "
+"any other value the initial backup will start within a few minutes then "
+"repeat on the selected interval."
+msgstr ""
+"Selezionare un intervallo di backup dalle opzioni sottostanti. Se si "
+"seleziona \"Immediato\", il backup verrà avviato immediatamente e verrà "
+"eseguito una sola volta. Se si seleziona un altro valore, il backup iniziale "
+"verrà avviato entro pochi minuti e poi ripetuto all'intervallo selezionato."
+
+#: cp-snapshot.php:644 lib/Snapshot/View/Metabox/Admin.php:389
+#: lib/Snapshot/View/Metabox/Admin.php:2787 views/snapshots/restore.php:666
+#: views/snapshots/snapshot.php:703
 #, fuzzy
 msgid "Select all"
 msgstr "Seleziona tutti"
@@ -2962,11 +4422,16 @@ msgstr ""
 "progetto, è necessario inserire un nome, ma l'ID non è importante e può "
 "essere ignorato."
 
-#: views/destinations/add/aws.php:168
 #: lib/Snapshot/Model/Destination/aws/index.php:752
+#: views/destinations/add/aws.php:168
 #, fuzzy
 msgid "Select Bucket"
 msgstr "Selezionare il secchio"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2626
+#, fuzzy
+msgid "Select Compression Option"
+msgstr "Selezionare l'opzione di compressione"
 
 #: lib/Snapshot/Model/Destination/google-drive/index.php:648
 #, fuzzy
@@ -2984,6 +4449,28 @@ msgstr ""
 #, fuzzy
 msgid "Select the archive you wish to restore from."
 msgstr "Selezionare l'archivio da cui si desidera eseguire il ripristino."
+
+#: lib/Snapshot/View/Metabox/Admin.php:328
+#, fuzzy
+msgid "Select the database tables backup option for this Snapshot."
+msgstr ""
+"Selezionare l'opzione di backup delle tabelle del database per questa "
+"istantanea."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2730
+#, fuzzy
+msgid "Select the database tables restore option."
+msgstr "Selezionare l'opzione di ripristino delle tabelle del database."
+
+#: lib/Snapshot/View/Metabox/Admin.php:521
+#, fuzzy
+msgid "Select the File backup option for this Snapshot."
+msgstr "Selezionare l'opzione Backup dei file per questa istantanea."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2894
+#, fuzzy
+msgid "Select the File sections to restore:"
+msgstr "Selezionare le sezioni di file da ripristinare:"
 
 #: lib/Snapshot/View/Table/Archives.php:409
 #, fuzzy
@@ -3012,6 +4499,16 @@ msgstr ""
 msgid "Selected Archive to Restore"
 msgstr "Archivio selezionato da ripristinare"
 
+#: cp-snapshot.php:554
+#, fuzzy
+msgid "Selected Snapshots successfully deleted."
+msgstr "Le istantanee selezionate sono state eliminate con successo."
+
+#: cp-snapshot.php:7136
+#, fuzzy
+msgid "Sending Archive"
+msgstr "Invio dell'archivio"
+
 #: lib/Snapshot/Model/Destination/ftp/index.php:275
 #, fuzzy
 msgid "Server Address"
@@ -3022,11 +4519,16 @@ msgstr "Indirizzo del server"
 msgid "Server Port (optional)"
 msgstr "Porta del server (opzionale)"
 
-#: views/destinations/add/ftp.php:157
 #: lib/Snapshot/Model/Destination/ftp/index.php:375
+#: views/destinations/add/ftp.php:157
 #, fuzzy
 msgid "Server Timeout"
 msgstr "Timeout del server"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1599
+#, fuzzy
+msgid "Set a theme to active"
+msgstr "Impostare un tema come attivo"
 
 #: views/managed_backups.php:406
 #, fuzzy
@@ -3040,11 +4542,17 @@ msgstr ""
 "frequenza settimanale o giornaliera, a seconda di quanto è attivo il vostro "
 "sito web."
 
-#: views/managed_backups.php:168 views/managed_backups.php:172
-#: views/managed_backups.php:383 views/settings.php:10
+#: cp-snapshot.php:435 cp-snapshot.php:1386 views/managed_backups.php:168
+#: views/managed_backups.php:172 views/managed_backups.php:383
+#: views/settings.php:10
 #, fuzzy
 msgid "Settings"
 msgstr "Impostazioni"
+
+#: cp-snapshot.php:556 cp-snapshot.php:607
+#, fuzzy
+msgid "Settings have been updated."
+msgstr "Le impostazioni sono state aggiornate."
 
 #: lib/Snapshot/Model/Destination/ftp/index.php:40
 #, fuzzy
@@ -3058,8 +4566,6 @@ msgstr "Mostra tutte le destinazioni"
 
 #: views/managed-backups/partials/restore-backup-progress.php:10
 #: views/snapshots/partials/create-snapshot-progress.php:11
-#: views/snapshots/partials/create-snapshot-progress.php:11
-#: views/snapshots/partials/restore-snapshot-progress.php:10
 #: views/snapshots/partials/restore-snapshot-progress.php:10
 #, fuzzy
 msgid "Show Full Log"
@@ -3070,15 +4576,18 @@ msgstr "Mostra il registro completo"
 msgid "Show Log"
 msgstr "Mostra registro"
 
-#: views/snapshots/restore.php:155 views/snapshots/restore.php:210
+#: lib/Snapshot/View/Metabox/Admin.php:1743
+#: lib/Snapshot/View/Metabox/Admin.php:1832 views/snapshots/restore.php:155
+#: views/snapshots/restore.php:210
 #, fuzzy
 msgid "Site URL:"
 msgstr "URL del sito:"
 
-#: views/managed_backups.php:234 views/managed_backups.php:281
-#: views/snapshots.php:126 views/snapshots.php:231
+#: lib/Snapshot/View/Metabox/Admin.php:1415
 #: lib/Snapshot/View/Table/Archives.php:377
-#: lib/Snapshot/View/Table/FullBackups.php:23
+#: lib/Snapshot/View/Table/FullBackups.php:23 views/managed_backups.php:234
+#: views/managed_backups.php:281 views/snapshots.php:126
+#: views/snapshots.php:231
 #, fuzzy
 msgid "Size"
 msgstr "Dimensione"
@@ -3088,10 +4597,15 @@ msgstr "Dimensione"
 msgid "Skip"
 msgstr "Salto"
 
-#: views/snapshots/snapshot.php:1047
+#: lib/Snapshot/View/Metabox/Admin.php:218 views/snapshots/snapshot.php:1047
 #, fuzzy
 msgid "Snapshot"
 msgstr "Istantanea"
+
+#: cp-snapshot.php:660 cp-snapshot.php:681
+#, fuzzy
+msgid "Snapshot backup aborted"
+msgstr "Backup dell'istantanea interrotto"
 
 #: lib/Snapshot/View/Destination/Listing.php:24
 #, fuzzy
@@ -3104,11 +4618,17 @@ msgstr "Tutte le destinazioni dell'istantanea"
 msgid "Snapshot Destinations"
 msgstr "Destinazioni istantanee"
 
+#: cp-snapshot.php:658
 #: views/managed-backups/partials/restore-backup-progress.php:114
 #: views/snapshots/partials/restore-snapshot-progress.php:126
 #, fuzzy
 msgid "Snapshot determining tables/files to restore"
 msgstr "Istantanea che determina le tabelle/file da ripristinare"
+
+#: cp-snapshot.php:656
+#, fuzzy
+msgid "Snapshot Finishing"
+msgstr "Finitura istantanea"
 
 #: views/snapshots/partials/create-snapshot-progress.php:222
 #, fuzzy
@@ -3131,7 +4651,12 @@ msgstr "Informazioni istantanee"
 msgid "Snapshot Initializing"
 msgstr "Inizializzazione dell'istantanea"
 
-#: views/managed_backups.php:97
+#: cp-snapshot.php:647
+#, fuzzy
+msgid "Snapshot initializing"
+msgstr "Inizializzazione dell'istantanea"
+
+#: cp-snapshot.php:674 views/managed_backups.php:97
 #, fuzzy
 msgid "Snapshot Key"
 msgstr "Chiave istantanea"
@@ -3140,6 +4665,11 @@ msgstr "Chiave istantanea"
 #, fuzzy
 msgid "Snapshot Log"
 msgstr "Registro delle istantanee"
+
+#: cp-snapshot.php:643
+#, fuzzy
+msgid "Snapshot Log Viewer"
+msgstr "Visualizzatore di log delle istantanee"
 
 #: lib/Snapshot/View/Full/Backup.php:243
 #, fuzzy
@@ -3165,6 +4695,18 @@ msgctxt "Snapshot page description"
 msgid ""
 msgstr ""
 
+#: lib/Snapshot/View/Metabox/Admin.php:2398
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"<strong>If left blank, Snapshot will compare the php.ini (memory_limit), "
+"WP_MEMORY_LIMIT and WP_MAX_MEMORY_LIMIT settings and use the largest value."
+"</strong>"
+msgstr ""
+"<strong>Se lasciato vuoto, Snapshot confronterà le impostazioni php.ini "
+"(memory_limit), WP_MEMORY_LIMIT e WP_MAX_MEMORY_LIMIT e utilizzerà il valore "
+"più grande.</strong>"
+
 #: lib/Snapshot/View/Settings.php:375
 #, fuzzy
 msgctxt "Snapshot page description"
@@ -3174,6 +4716,50 @@ msgid ""
 msgstr ""
 "ERRORE: Argomento mancante. Tornare al pannello principale delle istantanee "
 "e selezionare l'archivio da ripristinare."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2071
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"For example you have a table with 80,000 records. This would take more than "
+"the normal 3 minutes or less most servers allow for processing it attempted "
+"in a single request. By setting the segment size to 1000 the Snapshot "
+"process will breakup the table into 80 small parts. These 1000 records per "
+"request should complete within the allow server timeout period."
+msgstr ""
+"Ad esempio, si ha una tabella con 80.000 record. Ciò richiederebbe più dei "
+"normali 3 minuti o meno che la maggior parte dei server concede per "
+"l'elaborazione tentata in una singola richiesta. Impostando la dimensione "
+"del segmento a 1000, il processo di snapshot spezzerà la tabella in 80 "
+"piccole parti. Questi 1000 record per richiesta dovrebbero essere completati "
+"entro il periodo di timeout consentito dal server."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1984
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"If you do change the Snapshot folder, the existing folder will be "
+"moved/renamed to the new value. <strong>The new folder must not already "
+"exist.</strong>"
+msgstr ""
+"Se si modifica la cartella dell'istantanea, la cartella esistente verrà "
+"spostata/rinominata nel nuovo valore. <La nuova cartella non deve esistere"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1225
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"Migrate Snapshot files and logs created under previous version of the "
+"Snapshot plugin."
+msgstr ""
+"Migrare i file e i registri delle istantanee creati con la versione "
+"precedente del plugin Snapshot."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1276
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid "No legacy snapshot data found to convert."
+msgstr "Non sono stati trovati dati di istantanee legacy da convertire."
 
 #: lib/Snapshot/View/Settings.php:284
 #, fuzzy
@@ -3186,6 +4772,90 @@ msgstr ""
 "In questa pagina è possibile ripristinare un'istantanea precedente. Nella "
 "sezione \"Opzioni di ripristino\" è possibile scegliere di disattivare tutti "
 "i plugin e di passare a un tema diverso come parte del ripristino."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1982
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"Optionally, you can attempt to set the snapshot folder to a directory "
+"outside of your web site. This may not be available depending on your "
+"hosting configuration. Check with your hosting provider. If you change the "
+"folder to be outside of your web site you may not be able to access the "
+"archive via this plugin. You will need to use FTP or some other solution "
+"provided by your hosting provider."
+msgstr ""
+"Opzionalmente, si può tentare di impostare la cartella delle istantanee in "
+"una directory esterna al sito web. Questa opzione potrebbe non essere "
+"disponibile a seconda della configurazione dell'hosting. Verificate con il "
+"vostro provider di hosting. Se si modifica la cartella all'esterno del sito "
+"web, potrebbe non essere possibile accedere all'archivio tramite questo "
+"plugin. È necessario utilizzare l'FTP o un'altra soluzione fornita dal "
+"provider di hosting."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1978
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"Set a destination folder for your snapshots. This folder will be created "
+"inside your site's media upload folder."
+msgstr ""
+"Impostare una cartella di destinazione per le istantanee. Questa cartella "
+"verrà creata all'interno della cartella di caricamento dei file multimediali "
+"del sito."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1239
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid "The following items will be converted to the new Snapshot format."
+msgstr "I seguenti elementi saranno convertiti nel nuovo formato Snapshot."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2396
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"The Memory Limit setting can allow Snapshot to use more or limit the amount "
+"of memory used by Snapshot during the backup or restore processing. The "
+"value set here can be higher than the value you would define for "
+"WP_MEMORY_LIMIT in you wp-config.php. This is because working with zip "
+"archives takes more memory than just serving a web page. For any moderate "
+"size site this value should be at least <strong>256M</strong>."
+msgstr ""
+"L'impostazione Limite di memoria può consentire a Snapshot di usare più o "
+"limitare la quantità di memoria utilizzata da Snapshot durante "
+"l'elaborazione del backup o del ripristino. Il valore impostato qui può "
+"essere più alto del valore definito per WP_MEMORY_LIMIT in wp-config.php. "
+"Questo perché lavorare con gli archivi zip richiede più memoria che servire "
+"una pagina web. Per qualsiasi sito di dimensioni moderate, questo valore "
+"dovrebbe essere almeno <strong>256M</strong>."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2069
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"The Segment Size can be defined as the number of rows to backup per table "
+"per request. The Segment Size controls the backup processing when you create "
+"a new snapshot. During the backup processing Snapshot will make a request to "
+"the server to backup each table. You can see this in the progress meters "
+"when you create a new snapshot. In most situations this backup process will "
+"attempt to backup the table in one step. But on some server configurations "
+"the timeout is set very low or the table size is very large and prevents the "
+"backup process from finishing. To control this the Snapshot backup process "
+"will breakup the requests into smaller 'chunks of work' requested to the "
+"server."
+msgstr ""
+"La Dimensione segmento può essere definita come il numero di righe di cui "
+"eseguire il backup per tabella e per richiesta. La Dimensione segmento "
+"controlla l'elaborazione del backup quando si crea una nuova istantanea. "
+"Durante l'elaborazione del backup, l'istantanea farà una richiesta al server "
+"per eseguire il backup di ogni tabella. Questo è visibile nei contatori di "
+"avanzamento quando si crea una nuova istantanea. Nella maggior parte delle "
+"situazioni il processo di backup tenterà di eseguire il backup della tabella "
+"in un unico passaggio. Tuttavia, in alcune configurazioni di server il "
+"timeout è impostato su un valore molto basso o le dimensioni della tabella "
+"sono molto grandi e impediscono al processo di backup di terminare. Per "
+"controllare questo problema, il processo di backup delle istantanee "
+"suddivide le richieste in \"pezzi di lavoro\" più piccoli richiesti al "
+"server."
 
 #: lib/Snapshot/View/Settings.php:400
 #, fuzzy
@@ -3256,6 +4926,20 @@ msgstr ""
 "precedente. Inoltre, viene fornito un link per scaricare l'istantanea per "
 "condividerla o archiviarla."
 
+#: lib/Snapshot/View/Metabox/Admin.php:2432
+#, fuzzy
+msgctxt "Snapshot page description"
+msgid ""
+"Warning: Unable to update the 'memory_limit' via the PHP function init_set. "
+"This means in order in to increased the allowed memory limit for Snapshot "
+"you will need to make the change directly in your php.ini file. Contact your "
+"host provider for details."
+msgstr ""
+"Attenzione: Impossibile aggiornare il 'memory_limit' tramite la funzione PHP "
+"init_set. Ciò significa che per aumentare il limite di memoria consentito "
+"per Snapshot è necessario apportare la modifica direttamente nel file php."
+"ini. Contattare il proprio provider di hosting per i dettagli."
+
 #: lib/Snapshot/View/Destination/Listing.php:130
 #, fuzzy
 msgctxt "Snapshot Plugin Page Title"
@@ -3293,10 +4977,30 @@ msgctxt "Snapshot Plugin Page Title"
 msgid "Snapshot Settings"
 msgstr "Impostazioni dell'istantanea"
 
+#: cp-snapshot.php:682
+#, fuzzy
+msgid "Snapshot restore aborted"
+msgstr "Ripristino dell'istantanea interrotto"
+
 #: views/snapshots/partials/create-snapshot-progress.php:17
 #, fuzzy
 msgid "Snapshot Result"
 msgstr "Risultato dell'istantanea"
+
+#: cp-snapshot.php:553
+#, fuzzy
+msgid "Snapshot successfully deleted."
+msgstr "L'istantanea è stata eliminata con successo."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2209
+#, fuzzy
+msgid ""
+"Snapshot uses WP_CRON to run automated backups. If you have disabled WP_CRON "
+"via your wp-config.php you will not be able to schedule snapshots."
+msgstr ""
+"Snapshot utilizza WP_CRON per eseguire backup automatici. Se avete "
+"disabilitato WP_CRON tramite il file wp-config.php, non sarete in grado di "
+"programmare le istantanee."
 
 #: views/snapshots/snapshot.php:1053
 #, fuzzy
@@ -3324,8 +5028,6 @@ msgstr ""
 msgid "Snapshot Wizard"
 msgstr "Procedura guidata per le istantanee"
 
-#: views/snapshots.php:16 views/snapshots/item.php:21
-#: views/snapshots/restore.php:34 views/snapshots/snapshot.php:29
 #: views/boxes/dashboard/widget-snapshots.php:27
 #: views/boxes/modals/popup-welcome.php:55
 #: views/destinations/partials/dropbox-destination-list.php:16
@@ -3333,6 +5035,8 @@ msgstr "Procedura guidata per le istantanee"
 #: views/destinations/partials/google-drive-destination-list.php:17
 #: views/destinations/partials/local-destination-list.php:17
 #: views/destinations/partials/s3-destination-list.php:19
+#: views/snapshots.php:16 views/snapshots/item.php:21
+#: views/snapshots/restore.php:34 views/snapshots/snapshot.php:29
 #, fuzzy
 msgid "Snapshots"
 msgstr "Istantanee"
@@ -3361,17 +5065,27 @@ msgstr ""
 msgid "South America (Sao Paulo) Region"
 msgstr "Regione Sud America (San Paolo)"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2287
+#, fuzzy
+msgid "SSL Version"
+msgstr "Versione SSL"
+
 #: lib/Snapshot/Model/Destination/aws/index.php:119
 #, fuzzy
 msgid "Standard"
 msgstr "Standard"
+
+#: lib/Snapshot/View/Metabox/Admin.php:854
+#, fuzzy
+msgid "Start Backup"
+msgstr "Avviare il backup"
 
 #: lib/Snapshot/View/Full/Backup.php:238
 #, fuzzy
 msgid "Starting..."
 msgstr "A partire..."
 
-#: views/snapshots/item.php:136 lib/Snapshot/View/Table/Archives.php:379
+#: lib/Snapshot/View/Table/Archives.php:379 views/snapshots/item.php:136
 #, fuzzy
 msgid "Status"
 msgstr "Stato"
@@ -3391,6 +5105,11 @@ msgstr "Passo 2: credenziali di accesso a Google Drive"
 msgid "Step 3: Google Authorize"
 msgstr "Passo 3: Autorizzazione di Google"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2577
+#, fuzzy
+msgid "Stop"
+msgstr "Stop"
+
 #: views/settings.php:131
 #, fuzzy
 msgid "Stop the backup process if a notice occurs"
@@ -3406,14 +5125,14 @@ msgstr "Interrompere il processo di backup se si verifica un avviso"
 msgid "Stop the backup process if an error occurs"
 msgstr "Interrompere il processo di backup in caso di errore"
 
-#: views/managed_backups.php:464 views/managed-backups/new-backup.php:214
+#: views/managed-backups/new-backup.php:214 views/managed_backups.php:464
 #: views/snapshots/snapshot.php:980
 #, fuzzy
 msgid "Storage Limit"
 msgstr "Limite di stoccaggio"
 
-#: views/destinations/add/aws.php:126
 #: lib/Snapshot/Model/Destination/aws/index.php:720
+#: views/destinations/add/aws.php:126
 #, fuzzy
 msgid "Storage Type"
 msgstr "Tipo di stoccaggio"
@@ -3440,24 +5159,39 @@ msgstr ""
 "</strong> Il token memorizzato sarà utilizzato in futuro quando ci si "
 "connetterà a Google"
 
-#: views/import.php:32 lib/Snapshot/View/Settings.php:651
+#: lib/Snapshot/View/Settings.php:651 views/import.php:32
 #, fuzzy, php-format
 msgid "Success: %s"
 msgstr "Successo: %s"
+
+#: cp-snapshot.php:5368
+#, fuzzy
+msgid "SUCCESS: Snapshot Restore complete! "
+msgstr "SUCCESSO: Ripristino dell'istantanea completato!"
 
 #: lib/Snapshot/Helper/UI.php:85
 #, fuzzy
 msgid "Sunday"
 msgstr "Domenica"
 
+#: cp-snapshot.php:7134
+#, fuzzy
+msgid "Syncing Files"
+msgstr "Sincronizzazione dei file"
+
 #: lib/Snapshot/Helper/Utility.php:1138
 #, fuzzy
 msgid "Tables:"
 msgstr "Tavoli:"
 
-#: views/destinations/add/aws.php:221 views/destinations/add/ftp.php:165
+#: lib/Snapshot/View/Metabox/Admin.php:2122
+#, fuzzy
+msgid "Take me there now"
+msgstr "Portami lì ora"
+
 #: lib/Snapshot/Model/Destination/aws/index.php:805
 #: lib/Snapshot/Model/Destination/ftp/index.php:414
+#: views/destinations/add/aws.php:221 views/destinations/add/ftp.php:165
 #, fuzzy
 msgid "Test Connection"
 msgstr "Collegamento di prova"
@@ -3476,8 +5210,8 @@ msgstr ""
 "processo di importazione non supporta ancora l'autenticazione. Vedere le "
 "note di seguito sui servizi specifici."
 
-#: views/destinations/add/ftp.php:163
 #: lib/Snapshot/Model/Destination/ftp/index.php:383
+#: views/destinations/add/ftp.php:163
 #, fuzzy
 msgid ""
 "The default timeout for PHP FTP connections is 90 seconds. Sometimes this "
@@ -3486,6 +5220,26 @@ msgstr ""
 "Il timeout predefinito per le connessioni FTP PHP è di 90 secondi. A volte "
 "questo timeout deve essere più lungo per le connessioni più lente ai server "
 "occupati."
+
+#: cp-snapshot.php:604
+#, fuzzy
+msgid "The Destination has been added."
+msgstr "La destinazione è stata aggiunta."
+
+#: cp-snapshot.php:605
+#, fuzzy
+msgid "The Destination has been deleted."
+msgstr "La destinazione è stata eliminata."
+
+#: cp-snapshot.php:606
+#, fuzzy
+msgid "The Destination has been restored."
+msgstr "La destinazione è stata ripristinata."
+
+#: cp-snapshot.php:603
+#, fuzzy
+msgid "The Destination has been updated."
+msgstr "La destinazione è stata aggiornata."
 
 #: views/settings.php:109
 #, fuzzy
@@ -3501,6 +5255,24 @@ msgstr ""
 "theme/twentyten o public/wp-content/theme/twentyten. <strong>La cartella "
 "locale è esclusa dai backup istantanei per impostazione predefinita"
 
+#: lib/Snapshot/View/Metabox/Admin.php:723
+#, fuzzy
+msgid ""
+"The exclude logic uses pattern matching. So instead of entering the complete "
+"server pathname for a file or directory you can simply use the filename of "
+"parent directory. For example to exclude the theme twentyten you could enter "
+"this one of many ways: twentyten,  themes/twentyten /wp-"
+"content/themes/twentyten, /www-data/wp-content/themes/twentyten. <strong>"
+"Regular Expression are not allowed at this time</strong>."
+msgstr ""
+"La logica di esclusione utilizza la corrispondenza dei modelli. Quindi, "
+"invece di inserire il percorso completo del server per un file o una "
+"directory, si può semplicemente usare il nome del file della directory madre."
+" Ad esempio, per escludere il tema twentyten si può inserire uno dei "
+"seguenti modi: twentyten, themes/twentyten /wp-content/themes/twentyten, "
+"/www-data/wp-content/themes/twentyten. <strong>L'espressione regolare non è "
+"consentita in questo momento</strong>."
+
 #: views/destinations/add/dropbox.php:257
 #: views/destinations/add/dropbox.php:272
 #, fuzzy
@@ -3514,6 +5286,17 @@ msgstr ""
 "comunicare con l'account Dropbox. Dropbox richiede che si conceda a Snapshot "
 "l'accesso al proprio account. Questo è necessario per consentire a Snapshot "
 "di caricare i file sull'account Dropbox."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2155
+#, fuzzy
+msgid ""
+"The following table shows version information about your server. When "
+"contacting support it might be helpful to provide this information along "
+"with your specific issues."
+msgstr ""
+"La tabella seguente mostra le informazioni sulla versione del server. Quando "
+"si contatta l'assistenza, potrebbe essere utile fornire queste informazioni "
+"insieme ai problemi specifici."
 
 #: views/destinations/add/ftp.php:53
 #, fuzzy, php-format
@@ -3535,6 +5318,29 @@ msgstr ""
 "con Windows che utilizza i binari PHP predefiniti. Controllare i documenti "
 "di PHP per ftp_ssl_connection."
 
+#: lib/Snapshot/View/Metabox/Admin.php:3039
+#, fuzzy
+msgid ""
+"The import process can import an archive from a remote system server via FTP,"
+" Amazon S3 or Dropbox. The remote archive <strong>must</strong> by publicly "
+"accessible as this import process does not yet support authentication. See "
+"notes below on specific services."
+msgstr ""
+"Il processo di importazione può importare un archivio da un server di "
+"sistema remoto tramite FTP, Amazon S3 o Dropbox. L'archivio remoto <strong>"
+"deve</strong> essere accessibile pubblicamente, poiché questo processo di "
+"importazione non supporta ancora l'autenticazione. Vedere le note di seguito "
+"sui servizi specifici."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2261
+#, fuzzy
+msgid ""
+"The OpenSSL Apache module is require to make secure connections with "
+"destinations like Dropbox and Amazon AWS."
+msgstr ""
+"Il modulo OpenSSL Apache è necessario per effettuare connessioni sicure con "
+"destinazioni come Dropbox e Amazon AWS."
+
 #: views/snapshots/snapshot.php:264
 #, fuzzy
 msgid ""
@@ -3543,6 +5349,41 @@ msgid ""
 msgstr ""
 "L'opzione Directory può essere utilizzata per sostituire o integrare il "
 "valore della directory di destinazione selezionata."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1144
+#, fuzzy
+msgid ""
+"The optional Directory can be used to override or supplement the selected "
+"destination directory value. If 'local server' is selected and if the "
+"directory does not start with a forward slash '/' the directory will be "
+"relative to the site root."
+msgstr ""
+"L'opzione Directory può essere usata per sovrascrivere o integrare il valore "
+"della directory di destinazione selezionata. Se si seleziona \"server "
+"locale\" e se la directory non inizia con una barra in avanti \"/\", la "
+"directory sarà relativa alla radice del sito."
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:221
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid ""
+"Entschuldige, es konnte nicht festgestellt werden, ob Updates für %s "
+"verfügbar sind."
+msgstr ""
+"Entschuldige, es konnte nicht festgestellt werden, ob Updates für %s "
+"verfügbar sind."
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:219
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid "Im PSOURCE REPO ist eine <b>neuere Version von %s</b> verfügbar!."
+msgstr "Im PSOURCE REPO ist eine <b>neuere Version von %s</b> verfügbar!."
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:217
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid "Keine neuere Version von %s im PSOURCE REPO gefunden."
+msgstr "Non è stata creata una nuova versione di %s nel PSOURCE REPO."
 
 #: lib/Snapshot/Model/Destination/ftp/index.php:321
 #, fuzzy
@@ -3562,6 +5403,49 @@ msgstr ""
 "utilizzano questa destinazione. È anche possibile definire una directory "
 "utilizzata da un'istantanea specifica."
 
+#: lib/Snapshot/View/Metabox/Admin.php:2084
+#, fuzzy, php-format
+msgid ""
+"The segment size is the number of database records to backup per request. It "
+"is recommended you keep this at least above 1000.<br />Default segment size "
+"is: %s."
+msgstr ""
+"La dimensione del segmento è il numero di record del database di cui "
+"eseguire il backup per ogni richiesta. Si consiglia di mantenerlo almeno al "
+"di sopra di 1000.<br />La dimensione del segmento predefinita è: %s."
+
+#: cp-snapshot.php:1324
+#, fuzzy
+msgid ""
+"The Settings panel provides access to a number of configuration settings you "
+"can customize Snapshot to meet you site needs."
+msgstr ""
+"Il pannello Impostazioni consente di accedere a una serie di impostazioni di "
+"configurazione che permettono di personalizzare Snapshot per soddisfare le "
+"esigenze del sito."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2542
+#, fuzzy, php-format
+msgid "The Snapshot directory %s is automatically excluded from all snapshots"
+msgstr ""
+"La directory dell'istantanea %s è automaticamente esclusa da tutte le "
+"istantanee"
+
+#: cp-snapshot.php:552
+#, fuzzy
+msgid "The Snapshot has been created."
+msgstr "L'istantanea è stata creata."
+
+#: cp-snapshot.php:555
+#, fuzzy
+msgid "The Snapshot has been restored."
+msgstr "L'istantanea è stata ripristinata."
+
+#: cp-snapshot.php:551
+#, fuzzy
+msgid "The Snapshot has been updated."
+msgstr "L'istantanea è stata aggiornata."
+
 #: lib/Snapshot/View/Settings.php:469
 #, fuzzy
 msgid ""
@@ -3577,6 +5461,37 @@ msgstr ""
 "remoto, ad esempio, è necessario importare l'archivio qui. L'archivio verrà "
 "quindi visualizzato nell'elenco Tutte le istantanee. Da quella pagina è "
 "possibile eseguire il ripristino necessario."
+
+#: cp-snapshot.php:1295
+#, fuzzy
+msgid ""
+"The Snapshot plugin provides the ability to create quick on-demand snapshot "
+"of your ClassicPress site database and files. You can create as many "
+"snapshots as needed. The Snapshot plugin also provides the ability to "
+"restore a snapshot backup."
+msgstr ""
+"Il plugin Snapshot offre la possibilità di creare istantanee rapide e su "
+"richiesta del database e dei file del sito ClassicPress. È possibile creare "
+"un numero di istantanee pari a quello necessario. Il plugin Snapshot offre "
+"anche la possibilità di ripristinare un'istantanea di backup."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1022
+#, fuzzy
+msgid ""
+"The Snapshot scheduling process uses the ClassicPress Cron (WPCron) system. "
+"This is the same process used to run daily checks for updates to core, "
+"plugins and themes. It should be understood this WPCron process is not "
+"precise. If you schedule a Snapshot for a specific minute of the hour WPCron "
+"may not execute at exactly that time. WPCron relies on regular front-end "
+"traffic to your website to kickoff the processing."
+msgstr ""
+"Il processo di pianificazione delle istantanee utilizza il sistema "
+"ClassicPress Cron (WPCron). Si tratta dello stesso processo utilizzato per "
+"eseguire i controlli giornalieri degli aggiornamenti del nucleo, dei plugin "
+"e dei temi. È bene sottolineare che questo processo WPCron non è preciso. Se "
+"si pianifica un'istantanea per un minuto specifico dell'ora, WPCron potrebbe "
+"non essere eseguito esattamente a quell'ora. WPCron si basa sul regolare "
+"traffico front-end del sito web per avviare l'elaborazione."
 
 #: views/destinations/add/google-drive.php:225
 #, fuzzy
@@ -3610,15 +5525,31 @@ msgstr ""
 "l'ultima parte dopo <em>/#folders/</em>: <strong>"
 "0B6GD66ctHXXCOWZKNDRIRGJJXS3.</strong>"
 
-#: views/snapshots/restore.php:496 views/snapshots/restore.php:780
+#: lib/Snapshot/View/Metabox/Admin.php:2943 views/snapshots/restore.php:496
+#: views/snapshots/restore.php:780
 #, fuzzy
 msgid "Themes"
 msgstr "Temi"
+
+#: lib/Snapshot/View/Metabox/Admin.php:549
+#, fuzzy
+msgid "Themes, Plugins,"
+msgstr "Temi, plugin,"
 
 #: views/snapshots/snapshot.php:351
 #, fuzzy
 msgid "themes, plugins,"
 msgstr "temi e plugin,"
+
+#: lib/Snapshot/View/Metabox/Admin.php:595
+#, fuzzy
+msgid "Themes: All active and inactive themes will be included"
+msgstr "Temi: Tutti i temi attivi e inattivi saranno inclusi"
+
+#: psource/psource-plugin-update/Puc/v5p0/Vcs/PluginUpdateChecker.php:98
+#, fuzzy
+msgid "There is no changelog available."
+msgstr "Non è disponibile un changelog."
 
 #: lib/Snapshot/Model/Database/Backup.php:78
 #, fuzzy
@@ -3626,7 +5557,7 @@ msgid "There was an error writing a line to the backup script:"
 msgstr ""
 "Si è verificato un errore nella scrittura di una riga nello script di backup:"
 
-#: views/snapshots/snapshot.php:708
+#: lib/Snapshot/View/Metabox/Admin.php:394 views/snapshots/snapshot.php:708
 #, fuzzy
 msgid ""
 "These global user tables contain blog specific user information which can be "
@@ -3639,6 +5570,18 @@ msgstr ""
 "istantanee. Saranno inclusi solo gli utenti il cui blog principale "
 "corrisponde al blog selezionato. <strong>Gli utenti superadmin non saranno "
 "inclusi nell'archivio del sottosito.</strong>"
+
+#: lib/Snapshot/View/Metabox/Admin.php:68
+#, fuzzy
+msgid ""
+"This archive is from a previous import action. The information from the "
+"archive did not match the current blog. So before you can change the "
+"configuration you need to assign it to an existing account."
+msgstr ""
+"Questo archivio proviene da un'azione di importazione precedente. Le "
+"informazioni contenute nell'archivio non corrispondono al blog attuale. "
+"Pertanto, prima di modificare la configurazione, è necessario assegnarla a "
+"un account esistente."
 
 #: views/destinations/partials/dropbox-destination-list.php:39
 #: views/destinations/partials/ftp-destination-list.php:44
@@ -3681,12 +5624,28 @@ msgstr ""
 "directory home dell'FTP verrà usata come destinazione per i file "
 "dell'istantanea."
 
+#: lib/Snapshot/View/Metabox/Admin.php:1146
+#, fuzzy
+msgid ""
+"This field support tokens you can use to create dynamic values. You can use "
+"any combination of the following tokens. Use the forward slash '/' to "
+"separate directory elements."
+msgstr ""
+"Questo campo supporta i token che si possono usare per creare valori "
+"dinamici. È possibile utilizzare qualsiasi combinazione dei seguenti token. "
+"Usare la barra di avanzamento '/' per separare gli elementi della directory."
+
 #: views/snapshots/snapshot.php:268
 #, fuzzy
 msgid "This field supports tokens you can use to create dynamic values."
 msgstr ""
 "Questo campo supporta i token che possono essere utilizzati per creare "
 "valori dinamici."
+
+#: lib/Snapshot/View/Metabox/Admin.php:1174
+#, fuzzy
+msgid "This is the unique ID assigned to this Snapshot set"
+msgstr "È l'ID univoco assegnato a questo set di istantanee"
 
 #: views/snapshots/snapshot.php:282
 #, fuzzy
@@ -3696,10 +5655,14 @@ msgstr "È l'ID univoco assegnato a questa istantanea."
 #: views/boxes/modals/popup-snapshot.php:31
 #: views/boxes/modals/popup-snapshot.php:55
 #, fuzzy
+#| msgid ""
+#| "This is your Snapshot API key. If you have any issues connecting to WPMU "
+#| "DEV’s cloud servers, just reset your key. Don’t worry, resetting your key "
+#| "won’t affect your backups."
 msgid ""
-"This is your Snapshot API key. If you have any issues connecting to WPMU "
-"DEV’s cloud servers, just reset your key. Don’t worry, resetting your key "
-"won’t affect your backups."
+"This is your Snapshot API key. If you have any issues connecting to "
+"PSOURCE’s cloud servers, just reset your key. Don’t worry, resetting your "
+"key won’t affect your backups."
 msgstr ""
 "Questa è la chiave API dello snapshot. Se si verificano problemi di "
 "connessione ai server cloud di WPMU DEV, è sufficiente reimpostare la chiave."
@@ -3721,6 +5684,20 @@ msgstr ""
 msgid "This migration logic is considered still in beta."
 msgstr "Questa logica di migrazione è considerata ancora in fase beta."
 
+#: lib/Snapshot/View/Metabox/Admin.php:1149
+#, fuzzy
+msgid ""
+"This represents the Directory/Bucket used by the selected Backup Destination "
+"or if local, the Settings Folder Location. This can be used to supplement a "
+"value entered into this Snapshot. If [DEST_PATH] is not used the Directory "
+"value here will override the complete value from the selected Destination."
+msgstr ""
+"Rappresenta la directory/bucket utilizzata dalla destinazione di backup "
+"selezionata o, se locale, la posizione della cartella delle impostazioni. "
+"Può essere usato per integrare un valore inserito in questa istantanea. Se "
+"[DEST_PATH] non viene utilizzato, il valore della directory qui presente "
+"sovrascriverà il valore completo della destinazione selezionata."
+
 #: views/snapshots/snapshot.php:274
 #, fuzzy
 msgid ""
@@ -3736,11 +5713,47 @@ msgstr ""
 "Se [DEST_PATH] non viene utilizzato, il valore della directory qui presente "
 "sovrascriverà il valore completo della destinazione selezionata."
 
+#: lib/Snapshot/View/Metabox/Admin.php:1152
+#, fuzzy
+msgid "This represents the full domain of the selected site per this snapshot"
+msgstr ""
+"Rappresenta il dominio completo del sito selezionato per questa istantanea"
+
 #: views/snapshots/snapshot.php:278
 #, fuzzy
 msgid "This represents the full domain of the selected site per this snapshot."
 msgstr ""
 "Rappresenta il dominio completo del sito selezionato per questa istantanea."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2573
+#, fuzzy
+msgid ""
+"This section controls how Snapshot will handle an error condition during the "
+"backup / restore processing. There are two columns for each type of error. "
+"The 'stop' column controls if Snapshot will abort the current process should "
+"that type of error be reached. The 'log' column controls if the type of "
+"error and details will be written to the processing log. In most cases you "
+"want to set 'stop' for Errors only. And set 'log' for all."
+msgstr ""
+"Questa sezione controlla come Snapshot gestirà una condizione di errore "
+"durante l'elaborazione del backup/ripristino. Ci sono due colonne per ogni "
+"tipo di errore. La colonna 'stop' controlla se Snapshot interromperà il "
+"processo corrente in caso di quel tipo di errore. La colonna 'log' controlla "
+"se il tipo di errore e i dettagli saranno scritti nel registro di "
+"elaborazione. Nella maggior parte dei casi si desidera impostare 'stop' solo "
+"per gli errori. E impostare 'log' per tutti."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2622
+#, fuzzy
+msgid ""
+"This section lets you select which zip compression library to use. The zip "
+"library is used during the backup and restore processing by Snapshot. Chose "
+"from the options below."
+msgstr ""
+"Questa sezione consente di selezionare la libreria di compressione zip da "
+"utilizzare. La libreria zip viene utilizzata durante l'elaborazione del "
+"backup e del ripristino da parte di Snapshot. Scegliere tra le opzioni "
+"seguenti."
 
 #: lib/Snapshot/Model/Destination/ftp/index.php:284
 #, fuzzy
@@ -3827,6 +5840,11 @@ msgstr "Riprova"
 msgid "Tuesday"
 msgstr "Martedì"
 
+#: lib/Snapshot/View/Metabox/Admin.php:1594
+#, fuzzy
+msgid "Turn off all plugins"
+msgstr "Disattivare tutti i plugin"
+
 #: lib/Snapshot/Helper/Utility.php:748
 #, fuzzy
 msgid "Twice Daily"
@@ -3842,11 +5860,11 @@ msgstr "Due volte al mese"
 msgid "Twice Weekly"
 msgstr "Due volte alla settimana"
 
-#: views/snapshots.php:122 views/boxes/dashboard/widget-destinations.php:48
+#: views/boxes/dashboard/widget-destinations.php:48
 #: views/destinations/add/aws.php:8 views/destinations/add/dropbox-error.php:13
 #: views/destinations/add/dropbox.php:18 views/destinations/add/ftp.php:7
 #: views/destinations/add/google-drive.php:34
-#: views/destinations/add/local.php:7
+#: views/destinations/add/local.php:7 views/snapshots.php:122
 #, fuzzy
 msgid "Type"
 msgstr "Tipo"
@@ -3855,6 +5873,14 @@ msgstr "Tipo"
 #, fuzzy
 msgid "UID"
 msgstr "UID"
+
+#: cp-snapshot.php:5282
+#, fuzzy, php-format
+msgid ""
+"Unable to create directory %s. Make sure the parent folder is writeable."
+msgstr ""
+"Impossibile creare la directory %s. Assicurarsi che la cartella madre sia "
+"scrivibile."
 
 #: lib/Snapshot/Controller/Full/Ajax.php:95
 #, fuzzy
@@ -3881,7 +5907,12 @@ msgstr "Impossibile ottenere un URL di autorizzazione da Google"
 msgid "Unable to obtain Authorization URL from Google"
 msgstr "Impossibile ottenere l'URL di autorizzazione da Google"
 
-#: views/snapshots/snapshot.php:127
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:227
+#, fuzzy, php-format
+msgid "Unbekannter PSOURCE-UPDATTER-Status \"%s\""
+msgstr "Stato PSOURCE-UPDATTER \"%s\" non accettato"
+
+#: lib/Snapshot/View/Metabox/Admin.php:138 views/snapshots/snapshot.php:127
 #, fuzzy
 msgid "Unknown Blog"
 msgstr "Blog sconosciuto"
@@ -3891,12 +5922,19 @@ msgstr "Blog sconosciuto"
 msgid "unknown source"
 msgstr "fonte sconosciuta"
 
-#: views/managed_backups.php:487 views/managed-backups/new-backup.php:268
+#: cp-snapshot.php:645
+#, fuzzy
+msgid "Unselect all"
+msgstr "Deselezionare tutti"
+
+#: views/managed-backups/new-backup.php:268 views/managed_backups.php:487
 #, fuzzy
 msgid "Update Settings"
 msgstr "Aggiornamento delle impostazioni"
 
-#: views/snapshots/restore.php:159 views/snapshots/restore.php:324
+#: lib/Snapshot/View/Metabox/Admin.php:1798
+#: lib/Snapshot/View/Metabox/Admin.php:1943 views/snapshots/restore.php:159
+#: views/snapshots/restore.php:324
 #, fuzzy
 msgid "Upload Path:"
 msgstr "Percorso di caricamento:"
@@ -3915,6 +5953,11 @@ msgstr "Caricamento&hellip;"
 #, fuzzy
 msgid "URL exclusions"
 msgstr "Esclusioni URL"
+
+#: lib/Snapshot/View/Metabox/Admin.php:3063
+#, fuzzy
+msgid "URL or local path to Snapshot Archive"
+msgstr "URL o percorso locale dell'archivio istantanee"
 
 #: views/snapshots/snapshot.php:570
 #, fuzzy
@@ -3950,6 +5993,11 @@ msgstr "Regione Ovest degli Stati Uniti (Oregon)"
 msgid "Usage"
 msgstr "Utilizzo"
 
+#: cp-snapshot.php:651
+#, fuzzy
+msgid "Usage:"
+msgstr "Utilizzo:"
+
 #: views/settings.php:73
 #, fuzzy
 msgid "Use custom directory"
@@ -3970,8 +6018,8 @@ msgstr "Destinazione d'uso"
 msgid "Use Passive Mode"
 msgstr "Utilizzare la modalità passiva"
 
-#: views/destinations/add/aws.php:68
 #: lib/Snapshot/Model/Destination/aws/index.php:661
+#: views/destinations/add/aws.php:68
 #, fuzzy
 msgid "Use SSL Connection"
 msgstr "Utilizzare la connessione SSL"
@@ -3980,6 +6028,32 @@ msgstr "Utilizzare la connessione SSL"
 #, fuzzy
 msgid "Use the forward slash \"/\" to separate directory elements."
 msgstr "Usare la barra \"/\" per separare gli elementi della directory."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2524
+#, fuzzy
+msgid ""
+"Use this setting to create global exclusions. This means the excluded files "
+"or directories will be excluded automatically from all snapshot "
+"configurations. You can also setup exclusions specific to a single snapshot "
+"via the configuration screen. The exclude logic uses pattern matching. So "
+"instead of entering the complete server pathname for a file or directory you "
+"can use simply use the filename of parent directory. For example to exclude "
+"the theme twentyten you could enter this one of many ways: twentyten,  "
+"themes/twentyten /wp-content/themes/twentyten, /www-data/wp-"
+"content/themes/twentyten. <strong>Regular Expression are not allowed at this "
+"time</strong>."
+msgstr ""
+"Utilizzare questa impostazione per creare esclusioni globali. Ciò significa "
+"che i file o le directory esclusi saranno esclusi automaticamente da tutte "
+"le configurazioni delle istantanee. È anche possibile impostare esclusioni "
+"specifiche per una singola istantanea tramite la schermata di configurazione."
+" La logica di esclusione utilizza la corrispondenza dei pattern. Quindi, "
+"invece di inserire il percorso completo del server per un file o una "
+"directory, è possibile utilizzare semplicemente il nome del file della "
+"directory principale. Ad esempio, per escludere il tema twentyten si può "
+"inserire uno dei seguenti modi: twentyten, themes/twentyten /wp-"
+"content/themes/twentyten, /www-data/wp-content/themes/twentyten. <strong>"
+"L'espressione regolare non è consentita in questo momento</strong>."
 
 #: lib/Snapshot/Model/Destination/aws/index.php:533
 #: lib/Snapshot/Model/Destination/ftp/index.php:141
@@ -4004,8 +6078,15 @@ msgstr "Nome utente"
 msgid "Username is required"
 msgstr "Il nome utente è necessario"
 
-#: views/snapshots/item.php:298 lib/Snapshot/View/Table/Archives.php:234
+#: lib/Snapshot/View/Metabox/Admin.php:2286
+#, fuzzy
+msgid "Version"
+msgstr "Versione"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1541
+#: lib/Snapshot/View/Table/Archives.php:234
 #: lib/Snapshot/View/Table/Items.php:485 lib/Snapshot/View/Table/Items.php:498
+#: views/snapshots/item.php:298
 #, fuzzy
 msgid "view"
 msgstr "vista"
@@ -4016,10 +6097,20 @@ msgstr "vista"
 msgid "View All"
 msgstr "Visualizza tutti"
 
+#: lib/Snapshot/View/Metabox/Admin.php:1383
+#, fuzzy
+msgid "View all archives"
+msgstr "Visualizza tutti gli archivi"
+
 #: views/managed-backups/partials/create-backup-progress.php:77
 #, fuzzy
 msgid "View Backups"
 msgstr "Visualizza i backup"
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:56
+#, fuzzy
+msgid "View details"
+msgstr "Visualizza i dettagli"
 
 #: views/managed_backups.php:106
 #, fuzzy
@@ -4041,6 +6132,7 @@ msgstr "Visualizza i registri"
 msgid "View Site"
 msgstr "Visualizza il sito"
 
+#: cp-snapshot.php:4155
 #: views/managed-backups/partials/restore-backup-progress.php:237
 #: views/snapshots/partials/create-snapshot-progress.php:104
 #, fuzzy
@@ -4062,17 +6154,52 @@ msgstr "ATTENZIONE"
 msgid "Warning"
 msgstr "Avvertenze"
 
+#: cp-snapshot.php:2064
+#, fuzzy
+msgid "Warning: We were unable to find the old Snapshot folder."
+msgstr "Attenzione: Non siamo riusciti a trovare la vecchia cartella Snapshot."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2018
+#, fuzzy
+msgid ""
+"Warning: Your Snapshot folder is publicly accessible. Please make sure you "
+"DO NOT use the default \"snapshot\" location. Although we attempt to "
+"disallow directory listing and are obscuring your backup names, having this "
+"folder public opens it up for exploitation. You may need to consult your "
+"hosting provider to move this folder outside of your website folder. Example "
+"path:"
+msgstr ""
+"Attenzione: La cartella delle istantanee è accessibile pubblicamente. "
+"Assicurarsi di NON utilizzare la posizione predefinita \"snapshot\". Sebbene "
+"cerchiamo di non consentire l'inserimento di elenchi di directory e di "
+"oscurare i nomi dei backup, la cartella è pubblica e può essere sfruttata. "
+"Potrebbe essere necessario consultare il proprio provider di hosting per "
+"spostare questa cartella al di fuori della cartella del sito web. Percorso "
+"di esempio:"
+
 #: views/settings.php:124
 #, fuzzy
 msgid "Warnings"
 msgstr "Avvertenze"
 
+#: lib/Snapshot/View/Metabox/Admin.php:2561
+#, fuzzy
+msgid ""
+"Warnings - Run-time warnings (non-fatal errors). Execution of the script is "
+"not halted."
+msgstr ""
+"Avvertenze - Avvertenze di esecuzione (errori non fatali). L'esecuzione "
+"dello script non viene interrotta."
+
 #: views/boxes/modals/popup-snapshot.php:50
 #, fuzzy, php-format
+#| msgid ""
+#| "We couldn’t verify your Snapshot key. Try entering it again, or reset it "
+#| "for this website in <a target=\"_blank\" href=\"%s\">The Hub</a> over at "
+#| "WPMU DEV."
 msgid ""
 "We couldn’t verify your Snapshot key. Try entering it again, or reset it for "
-"this website in <a target=\"_blank\" href=\"%s\">The Hub</a> over at WPMU "
-"DEV."
+"this website in <a target=\"_blank\" href=\"%s\">The Hub</a> over at PSOURCE."
 msgstr ""
 "Non siamo riusciti a verificare la tua chiave istantanea. Provate a "
 "inserirla di nuovo o a reimpostarla per questo sito web in <a "
@@ -4102,6 +6229,11 @@ msgstr ""
 msgid "Wednesday"
 msgstr "Mercoledì"
 
+#: lib/Snapshot/View/Metabox/Admin.php:930
+#, fuzzy
+msgid "Weekday"
+msgstr "Giorno feriale"
+
 #: lib/Snapshot/Helper/Utility.php:752 lib/Snapshot/Model/Full/Backup.php:235
 #, fuzzy
 msgid "Weekly"
@@ -4116,6 +6248,11 @@ msgstr "settimanale"
 #, fuzzy
 msgid "Weekly Managed Snapshot"
 msgstr "Istantanea settimanale gestita"
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:79
+#, fuzzy, php-format
+msgid "Weitere Informationen zu %s"
+msgstr "Altre informazioni su %s"
 
 #: views/boxes/modals/popup-welcome.php:21
 #, fuzzy
@@ -4178,7 +6315,7 @@ msgstr "Quali tabelle archiviare"
 msgid "What Tables to Restore?"
 msgstr "Quali tabelle ripristinare?"
 
-#: views/snapshots/restore.php:671
+#: lib/Snapshot/View/Metabox/Admin.php:2793 views/snapshots/restore.php:671
 #, fuzzy
 msgid ""
 "When restoring users and usermeta records under a Multisite environment "
@@ -4204,7 +6341,7 @@ msgstr ""
 msgid "Where to save the Archive "
 msgstr "Dove salvare l'archivio"
 
-#: views/snapshots/restore.php:192
+#: lib/Snapshot/View/Metabox/Admin.php:1804 views/snapshots/restore.php:192
 #, fuzzy
 msgid "Will be restored to"
 msgstr "Verrà ripristinato a"
@@ -4222,25 +6359,15 @@ msgstr ""
 "database di cui eseguire il backup e memorizzarli su destinazioni di terze "
 "parti. Per iniziare, aggiungiamo la prima destinazione."
 
-#. Author of the plugin
+#. Author of the plugin/theme
 #, fuzzy
 msgid "WMS N@W"
 msgstr "WMS N@W"
 
-#: views/snapshots/restore.php:648
+#: cp-snapshot.php:680
 #, fuzzy
-msgid "ClassicPress Blog Tables"
-msgstr "Tabelle del blog ClassicPress"
-
-#: views/snapshots/snapshot.php:682
-#, fuzzy
-msgid "ClassicPress core Tables"
-msgstr "Tabelle del nucleo di ClassicPress"
-
-#: views/snapshots/restore.php:647 views/snapshots/snapshot.php:681
-#, fuzzy
-msgid "ClassicPress Global Tables"
-msgstr "Tabelle globali ClassicPress"
+msgid "Working..."
+msgstr "Lavorare..."
 
 #: views/managed-backups/new-backup.php:156
 #, fuzzy
@@ -4263,20 +6390,57 @@ msgstr ""
 msgid "WP ADMIN"
 msgstr "AMMINISTRATORE DI WP"
 
-#: views/snapshots/restore.php:523 views/snapshots/snapshot.php:459
+#: lib/Snapshot/View/Metabox/Admin.php:2975 views/snapshots/restore.php:523
+#: views/snapshots/snapshot.php:459
 #, fuzzy
 msgid "wp-config.php"
 msgstr "wp-config.php"
 
-#: views/managed-backups/new-backup.php:130
+#: lib/Snapshot/View/Metabox/Admin.php:637
 #, fuzzy
-msgid "PSOURCE Cloud"
-msgstr "Nuvola PSOURCE"
+msgid "wp-config.php - Your current wp-config.php file"
+msgstr "wp-config.php - Il file wp-config.php attuale"
 
-#: views/boxes/modals/popup-welcome.php:45
+#: lib/Snapshot/View/Metabox/Admin.php:2204
 #, fuzzy
-msgid "PSOURCE Managed Backups"
-msgstr "Backup gestiti da PSOURCE"
+msgid "WP_CRON"
+msgstr "WP_CRON"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2211
+#, fuzzy
+msgid ""
+"WP_CRON - Disabled. Check your wp-config.php for the DISABLE_WP_CRON define. "
+"When scheduling snapshots to run you will need to call the wp-cron.php file "
+"from an external source"
+msgstr ""
+"WP_CRON - Disabilitato. Controllare il file wp-config.php per trovare la "
+"definizione DISABLE_WP_CRON. Quando si pianifica l'esecuzione delle "
+"istantanee, è necessario richiamare il file wp-cron.php da una fonte esterna"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2213
+#, fuzzy
+msgid "WP_CRON Enabled."
+msgstr "WP_CRON abilitato."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2217
+#, fuzzy
+msgid "WP_CRON Lock timeout: "
+msgstr "WP_CRON Timeout di blocco:"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2245
+#, fuzzy
+msgid "Writable "
+msgstr "Scrivibile"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1115
+#, fuzzy
+msgid "Yes"
+msgstr "Sì"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2195
+#, fuzzy
+msgid "Yes, Number of Sites"
+msgstr "Sì, Numero di siti"
 
 #: lib/Snapshot/View/Settings.php:287
 #, fuzzy
@@ -4300,10 +6464,31 @@ msgstr ""
 "possibile accedere agli archivi presenti nelle destinazioni utilizzando "
 "l'interfaccia %s."
 
+#: lib/Snapshot/View/Metabox/Admin.php:760
+#, fuzzy
+msgid ""
+"You can change the interval when a backup occurs by selecting from the "
+"options below. If you select 'Suspend' the recurring backups will be stopped."
+" If you select to schedule a backup or change the interval, the initial "
+"backup will start within a few minutes then repeat on the selected interval"
+msgstr ""
+"È possibile modificare l'intervallo di esecuzione di un backup selezionando "
+"una delle opzioni seguenti. Se si seleziona \"Sospendi\", i backup "
+"ricorrenti verranno interrotti. Se si seleziona di pianificare un backup o "
+"di modificare l'intervallo, il backup iniziale verrà avviato entro pochi "
+"minuti e poi ripetuto all'intervallo selezionato"
+
 #: lib/Snapshot/Model/Destination/google-drive/index.php:623
 #, fuzzy
 msgid "You can define multiple Directory IDs seperated by comma"
 msgstr "È possibile definire più ID di directory separati da una virgola"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2471
+#, fuzzy
+msgid "You can export your current Snapshot configuration to save offsite."
+msgstr ""
+"È possibile esportare la configurazione corrente dell'istantanea per "
+"salvarla fuori sede."
 
 #: views/destinations/add/aws.php:45
 #, fuzzy, php-format
@@ -4313,6 +6498,15 @@ msgid ""
 msgstr ""
 "È possibile ottenere le chiavi di accesso tramite la <a target=\"_blank\" "
 "href=\"%s\">AWS Console</a>"
+
+#: lib/Snapshot/View/Metabox/Admin.php:2135
+#, fuzzy, php-format
+msgid ""
+"You can learn more about your server configuration in our <a href=\"%s\">"
+"PSOURCE Dashboard plugin</a>."
+msgstr ""
+"Per saperne di più sulla configurazione del server, consultare il nostro "
+"plugin <a href=\"%s\">PSOURCE Dashboard</a>."
 
 #: views/destinations/add/dropbox.php:117
 #, fuzzy
@@ -4327,6 +6521,17 @@ msgstr ""
 #, fuzzy, php-format
 msgid "You can reset your key <a href=\"%s\">here</a>"
 msgstr "È possibile reimpostare la chiave <a href=\"%s\">qui</a>"
+
+#: lib/Snapshot/View/Metabox/Admin.php:1699
+#, fuzzy
+msgid ""
+"You can restore the backup to a different blog within your Multisite "
+"environment. Note: The destination blog MUST already exist. This migration "
+"logic is considered still in beta."
+msgstr ""
+"È possibile ripristinare il backup in un blog diverso all'interno "
+"dell'ambiente Multisite. Nota: il blog di destinazione DEVE già esistere. "
+"Questa logica di migrazione è considerata ancora in fase beta."
 
 #: views/snapshots/restore.php:128
 #, fuzzy
@@ -4399,6 +6604,15 @@ msgstr ""
 "Non avete ancora eseguito il backup del vostro sito. Create subito il vostro "
 "primo backup<br>- ci vorrà solo un minuto."
 
+#: cp-snapshot.php:678
+#, fuzzy
+msgid ""
+"You haven't included any files or database tables in this Snapshot. Please "
+"select what to include and try again."
+msgstr ""
+"Non è stato incluso alcun file o tabella di database in questa istantanea. "
+"Selezionare cosa includere e riprovare."
+
 #: views/destinations/add/google-drive.php:84
 #, fuzzy, php-format
 msgid "You may specify multiple Directory IDs separated by a comma \"%s\""
@@ -4450,12 +6664,34 @@ msgstr ""
 "È necessario sovrascrivere la funzione 'sendfile_to_remote' nella classe "
 "Snapshot Destination!"
 
-#: views/destinations/add/google-drive.php:224
 #: lib/Snapshot/Model/Destination/google-drive/index.php:759
+#: views/destinations/add/google-drive.php:224
 #, fuzzy
 msgid "You must save this form one last time to retain the token."
 msgstr ""
 "È necessario salvare il modulo un'ultima volta per conservare il token."
+
+#: cp-snapshot.php:677
+#, fuzzy
+msgid "You must select at least one database table to include."
+msgstr "È necessario selezionare almeno una tabella del database da includere."
+
+#: cp-snapshot.php:676
+#, fuzzy
+msgid "You must select at least one Files backup option."
+msgstr "È necessario selezionare almeno un'opzione di backup dei file."
+
+#: cp-snapshot.php:661
+#, fuzzy
+msgid "You must select at least one table"
+msgstr "È necessario selezionare almeno una tabella"
+
+#: cp-snapshot.php:662
+#, fuzzy
+msgid "You must select which Files and/or Tables to backup in this Snapshot"
+msgstr ""
+"È necessario selezionare i file e/o le tabelle di cui eseguire il backup in "
+"questa istantanea"
 
 #: views/managed-backups/restore.php:92
 #, fuzzy
@@ -4575,6 +6811,24 @@ msgstr ""
 "operazione richiederà solo pochi minuti, ma potrebbe richiedere un paio "
 "d'ore per i siti più grandi."
 
+#: lib/Snapshot/View/Metabox/Admin.php:765
+#, fuzzy
+msgid ""
+"Your site has disabled the ClassicPress Cron scheduler (WP_CRON). When "
+"scheduling an archive to be created it may not run. Check your wp-config.php "
+"for the DISABLE_WP_CRON define. If found either remove it or set the value "
+"to \"false\"."
+msgstr ""
+"Il sito ha disattivato il pianificatore Cron di ClassicPress (WP_CRON). "
+"Quando si pianifica la creazione di un archivio, questo potrebbe non essere "
+"eseguito. Controllare il file wp-config.php per trovare la definizione "
+"DISABLE_WP_CRON. Se presente, rimuoverla o impostare il valore a \"false\"."
+
+#: cp-snapshot.php:4155
+#, fuzzy
+msgid "Your snapshot has been successfully created and stored!"
+msgstr "L'istantanea è stata creata e memorizzata con successo!"
+
 #: views/snapshots/partials/create-snapshot-progress.php:79
 #, fuzzy
 msgid ""
@@ -4597,6 +6851,23 @@ msgstr ""
 "web, questo verrà caricato sulla destinazione. Se il sito è di piccole "
 "dimensioni, l'operazione richiederà solo pochi minuti, ma potrebbe "
 "richiedere un paio d'ore per i siti più grandi."
+
+#: cp-snapshot.php:558
+#, fuzzy
+msgid "Your Snapshot Key has been successfully added."
+msgstr "La chiave istantanea è stata aggiunta con successo."
+
+#: lib/Snapshot/View/Settings.php:45
+#, fuzzy, php-format
+msgid ""
+"Your web server timeout is set very low, %d seconds. Also, it appears this "
+"timeout cannot be adjusted via the Snapshot backup process. Attempting a "
+"snapshot backup could result in a partial backup of your tables."
+msgstr ""
+"Il timeout del server Web è impostato su un valore molto basso, %d secondi. "
+"Inoltre, sembra che questo timeout non possa essere regolato tramite il "
+"processo di backup istantaneo. Il tentativo di eseguire un backup istantaneo "
+"potrebbe causare un backup parziale delle tabelle."
 
 #: lib/Snapshot/View/Settings.php:295
 #, fuzzy, php-format
@@ -4624,3 +6895,20 @@ msgid ""
 msgstr ""
 "Il vostro sito web è stato ripristinato con successo dalla vostra istantanea!"
 "!! <a href=\"%s\">Vedi il sito web</a>."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2640
+#, fuzzy
+msgid ""
+"ZipArchive - In most cases ZipArchive is built into PHP and generally faster "
+"than PclZIP. This library primarily uses files instead of memory for "
+"temporary storage when compressing large files."
+msgstr ""
+"ZipArchive - Nella maggior parte dei casi ZipArchive è integrato in PHP e "
+"generalmente è più veloce di PclZIP. Questa libreria utilizza principalmente "
+"i file invece della memoria per l'archiviazione temporanea durante la "
+"compressione di file di grandi dimensioni."
+
+#: lib/Snapshot/View/Metabox/Admin.php:2313
+#, fuzzy
+msgid "ZLib Compression"
+msgstr "Compressione ZLib"

@@ -17,3 +17,48 @@ This plugin allows you to create quick backup snapshots of your working ClassicP
 
 [RESTORE SCRIPT](https://github.com/cp-psource/cp-snapshot-installer-1.0.1)
 
+[POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/cp-powersource/)
+
+== Languages ==
+
+* Deutsch: de_DE
+* English: en_US
+* France: fr_FR
+* Italiono: it_IT
+* Dutch: nl_NL
+* Polish: pl_PL
+* Spanish: es_ES
+* Portuguese: pt_PT
+* Portuguese (Brazil): pt_BR
+
+Du kannst uns gerne Deine optimierten .po/.mo Dateien für Deine Muttersprache zukommen lassen. 
+Nutze die Möglichkeit dazu auf GitHub oder sende Deine Dateien an: webmaster@n3rds.work
+
+You are welcome to send us your optimized .po/.mo files for your native language. 
+Use the opportunity to do so on GitHub or send your files to: webmaster@n3rds.work
+
+== CP PSOURCE ==
+
+= Finde mehr Piestingtal.Source =
+
+Wirf einen Blick in unser [PSOURCE Sortiment](https://n3rds.work/psource_kategorien/cp-powersource/) und hole noch mehr aus Deinem ClassicPress/ClassicPress!
+
+Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
+
+= Support Us =
+
+Viele, viele Kaffees konsumieren wir während wir an unseren Plugins und Themes arbeiten.
+Wie wärs? Möchtest Du uns mit einer Kaffee-Spende bei der Arbeit an unseren Plugins unterstützen?
+
+We consume many, many coffees while working on our plugins and themes.
+how about Would you like to support us with a coffee donation while working on our plugins?
+
+Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/) wir Danken Dir!
+
+Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
+
+Make a [donation by bank transfer or PayPal](https://n3rds.work/spenderaktionen/unterstuetze-unsere-psource-free-werke/) we thank you!
+
+Keep yourself informed about our Piestingtal.Source with our [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/)!
+
+== ChangeLog ==

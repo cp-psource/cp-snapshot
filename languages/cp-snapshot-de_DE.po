@@ -209,7 +209,7 @@ msgid ""
 "older version that somehow became disconnected with the settings. You can "
 "now import the zip file and snapshot will add it to the listing."
 msgstr ""
-"<strong>Archivimport</strong> – Du hast eine Schnappschuss-ZIP-Datei aus "
+"<strong>Archivimport</strong> – Du hast eine Snapshot-ZIP-Datei aus "
 "einer älteren Version, die irgendwie von den Einstellungen getrennt wurde. "
 "Du kannst jetzt die ZIP-Datei importieren und Snapshot fügt sie der Liste "
 "hinzu."
@@ -412,7 +412,7 @@ msgid ""
 "name is \"snapshot\"."
 msgstr ""
 "<strong>Name</strong> – Gib einen benutzerdefinierten Namen für diesen "
-"Snapshot an. Der Standardname ist „Schnappschuss“."
+"Snapshot an. Der Standardname ist „Snapshot“."
 
 #: cp-snapshot.php:1298 cp-snapshot.php:1305
 msgid ""
@@ -432,7 +432,7 @@ msgid ""
 msgstr ""
 "<strong>Notizen</strong> – Die Spalte „Notizen“ zeigt die Beschreibung, die "
 "Du dem Snapshot zugewiesen hast. In dieser Spalte befinden sich auch die in "
-"diesem Schnappschuss enthaltenen Tabellen."
+"diesem Snapshot enthaltenen Tabellen."
 
 #: lib/Snapshot/View/Metabox/Admin.php:3041 views/import.php:212
 msgid ""
@@ -1356,7 +1356,7 @@ msgstr "Land"
 #: cp-snapshot.php:127
 #, fuzzy
 msgid "CP Snapshot"
-msgstr "CP-Schnappschuss"
+msgstr "CP-Snapshot"
 
 #: views/boxes/dashboard/widget-snapshots.php:35
 #, fuzzy
@@ -2097,7 +2097,7 @@ msgstr "ERROR: Der Snapshot incorrect 'item_data' ["
 #: cp-snapshot.php:2889
 #, fuzzy
 msgid "ERROR: The Snapshot locks folder is not writable"
-msgstr "FEHLER: Der Ordner \"Schnappschusssperren\" ist nicht beschreibbar"
+msgstr "FEHLER: Der Ordner \"Snapshotsperren\" ist nicht beschreibbar"
 
 #: cp-snapshot.php:5163
 #, fuzzy
@@ -2988,7 +2988,7 @@ msgid ""
 "exclude files for all snapshots by using the Global File Exclusions on the "
 "Settings panel."
 msgstr ""
-"Hier kannst du Dateien auflisten, die von diesem Schnappschuss "
+"Hier kannst du Dateien auflisten, die von diesem Snapshot "
 "ausgeschlossen werden sollen. Das ist praktisch, um sehr große Dateien wie "
 "Videos auszuschließen. Die Dateien sollten einzeln pro Zeile aufgeführt "
 "werden. Du kannst auch Dateien für alle Schnappschüsse ausschließen, indem "
@@ -3053,7 +3053,7 @@ msgstr "Lokaler Server"
 #: cp-snapshot.php:2293
 #, fuzzy
 msgid "Local Snapshot"
-msgstr "Lokaler Schnappschuss"
+msgstr "Lokaler Snapshot"
 
 #: views/managed-backups/restore.php:68
 #, fuzzy
@@ -3239,7 +3239,7 @@ msgstr "Einstellungen"
 #, fuzzy
 msgctxt "menu label"
 msgid "Snapshot"
-msgstr "Schnappschuss"
+msgstr "Snapshot"
 
 #: cp-snapshot.php:474
 #, fuzzy
@@ -3579,9 +3579,9 @@ msgid ""
 "Also provided is a link to the snapshot file which you can download and "
 "archive to your local system."
 msgstr ""
-"Im Fenster Schnappschuss bearbeiten kannst du den Schnappschuss umbenennen "
+"Im Fenster Snapshot bearbeiten kannst du den Snapshot umbenennen "
 "oder mit Notizen versehen. Außerdem gibt es einen Link zur "
-"Schnappschussdatei, die du herunterladen und auf deinem lokalen System "
+"Snapshotdatei, die du herunterladen und auf deinem lokalen System "
 "archivieren kannst."
 
 #: cp-snapshot.php:1312
@@ -3734,7 +3734,7 @@ msgstr "Einstellungen"
 #, fuzzy
 msgctxt "page label"
 msgid "Snapshot Pro"
-msgstr "Schnappschuss Pro"
+msgstr "Snapshot Pro"
 
 #: cp-snapshot.php:473
 #, fuzzy
@@ -4558,7 +4558,7 @@ msgstr "Snapshot zur Bestimmung der wiederherzustellenden Tabellen/Dateien"
 #: cp-snapshot.php:656
 #, fuzzy
 msgid "Snapshot Finishing"
-msgstr "Schnappschuss-Finishing"
+msgstr "Snapshot-Finishing"
 
 #: views/snapshots/partials/create-snapshot-progress.php:222
 #, fuzzy
@@ -4582,7 +4582,7 @@ msgstr "Snapshot Initialisierung"
 #: cp-snapshot.php:647
 #, fuzzy
 msgid "Snapshot initializing"
-msgstr "Schnappschuss wird initialisiert"
+msgstr "Snapshot wird initialisiert"
 
 #: cp-snapshot.php:674 views/managed_backups.php:97
 msgid "Snapshot Key"
@@ -4843,7 +4843,7 @@ msgid ""
 "is a link you can use to download the snapshot for sharing or archiving."
 msgstr ""
 "Verwende dieses Formular, um die Details eines früheren Snapshots zu "
-"aktualisieren. Außerdem findest du einen Link, über den du den Schnappschuss "
+"aktualisieren. Außerdem findest du einen Link, über den du den Snapshot "
 "zum Teilen oder Archivieren herunterladen kannst."
 
 #: lib/Snapshot/View/Metabox/Admin.php:2432
@@ -5341,7 +5341,7 @@ msgstr ""
 #, fuzzy, php-format
 msgid "The Snapshot directory %s is automatically excluded from all snapshots"
 msgstr ""
-"Das Schnappschussverzeichnis %s wird automatisch von allen Schnappschüssen "
+"Das Snapshotverzeichnis %s wird automatisch von allen Schnappschüssen "
 "ausgeschlossen"
 
 #: cp-snapshot.php:552
@@ -5872,7 +5872,7 @@ msgstr "URL-Ausschlüsse"
 #: lib/Snapshot/View/Metabox/Admin.php:3063
 #, fuzzy
 msgid "URL or local path to Snapshot Archive"
-msgstr "URL oder lokaler Pfad zum Schnappschuss-Archiv"
+msgstr "URL oder lokaler Pfad zum Snapshot-Archiv"
 
 #: views/snapshots/snapshot.php:570
 #, fuzzy

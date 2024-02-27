@@ -1,6 +1,6 @@
 ;(function ($) {
 	// page ID or "slug"
-	window.SS_PAGES.snapshot_page_snapshot_pro_dashboard = function () {
+	window.SS_PAGES.snapshot_page_snapshot_dashboard = function () {
 
 		var view_snapshot_key_button = function () {
 

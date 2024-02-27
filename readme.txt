@@ -1,5 +1,5 @@
 === CP Snapshot ===
-Contributors: DerN3rd (WMS N@W)
+Contributors: DerN3rd (PSOURCE)
 Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
 Tags: multisite, snapshot, backups, classicpress-plugin
 Requires at least: 4.9
@@ -15,7 +15,7 @@ This plugin allows you to create quick backup snapshots of your working ClassicP
 
 == Description ==
 
-[RESTORE SCRIPT](https://github.com/cp-psource/cp-snapshot-installer-1.0.1)
+[RESTORE SCRIPT](https://github.com/cp-psource/snapshot-installer-1.0.1)
 
 [POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/cp-powersource/)
 

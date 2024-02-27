@@ -128,7 +128,7 @@ abstract class Snapshot_Model_Destination {
 			}
 			if ( $destination_count ) {
 				?><a href="<?php echo PSOURCESnapshot::instance()->get_setting( 'SNAPSHOT_MENU_URL' );
-				?>snapshot_pro_snapshots&amp;destination=<?php echo $destination_key; ?>"><?php echo $destination_count ?></a><?php
+				?>snapshot_snapshots&amp;destination=<?php echo $destination_key; ?>"><?php echo $destination_count ?></a><?php
 			} else {
 				echo '<span>0</span>';
 			}

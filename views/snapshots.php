@@ -92,7 +92,7 @@ $data = array(
 
 						<div class="my-snapshots">
 
-							<form id="snapshot-edit-listing" action="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshot_pro_snapshots' ); ?>" method="post">
+							<form id="snapshot-edit-listing" action="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshot_snapshots' ); ?>" method="post">
 								<input type="hidden" name="snapshot-action" value="delete-bulk"/>
 								<?php wp_nonce_field( 'snapshot-delete', 'snapshot-noonce-field' ); ?>
 								<?php $this->render( "snapshots/partials/filter", false, $data, false, false ); ?>

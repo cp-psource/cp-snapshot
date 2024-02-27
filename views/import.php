@@ -197,7 +197,7 @@ class Snapshot_Process_Import_Archives {
 		</div>
 
 		<div class="wpmud-box-content">
-			<form action="?page=snapshot_pro_import" method="post">
+			<form action="?page=snapshot_import" method="post">
 				<input type="hidden" value="archives-import" name="snapshot-action">
 				<?php wp_nonce_field( 'snapshot-import', 'snapshot-noonce-field' ); ?>
 

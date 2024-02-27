@@ -70,7 +70,7 @@ if ( ! class_exists( 'SnapshotDestinationDropbox' )
 			// we load the stored item option and grab the new access token. Then store the options and redirect the user to
 			// the Destination Dropbox form where they will finally save the destination info.
 
-			if ( ! isset( $_GET['page'] ) || ! in_array( sanitize_text_field( $_GET['page'] ), array( 'snapshots_destinations_panel', 'snapshot_pro_destinations' ) ) ) {
+			if ( ! isset( $_GET['page'] ) || ! in_array( sanitize_text_field( $_GET['page'] ), array( 'snapshots_destinations_panel', 'snapshot_destinations' ) ) ) {
 				return;
 			}
 

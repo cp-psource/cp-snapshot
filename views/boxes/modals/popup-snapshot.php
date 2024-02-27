@@ -58,7 +58,7 @@
 
 							<?php endif; ?>
 
-							<form method="post" action="?page=snapshot_pro_settings" data-security="<?php echo $ajax_nonce;?>">
+							<form method="post" action="?page=snapshot_settings" data-security="<?php echo $ajax_nonce;?>">
 
 								<div class="wps-snapshot-key wpmud-box-gray">
 

@@ -1,6 +1,6 @@
 ;(function ($) {
     // page ID or "slug"
-    window.SS_PAGES.snapshot_page_snapshot_pro_managed_backups_restore = function () {
+    window.SS_PAGES.snapshot_page_snapshot_managed_backups_restore = function () {
         /* Handler for Backup/Restore user Aborts */
 
         var snapshot_ajax_hdl_xhr = null,

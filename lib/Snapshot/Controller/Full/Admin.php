@@ -72,7 +72,7 @@ class Snapshot_Controller_Full_Admin extends Snapshot_Controller_Full {
 			return false;
 		}
 
-		if ( ! $this->_view->is_current_admin_page() && ! ( isset( $_GET['page'] ) && in_array( sanitize_text_field( $_GET['page'] ), array( "snapshot_pro_settings", "snapshot_pro_managed_backups" ) ) ) ) {
+		if ( ! $this->_view->is_current_admin_page() && ! ( isset( $_GET['page'] ) && in_array( sanitize_text_field( $_GET['page'] ), array( "snapshot_settings", "snapshot_managed_backups" ) ) ) ) {
 			return false;
 		}
 
@@ -80,7 +80,7 @@ class Snapshot_Controller_Full_Admin extends Snapshot_Controller_Full {
 			return false;
 		}
 
-		if ( isset( $_GET['action'] ) && $_GET['page'] === 'snapshot_pro_managed_backups' && $_GET['action'] === 'delete' ) {
+		if ( isset( $_GET['action'] ) && $_GET['page'] === 'snapshot_managed_backups' && $_GET['action'] === 'delete' ) {
 			$_POST = $_GET;
 		}
 		$data = new Snapshot_Model_Post();
@@ -229,7 +229,7 @@ class Snapshot_Controller_Full_Admin extends Snapshot_Controller_Full {
 		) {
 			return false;
 		}
-		if ( $this->_model->is_active() && ! ( isset( $_GET['page'] ) && in_array( sanitize_text_field( $_GET['page'] ), array( "snapshot_pro_settings", "snapshot_pro_managed_backups" ) ) ) ) {
+		if ( $this->_model->is_active() && ! ( isset( $_GET['page'] ) && in_array( sanitize_text_field( $_GET['page'] ), array( "snapshot_settings", "snapshot_managed_backups" ) ) ) ) {
 			if ( $data->is_true( 'activate' ) ) {
 				return false;
 			} // Pleonasm

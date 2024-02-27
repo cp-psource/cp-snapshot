@@ -3,18 +3,18 @@
 Plugin Name: CP Snapshot
 Version: 1.0.0
 Description: Dieses Plugin ermöglicht es Dir, bei Bedarf schnelle Backup-Snapshots Deiner funktionierenden ClassicPress-Datenbank zu erstellen. Du kannst aus den standardmäßigen ClassicPress-Tabellen sowie benutzerdefinierten Plugin-Tabellen innerhalb der Datenbankstruktur auswählen. Alle Snapshots werden protokolliert und Du kannst den Snapshot nach Bedarf wiederherstellen.
-Author: WMS N@W
-Author URI: https://n3rds.work/
+Author: PSOURCE
+Author URI: https://github.com/cp-psource
 Plugin URI: https://n3rds.work/project/snapshot/
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: cp-snapshot
+Text Domain: snapshot
 Domain Path: languages
 Network: true
  */
 
 /**
- * @copyright WMS N@W (https://n3rds.work/)
+ * @copyright PSOURCE (https://github.com/cp-psource)
  *
  * Authors: DerN3rd
  *
@@ -40,9 +40,9 @@ require 'psource/psource-plugin-update/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
   
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/cp-psource/cp-snapshot',
+	'https://github.com/cp-psource/snapshot',
 	__FILE__,
-	'cp-snapshot'
+	'snapshot'
 );
   
 //Set the branch that contains the stable release.
@@ -50,11 +50,11 @@ $myUpdateChecker->setBranch('master');
 
 
 if ( ! defined( 'SNAPSHOT_I18N_DOMAIN' ) ) {
-	define( 'SNAPSHOT_I18N_DOMAIN', 'cp-snapshot' );
+	define( 'SNAPSHOT_I18N_DOMAIN', 'snapshot' );
 }
 
 if ( ! defined( 'SNAPSHOT_TD' ) ) {
-	define( 'SNAPSHOT_TD', 'cp-snapshot' );
+	define( 'SNAPSHOT_TD', 'snapshot' );
 }
 
 /* Load important file functions (and everything that goes with it). */
@@ -319,7 +319,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 					'parent' => 'new-content',
 					'id' => 'snapshot-admin-menubar',
 					'title' => $this->_settings['admin_menu_label'],
-					'href' => 'admin.php?page=snapshot_pro_new_snapshot',
+					'href' => 'admin.php?page=snapshot_new_snapshot',
 					'meta' => false,
 				)
 			);
@@ -437,7 +437,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		function snapshot_plugin_settings_link_proc( $links ) {
 			$settings_link = sprintf( '<a href="%s">%s</a>',
 				esc_url( $this->snapshot_get_pagehook_url( 'snapshots-newui-new-snapshot' ) ),
-				esc_html__( 'Settings', SNAPSHOT_I18N_DOMAIN )
+				esc_html__( 'Einstellungen', SNAPSHOT_I18N_DOMAIN )
 			);
 			array_unshift( $links, $settings_link );
 
@@ -458,51 +458,51 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		function snapshot_admin_menu_proc() {
 
 			add_menu_page(
-				_x( 'Snapshot Pro', 'page label', SNAPSHOT_I18N_DOMAIN ),
-				_x( 'Snapshot', 'menu label', SNAPSHOT_I18N_DOMAIN ),
+				_x( 'CP Snapshot', 'page label', SNAPSHOT_I18N_DOMAIN ),
+				_x( 'CP Snapshot', 'menu label', SNAPSHOT_I18N_DOMAIN ),
 				'manage_options',
-				'snapshot_pro_dashboard',
+				'snapshot_dashboard',
 				array( $this->_new_ui_tester, 'dashboard' ),
 				'div'
 			);
 			$this->_pagehooks['snapshots-newui-dashboard'] = add_submenu_page(
-				'snapshot_pro_dashboard',
+				'snapshot_dashboard',
 				_x( 'Dashboard', 'page label', SNAPSHOT_I18N_DOMAIN ),
 				_x( 'Dashboard', 'menu label', SNAPSHOT_I18N_DOMAIN ),
 				'manage_options',
-				'snapshot_pro_dashboard',
+				'snapshot_dashboard',
 				array( $this->_new_ui_tester, 'dashboard' )
 			);
 			$this->_pagehooks['snapshots-newui-snapshots'] = add_submenu_page(
-				'snapshot_pro_dashboard',
+				'snapshot_dashboard',
 				_x( 'Snapshots', 'page label', SNAPSHOT_I18N_DOMAIN ),
 				_x( 'Snapshots', 'menu label', SNAPSHOT_I18N_DOMAIN ),
 				'manage_options',
-				'snapshot_pro_snapshots',
+				'snapshot_snapshots',
 				array( $this->_new_ui_tester, 'snapshots' )
 			);
 			$this->_pagehooks['snapshots-newui-destinations'] = add_submenu_page(
-				'snapshot_pro_dashboard',
+				'snapshot_dashboard',
 				_x( 'Destinations', 'page label', SNAPSHOT_I18N_DOMAIN ),
 				_x( 'Destinations', 'menu label', SNAPSHOT_I18N_DOMAIN ),
 				'manage_options',
-				'snapshot_pro_destinations',
+				'snapshot_destinations',
 				array( $this->_new_ui_tester, 'destinations' )
 			);
 			$this->_pagehooks['snapshots-newui-import'] = add_submenu_page(
-				'snapshot_pro_dashboard',
-				_x( 'Import', 'page label', SNAPSHOT_I18N_DOMAIN ),
-				_x( 'Import', 'menu label', SNAPSHOT_I18N_DOMAIN ),
+				'snapshot_dashboard',
+				_x( 'Importieren', 'page label', SNAPSHOT_I18N_DOMAIN ),
+				_x( 'Importieren', 'menu label', SNAPSHOT_I18N_DOMAIN ),
 				'manage_options',
-				'snapshot_pro_import',
+				'snapshot_import',
 				array( $this->_new_ui_tester, 'import' )
 			);
 			$this->_pagehooks['snapshots-newui-settings'] = add_submenu_page(
-				'snapshot_pro_dashboard',
-				_x( 'Settings', 'page label', SNAPSHOT_I18N_DOMAIN ),
-				_x( 'Settings', 'menu label', SNAPSHOT_I18N_DOMAIN ),
+				'snapshot_dashboard',
+				_x( 'Einstellungen', 'page label', SNAPSHOT_I18N_DOMAIN ),
+				_x( 'Einstellungen', 'menu label', SNAPSHOT_I18N_DOMAIN ),
 				'manage_options',
-				'snapshot_pro_settings',
+				'snapshot_settings',
 				array( $this->_new_ui_tester, 'settings' )
 			);
 
@@ -1371,7 +1371,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 					} else {
 						$screen->add_help_tab( array(
 								'id' => 'snapshot-help-listing',
-								'title' => __( 'All Snapshots', SNAPSHOT_I18N_DOMAIN ),
+								'title' => __( 'Alle Snapshots', SNAPSHOT_I18N_DOMAIN ),
 								'content' => $screen_help_text['snapshots_edit_panel']['default'],
 							)
 						);
@@ -1380,7 +1380,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 
 					$screen->add_help_tab( array(
 							'id' => 'snapshot-help-activity',
-							'title' => __( 'Activity Log', SNAPSHOT_I18N_DOMAIN ),
+							'title' => __( 'Aktivitätsprotokoll', SNAPSHOT_I18N_DOMAIN ),
 							'content' => $screen_help_text['snapshots_activity_panel'],
 						)
 					);
@@ -1388,7 +1388,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 
 					$screen->add_help_tab( array(
 							'id' => 'snapshot-help-settings',
-							'title' => __( 'Settings', SNAPSHOT_I18N_DOMAIN ),
+							'title' => __( 'Einstellungen', SNAPSHOT_I18N_DOMAIN ),
 							'content' => $screen_help_text['snapshots_settings_panel'],
 						)
 					);
@@ -1452,7 +1452,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 
 			$CONFIG_CHANGED = false;
 
-			if ( $page == 'snapshot_pro_managed_backups' ) {
+			if ( $page == 'snapshot_managed_backups' ) {
 				$model = new Snapshot_Model_Full_Backup;
 
 				if ( ! current_user_can( Snapshot_View_Full_Backup::get()->get_page_role() ) ) {
@@ -1941,7 +1941,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 				return $item['timestamp'];
 			} else {
-				$redirect_url = $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_pro_snapshots';
+				$redirect_url = $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_snapshots';
 
 				$redirect_url = add_query_arg( array(
 					'snapshot-action' => 'view',
@@ -2143,11 +2143,11 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 				$this->save_config();
 			}
 
-			$location = esc_url_raw( add_query_arg( 'message', 'success-settings', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_pro_settings' ) );
+			$location = esc_url_raw( add_query_arg( 'message', 'success-settings', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_settings' ) );
 			if ( isset( $_POST['snapshot-destination']['type'] ) && $_POST['snapshot-destination']['type'] == 'local' ) {
 				$message = 'success-update';
 				if ( ! isset( $this->_admin_header_error ) || empty( $this->_admin_header_error ) ) {
-					$location = esc_url_raw( add_query_arg( 'message', 'success-update', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_pro_destinations' ) );
+					$location = esc_url_raw( add_query_arg( 'message', 'success-update', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_destinations' ) );
 				} else {
 					$location = esc_url_raw( add_query_arg( array(
 						'snapshot-action' => 'edit',
@@ -4156,7 +4156,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 				$error_status['responseFile'] = basename( $backupZipFileFinal );
 
 				// echo out the finished message so the user knows we are done.
-				$snapshot_url = $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_pro_snapshots';
+				$snapshot_url = $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_snapshots';
 				$error_status['responseText'] = __( "Your snapshot has been successfully created and stored!", SNAPSHOT_I18N_DOMAIN ) . "<br />" . '<a href="' . $snapshot_url . '&amp;snapshot-action=view&amp;item=' . $item_key . '">' . __( "View Snapshot", SNAPSHOT_I18N_DOMAIN ) . '</a>';
 
 				//}
@@ -6477,8 +6477,8 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 
 				$location = esc_url_raw( add_query_arg( 'message', 'success-delete', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshots_destinations_panel' ) );
 
-				if ( isset( $_GET['page'] ) && sanitize_text_field( $_GET['page'] ) === 'snapshot_pro_destinations' ) {
-					$location = esc_url_raw( add_query_arg( 'message', 'success-delete', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_pro_destinations' ) );
+				if ( isset( $_GET['page'] ) && sanitize_text_field( $_GET['page'] ) === 'snapshot_destinations' ) {
+					$location = esc_url_raw( add_query_arg( 'message', 'success-delete', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_destinations' ) );
 
 				}
 
@@ -6513,8 +6513,8 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 					$this->save_config();
 
 					$location = esc_url_raw( add_query_arg( 'message', 'success-delete', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshots_destinations_panel' ) );
-					if ( isset( $_GET['page'] ) && sanitize_text_field( $_GET['page'] ) === 'snapshot_pro_destinations' ) {
-						$location = esc_url_raw( add_query_arg( 'message', 'success-delete', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_pro_destinations' ) );
+					if ( isset( $_GET['page'] ) && sanitize_text_field( $_GET['page'] ) === 'snapshot_destinations' ) {
+						$location = esc_url_raw( add_query_arg( 'message', 'success-delete', $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_destinations' ) );
 
 					}
 
@@ -6524,8 +6524,8 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 					}
 				}
 
-				if ( isset( $_GET['page'] ) && sanitize_text_field( $_GET['page'] ) === 'snapshot_pro_destinations' ) {
-					wp_redirect( $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_pro_destinations' );
+				if ( isset( $_GET['page'] ) && sanitize_text_field( $_GET['page'] ) === 'snapshot_destinations' ) {
+					wp_redirect( $this->_settings['SNAPSHOT_MENU_URL'] . 'snapshot_destinations' );
 					die();
 
 				}
@@ -8011,19 +8011,19 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			$snapshot_action = sanitize_text_field( $_REQUEST['snapshot-action'] );
 
 			if ( $snapshot_action == 'new' || $snapshot_action == 'backup' ) {
-				/*if ( 'snapshot_page_snapshot_pro_managed_backups' === $screen_id ) {
-					$classes .= 'snapshot_page_snapshot_pro_managed_backups_create ';
+				/*if ( 'snapshot_page_snapshot_managed_backups' === $screen_id ) {
+					$classes .= 'snapshot_page_snapshot_managed_backups_create ';
 
-				} else*/ if ( 'snapshot_page_snapshot_pro_snapshots' === $screen_id ) {
-					$classes .= 'snapshot_page_snapshot_pro_snapshot_create ';
+				} else*/ if ( 'snapshot_page_snapshot_snapshots' === $screen_id ) {
+					$classes .= 'snapshot_page_snapshot_snapshot_create ';
 				}
 			}
 			if ( $snapshot_action == 'restore' ) {
-				/*if ( 'snapshot_page_snapshot_pro_managed_backups' === $screen_id ) {
-					$classes .= 'snapshot_page_snapshot_pro_managed_backups_restore ';
+				/*if ( 'snapshot_page_snapshot_managed_backups' === $screen_id ) {
+					$classes .= 'snapshot_page_snapshot_managed_backups_restore ';
 
-				} else*/ if ( 'snapshot_page_snapshot_pro_snapshots' === $screen_id ) {
-					$classes .= 'snapshot_page_snapshot_pro_snapshots_restore ';
+				} else*/ if ( 'snapshot_page_snapshot_snapshots' === $screen_id ) {
+					$classes .= 'snapshot_page_snapshot_snapshots_restore ';
 				}
 			}
 
@@ -8035,7 +8035,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			if ( ! $network_activation ) {
 				$re = sprintf( '/%s$/', basename( __FILE__ ) );
 				if ( preg_match( $re, $plugin ) ) {
-					$dashboard_url = 'admin.php?page=snapshot_pro_dashboard';
+					$dashboard_url = 'admin.php?page=snapshot_dashboard';
 					wp_safe_redirect( $dashboard_url );
 					exit;
 				}

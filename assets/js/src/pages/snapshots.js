@@ -1,7 +1,7 @@
 ;(function ($) {
 
 	// page ID or "slug"
-	window.SS_PAGES.snapshot_page_snapshot_pro_snapshots = function () {
+	window.SS_PAGES.snapshot_page_snapshot_snapshots = function () {
 
 		// Available Snapshots
 		// Menu options
@@ -87,8 +87,8 @@
 			}, 1000);
 		});
 
-		if (!$('body').is('.snapshot_page_snapshot_pro_snapshot_create')) {
-			window.SS_PAGES.snapshot_page_snapshot_pro_snapshot_create();
+		if (!$('body').is('.snapshot_page_snapshot_snapshot_create')) {
+			window.SS_PAGES.snapshot_page_snapshot_snapshot_create();
 		}
 	};
 

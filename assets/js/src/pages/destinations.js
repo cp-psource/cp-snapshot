@@ -1,6 +1,6 @@
 ;(function ($) {
 	// page ID or "slug"
-	window.SS_PAGES.snapshot_page_snapshot_pro_destinations = function () {
+	window.SS_PAGES.snapshot_page_snapshot_destinations = function () {
 
 		$('#wps-destination-delete').on('click', function (e) {
 			e.preventDefault();

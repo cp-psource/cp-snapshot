@@ -1,6 +1,6 @@
 (function ($) {
 	// page ID or "slug"
-	window.SS_PAGES.snapshot_page_snapshot_pro_managed_backups_create = function () {
+	window.SS_PAGES.snapshot_page_snapshot_managed_backups_create = function () {
 
 		$(document).ready(function () {
 			if ('#wps-backups-settings-schedule' === window.location.hash) {

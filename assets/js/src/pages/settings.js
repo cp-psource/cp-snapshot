@@ -1,6 +1,6 @@
 ;(function ($) {
 	// page ID or "slug"
-	window.SS_PAGES.snapshot_page_snapshot_pro_settings = function () {
+	window.SS_PAGES.snapshot_page_snapshot_settings = function () {
 
 		$('[name="files"]').on('change', function () {
 			if ($('[name="files"]:checked').is('#common_files')) {

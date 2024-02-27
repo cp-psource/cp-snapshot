@@ -223,7 +223,7 @@ $model = new Snapshot_Model_Full_Backup();
 									<div class="my-backups">
 
 										<form id="snapshot-edit-listing" method="post"
-										      action="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshot_pro_snapshots' ); ?>">
+										      action="<?php echo PSOURCESnapshot::instance()->snapshot_get_pagehook_url( 'snapshot_snapshots' ); ?>">
 
 											<div class="my-backups-content">
 

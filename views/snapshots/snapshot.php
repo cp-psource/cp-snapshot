@@ -740,7 +740,7 @@ $warning = $requirements_test['warning'];
 																			}
 																		}
 
-																		if ( isset( $_GET['page'] ) && ( $_GET['page'] === "snapshot_pro_snapshots" || $_GET['page'] === 'snapshot_pro_snapshots' ) ) {
+																		if ( isset( $_GET['page'] ) && ( $_GET['page'] === "snapshot_snapshots" || $_GET['page'] === 'snapshot_snapshots' ) ) {
 
 																			if ( isset( $item['tables-sections'] ) ) {
 

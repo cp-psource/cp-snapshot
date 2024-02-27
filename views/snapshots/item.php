@@ -296,7 +296,7 @@ if ( ! empty( $item['data_item']['destination-status'] ) ) {
 								<td>
 
 									<a id="wps-snapshot-log-view" class="button button-small button-outline button-gray" href="#"><?php _e( 'view', SNAPSHOT_I18N_DOMAIN ) ?></a>
-									<a class="button button-small button-outline button-gray" href="<?php echo '?page=snapshot_pro_snapshots&amp;snapshot-action=download-log&amp;snapshot-item=' . $item['timestamp'] . '&amp;snapshot-data-item=' . $item['data_item']['timestamp'] . '&amp;live=0' ?>"><?php _e( 'download', SNAPSHOT_I18N_DOMAIN ) ?>
+									<a class="button button-small button-outline button-gray" href="<?php echo '?page=snapshot_snapshots&amp;snapshot-action=download-log&amp;snapshot-item=' . $item['timestamp'] . '&amp;snapshot-data-item=' . $item['data_item']['timestamp'] . '&amp;live=0' ?>"><?php _e( 'download', SNAPSHOT_I18N_DOMAIN ) ?>
 									</a>
 
 								</td>
@@ -342,7 +342,7 @@ if ( ! empty( $item['data_item']['destination-status'] ) ) {
 							'modal_content' => __( "<p>Here's a log of events for this snapshot.</p>", SNAPSHOT_I18N_DOMAIN ),
 							'modal_content_ajax' => admin_url() . 'admin-ajax.php?action=snapshot_view_log_ajax&amp;snapshot-item=' . $item['timestamp'] . '&amp;snapshot-data-item=' . $item['data_item']['timestamp'],
 							'modal_action_title' => __( 'Download', SNAPSHOT_I18N_DOMAIN ),
-							'modal_action_url' => '?page=snapshot_pro_snapshots&amp;snapshot-action=download-log&amp;snapshot-item=' . $item['timestamp'] . '&amp;snapshot-data-item=' . $item['data_item']['timestamp'] . '&amp;live=0',
+							'modal_action_url' => '?page=snapshot_snapshots&amp;snapshot-action=download-log&amp;snapshot-item=' . $item['timestamp'] . '&amp;snapshot-data-item=' . $item['data_item']['timestamp'] . '&amp;live=0',
 							'modal_cancel_title' => __( 'Cancel', SNAPSHOT_I18N_DOMAIN ),
 							'modal_cancel_url' => '#',
 						);

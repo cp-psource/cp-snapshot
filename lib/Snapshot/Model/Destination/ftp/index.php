@@ -88,7 +88,7 @@ if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )
 		}
 
 		function load_scripts() {
-			if ( ( ! isset( $_GET['page'] ) ) || ( ! in_array( sanitize_text_field( $_GET['page'] ), array( "snapshots_destinations_panel","snapshot_pro_destinations" ) ) ) ) {
+			if ( ( ! isset( $_GET['page'] ) ) || ( ! in_array( sanitize_text_field( $_GET['page'] ), array( "snapshots_destinations_panel","snapshot_destinations" ) ) ) ) {
 				return;
 			}
 

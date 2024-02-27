@@ -22,7 +22,7 @@ $custom_directory = $use_folder;
 
 		<div class="wpmud-box-content">
 
-			<form action="?page=snapshot_pro_settings" method="post">
+			<form action="?page=snapshot_settings" method="post">
 
 				<input type="hidden" name="snapshot-action" value="settings-update"/>
 

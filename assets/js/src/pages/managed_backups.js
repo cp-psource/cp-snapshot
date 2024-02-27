@@ -1,7 +1,7 @@
 (function ($) {
 
 	// page ID or "slug"
-	window.SS_PAGES.snapshot_page_snapshot_pro_managed_backups = function () {
+	window.SS_PAGES.snapshot_page_snapshot_managed_backups = function () {
 
 		// Menu options
 		$('.wps-menu-dots').each(function () {
@@ -71,7 +71,7 @@
 			});
 		});
 
-		window.SS_PAGES.snapshot_page_snapshot_pro_managed_backups_create();
+		window.SS_PAGES.snapshot_page_snapshot_managed_backups_create();
 	};
 
 })(jQuery);

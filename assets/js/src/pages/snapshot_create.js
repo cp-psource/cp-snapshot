@@ -1,6 +1,6 @@
 (function ($) {
 	// page ID or "slug"
-	window.SS_PAGES.snapshot_page_snapshot_pro_snapshot_create = function () {
+	window.SS_PAGES.snapshot_page_snapshot_snapshot_create = function () {
 
 		jQuery("input[name='frequency']").change(function () {
 			var backup_frequency_options = jQuery("input[name='frequency']:checked").val();

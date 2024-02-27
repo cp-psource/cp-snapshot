@@ -1,6 +1,6 @@
 (function ($) {
     // page ID or "slug"
-    window.SS_PAGES.snapshot_page_snapshot_pro_snapshots_restore = function () {
+    window.SS_PAGES.snapshot_page_snapshot_snapshots_restore = function () {
 
         /* Handler for Backup/Restore user Aborts */
 

@@ -40,9 +40,9 @@ require 'psource/psource-plugin-update/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
   
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/cp-psource/snapshot',
+	'https://github.com/cp-psource/cp-snapshot',
 	__FILE__,
-	'snapshot'
+	'cp-snapshot'
 );
   
 //Set the branch that contains the stable release.
@@ -129,7 +129,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 
 			$this->_settings['SNAPSHOT_PLUGIN_URL'] = trailingslashit( WP_PLUGIN_URL ) . basename( dirname( __FILE__ ) );
 			$this->_settings['SNAPSHOT_PLUGIN_BASE_DIR'] = dirname( __FILE__ );
-			$this->_settings['admin_menu_label'] = __( "CP Snapshot", SNAPSHOT_I18N_DOMAIN ); // Used as the 'option_name' for wp_options table
+			$this->_settings['admin_menu_label'] = __( "Snapshot", SNAPSHOT_I18N_DOMAIN ); // Used as the 'option_name' for wp_options table
 
 			$this->_settings['options_key'] = "psource_snapshot";
 
@@ -458,8 +458,8 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		function snapshot_admin_menu_proc() {
 
 			add_menu_page(
-				_x( 'CP Snapshot', 'page label', SNAPSHOT_I18N_DOMAIN ),
-				_x( 'CP Snapshot', 'menu label', SNAPSHOT_I18N_DOMAIN ),
+				_x( 'Snapshot', 'page label', SNAPSHOT_I18N_DOMAIN ),
+				_x( 'Snapshot', 'menu label', SNAPSHOT_I18N_DOMAIN ),
 				'manage_options',
 				'snapshot_dashboard',
 				array( $this->_new_ui_tester, 'dashboard' ),

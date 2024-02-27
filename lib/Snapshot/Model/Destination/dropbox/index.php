@@ -1,13 +1,16 @@
 <?php
 /*
 Snapshots Plugin Destinations Dropbox
-Author: Paul Menard (Incsub)
+Author: DerN3rd (PSOURCE)
 */
 
 if ( ! class_exists( 'SnapshotDestinationDropbox' )
 	&& stristr( PSOURCE_SNAPSHOT_DESTINATIONS_EXCLUDE, 'SnapshotDestinationDropbox' ) === false ) {
 
 	class SnapshotDestinationDropbox extends Snapshot_Model_Destination {
+		// Define properties
+		public $sync_excluded_files = array();
+		public $sync_excluded_file_chars = array();
 
 		// The slug and name are used to identify the Destination Class
 		var $name_slug;

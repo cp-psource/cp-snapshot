@@ -637,7 +637,7 @@ msgstr "Ziel hinzufügen"
 #: lib/Snapshot/View/Metabox/Admin.php:1088
 #, fuzzy
 msgid "Add more Destinations"
-msgstr "Weitere Reiseziele hinzufügen"
+msgstr "Weitere Verzeichnisse hinzufügen"
 
 #: lib/Snapshot/View/Destination/Listing.php:61
 #: views/boxes/dashboard/widget-destinations.php:28
@@ -3215,7 +3215,7 @@ msgstr "Dashboard"
 #, fuzzy
 msgctxt "menu label"
 msgid "Destinations"
-msgstr "Reiseziele"
+msgstr "Verzeichnisse"
 
 #: cp-snapshot.php:490
 #, fuzzy
@@ -3710,7 +3710,7 @@ msgstr "Dashboard"
 #, fuzzy
 msgctxt "page label"
 msgid "Destinations"
-msgstr "Reiseziele"
+msgstr "Verzeichnisse"
 
 #: cp-snapshot.php:489
 #, fuzzy
@@ -4495,7 +4495,7 @@ msgstr "SFTP"
 
 #: lib/Snapshot/View/Table/Items.php:121
 msgid "Show All Destinations"
-msgstr "Alle Reiseziele Ziel-Definitionen"
+msgstr "Alle Verzeichnisse Ziel-Definitionen"
 
 #: views/managed-backups/partials/restore-backup-progress.php:10
 #: views/snapshots/partials/create-snapshot-progress.php:11

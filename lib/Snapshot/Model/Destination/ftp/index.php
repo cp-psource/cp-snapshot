@@ -1,7 +1,7 @@
 <?php
 /*
 Snapshots Plugin Destinations Dropbox
-Author: Paul Menard (Incsub)
+Author: DerN3rd (PSOURCE)
 */
 
 if ( ( ! class_exists( 'SnapshotDestinationFTP' ) )

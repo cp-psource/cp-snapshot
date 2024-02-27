@@ -1,7 +1,7 @@
 <?php
 /*
 Snapshots Plugin Destinations Google Drive
-Author: Paul Menard (Incsub)
+Author: DerN3rd (PSOURCE)
 */
 
 if ( ! defined( 'PSOURCE_SNAPSHOT_DESTINATION_GOOGLE_DRIVE_LOAD_LIB' ) ) {

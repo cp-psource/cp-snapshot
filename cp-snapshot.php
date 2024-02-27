@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: CP Snapshot
-Version: 3.1.5
+Version: 1.0.0
 Description: Dieses Plugin ermöglicht es Dir, bei Bedarf schnelle Backup-Snapshots Deiner funktionierenden ClassicPress-Datenbank zu erstellen. Du kannst aus den standardmäßigen ClassicPress-Tabellen sowie benutzerdefinierten Plugin-Tabellen innerhalb der Datenbankstruktur auswählen. Alle Snapshots werden protokolliert und Du kannst den Snapshot nach Bedarf wiederherstellen.
 Author: WMS N@W
 Author URI: https://n3rds.work/
@@ -36,13 +36,18 @@ Network: true
  *
  */
 
-require 'psource/psource-plugin-update/psource-plugin-updater.php';
-use Psource\PluginUpdateChecker\v5\PucFactory;
-$MyUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=cp-snapshot', 
-	__FILE__, 
-	'cp-snapshot' 
+require 'psource/psource-plugin-update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+  
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/cp-psource/cp-snapshot',
+	__FILE__,
+	'cp-snapshot'
 );
+  
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
+
 
 if ( ! defined( 'SNAPSHOT_I18N_DOMAIN' ) ) {
 	define( 'SNAPSHOT_I18N_DOMAIN', 'cp-snapshot' );
@@ -103,7 +108,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			$this->plugin_url = plugin_dir_url( __FILE__ );
 
 			$this->DEBUG = false;
-			$this->_settings['SNAPSHOT_VERSION'] = '3.1.5';
+			$this->_settings['SNAPSHOT_VERSION'] = '1.0.0';
 
 			if ( is_multisite() ) {
 				$this->_settings['SNAPSHOT_MENU_URL'] = network_admin_url() . 'admin.php?page=';

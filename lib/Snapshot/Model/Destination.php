@@ -2,7 +2,7 @@
 /**
  * Class for dealing with destinations.
  *
- * @since 2.5
+ * @since 1.0.0
  *
  * @package Snapshot
  * @subpackage Model

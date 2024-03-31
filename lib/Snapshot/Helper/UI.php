@@ -2,7 +2,7 @@
 /**
  * Snapshot utility class for creating common UI components.
  *
- * @since 2.5
+ * @since 1.0.0
  *
  * @package Snapshot
  * @subpackage Helper
@@ -105,7 +105,7 @@ if ( ! class_exists( 'Snapshot_Helper_UI' ) ) {
 		 * Utility function to display the AJAX information elements above the
 		 * Add New and Restore forms.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 */
 		public static function form_ajax_panels() {
 			?>

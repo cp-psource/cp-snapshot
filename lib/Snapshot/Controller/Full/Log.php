@@ -11,7 +11,7 @@ class Snapshot_Controller_Full_Log extends Snapshot_Controller_Full {
 	 * If it wasn't, we will assume that the logging is
 	 * implicitly enabled.
 	 *
-	 * @since v3.0.2-beta-1
+	 * @since 1.0.0
 	 */
 	const LOG_IMPLICIT = null;
 
@@ -33,7 +33,7 @@ class Snapshot_Controller_Full_Log extends Snapshot_Controller_Full {
 	 *
 	 * Checks both implicit and explicit enabling
 	 *
-	 * @since v3.0.2-beta-1
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */
@@ -49,7 +49,7 @@ class Snapshot_Controller_Full_Log extends Snapshot_Controller_Full {
 	 * Checks to see whether the logging has been *explicitly* enabled by the user
 	 *
 	 * @uses config['full_log_enable']
-	 * @since v3.0.2-beta-1
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */
@@ -66,7 +66,7 @@ class Snapshot_Controller_Full_Log extends Snapshot_Controller_Full {
 	 * Logging is implicitly enabled when there has been no user action
 	 *
 	 * @uses config['full_log_enable']
-	 * @since v3.0.2-beta-1
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */
@@ -107,7 +107,7 @@ class Snapshot_Controller_Full_Log extends Snapshot_Controller_Full {
 	 * Used when the log setup has been explicitly enabled in settings.
 	 *
 	 * @uses config['full_log_setup']
-	 * @since v3.0.2-beta-1
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */
@@ -139,7 +139,7 @@ class Snapshot_Controller_Full_Log extends Snapshot_Controller_Full {
 	 *
 	 * Used when the log setup has *NOT* been explicitly enabled in settings.
 	 *
-	 * @since v3.0.2-beta-1
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */

@@ -3,7 +3,7 @@
 /**
  * Handles secret key exchange
  *
- * @since v3.0.5-BETA-3
+ * @since 1.0.0
  */
 class Snapshot_Model_Full_Remote_Key extends Snapshot_Model_Full {
 

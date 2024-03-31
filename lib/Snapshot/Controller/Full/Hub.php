@@ -3,7 +3,7 @@
 /**
  * Hub actions controller
  *
- * @since v3.0.5-BETA-4
+ * @since 1.0.0
  */
 class Snapshot_Controller_Full_Hub extends Snapshot_Controller_Full {
 

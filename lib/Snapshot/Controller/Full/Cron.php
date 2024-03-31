@@ -65,7 +65,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 	/**
 	 * Runs the compatibility layer, if needed
 	 *
-	 * @since v3.0.5-BETA-1
+	 * @since 1.0.0
 	 * @deprecated v3.0.5-BETA-2
 	 *
 	 * @return bool Status
@@ -107,7 +107,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 	 * This is to be called from user action processing method.
 	 *
 	 * @uses $this->set_up_scheduling() to attach hooks and set up local rotation scheduling
-	 * @since 3.0.1
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */
@@ -259,7 +259,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 	/**
 	 * Self-ping handler that actually starts the backup process
 	 *
-	 * @since v3.0.5-BETA-2
+	 * @since 1.0.0
 	 */
 	private function _actually_start_backup () {
 		$this->_ignore_user_abort();
@@ -302,7 +302,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 	/**
 	 * Self-ping handler that actually processes the backup
 	 *
-	 * @since v3.0.5-BETA-2
+	 * @since 1.0.0
 	 */
 	protected function _actually_process_backup () {
 		$this->_ignore_user_abort();
@@ -335,7 +335,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 			/**
 			 * Automatic backup processing encountered too many errors
 			 *
-			 * @since 3.0-beta-12
+			 * @since 1.0.0
 			 *
 			 * @param string Action type indicator (process or finish)
 			 * @param string $key Error message key
@@ -382,7 +382,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 	/**
 	 * Finish the started backup
 	 *
-	 * @since v3.0.5-BETA-2
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */
@@ -417,7 +417,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 			/**
 			 * Automatic backup processing encountered too many errors
 			 *
-			 * @since 3.0-beta-12
+			 * @since 1.0.0
 			 *
 			 * @param string Action type indicator (process or finish)
 			 * @param string $key Error message key
@@ -495,7 +495,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 	/**
 	 * Returns a list of known self-pinging job actions
 	 *
-	 * @since v3.0.5-BETA-2
+	 * @since 1.0.0
 	 *
 	 * @return array
 	 */
@@ -622,7 +622,7 @@ class Snapshot_Controller_Full_Cron extends Snapshot_Controller_Full {
 	 * Dumb, manual schedule starting interface, decoupled from
 	 * the action hookup. Serves single duty.
 	 *
-	 * @since 3.0.1
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */

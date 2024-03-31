@@ -7,7 +7,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 		/**
 		 * Panel showing form for adding new Snapshots.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses setup in $this->admin_menu_proc()
 		 * @uses $wpdb
 		 *
@@ -174,7 +174,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 		/**
 		 * Metabox showing form for editing previous Snapshots.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses metaboxes setup in $this->admin_menu_proc()
 		 * @uses $_REQUEST['item']
 		 * @uses $this->config_data['items']
@@ -262,7 +262,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 		/**
 		 * Panel showing form to restore previous Snapshot.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses metaboxes setup in $this->admin_menu_proc()
 		 * @uses $_REQUEST['item']
 		 * @uses $this->config_data['items']
@@ -383,7 +383,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 		/**
 		 * Metabox showing form for Settings.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses metaboxes setup in $this->admin_menu_proc()
 		 * @uses $_REQUEST['item']
 		 * @uses $this->config_data['items']

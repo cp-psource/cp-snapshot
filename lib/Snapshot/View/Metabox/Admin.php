@@ -22,7 +22,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		 * The old-style PHP Class constructor. Used when an instance of this class
 		 * is needed. If used (PHP4) this function calls the PHP5 version of the constructor.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param none
 		 *
@@ -34,7 +34,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 
 		/**
 		 * Metabox Content for Snapshot Item header
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses metaboxes setup in $this->admin_menu_proc()
 		 * @uses $this->config_data['items']
 		 *
@@ -287,7 +287,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox to show the site tables with checkboxes
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param string $title - Title to be displayed in header of metabox
 		 * @param array $item - The current viewed item
@@ -484,7 +484,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox to show the backup file options
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param string $title - Title to be displayed in header of metabox
 		 * @param array $item - The current viewed item
@@ -733,7 +733,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox to show the backup scheduling options
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param string $title - Title to be displayed in header of metabox
 		 * @param array $item - The current viewed item
@@ -1062,7 +1062,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox to show the backup destination options
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param string $title - Title to be displayed in header of metabox
 		 * @param array $item - The current viewed item
@@ -1200,7 +1200,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox Content for Snapshot Migration
 		 * This is used to migrate snapshot files and logs from version 1.0.1 and earlier to the centralized 1.0.2 Multisite format
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses metaboxes setup in $this->admin_menu_proc()
 		 * @uses $this->config_data['items']
 		 *
@@ -1281,7 +1281,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 
 		/**
 		 * Metabox Content for Snapshot Item tables
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses metaboxes setup in $this->admin_menu_proc()
 		 * @uses $this->config_data['items']
 		 *
@@ -1356,7 +1356,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox to show the backup archived files
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param string $title - Title to be displayed in header of metabox
 		 * @param array $item - The current viewed item
@@ -1568,7 +1568,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox to show the restore options
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param string $title - Title to be displayed in header of metabox
 		 * @param array $item - The current viewed item
@@ -2049,7 +2049,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox Content for Snapshot segment size
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses metaboxes setup in $this->admin_menu_proc()
 		 * @uses $this->config_data['items']
 		 *
@@ -2504,7 +2504,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 		/**
 		 * Metabox Global File Exclusions - Allows setting exclude patterns to be used by all snapshot instances.
 		 *
-		 * @since 2.0.3
+		 * @since 1.0.0
 		 * @uses metaboxes setup in $this->admin_menu_proc()
 		 * @uses $this->config_data['items']
 		 *

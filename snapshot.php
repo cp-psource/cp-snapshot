@@ -13,41 +13,41 @@ Domain Path: languages
 Network: true
  */
 
-/**
- * @copyright PSOURCE (https://github.com/cp-psource)
- *
- * Authors: DerN3rd
- *
- * @license https://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2 (GPL-2.0)
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License, version 2, as
- * published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
- * MA 02110-1301 USA
- *
- */
+/*  Copyright 2016-2024 PSOURCE (https://github.com/cp-psource)
 
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+
+/**
+ * @@@@@@@@@@@@@@@@@ PS UPDATER 1.3 @@@@@@@@@@@
+ **/
 require 'psource/psource-plugin-update/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
-  
+ 
 $myUpdateChecker = PucFactory::buildUpdateChecker(
 	'https://github.com/cp-psource/cp-snapshot',
 	__FILE__,
 	'cp-snapshot'
 );
-  
+ 
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('master');
 
+/**
+ * @@@@@@@@@@@@@@@@@ ENDE PS UPDATER 1.3 @@@@@@@@@@@
+ **/
 
 if ( ! defined( 'SNAPSHOT_I18N_DOMAIN' ) ) {
 	define( 'SNAPSHOT_I18N_DOMAIN', 'snapshot' );
@@ -70,7 +70,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * Singleton instance of the plugin.
 		 *
-		 * @since 2.5
+		 * @since 1.0.0
 		 *
 		 * @access private
 		 * @var PSOURCESnapshot
@@ -595,7 +595,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * Set up the page with needed items for the Destinations metaboxes.
 		 *
-		 * @since 1.0.7
+		 * @since 1.0.0
 		 * @uses none
 		 *
 		 * @param none
@@ -1155,7 +1155,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * Plugin main action processing function. Will filter the destination action called then
 		 * pass on to other sub-functions
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @uses $_REQUEST global PHP object
 		 *
 		 * @param none
@@ -2578,7 +2578,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			 *
 			 * Can be used to manipulate the loaded data on the fly.
 			 *
-			 * @since 3.0.2-beta-1
+			 * @since 1.0.0
 			 */
 			do_action( 'snapshot-config-loaded' );
 		}
@@ -3706,7 +3706,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * This 'file' process
 		 *
-		 * @since 1.0.6
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -4190,7 +4190,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * AJAX callback function from the snapshot add new form. Used to update the blog tables listing
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param $_POST ['blog_id'] designates the blog to show tables for.
@@ -4421,7 +4421,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * AJAX callback function from snapshots page to disable notification.
 		 *
-		 * @since 3.1
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -4439,7 +4439,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * AJAX callback function from snapshots page to disable notification.
 		 *
-		 * @since 3.1
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -4527,7 +4527,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * AJAX callback function from the snapshot restore form.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -4718,7 +4718,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * step of the restore. This step will unzip the archive and retrieve the
 		 * the MANIFEST file content.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -5045,7 +5045,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * AJAX callback function from the snapshot restore form. This is the second
 		 * step of the restore. This step will receives a table name to restore.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param array  $item from the snapshot history.
@@ -5147,7 +5147,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * AJAX callback function from the snapshot restore form. This is the third
 		 * step of the restore. This step will restore a single file to the original location.
 		 *
-		 * @since 1.0.7
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -5304,7 +5304,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * step of the restore. This step will performs the cleanup of the unzipped
 		 * archive and writes an entry to the activity log about the restore.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -6123,7 +6123,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * Utility function to migrate previous snapshot items to new data structure and filename format
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param blog_id
@@ -6237,7 +6237,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * Interface function provide access to the private _settings array to outside classes.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param string $settings key to $this->_settings array item
@@ -6252,7 +6252,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * Interface function provide access to the private _settings array to outside classes.
 		 *
-		 * @since 1.0.7
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param string $settings key to $this->_settings array item
@@ -6271,7 +6271,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * Interface function provide access to the private _pagehooks array to outside classes.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param string $settings key to $this->_pagehooks array item
@@ -6288,7 +6288,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * provide admin page URl spesific to a _pagehooks array element.
 		 *
-		 * @since 2.0.0
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param string $setting key to $this->_pagehooks array item
@@ -6544,7 +6544,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * entries a secondary process will loop through the WP Cron entries to make
 		 * the entries related to Snapshot are valid and current.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -6653,7 +6653,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * Utility function called by WPCron scheduling dispatch. The parameter passed in is the
 		 * config item key to an existing entry. If a match is found and verified it will be processed
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param int $item_key - Match to an item in the $this->config_data['items'] array.
@@ -7437,7 +7437,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * Utility function called by WPCron scheduling dispatch. This function handles forwarding of files
 		 * to remote destination.
 		 *
-		 * @since 1.0.7
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -7476,7 +7476,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		/**
 		 * Custom Error handler to trap critical error and log them
 		 *
-		 * @since 1.0.4
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param errno , errstr, errfile, errline all provided by PHP

@@ -33,7 +33,7 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 /**
  * This Helper creates utility functions for debugging.
  *
- * @since 2.5
+ * @since 1.0.0
  * @package Snapshot
  * @subpackage Helper
  */

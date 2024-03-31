@@ -115,7 +115,7 @@ class Snapshot_Controller_Full_Ajax extends Snapshot_Controller_Full {
 	/**
 	 * Forces S3 API info refresh
 	 *
-	 * @since v3.0.5-BETA-6
+	 * @since 1.0.0
 	 */
 	public function json_reset_api () {
 		if (!current_user_can(Snapshot_View_Full_Backup::get()->get_page_role())) die; // Only some users can do this
@@ -449,7 +449,7 @@ class Snapshot_Controller_Full_Ajax extends Snapshot_Controller_Full {
 			/**
 			 * Automatic backup processing encountered too many errors
 			 *
-			 * @since 3.0-beta-12
+			 * @since 1.0.0
 			 *
 			 * @param string Action type indicator (process or finish)
 			 * @param string $key Error message key
@@ -488,7 +488,7 @@ class Snapshot_Controller_Full_Ajax extends Snapshot_Controller_Full {
 			/**
 			 * Automatic backup processing encountered too many errors
 			 *
-			 * @since 3.0-beta-12
+			 * @since 1.0.0
 			 *
 			 * @param string Action type indicator (process or finish)
 			 * @param string $key Error message key

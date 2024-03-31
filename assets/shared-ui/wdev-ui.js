@@ -215,7 +215,7 @@ window.WDP = window.WDP || {};
  * The dialog source must be (or contain) an <dialog> element.
  * Only the <dialog> element is parsed and displayed in the overlay.
  *
- * @since  4.0.0
+ * @since 1.0.0
  * @param  string dialogSource Either CSS class/ID, URL or HTML string.
  *         - ID must start with a hash '#'.
  *         - Class must start with a dot '.'.
@@ -355,7 +355,7 @@ WDP.showOverlay = function(dialogSource, args) {
 /**
  * Closes the current modal overlay again.
  *
- * @since  4.0.0
+ * @since  1.0.0
  */
 WDP.closeOverlay = function() {
 	if ( WDP.prepareOverlay() ) { return WDP; }
@@ -381,7 +381,7 @@ WDP.closeOverlay = function() {
  * Updates the position of the overlay to keep it vertically centered on the
  * screen.
  *
- * @since  4.0.0
+ * @since  1.0.0
  */
 WDP.positionOverlay = function() {
 	var availHeight, needHeight, newOffset;
@@ -401,7 +401,7 @@ WDP.positionOverlay = function() {
 /**
  * Creates all the DOM elements needed to display the overlay element.
  *
- * @since  4.0.0
+ * @since  1.0.0
  * @return bool True if the modal is ready to be displayed.
  */
 WDP.prepareOverlay = function() {
@@ -438,7 +438,7 @@ WDP.prepareOverlay = function() {
 /**
  * Select all text inside the HTML element. This can be a div/code/input/etc.
  *
- * @since  4.0.0
+ * @since  1.0.0
  * @param  object el The HTML element.
  */
 WDP.selectText = function(el) {
@@ -464,7 +464,7 @@ WDP.selectText = function(el) {
 /**
  * Initialize the functions of a tab-area
  *
- * @since  4.0.0
+ * @since  1.0.0
  * @param  object el The tab-area container element.
  */
 WDP.wpmuTabs = function(el) {
@@ -537,7 +537,7 @@ WDP.wpmuTabs = function(el) {
 /**
  * Initialize the functions of a vertical tab-area
  *
- * @since  4.0.0
+ * @since  1.0.0
  * @param  object el The tab-area container element.
  */
 WDP.wpmuVerticalTabs = function(el) {
@@ -624,7 +624,7 @@ WDP.wpmuVerticalTabs = function(el) {
 /**
  * Update a normal select list to a fancy PSOURCE select list!
  *
- * @since  4.0.0
+ * @since  1.0.0
  * @param  object el The select element.
  */
 WDP.wpmuSelect = function(el) {
@@ -788,7 +788,7 @@ WDP.wpmuSelect = function(el) {
 /**
  * Initialize the search-areas.
  *
- * @since  4.0.0
+ * @since  1.0.0
  * @param  object el The search input element.
  */
 WDP.wpmuSearchfield = function(el) {
@@ -1017,7 +1017,7 @@ WDP.wpmuSearchfield = function(el) {
 /**
  * Displays a message in the top of the window.
  *
- * @since  4.0.0
+ * @since  1.0.0
  */
 WDP.showMessage = function(action) {
 	var me = this;
@@ -1186,7 +1186,7 @@ WDP.showMessage = function(action) {
 /**
  * Displays the "Changes saved" message in the top of the window.
  *
- * @since  4.0.0
+ * @since  1.0.0
  */
 WDP.showSuccess = function(message) {
 	var args = {
@@ -1212,7 +1212,7 @@ WDP.showSuccess = function(message) {
 /**
  * Displays the "Did not work" message in the top of the window.
  *
- * @since  4.0.0
+ * @since  1.0.0
  */
 WDP.showError = function(message) {
 	var args = {
@@ -1239,7 +1239,7 @@ WDP.showError = function(message) {
  * Updates the hash-value in the current windows URL without scrolling to the
  * element.
  *
- * @since  4.0.3
+ * @since  1.0.0
  */
 WDP.updateHash = function(newHash) {
 	newHash = newHash.replace( /^#/, '' );
@@ -1275,7 +1275,7 @@ WDP.updateHash = function(newHash) {
 /**
  * Create or replace a cookie via javascript.
  *
- * @since  4.1.0
+ * @since 1.0.0
  */
 WDP.setCookie = function(name, value, days) {
 	var expires;
@@ -1292,7 +1292,7 @@ WDP.setCookie = function(name, value, days) {
 /**
  * Return the value of a cookie.
  *
- * @since  4.1.0
+ * @since 1.0.0
  */
 WDP.getCookie = function(cookieName) {
 	if (document.cookie.length > 0) {

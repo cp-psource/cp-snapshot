@@ -2,7 +2,7 @@
 /**
  * Snapshot Utility class
  *
- * @since 2.5
+ * @since 1.0.0
  *
  * @package Snapshot
  * @subpackage Helper
@@ -257,7 +257,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function to determine all blogs under a Multisite install
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param bool $show_counts_only
 		 *
@@ -304,7 +304,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function to generate an 8 character checksum for a filename. This is to make the filename unique.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param $file
 		 *
@@ -500,7 +500,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function recursively scan a folder and build an array of it's contents
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param string $base
 		 *
@@ -548,7 +548,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		 * be an array of nodes. Each node will contain information about the stating row and number of
 		 * segment (itself). Also total rows and total segments for this table.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param $table_name
 		 * @param int $segmentSize
@@ -607,7 +607,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		 * build the segments array needed based on the Settings for segment size. This function is mostly used
 		 * for pre-1.0.2 archive where the database content for all tables was contained in a single file.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param $backupFile
 		 *
@@ -714,7 +714,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function to add some custom schedule intervals to the default ClassicPress schedules.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param $schedules Passed in by ClassicPress. The current array of schedules.
 		 *
@@ -772,7 +772,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function to get the pretty display text for a ClassicPress schedule interval
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param $sched_key Key to item in wp_get_schedules array
 		 *
@@ -791,7 +791,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function to get the interval for a ClassicPress schedule.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param $sched_key Key to item in wp_get_schedules array
 		 *
@@ -809,7 +809,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 
 		/**
 		 * Calculate interval offset.
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param string $interval
 		 * @param string $interval_offset
@@ -908,7 +908,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		 *
 		 * @todo: $snapshot_filename
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.0
 		 *
 		 * @param $backupLogFileFull
 		 *
@@ -955,7 +955,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function to recursively remove directories.
 		 *
-		 * @since 1.0.3
+		 * @since 1.0.0
 		 * @see
 		 *
 		 * @param none
@@ -983,7 +983,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function to access the latest item's data set.
 		 *
-		 * @since 1.0.4
+		 * @since 1.0.0
 		 *
 		 * @param $data_items
 		 *
@@ -999,7 +999,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function to access the latest backup ever.
 		 *
-		 * @since 1.0.4
+		 * @since 1.0.0
 		 *
 		 * @param $data_items
 		 *
@@ -1024,7 +1024,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Utility function Add index.php and .htaccess files to archive folders
 		 *
-		 * @since 1.0.5
+		 * @since 1.0.0
 		 *
 		 * @param string $folder Destination folder to apply security files to
 		 */
@@ -1753,7 +1753,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Convert bytes to human readable format.
 		 *
-		 * @since 2.0.3
+		 * @since 1.0.0
 		 *
 		 * @param int $bytes Size in bytes to convert
 		 * @param int $precision
@@ -2031,7 +2031,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Is this Snapshot Pro?
 		 *
-		 * @since 2.5
+		 * @since 1.0.0
 		 *
 		 * @return bool
 		 */
@@ -2042,7 +2042,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		/**
 		 * Check system requirements
 		 *
-		 * @since 3.1
+		 * @since 1.0.0
 		 *
 		 * @param $requirements
 		 *

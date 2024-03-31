@@ -10,7 +10,7 @@
  * query result. Which a RENAME does not produce. So this class extends wpdb then replaces the query() function to include RENAME as one
  * of the 'special' keywords.
  *
- * @since 2.5
+ * @since 1.0.0
  *
  * @package Snapshot
  * @subpackage Model

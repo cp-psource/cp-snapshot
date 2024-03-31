@@ -161,7 +161,7 @@ class Snapshot_Controller_Full {
 			/**
 			 * Automatic backup processing encountered too many errors
 			 *
-			 * @since 3.0-beta-12
+			 * @since 1.0.0
 			 *
 			 * @param string Action type indicator (process or finish)
 			 * @param string $error Offending error message key
@@ -219,7 +219,7 @@ class Snapshot_Controller_Full {
 			/**
 			 * Automatic backup processing encountered too many errors
 			 *
-			 * @since 3.0-beta-12
+			 * @since 1.0.0
 			 *
 			 * @param string Action type indicator (process or finish)
 			 * @param string $error Offending error message key

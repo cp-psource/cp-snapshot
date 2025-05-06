@@ -678,9 +678,9 @@ $warning = $requirements_test['warning'];
 
 											<?php
 											$tables_sets_idx = array(
-												'global' => __( "ClassicPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
-												'wp'     => __( "ClassicPress core Tables", SNAPSHOT_I18N_DOMAIN ),
-												'non'    => __( "Non-ClassicPress Tables", SNAPSHOT_I18N_DOMAIN ),
+												'global' => __( "WordPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
+												'wp'     => __( "WordPress core Tables", SNAPSHOT_I18N_DOMAIN ),
+												'non'    => __( "Non-WordPress Tables", SNAPSHOT_I18N_DOMAIN ),
 												'other'  => __( "Other Tables", SNAPSHOT_I18N_DOMAIN ),
 												'error'  => __( "Error Tables - These tables are skipped for the noted reasons.", SNAPSHOT_I18N_DOMAIN )
 											);

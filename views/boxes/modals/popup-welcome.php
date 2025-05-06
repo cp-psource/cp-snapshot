@@ -31,11 +31,11 @@ $plugin->save_config();
 
 						<?php if ( $is_client && ! $has_snapshot_key) : ?>
 
-							<p><?php _e('Welcome to Snapshot Pro, the hottest backups plugin for ClassicPress! Let’s start by choosing what type of backup you’d like to make - there are two types…', SNAPSHOT_I18N_DOMAIN); ?></p>
+							<p><?php _e('Welcome to Snapshot Pro, the hottest backups plugin for WordPress! Let’s start by choosing what type of backup you’d like to make - there are two types…', SNAPSHOT_I18N_DOMAIN); ?></p>
 
 						<?php else : ?>
 
-							<p><?php _e('Welcome to Snapshot, the hottest backups plugin for ClassicPress! With this plugin you can backup and migrate bits and pieces of your website to third party destinations like Dropbox, Google Drive, Amazon S3 & more.', SNAPSHOT_I18N_DOMAIN); ?></p>
+							<p><?php _e('Welcome to Snapshot, the hottest backups plugin for WordPress! With this plugin you can backup and migrate bits and pieces of your website to third party destinations like Dropbox, Google Drive, Amazon S3 & more.', SNAPSHOT_I18N_DOMAIN); ?></p>
 
 						<?php endif; ?>
 
@@ -43,7 +43,7 @@ $plugin->save_config();
 
 							<div class="wps-welcome-message-pro">
 								<h3><?php _e('PSOURCE Managed Backups', SNAPSHOT_I18N_DOMAIN); ?></h3>
-								<p><small><?php _e('As part of your PSOURCE membership you get 10GB free cloud storage to back up and store your entire ClassicPress website - including ClassicPress itself. You can schedule these backups to run daily, monthly or weekly and should you ever need it you can restore an entire website in just a few clicks.', SNAPSHOT_I18N_DOMAIN); ?></small></p>
+								<p><small><?php _e('As part of your PSOURCE membership you get 10GB free cloud storage to back up and store your entire WordPress website - including WordPress itself. You can schedule these backups to run daily, monthly or weekly and should you ever need it you can restore an entire website in just a few clicks.', SNAPSHOT_I18N_DOMAIN); ?></small></p>
 								<p><a class="button button-blue button-small wps-dismiss-welcome"
 									  href="<?php echo esc_url( PSOURCESnapshot::instance()->snapshot_get_pagehook_url('snapshots-newui-managed-backups') ); ?>">
 										<?php _e( 'Activate Managed Backups', SNAPSHOT_I18N_DOMAIN ); ?>

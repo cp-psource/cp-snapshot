@@ -38,7 +38,7 @@ jQuery(function() {
 		});
 	}
 
-	// Notify ClassicPress about the users choice and close the message.
+	// Notify WordPress about the users choice and close the message.
 	function notify_wordpress(action, message) {
 		var ajax_data = {};
 

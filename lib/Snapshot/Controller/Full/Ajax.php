@@ -236,7 +236,7 @@ class Snapshot_Controller_Full_Ajax extends Snapshot_Controller_Full {
 			: false
 		;
 
-		if (!$wp_state) Snapshot_Helper_Log::note("There has been an issue with determining ClassicPress state");
+		if (!$wp_state) Snapshot_Helper_Log::note("There has been an issue with determining WordPress state");
 
 		// Fileset
 		$set = Snapshot_Model_Fileset::get_source('full');

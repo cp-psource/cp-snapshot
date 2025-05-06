@@ -4,7 +4,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 
 		/**
 		 * The PHP5 Class constructor. Used when an instance of this class is needed.
-		 * Sets up the initial object environment and hooks into the various ClassicPress
+		 * Sets up the initial object environment and hooks into the various WordPress
 		 * actions and filters.
 		 *
 		 * @since 1.0.0
@@ -363,9 +363,9 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 										     } ?>">
 											<?php
 											$tables_sets_idx = array(
-												'global' => __( "ClassicPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
-												'wp'     => __( "ClassicPress core Tables", SNAPSHOT_I18N_DOMAIN ),
-												'non'    => __( "Non-ClassicPress Tables", SNAPSHOT_I18N_DOMAIN ),
+												'global' => __( "WordPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
+												'wp'     => __( "WordPress core Tables", SNAPSHOT_I18N_DOMAIN ),
+												'non'    => __( "Non-WordPress Tables", SNAPSHOT_I18N_DOMAIN ),
 												'other'  => __( "Other Tables", SNAPSHOT_I18N_DOMAIN ),
 												'error'  => __( "Error Tables - These tables are skipped for the noted reasons.", SNAPSHOT_I18N_DOMAIN )
 											);
@@ -653,7 +653,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 													id="snapshot-files-option-core" value="core"
 													name="snapshot-backup-files-sections[core]"> <label
 													for="snapshot-files-option-core"><?php
-														_e('ClassicPress core files', SNAPSHOT_I18N_DOMAIN); ?></label></li>
+														_e('WordPress core files', SNAPSHOT_I18N_DOMAIN); ?></label></li>
 <?php */ ?>
 												</ul>
 
@@ -762,7 +762,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 
 								if ( ( defined( 'DISABLE_WP_CRON' ) ) && ( DISABLE_WP_CRON == true ) ) {
 									?><p
-										style="color: #FF0000"><?php _e( 'Your site has disabled the ClassicPress Cron scheduler (WP_CRON). When scheduling an archive to be created it may not run. Check your wp-config.php for the DISABLE_WP_CRON define. If found either remove it or set the value to "false".',
+										style="color: #FF0000"><?php _e( 'Your site has disabled the WordPress Cron scheduler (WP_CRON). When scheduling an archive to be created it may not run. Check your wp-config.php for the DISABLE_WP_CRON define. If found either remove it or set the value to "false".',
 										SNAPSHOT_I18N_DOMAIN ); ?></p><?php
 								}
 								?>
@@ -1019,7 +1019,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 							<tr class="form-field">
 								<td scope="row" colspan="2">
 									<p><strong><sup>1</sup>
-											- <?php _e( "The Snapshot scheduling process uses the ClassicPress Cron (WPCron) system. This is the same process used to run daily checks for updates to core, plugins and themes. It should be understood this WPCron process is not precise. If you schedule a Snapshot for a specific minute of the hour WPCron may not execute at exactly that time. WPCron relies on regular front-end traffic to your website to kickoff the processing.",
+											- <?php _e( "The Snapshot scheduling process uses the WordPress Cron (WPCron) system. This is the same process used to run daily checks for updates to core, plugins and themes. It should be understood this WPCron process is not precise. If you schedule a Snapshot for a specific minute of the hour WPCron may not execute at exactly that time. WPCron relies on regular front-end traffic to your website to kickoff the processing.",
 												SNAPSHOT_I18N_DOMAIN ); ?></strong></p>
 								</td>
 							</tr>
@@ -1706,7 +1706,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 							?>
 							<tr>
 							<td colspan="2"><p
-									class="snapshot-error"><?php _e( 'Restore Note: URL mismatch!. The Snapshot archive does not appear made from the current ClassicPress system. Every attempt will be made to replace the source URL with the URL from the destination.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+									class="snapshot-error"><?php _e( 'Restore Note: URL mismatch!. The Snapshot archive does not appear made from the current WordPress system. Every attempt will be made to replace the source URL with the URL from the destination.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 							</td></tr><?php
 							$restore_blog_id = '';
 						} else {
@@ -2156,7 +2156,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 			<table class="form-table snapshot-settings-server-info">
 				<tr class="form-field">
 					<th scope="row">
-						<?php _e( 'ClassicPress Version', SNAPSHOT_I18N_DOMAIN ); ?>
+						<?php _e( 'WordPress Version', SNAPSHOT_I18N_DOMAIN ); ?>
 
 					</th>
 					<td>
@@ -2338,12 +2338,12 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 							} else if ( $php_var == "memory_limit" ) {
 								//echo " - PHP 'memory_limit'";
 								if ( defined( 'WP_MEMORY_LIMIT' ) ) {
-									echo WP_MEMORY_LIMIT . ' - WP_MEMORY_LIMIT defined by ClassicPress <a target="_blank"
+									echo WP_MEMORY_LIMIT . ' - WP_MEMORY_LIMIT defined by WordPress <a target="_blank"
  href="http://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP">wp-config.php</a>.';
 								}
 
 								if ( defined( 'WP_MAX_MEMORY_LIMIT' ) ) {
-									echo "<br />" . WP_MAX_MEMORY_LIMIT . ' - WP_MAX_MEMORY_LIMIT defined automatically by ClassicPress';
+									echo "<br />" . WP_MAX_MEMORY_LIMIT . ' - WP_MAX_MEMORY_LIMIT defined automatically by WordPress';
 								} else {
 									echo "<br />" . WP_MAX_MEMORY_LIMIT . ' - not defined';
 								}
@@ -2651,7 +2651,7 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 							if ( PSOURCESnapshot::instance()->config_data['config']['zipLibrary'] == 'PclZip' ) {
 								echo ' checked="checked" ';
 							} ?> /> <?php
-							echo __( 'PclZip - is part of the ClassicPress core libraries. It will be slower than built-in PHP functions like ZipArchive. This library  uses memory instead of files for temporary storage when compressing large files.',
+							echo __( 'PclZip - is part of the WordPress core libraries. It will be slower than built-in PHP functions like ZipArchive. This library  uses memory instead of files for temporary storage when compressing large files.',
 								SNAPSHOT_I18N_DOMAIN ); ?><br/>
 
 						</td>
@@ -2758,9 +2758,9 @@ if ( ! class_exists( "Snapshot_View_Metabox_Admin" ) ) {
 										     style="margin-left: 30px; padding-top: 20px; display: none;">
 											<?php
 											$tables_sets_idx = array(
-												'global' => __( "ClassicPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
-												'wp'     => __( "ClassicPress Blog Tables", SNAPSHOT_I18N_DOMAIN ),
-												'non'    => __( "Non-ClassicPress Tables", SNAPSHOT_I18N_DOMAIN ),
+												'global' => __( "WordPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
+												'wp'     => __( "WordPress Blog Tables", SNAPSHOT_I18N_DOMAIN ),
+												'non'    => __( "Non-WordPress Tables", SNAPSHOT_I18N_DOMAIN ),
 												'other'  => __( "Other Tables", SNAPSHOT_I18N_DOMAIN ),
 											);
 

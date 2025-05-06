@@ -93,9 +93,9 @@ if ( ! class_exists( 'Snapshot_Helper_Recovery' ) ) {
 			}
 
 			if ( ( ! isset( $restore_form['wordpress']['reload'] ) ) || ( ! strlen( $restore_form['wordpress']['reload'] ) ) ) {
-				$form_errors['form']['wordpress']['reload'] = "ClassicPress Reload cannot be empty.";
+				$form_errors['form']['wordpress']['reload'] = "WordPress Reload cannot be empty.";
 			} else if ( ( $restore_form['wordpress']['reload'] != "yes" ) && ( $restore_form['wordpress']['reload'] != "no" ) ) {
-				$form_errors['form']['wordpress']['reload'] = "ClassicPress Reload invalid value given.";
+				$form_errors['form']['wordpress']['reload'] = "WordPress Reload invalid value given.";
 
 				return $form_errors;
 			} else {
@@ -103,7 +103,7 @@ if ( ! class_exists( 'Snapshot_Helper_Recovery' ) ) {
 			}
 
 			if ( ( ! isset( $restore_form['wordpress']['install-path'] ) ) || ( ! strlen( $restore_form['wordpress']['install-path'] ) ) ) {
-				$form_errors['form']['wordpress']['install-path'] = "ClassicPress Install Path file cannot be empty.";
+				$form_errors['form']['wordpress']['install-path'] = "WordPress Install Path file cannot be empty.";
 			} else {
 				$_SESSION['restore_form']['wordpress']['install-path'] = self::untrailingslashit_snapshot( $restore_form['wordpress']['install-path'] );
 				if ( ! file_exists( $_SESSION['restore_form']['wordpress']['install-path'] ) ) {
@@ -206,23 +206,23 @@ if ( ! class_exists( 'Snapshot_Helper_Recovery' ) ) {
 				if ( ( ! file_exists( $_SESSION['restore_form']['wordpress']['archive-file-local'] ) )
 				     || ( ! filesize( $_SESSION['restore_form']['wordpress']['archive-file-local'] ) )
 				) {
-					$form_errors['message-error'][] = "Attempted to download ClassicPress file to local [" .
+					$form_errors['message-error'][] = "Attempted to download WordPress file to local [" .
 					                                  $_SESSION['restore_form']['wordpress']['archive-file-local'] . "]. File not found or is empty. Check parent folder permissions and reload the page.";
 
 					return $form_errors;
 
 				} else {
-					$form_errors['message-success'][] = "Remote ClassicPress  Archive [" .
+					$form_errors['message-success'][] = "Remote WordPress  Archive [" .
 					                                    basename( $_SESSION['restore_form']['wordpress']['archive-file-local'] ) . "] downloaded successfully.";
 
-					// Extract ClassicPress files into place
+					// Extract WordPress files into place
 					$_SESSION['restore_form']['wordpress']['extract-path'] = dirname( __FILE__ ) . "/_wordpress/extract/";
 
 					$unzip_ret = unzip_archive( $_SESSION['restore_form']['wordpress']['archive-file-local'], $_SESSION['restore_form']['wordpress']['extract-path'] );
 					if ( file_exists( $_SESSION['restore_form']['wordpress']['extract-path'] . "/wordpress" ) ) {
 						$_SESSION['restore_form']['wordpress']['extract-path'] = $_SESSION['restore_form']['wordpress']['extract-path'] . "/wordpress";
 
-						$form_errors['message-success'][] = "ClassicPress Archive extracted successfully.";
+						$form_errors['message-success'][] = "WordPress Archive extracted successfully.";
 					}
 
 					self::move_tree( $_SESSION['restore_form']['wordpress']['extract-path'], $_SESSION['restore_form']['wordpress']['install-path'] );
@@ -240,12 +240,12 @@ if ( ! class_exists( 'Snapshot_Helper_Recovery' ) ) {
 			$form_errors['message-success'] = array();
 
 			if ( ( ! isset( $restore_form['wordpress']['wp-config'] ) ) || ( ! strlen( $restore_form['wordpress']['wp-config'] ) ) ) {
-				$form_errors['form']['wordpress']['wp-config'] = "ClassicPress wp-config cannot be empty.";
+				$form_errors['form']['wordpress']['wp-config'] = "WordPress wp-config cannot be empty.";
 
 				return $form_errors;
 			}
 			if ( ( $restore_form['wordpress']['wp-config'] != "existing" ) && ( $restore_form['wordpress']['wp-config'] != "snapshot" ) ) {
-				$form_errors['form']['wordpress']['wp-config'] = "ClassicPress wp-config invalid value given.";
+				$form_errors['form']['wordpress']['wp-config'] = "WordPress wp-config invalid value given.";
 
 				return $form_errors;
 			}

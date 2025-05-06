@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: CP Snapshot
+Plugin Name: PS Snapshot
 Version: 1.0.0
-Description: Dieses Plugin ermöglicht es Dir, bei Bedarf schnelle Backup-Snapshots Deiner funktionierenden ClassicPress-Datenbank zu erstellen. Du kannst aus den standardmäßigen ClassicPress-Tabellen sowie benutzerdefinierten Plugin-Tabellen innerhalb der Datenbankstruktur auswählen. Alle Snapshots werden protokolliert und Du kannst den Snapshot nach Bedarf wiederherstellen.
+Description: Dieses Plugin ermöglicht es Dir, bei Bedarf schnelle Backup-Snapshots Deiner funktionierenden WordPress-Datenbank zu erstellen. Du kannst aus den standardmäßigen WordPress-Tabellen sowie benutzerdefinierten Plugin-Tabellen innerhalb der Datenbankstruktur auswählen. Alle Snapshots werden protokolliert und Du kannst den Snapshot nach Bedarf wiederherstellen.
 Author: PSOURCE
 Author URI: https://github.com/cp-psource
 Plugin URI: https://cp-psource.github.io/cp-snapshot
@@ -159,7 +159,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			/* Setup the tetdomain for i18n language handling see http://codex.wordpress.org/Function_Reference/load_plugin_textdomain */
 			load_plugin_textdomain( SNAPSHOT_I18N_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-			/* Standard activation hook for all ClassicPress plugins see http://codex.wordpress.org/Function_Reference/register_activation_hook */
+			/* Standard activation hook for all WordPress plugins see http://codex.wordpress.org/Function_Reference/register_activation_hook */
 			register_activation_hook( __FILE__, array( $this, 'snapshot_plugin_activation_proc' ) );
 			register_deactivation_hook( __FILE__, array( $this, 'snapshot_plugin_deactivation_proc' ) );
 			//add_action('plugins_loaded', array( $this, 'snapshot_plugin_activation_proc' ) );
@@ -171,7 +171,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			add_action( is_multisite() ? 'network_admin_menu' : 'admin_menu', array( $this, 'snapshot_admin_menu_proc' ) );
 			add_action( 'admin_init', array( $this, 'redirect_old_admin_menus' ) );
 
-			/* Hook into the ClassicPress AJAX systems. */
+			/* Hook into the WordPress AJAX systems. */
 			add_action( 'wp_ajax_snapshot_backup_ajax', array( $this, 'snapshot_ajax_backup_proc' ) );
 			add_action( 'wp_ajax_snapshot_show_blog_tables', array( $this, 'snapshot_ajax_show_blog_tables' ) );
 			add_action( 'wp_ajax_snapshot_get_blog_restore_info', array( $this, 'snapshot_get_blog_restore_info' ) );
@@ -277,7 +277,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		}
 
 		/**
-		 * Called from ClassicPress when the admin page init process is invoked.
+		 * Called from WordPress when the admin page init process is invoked.
 		 * Sets up other action and filter needed within the admin area for
 		 * our page display.
 		 * @since 1.0.0
@@ -298,7 +298,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		}
 
 		/**
-		 * Hook to add the Snapshots menu option to the new ClassicPress admin
+		 * Hook to add the Snapshots menu option to the new WordPress admin
 		 * bar. This function will our a menu option to the admin menu
 		 * named 'Snapshots' which will link to the Tools > Snapshots page.
 		 *
@@ -445,7 +445,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		}
 
 		/**
-		 * Add the new Menu to the Tools section in the ClassicPress main nav
+		 * Add the new Menu to the Tools section in the WordPress main nav
 		 *
 		 * @since 1.0.0
 		 * @uses $this->_pagehooks
@@ -506,7 +506,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 				array( $this->_new_ui_tester, 'settings' )
 			);
 
-			// Hook into the ClassicPress load page action for our new nav items. This is better then checking page query_str values.
+			// Hook into the WordPress load page action for our new nav items. This is better then checking page query_str values.
 			$panels = array( 'dashboard', 'snapshots', 'destinations', 'import', 'settings' );
 			$extra_actions = array( 'destinations' => 'on_load_destination_panels' );
 
@@ -552,7 +552,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 */
 		function snapshot_on_load_panels() {
 
-			/* These messages are displayed as part of the admin header message see 'admin_notices' ClassicPress action */
+			/* These messages are displayed as part of the admin header message see 'admin_notices' WordPress action */
 			$this->_messages['success-update'] = __( 'The Snapshot has been updated.', SNAPSHOT_I18N_DOMAIN );
 			$this->_messages['success-add'] = __( 'The Snapshot has been created.', SNAPSHOT_I18N_DOMAIN );
 			$this->_messages['success-delete'] = __( 'Snapshot successfully deleted.', SNAPSHOT_I18N_DOMAIN );
@@ -604,7 +604,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 */
 		function on_load_destination_panels() {
 
-			// These messages are displayed as part of the admin header message see 'admin_notices' ClassicPress action
+			// These messages are displayed as part of the admin header message see 'admin_notices' WordPress action
 			$this->_messages['success-update'] = __( "The Destination has been updated.", SNAPSHOT_I18N_DOMAIN );
 			$this->_messages['success-add'] = __( "The Destination has been added.", SNAPSHOT_I18N_DOMAIN );
 			$this->_messages['success-delete'] = __( "The Destination has been deleted.", SNAPSHOT_I18N_DOMAIN );
@@ -1297,11 +1297,11 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			$screen = get_current_screen();
 
 			$screen_help_text = array();
-			$screen_help_text['snapshot-help-overview'] = '<p>' . __( 'The Snapshot plugin provides the ability to create quick on-demand snapshot of your ClassicPress site database and files. You can create as many snapshots as needed. The Snapshot plugin also provides the ability to restore a snapshot backup.', SNAPSHOT_I18N_DOMAIN ) . '</p>';
+			$screen_help_text['snapshot-help-overview'] = '<p>' . __( 'The Snapshot plugin provides the ability to create quick on-demand snapshot of your WordPress site database and files. You can create as many snapshots as needed. The Snapshot plugin also provides the ability to restore a snapshot backup.', SNAPSHOT_I18N_DOMAIN ) . '</p>';
 
 			$screen_help_text['snapshots_new_panel'] = '<p>' . __( '<strong>Name</strong> - Provide a custom name for this snapshot. Default name is "snapshot".', SNAPSHOT_I18N_DOMAIN ) . '</p>
 			<p>' . __( '<strong>Notes</strong> - Add some optional notes about the snapshot. Maybe some details on what plugins or theme were active. Or some note before you activate some new plugin.', SNAPSHOT_I18N_DOMAIN ) . '</p>
-			<p>' . __( '<strong>What to Backup</strong> - This section lists all tables for your site. Select the table you want to include in the backup. The tables are grouped by ClassicPress Core and Other tables. These Other tables could have been created and used by some of the plugins you installed.', SNAPSHOT_I18N_DOMAIN ) . '</p>
+			<p>' . __( '<strong>What to Backup</strong> - This section lists all tables for your site. Select the table you want to include in the backup. The tables are grouped by WordPress Core and Other tables. These Other tables could have been created and used by some of the plugins you installed.', SNAPSHOT_I18N_DOMAIN ) . '</p>
 			<p>' . __( '<strong>When to Archive</strong> - This section shows a dropdown where you can select how often to create a backup of the selected tables. The default is "Manual". If selected will create a one time on demand backup. You can also select to schedule the backup by selecting one of the many options available. If the backup is scheduled you will also be able to set the number of archives to keep.', SNAPSHOT_I18N_DOMAIN ) . '</p>
 			<p>' . __( '<strong>Where to save the Archive</strong> - The only available option at this time is local. This means the files will be stored on the local server. Future options will be remote systems like Dropbox, Amazon S3, FTP, etc.', SNAPSHOT_I18N_DOMAIN ) . '</p>';
 
@@ -2165,7 +2165,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		}
 
 		/**
-		 * Utility function to read our config array from the ClassicPress options table. This
+		 * Utility function to read our config array from the WordPress options table. This
 		 * function also will initialize needed instances of the array if needed.
 		 *
 		 * @since 1.0.0
@@ -2586,7 +2586,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		}
 
 		/**
-		 * Utility function to save our config array to the ClassicPress options table.
+		 * Utility function to save our config array to the WordPress options table.
 		 *
 		 * @since 1.0.0
 		 * @uses $this->_settings
@@ -2595,10 +2595,10 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * @param bool $force_save if set to true will first delete the option from the
 		 * global options array then re-add it. This is needed after a restore action where
 		 * the restored table my be the wp_options. In this case we need to re-add out own
-		 * plugins config array. When we call update_option() ClassicPress will not see a change
+		 * plugins config array. When we call update_option() WordPress will not see a change
 		 * when it compares our config data to its own internal version so the INSERT will be skipped.
-		 * If we first delete the option from the ClassicPress internal version this will force
-		 * ClassicPress to re-insert our plugin option to the MySQL table.
+		 * If we first delete the option from the WordPress internal version this will force
+		 * WordPress to re-insert our plugin option to the MySQL table.
 		 *
 		 * @return bool whether the config was saved successfully
 		 */
@@ -2921,7 +2921,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		function snapshot_ajax_backup_proc() {
 			global $wpdb;
 
-			// When zlib compression is turned on we get errors from this shutdown action setup by ClassicPress. So we disabled.
+			// When zlib compression is turned on we get errors from this shutdown action setup by WordPress. So we disabled.
 			$zlib_compression = ini_get( 'zlib.output_compression' );
 			if ( $zlib_compression ) {
 				remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
@@ -4197,7 +4197,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 *
 		 * @param $_POST ['blog_id'] designates the blog to show tables for.
 		 *
-		 * @return JSON formatted array of tables. This is a multi-dimensional array containing groups for 'wp' - ClassicPress core, 'other' - Non core tables
+		 * @return JSON formatted array of tables. This is a multi-dimensional array containing groups for 'wp' - WordPress core, 'other' - Non core tables
 		 */
 
 		function snapshot_ajax_show_blog_tables() {
@@ -4538,7 +4538,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 */
 
 		function snapshot_ajax_restore_proc() {
-			// When zlib compression is turned on we get errors from this shutdown action setup by ClassicPress. So we disabled.
+			// When zlib compression is turned on we get errors from this shutdown action setup by WordPress. So we disabled.
 			$zlib_compression = ini_get( 'zlib.output_compression' );
 			if ( $zlib_compression ) {
 				remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
@@ -6150,7 +6150,7 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 			//
 			//		} else {
 			//
-			//			// Single ClassicPress (Not Multisite)
+			//			// Single WordPress (Not Multisite)
 			//			$config_data = get_option($this->_settings['options_key']);
 			//			if ($config_data)
 			//				return;

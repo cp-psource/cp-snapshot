@@ -135,7 +135,7 @@ $warning = $requirements_test['warning'];
 											<?php if ( ! isset( $item['MANIFEST']['WP_SITEURL'] ) || $blog_details->siteurl !== $item['MANIFEST']['WP_SITEURL'] ) { ?>
 												<div class="wps-auth-message error">
 
-													<p><?php _e( 'Restore Note: URL mismatch! The Snapshot archive does not appear made from the current ClassicPress system. Every attempt will be made to replace the source URL with the URL from the destination.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+													<p><?php _e( 'Restore Note: URL mismatch! The Snapshot archive does not appear made from the current WordPress system. Every attempt will be made to replace the source URL with the URL from the destination.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 												</div>
 
 											<?php }
@@ -644,9 +644,9 @@ $warning = $requirements_test['warning'];
 										<div id="snapshot-selected-tables-container" class="wpmud-box-gray" style="display: none;">
 
 											<?php $tables_sets_idx = array(
-												'global' => __( "ClassicPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
-												'wp' => __( "ClassicPress Blog Tables", SNAPSHOT_I18N_DOMAIN ),
-												'non' => __( "Non-ClassicPress Tables", SNAPSHOT_I18N_DOMAIN ),
+												'global' => __( "WordPress Global Tables", SNAPSHOT_I18N_DOMAIN ),
+												'wp' => __( "WordPress Blog Tables", SNAPSHOT_I18N_DOMAIN ),
+												'non' => __( "Non-WordPress Tables", SNAPSHOT_I18N_DOMAIN ),
 												'other' => __( "Other Tables", SNAPSHOT_I18N_DOMAIN ),
 											);
 

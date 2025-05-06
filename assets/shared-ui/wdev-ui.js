@@ -252,7 +252,7 @@ WDP.showOverlay = function(dialogSource, args) {
 		if ('ajax' === type) {
 			/*
 			 * Type 2a: AJAX handler
-			 * The URL is relative or starts with the ClassicPress site_url. The
+			 * The URL is relative or starts with the WordPress site_url. The
 			 * URL is called as ajax handler. Result can be either HTML code or
 			 * a JSON object with attributes `obj.success` and `obj.data.html`
 			 * In either case, the returned HTML needs to contain a <dialog> tag

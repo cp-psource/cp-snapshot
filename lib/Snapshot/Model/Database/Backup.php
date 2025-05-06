@@ -142,7 +142,7 @@ if ( ! class_exists( 'Snapshot_Model_Database_Backup' ) ) {
 		 * Alain Wolf, Zurich - Switzerland
 		 * Website: http://restkultur.ch/personal/wolf/scripts/db_backup/
 		 * Modified by Scott Merrill (http://www.skippy.net/)
-		 * to use the ClassicPress $wpdb object
+		 * to use the WordPress $wpdb object
 		 *
 		 * @param string $table
 		 * @param string $segment

@@ -6,7 +6,7 @@
  *
  * During a restore Snapshot load the database tables to temporary tables.
  * Then once all tables have been loaded it DROPs the original table then RENAMEs the restored to replace the original table. Seems the
- * ClassicPress wpdb class via the $wpdb->query() function does not treat the sql RENAME keyword like DROP, CREATE, etc. It expects a
+ * WordPress wpdb class via the $wpdb->query() function does not treat the sql RENAME keyword like DROP, CREATE, etc. It expects a
  * query result. Which a RENAME does not produce. So this class extends wpdb then replaces the query() function to include RENAME as one
  * of the 'special' keywords.
  *

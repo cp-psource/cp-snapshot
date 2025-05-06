@@ -152,7 +152,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 
 			if ( count( $tables_all ) ) {
 
-				// Get a list of all ClassicPress known tables for the selected blog_id
+				// Get a list of all WordPress known tables for the selected blog_id
 				$tables_wp = $wpdb->tables( 'all' );
 				//echo "tables_wp<pre>"; print_r($tables_wp); echo "</pre>";
 
@@ -712,11 +712,11 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		}
 
 		/**
-		 * Utility function to add some custom schedule intervals to the default ClassicPress schedules.
+		 * Utility function to add some custom schedule intervals to the default WordPress schedules.
 		 *
 		 * @since 1.0.0
 		 *
-		 * @param $schedules Passed in by ClassicPress. The current array of schedules.
+		 * @param $schedules Passed in by WordPress. The current array of schedules.
 		 *
 		 * @return mixed $schedules And updated list containing our custom items.
 		 */
@@ -770,7 +770,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		}
 
 		/**
-		 * Utility function to get the pretty display text for a ClassicPress schedule interval
+		 * Utility function to get the pretty display text for a WordPress schedule interval
 		 *
 		 * @since 1.0.0
 		 *
@@ -789,7 +789,7 @@ if ( ! class_exists( 'Snapshot_Helper_Utility' ) ) {
 		}
 
 		/**
-		 * Utility function to get the interval for a ClassicPress schedule.
+		 * Utility function to get the interval for a WordPress schedule.
 		 *
 		 * @since 1.0.0
 		 *

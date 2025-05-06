@@ -284,7 +284,7 @@ if ( ! class_exists( 'Snapshot_View_Settings' ) ) {
 					<p class="snapshot-restore-description"><?php _ex( "On this page you can restore a previous snapshot. Using the 'Restore Options' section below you can also opt to turn off all plugins as well as switch to a different theme as part of the restore.", 'Snapshot page description', SNAPSHOT_I18N_DOMAIN ); ?></p>
 
 					<div id='snapshot-ajax-warning' class='updated fade'>
-						<p><?php _e( 'You are about to restore a previous version of your ClassicPress database. This will remove any new information added since the snapshot backup.', SNAPSHOT_I18N_DOMAIN ); ?></p>
+						<p><?php _e( 'You are about to restore a previous version of your WordPress database. This will remove any new information added since the snapshot backup.', SNAPSHOT_I18N_DOMAIN ); ?></p>
 					</div>
 
 					<?php

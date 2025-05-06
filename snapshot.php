@@ -2175,25 +2175,27 @@ if ( ! class_exists( 'PSOURCESnapshot' ) ) {
 		 * @return void
 		 */
 		function load_config() {
-
 			global $wpdb;
-
+		
 			if ( is_multisite() ) {
-				//$this->config_data = get_blog_option($wpdb->blogid, $this->_settings['options_key']);
-				$blog_prefix = $wpdb->get_blog_prefix( $wpdb->blogid );
-				$row = $wpdb->get_col( $wpdb->prepare( "SELECT option_value FROM {$blog_prefix}options
-						WHERE option_name = %s", $this->_settings['options_key'] ) );
-				if ( $row ) {
-					$this->config_data = unserialize( $row[0] );
-				}
-
+				$this->config_data = get_blog_option( $wpdb->blogid, $this->_settings['options_key'] );
 			} else {
-				//$this->config_data = get_option($this->_settings['options_key']);
-				$row = $wpdb->get_col( $wpdb->prepare( "SELECT option_value FROM $wpdb->options
-					WHERE option_name = %s LIMIT 1", $this->_settings['options_key'] ) );
-				if ( $row ) {
-					$this->config_data = unserialize( $row[0] );
-				}
+				$this->config_data = get_option( $this->_settings['options_key'] );
+			}
+		
+			// Ensure $this->config_data is always an array
+			if ( ! is_array( $this->config_data ) ) {
+				$this->config_data = array();
+			}
+		
+			if ( ! isset( $this->config_data['items'] ) ) {
+				$this->config_data['items'] = array();
+			} else {
+				krsort( $this->config_data['items'] );
+			}
+		
+			if ( ! isset( $this->config_data['config'] ) ) {
+				$this->config_data['config'] = array();
 			}
 
 			if ( empty( $this->config_data ) ) {

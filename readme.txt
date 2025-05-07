@@ -18,25 +18,10 @@ This plugin allows you to create quick backup snapshots of your working WordPres
 
 [POWERED BY PSOURCE](https://github.com/cp-psource)
 
-== Languages ==
-
-* Deutsch: de_DE
-* English: en_US
-* France: fr_FR
-* Italiono: it_IT
-* Dutch: nl_NL
-* Polish: pl_PL
-* Spanish: es_ES
-* Portuguese: pt_PT
-* Portuguese (Brazil): pt_BR
-
-Du kannst uns gerne Deine optimierten .po/.mo Dateien für Deine Muttersprache zukommen lassen. 
-Nutze die Möglichkeit dazu auf GitHub oder sende Deine Dateien an: webmaster@n3rds.work
-
-You are welcome to send us your optimized .po/.mo files for your native language. 
-Use the opportunity to do so on GitHub or send your files to: webmaster@n3rds.work
-
-== CP PSOURCE ==
 
 
 == ChangeLog ==
+
+= 1.0.0 =
+
+* release

@@ -6,8 +6,8 @@ title: "PS SnapShot"
 <h2 align="center" style="color:#38c2bb;">📚 PS SnapShot</h2>
 
 <div class="menu">
-  <a href="https://github.com/cp-psource/custompress/discussions" style="color:#38c2bb;">💬 Forum</a>
-  <a href="https://github.com/cp-psource/custompress/releases" style="color:#38c2bb;">📝 Download</a>
+  <a href="https://github.com/cp-psource/cp-snapshot/discussions" style="color:#38c2bb;">💬 Forum</a>
+  <a href="https://github.com/cp-psource/cp-snapshot/releases" style="color:#38c2bb;">📝 Download</a>
 </div>
 
 ## 1.1 Dashboard
